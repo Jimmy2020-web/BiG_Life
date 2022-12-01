@@ -1,0 +1,396 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    behavior: smooth;
+}
+
+$bg_color : #F7EBD5;
+$text_color : #2A61BC;
+$B_shadow : 0px 3px 12px #000436bd;
+
+
+body {
+    font-family: 'Nunito', sans-serif;
+    background: $bg_color;
+    color: $text_color;
+}
+
+// Nav bar designe
+.navWarp {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 50px;
+    background: $text_color;
+    color: $bg_color;
+    padding: 0px 1rem;
+    position: fixed;
+    top: 0;
+    box-shadow: 0px 5px 20px #000436bd;
+    .logo {
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    .hamburger{
+        font-size: 1.5rem;
+        display: none;
+    }
+    .navManu ul{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        li {
+            list-style: none;
+            cursor: pointer;
+            a {
+                text-decoration: none;
+                color: #fff;
+                padding: 6px 16px;
+                font-size: 18px;
+                i{
+                    margin-right: .5rem;
+                }
+            }
+        }
+    }
+}
+
+.navManu ul li :hover {
+    background: #09036c;
+    border-radius: 50px;
+    padding: 6px 16px;
+    transition: .3s ease;
+}
+
+// nav bar responsive
+@media only screen and (max-width: 650px) {
+    .logo {
+        width: 85%;
+    }
+    .navWarp {
+        z-index: 90;
+    }
+   .hamburger {
+        display: block !important;
+        cursor: pointer;
+   }
+    .active {
+        box-shadow: 0px 6px 20px #000436cb;
+        opacity: 1 !important;
+        height: 220px !important;
+    }
+   .navManu ul{
+        position: absolute;
+        top: 54px;
+        width: 100vw !important;
+        height: 0px;
+        left: 0;
+        right: 0;
+        background: $text_color;
+        transform: .3s ease;
+        display: block !important;
+        width: fit-content;
+        text-align: left;
+        overflow: hidden;
+        opacity: 0;
+        backdrop-filter: blur(8px);
+        transition: .5s ease;
+        z-index: 99;
+        li {
+            margin: 1.5rem 0rem;
+            margin-left: 1rem;
+            i {
+                margin-right: 1.5rem;
+            }
+        }
+   }
+   .navManu ul li :hover {
+       padding: 6px 16px !important;
+       padding-right: 55% !important;
+   }
+}
+
+// Hero designe
+.contanier {
+    width: 90%;
+    margin: 0 auto;
+}
+.hero {
+    width: 100%;
+    background: url(./images/cover.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 350px;
+    margin-top: 3rem;
+    .heroWraper{
+        width: 100%;
+        height: 100%;
+        background: #00043691;
+        .slider{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            padding: 1rem;
+            p {
+                max-width: 600px;
+                padding: 2rem;
+                background: #ffffffa4;
+                border-radius: 1rem;
+                text-align: center;
+                color: #000;
+            }
+        }
+    }
+}
+
+.abInfo {
+    background: $text_color;
+    color: #fff;
+    p {
+        padding: 10px 25px;
+        overflow: hidden;
+    }
+}
+// owner designe
+.card{
+    background: #ddd;
+    color: #202020;
+    box-shadow: $B_shadow;
+    border: 1px solid #00042d80;
+    border-top-right-radius: 15px;
+    margin-bottom: 1.5rem;
+    .contact{
+        display: flex;
+        justify-content: space-between;
+        border-top: 1px solid #00042d80;
+        padding: 10px 15px;
+        background: #e9ebe9;
+        i{
+            padding: 0 6px;
+            color: #202020;
+            cursor: pointer;
+            transition: all .3s ease;
+            &:hover {
+                color: $text_color;
+            }
+        }
+    }
+}
+.owner {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 3.5rem;
+    .profile {
+        display: flex;
+        justify-content: space-around;
+        .avator {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            background: $text_color;
+            border-top-right-radius: 15px;
+        }
+        .avator img {
+            width: 100px;
+            border-radius: 50%;
+            border: 2px solid $bg_color;
+        }
+        .info, .whatsApp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 1rem;
+            .infoText {
+                p:nth-child(1){
+                    font-weight: bold;
+                    font-size: 18px;
+                }
+            }
+        }
+        .whatsApp {
+            img{
+                width: 90px;
+                border: 2px solid #000;
+            }
+        }
+    }
+}
+
+
+// service designe
+.service {
+    margin-top: 3.5rem;
+    background: #fff;
+    padding: 1.2rem;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: auto 450px;
+    gap: 15px;
+    overflow: hidden;
+    .simg {
+            width: 450px;
+            background: url(./images/Profile.jpeg);
+            background-size: cover;
+            background-position: center;
+        }
+        .serData {
+            table {
+                    width: 100%;
+                    border-collapse: collapse;
+                    border: 1px solid #ddd;
+                    text-transform: capitalize;
+                    th {
+                        background: $text_color;
+                        color: #fff;
+                        text-align: left;
+                        padding: 5px 10px;
+                    }
+                    tr {
+                        background: #2a62bc21;
+                        color: #000;
+                        td {
+                                padding: 5px 10px;
+                            }
+                    }
+                }
+        }
+}
+
+.poplurService{
+    margin-top: 3.5rem;
+    background: #fff;
+    border-radius: 1rem;
+    padding: 1rem;
+    overflow: hidden;
+    h2{
+        padding-bottom: 1rem;
+    }
+    .cardWraper, .aplayCard {
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        justify-content: space-around;
+        .sCard {
+            background: linear-gradient(to top, #002157, #3472d6);
+            color: #fff;
+            padding: 1rem;
+            text-align: center;
+            border-radius: 1rem;
+            // width: 280px;
+            margin: .8rem .5rem;
+            transition: .5s ease;
+            cursor: pointer;
+            &:hover {
+                    box-shadow: 0px 10px 20px #202020f3;
+                }
+            .imgDiv {
+                img{
+                    width:100%;
+                    border-radius: 1rem;
+                }
+            }
+            .textDiv {
+                h3 {
+                    padding-top: .5rem;
+                }
+            }
+        }
+    }
+}
+
+.footer {
+    margin-top: 2.5rem;
+    height: 100px;
+    background: #202020;
+    color: #fff;
+    .footer_content {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 100px;
+        .socaialDiv {
+            font-size: 30px;
+            border-radius: 6px;
+            i {
+                padding: 10px;
+                cursor: pointer;
+                transition: all .3s ease;
+                &:hover{
+                    color: yellow;
+                }
+            }
+        }
+    }
+}
+@media only screen and (max-width: 650px) {
+    .owner {
+        display: block;
+    }
+
+    .avator {
+        justify-content: start !important;
+    }
+
+    .profile {
+        position: relative;
+        margin-bottom: 1.5rem !important;
+        display: block !important;
+        z-index: 1;
+    }
+
+    .whatsApp {
+        position: absolute;
+        top: .5rem;
+        right: .5rem;
+    }
+
+    .card .contact .skill {
+        margin-left: 0rem;
+    }
+
+    .card .contact i {
+        padding: 0 3px;
+    }
+
+    .service {
+        display: block;
+    }
+
+    .simg {
+        margin-top: 1rem;
+        max-width: 100% !important;
+        max-height: 320px !important;
+    }
+    .cardWraper, .aplayCard {
+        display: block !important;
+        padding: 1rem;
+        padding-top: 0;
+    }
+    .sCard{
+        margin: 1.5rem 0 !important;
+    }
+    .footer {
+        height: 150px !important;
+    }
+    .footer_content {
+        display: block in !important;
+        position: relative;
+    }
+    .socaialDiv {
+        position: absolute;
+        bottom: -2rem;
+        right: .5rem;
+        i {
+            padding: 6px !important;
+        }
+    }
+}
