@@ -5,6 +5,21 @@ hambergurManu.onclick = function () {
     navBar.classList.toggle("active");
 }
 
+const fbBtn = document.querySelector(".fa-facebook");
+fbBtn.addEventListener("click", () => {
+  window.open("https://www.facebook.com/sagor.hosin/");
+});
+
+const linkBtn = document.querySelector(".fa-linkedin-in");
+linkBtn.addEventListener("click", () => {
+  window.open("https://www.linkedin.com/in/shahinur-islam-90b057103/");
+});
+
+const youtubBtn = document.querySelector(".fa-youtube");
+youtubBtn.addEventListener("click", () => {
+  window.open("https://www.youtube.com/channel/UCdO1hd0vkL2kc-_p8H5nzYw");
+})
+
 var isShow = true;
 var LangBton = document.getElementById("edata");
 
@@ -130,7 +145,7 @@ let serviceListEn = [
     sl: "18",
     sname: "Zabeda Khatian",
     serTime: "20 Days",
-    price: "20 Tk",
+    price: "200 Tk",
   },
   {
     sl: "19",

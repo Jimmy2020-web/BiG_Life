@@ -225,7 +225,24 @@ body {
         }
     }
 }
-
+// Online service 
+.serviceCard {
+    padding: 25px 0;
+    a {
+    text-decoration: none;
+    border: 2px solid $text_color;
+    color: $text_color;
+    padding: 15px 20px;
+    margin: 15px;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: all .3s ease;
+    &:hover{
+        background: $text_color;
+        color: #fff;
+    }
+    }
+}
 
 // service designe
 .service {

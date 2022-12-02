@@ -1,0 +1,63 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Roboto+Mono:wght@200;300;400;500&display=swap');
+@font-face {
+    font-family: NikoshBAN;
+    font-weight: 100;
+    font-style: normal;
+    src: url(./Fonts/NikoshBAN.ttf);
+}
+
+body{
+    font-family: NikoshBAN;
+}
+
+.date_time{
+    position: fixed;
+    top: 230px;
+    right: 80px;
+    font-size: 28px;
+}
+
+#titlep{
+    margin-top: 450px;
+    margin-left: 400px;
+    margin-bottom: 30px;
+    width: 100%;
+    font-size: 45px;
+    text-decoration: underline;
+}
+
+.prottionbody{
+    width: 90%;
+    margin: 0 auto;
+    text-align: justify;
+    line-height: 45px;
+    font-size: 30px;
+    position: relative;
+}
+
+.chairman{
+    position: absolute;
+    right: 20px;
+    bottom: -300px;
+    text-align: center;
+    font-size: 30px;
+}
+
+#dinfo{
+    position: fixed;
+    bottom: 110px;
+    right: 50px;
+    color: #22222280;
+    font-family: 'Poppins', sans-serif;
+}
+
+#mleft{
+    margin-left: 50px;
+}
+#mleft2{
+    margin-left: 50px;
+}

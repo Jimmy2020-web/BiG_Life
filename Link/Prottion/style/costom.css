@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&family=Roboto+Mono:wght@200;300;400;500&display=swap");
+@font-face {
+  font-family: NikoshBAN;
+  font-weight: 100;
+  font-style: normal;
+  src: url(./Fonts/NikoshBAN.ttf);
+}
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #262833;
+  background-color: #e6e7ee;
+  font-family: "NikoshBAN", "Poppins", sans-serif;
+}
+
+.dignerInfo {
+  padding: 1.5rem;
+  border: 1px solid #d1d9e6;
+  border-radius: 0.55rem;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+  position: fixed;
+  top: 80px;
+  right: -5px;
+  display: grid;
+  grid-template-columns: auto auto;
+  place-items: center;
+  gap: 5px;
+  padding: 8px;
+  font-size: 10px;
+  border-top-left-radius: 35px !important;
+  border-bottom-left-radius: 35px !important;
+}
+.dignerInfo:hover {
+  border: 1px solid #d1d9e6;
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff !important;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.dignerInfo .info1 {
+  padding-right: 10px;
+  font-family: "Poppins", sans-serif;
+}
+.dignerInfo .info1 h3 {
+  color: #a91e2c;
+}
+.dignerInfo .info1 p {
+  color: #024601;
+}
+.dignerInfo .info1 img {
+  width: 50px;
+  border-radius: 50%;
+  margin-bottom: -5px;
+}
+
+#mainContent {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+#usre_ui {
+  text-align: center;
+  margin-top: 80px;
+  min-width: 300px;
+  max-width: 550px;
+  padding: 15px;
+  box-sizing: border-box;
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: 1px solid #d1d9e6;
+  border-radius: 0.55rem;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+}
+#usre_ui h2 {
+  background: linear-gradient(90deg, #ff0022, #1b2c2c, #1a00fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+#usre_ui .btnSet {
+  display: flex;
+  justify-content: space-between;
+}
+
+.protionBox {
+  display: grid;
+  grid-template-columns: auto auto;
+}
+
+.prottionText {
+  padding: 20px;
+  position: relative;
+}
+.prottionText p, .prottionText span {
+  line-height: 35px;
+  text-align: right;
+  font-size: 22px;
+  margin: 7px 0;
+}
+.prottionText #chouse {
+  position: absolute;
+  padding: 5px !important;
+  margin: 0px !important;
+  position: absolute;
+  line-height: 20px;
+  right: 33px;
+  top: 111px;
+  border-radius: 4px !important;
+  border: 1px solid #d1d9e6;
+}
+.prottionText input {
+  background: rgba(251, 251, 251, 0.3411764706);
+  border: none;
+  outline: none;
+  height: 34px;
+  border-radius: 4px;
+  width: 90%;
+  padding-left: 10px;
+  font-family: "NikoshBAN";
+  font-size: 20px;
+  border: 1px solid #d1d9e6;
+  box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff !important;
+  margin: 3px 0;
+}
+
+select {
+  border: 1px;
+  outline: 0;
+  padding: 7px;
+  cursor: pointer;
+}
+
+.btn {
+  border-radius: 50px;
+  border-width: 0;
+  line-height: 30px;
+  width: 70px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 30px;
+  padding: 10 20px;
+  box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+  padding: 0.25rem;
+  border-radius: 0.55rem;
+  border: 1px solid #d1d9e6;
+  margin: 0.2rem 0.5rem;
+  font-weight: bold;
+  font-family: "Poppins", sans-serif;
+  color: #262833;
+}
+.btn:hover {
+  box-shadow: inset 3px 3px 6px #b8b9be, inset -3px -3px 6px #fff;
+  padding: 0.25rem;
+  border-radius: 0.55rem;
+  border: 1px solid #d1d9e6;
+  margin: 0.2rem 0.5rem;
+  color: #a91e2c;
+  transition: all 0.2s linear;
+}/*# sourceMappingURL=costom.css.map */
