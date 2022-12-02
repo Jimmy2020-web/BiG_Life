@@ -153,6 +153,7 @@ body {
 .abInfo p {
   padding: 10px 25px;
   overflow: hidden;
+  width: 1600px;
 }
 
 .card {
@@ -333,6 +334,9 @@ body {
 }
 
 @media only screen and (max-width: 650px) {
+  body {
+    font-size: 80%;
+  }
   .owner {
     display: block;
   }
@@ -386,5 +390,46 @@ body {
   }
   .socaialDiv i {
     padding: 6px !important;
+  }
+  .serviceCard a {
+    display: block;
+  }
+  .abInfo p {
+    -webkit-animation: lineSlid 30s ease 99;
+            animation: lineSlid 30s ease 99;
+  }
+  @-webkit-keyframes lineSlid {
+    0% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    90% {
+      transform: translateX(-1080px);
+      opacity: 1;
+    }
+    92% {
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
+  }
+  @keyframes lineSlid {
+    0% {
+      opacity: 1;
+      transform: translateX(0px);
+    }
+    90% {
+      transform: translateX(-1080px);
+      opacity: 1;
+    }
+    92% {
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0px);
+      opacity: 1;
+    }
   }
 }/*# sourceMappingURL=index.css.map */
