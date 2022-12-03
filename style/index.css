@@ -382,7 +382,7 @@ body {
     height: 150px !important;
   }
   .footer_content {
-    display: block in !important;
+    display: block !important;
     position: relative;
   }
   .socaialDiv {
@@ -391,7 +391,7 @@ body {
     right: 0.5rem;
   }
   .socaialDiv i {
-    padding: 6px !important;
+    padding: 5px !important;
   }
   .serviceCard a {
     display: block;
