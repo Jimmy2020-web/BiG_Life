@@ -13,6 +13,7 @@ body {
   font-family: "Nunito", sans-serif;
   background: #F7EBD5;
   color: #2A61BC;
+  overflow-x: hidden;
 }
 
 .navWarp {
