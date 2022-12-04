@@ -434,4 +434,9 @@ body {
       opacity: 1;
     }
   }
+}
+@media only screen and (max-width: 920px) {
+  .cardWraper, .aplayCard {
+    grid-template-columns: auto auto auto !important;
+  }
 }/*# sourceMappingURL=index.css.map */
