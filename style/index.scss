@@ -165,10 +165,13 @@ body {
 .card{
     background: #ddd;
     color: #202020;
-    box-shadow: $B_shadow;
     border: 1px solid #00042d80;
     border-top-right-radius: 15px;
     margin-bottom: 1.5rem;
+    transition: all .3s ease;
+    &:hover {
+        box-shadow: $B_shadow;
+    }
     .contact{
         display: flex;
         justify-content: space-between;
@@ -252,34 +255,29 @@ body {
     background: #fff;
     padding: 1.2rem;
     border-radius: 1rem;
-    display: grid;
-    grid-template-columns: auto 450px;
-    gap: 15px;
     overflow: hidden;
-    .simg {
-            width: 450px;
-            background: url(./images/Profile.jpeg);
-            background-size: cover;
-            background-position: center;
-        }
         .serData {
             table {
                     width: 100%;
                     border-collapse: collapse;
-                    border: 1px solid #ddd;
+                    border: 1px solid #b1b0b0;
                     text-transform: capitalize;
                     th {
                         background: $text_color;
                         color: #fff;
                         text-align: left;
-                        padding: 5px 10px;
+                        padding: 15px 20px;
                     }
                     tr {
-                        background: #2a62bc21;
                         color: #000;
+                        border-bottom: 1px solid #b1b0b0;
+                        transition: all .3s ease;
+                        &:hover {
+                            background: #c5c4c4ee;
+                        }
                         td {
-                                padding: 5px 10px;
-                            }
+                            padding: 15px;
+                        }
                     }
                 }
         }
@@ -442,6 +440,9 @@ body {
 }
 
 @media only screen and (max-width: 920px){
+    .owner {
+        display: block !important;
+    }
     .cardWraper, .aplayCard {
         grid-template-columns: auto auto auto !important;
     }
