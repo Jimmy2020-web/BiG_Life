@@ -152,6 +152,7 @@ body {
   color: #fff;
 }
 .abInfo p {
+  overflow: hidden;
   padding: 10px 25px;
 }
 
@@ -396,7 +397,6 @@ body {
   }
   .abInfo p {
     overflow: hidden !important;
-    width: 1600px;
     -webkit-animation: lineSlid 30s ease 99;
             animation: lineSlid 30s ease 99;
   }

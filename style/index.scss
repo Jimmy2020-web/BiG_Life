@@ -157,6 +157,7 @@ body {
     background: $text_color;
     color: #fff;
     p {
+        overflow: hidden;
         padding: 10px 25px;
     }
 }
@@ -421,7 +422,6 @@ body {
 
     .abInfo p{
         overflow: hidden !important;
-        width: 1600px;
         animation: lineSlid 30s ease 99;
     }
 
