@@ -1,0 +1,173 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+//     font-family: 'Nunito', sans-serif; font-family: 'Roboto', sans-serif;
+
+//**********************varable-start*****************************
+$bt-2-clor: #ff5733;
+$top-bg: #f4f6f6;
+$mute: #666464;
+$mute-2: #111111bb;
+$footer-bg: #eeeeee;
+
+// *********************incolred-scss******************************
+* {
+  margin-top: 0;
+  padding: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+h1,
+h2,
+h3,
+h4,
+h5 {
+  font-family: "Roboto", sans-serif;
+}
+
+a {
+  font-family: "Nunito", sans-serif;
+}
+
+body {
+  font-family: "Nunito", sans-serif;
+}
+
+.top-bar {
+    background-color: $top-bg;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: $mute;
+    i {
+      margin-right: 0.5rem;
+      padding: 0.5rem 0rem;
+    }
+  }
+// **************top bar style ************
+
+.protact-detels{
+    width: 100%;
+    height: 130vh;
+    background: url('https://i01.appmifile.com/webfile/globalimg/products/pc/redmi-9c/index-01.jpg');
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    .prodact-conent{
+        position: absolute;
+        width: 100%;
+        height: 130vh;
+        background-color: rgba($color: #000000, $alpha: 0.3);
+        backdrop-filter: blur(.8rem);
+        .sticky-top{
+          top: 3rem !important;
+        }
+    }
+}
+.table2{
+  background-color: #fff;
+  border-radius: .5rem; 
+  margin-top: 3rem;
+  box-shadow: 0px 0px 1.5rem #3d3d3d8a;
+}
+
+#phoneData{
+  .Over-view{
+    margin-top: 0rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    background: white;
+    display: block;
+  }
+  .table{
+    font-size: 1rem;
+    font-weight: normal;
+    text-transform: capitalize;
+  }
+}
+
+.phoneImg{
+  background-image: linear-gradient(45deg,  #FF2372, #FED981);
+  background-position: left;
+  background-size: 300%;
+  color: white;
+  border-radius: .5rem;
+  box-shadow: 0px 0px 1.5rem #3d3d3d8a;
+  animation: bgAnimation 10s infinite alternate;
+    img{
+        width: 18rem;
+        height: auto;
+        margin-top: 1.5rem;
+    }
+    .p-title{
+        padding-top: 2rem;
+    }
+}
+
+@keyframes bgAnimation {
+  0%{
+    background-position: left;
+  }
+  100%{
+    background-position: right;
+  }
+}
+//********************Footur style************************
+footer {
+  background: $footer-bg;
+  // margin-top: 1.2rem;
+  width: 100%;
+  height: 16rem;
+}
+.profile-fottur {
+  opacity: 0;
+  transform: translateY(-150px);
+  transform: scale(0.5);
+  box-sizing: border-box;
+  padding: 2rem;
+}
+
+.pro-title {
+  color: #3f3844;
+  font-weight: bold;
+}
+.pro-img {
+  width: 7.188rem;
+  height: 7.188rem;
+  display: block;
+  padding: 0.438rem;
+  border-radius: 50%;
+  margin-top: 2.3rem;
+  background: #fdfafc;
+  border: 2px solid #3f3844;
+  img {
+    width: 6.125rem;
+    height: auto;
+    border-radius: 50%;
+  }
+}
+.pro-detls {
+  opacity: 0;
+  transform: translateY(-150px);
+  transform: scale(0.5);
+  padding-top: 2rem;
+  color: #3f3844;
+  .parson {
+    a {
+      text-decoration: none;
+      i {
+        font-size: 1.8rem;
+        color: #3f3844;
+        margin-right: 0.7rem;
+      }
+    }
+  }
+}
+
+.fadeanimation-add {
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.5s ease;
+  transform: translateX(0px);
+}
