@@ -27,17 +27,11 @@ body {
 .top-bar {
   background-color: #f4f6f6;
   font-size: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  align-items: center;
+  justify-content: space-around;
   color: #666464;
 }
-
 .top-bar i {
   margin-right: 0.5rem;
   padding: 0.5rem 0rem;
@@ -52,7 +46,6 @@ body {
 .navbar-brand {
   position: relative;
 }
-
 .navbar-brand::before {
   background: #ff5733;
   content: "";
@@ -60,61 +53,46 @@ body {
   width: 100%;
   left: 0rem;
   top: 2.688rem;
-  -webkit-transform: translateX(-50%);
   transform: translateX(-50%);
   height: 0.313rem;
-  -webkit-transform: scaleX(0);
-          transform: scaleX(0);
-  -webkit-transition: all 0.3s ease-in;
+  transform: scaleX(0);
   transition: all 0.3s ease-in;
-  -webkit-transform-origin: center;
-          transform-origin: center;
+  transform-origin: center;
 }
-
 .navbar-brand:hover::before {
-  -webkit-transform: scaleX(1);
-          transform: scaleX(1);
-  -webkit-transform-origin: center;
-          transform-origin: center;
+  transform: scaleX(1);
+  transform-origin: center;
 }
 
 .convater-rem {
   height: 6rem;
 }
-
 .convater-rem p {
   font-size: 1.2rem;
 }
-
 .convater-rem p input {
   border: 1px solid #c9c6c6;
   outline: none;
-  padding: .4rem .8rem;
+  padding: 0.4rem 0.8rem;
   width: 10rem;
 }
-
 .convater-rem p label {
   border: 1px solid #c9c6c6;
   outline: none;
-  padding: .4rem .8rem;
+  padding: 0.4rem 0.8rem;
   width: 10rem;
 }
 
 .phone-item {
-  -webkit-box-shadow: 0px 2px 10px #8f8e8dab;
-          box-shadow: 0px 2px 10px #8f8e8dab;
+  box-shadow: 0px 2px 10px rgba(143, 142, 141, 0.6705882353);
 }
 
 .prodact-card #cards {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto auto;
-      grid-template-columns: auto auto auto auto;
+  grid-template-columns: auto auto auto auto;
 }
-
 .prodact-card #cards .card-body {
   position: relative;
-  -webkit-transition: opacity 3s ease-in-out;
   transition: opacity 3s ease-in-out;
   margin: 1rem;
   border-radius: 1.2rem;
@@ -122,41 +100,28 @@ body {
   color: #666464;
   cursor: pointer;
   background: #fff;
-  -webkit-transition: -webkit-box-shadow 0.2s ease-in-out;
-  transition: -webkit-box-shadow 0.2s ease-in-out;
   transition: box-shadow 0.2s ease-in-out;
-  transition: box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
 }
-
 .prodact-card #cards .card-body:hover {
-  -webkit-box-shadow: 0px 0px 1.5rem #3d3d3d8a;
-          box-shadow: 0px 0px 1.5rem #3d3d3d8a;
+  box-shadow: 0px 0px 1.5rem rgba(61, 61, 61, 0.5411764706);
 }
-
 .prodact-card #cards .card-body:hover .new {
   opacity: 1;
-  -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
 }
-
 .prodact-card #cards .card-body h4 {
-  color: #111111bb;
+  color: rgba(17, 17, 17, 0.7333333333);
   font-weight: 600;
 }
-
 .prodact-card #cards .card-body img {
   width: 13.5rem;
   height: auto;
   margin-bottom: 1rem;
 }
-
 .prodact-card #cards .card-body img:hover {
-  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  transform: scale(1.02);
 }
-
 .prodact-card #cards .card-body .new {
   position: absolute;
   top: 0rem;
@@ -178,14 +143,10 @@ body {
 }
 
 #Last-Price .last-prodact #price-card {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto auto;
-      grid-template-columns: auto auto auto;
+  grid-template-columns: auto auto auto;
 }
-
 #Last-Price .last-prodact #price-card .updata-card-body {
-  -webkit-transition: opacity 3s ease-in-out;
   transition: opacity 3s ease-in-out;
   margin: 1rem;
   padding: 1.5rem;
@@ -194,35 +155,24 @@ body {
   color: #666464;
   cursor: pointer;
   background: #fff;
-  -webkit-transition: -webkit-box-shadow 0.2s ease-in-out;
-  transition: -webkit-box-shadow 0.2s ease-in-out;
   transition: box-shadow 0.2s ease-in-out;
-  transition: box-shadow 0.2s ease-in-out, -webkit-box-shadow 0.2s ease-in-out;
 }
-
 #Last-Price .last-prodact #price-card .updata-card-body:hover {
-  -webkit-box-shadow: 0px 0px 1.5rem #3d3d3d8a;
-          box-shadow: 0px 0px 1.5rem #3d3d3d8a;
+  box-shadow: 0px 0px 1.5rem rgba(61, 61, 61, 0.5411764706);
 }
-
 #Last-Price .last-prodact #price-card .updata-card-body h4 {
-  color: #111111bb;
+  color: rgba(17, 17, 17, 0.7333333333);
   font-weight: 600;
 }
-
 #Last-Price .last-prodact #price-card .updata-card-body img {
   width: 18rem;
   height: auto;
   margin-bottom: 1rem;
 }
-
 #Last-Price .last-prodact #price-card .updata-card-body img:hover {
-  -webkit-transition: 0.5s ease-in-out;
   transition: 0.5s ease-in-out;
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
+  transform: scale(1.02);
 }
-
 #Last-Price .last-prodact #price-card .updata-card-body .bPrice {
   text-decoration: line-through;
 }
@@ -236,12 +186,9 @@ footer {
 
 .profile-fottur {
   opacity: 0;
-  -webkit-transform: translateY(-150px);
-          transform: translateY(-150px);
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  transform: translateY(-150px);
+  transform: scale(0.5);
+  box-sizing: border-box;
   padding: 2rem;
 }
 
@@ -260,7 +207,6 @@ footer {
   background: #fdfafc;
   border: 2px solid #3f3844;
 }
-
 .pro-img img {
   width: 6.125rem;
   height: auto;
@@ -269,18 +215,14 @@ footer {
 
 .pro-detls {
   opacity: 0;
-  -webkit-transform: translateY(-150px);
-          transform: translateY(-150px);
-  -webkit-transform: scale(0.5);
-          transform: scale(0.5);
+  transform: translateY(-150px);
+  transform: scale(0.5);
   padding-top: 2rem;
   color: #3f3844;
 }
-
 .pro-detls .parson a {
   text-decoration: none;
 }
-
 .pro-detls .parson a i {
   font-size: 1.8rem;
   color: #3f3844;
@@ -289,12 +231,9 @@ footer {
 
 .fadeanimation-add {
   opacity: 1;
-  -webkit-transform: scale(1);
-          transform: scale(1);
-  -webkit-transition: all 0.5s ease;
+  transform: scale(1);
   transition: all 0.5s ease;
-  -webkit-transform: translateX(0px);
-          transform: translateX(0px);
+  transform: translateX(0px);
 }
 
 .apps-link {
@@ -302,43 +241,32 @@ footer {
   text-align: center;
   text-transform: uppercase;
 }
-
 .apps-link h3 {
   font-weight: bold;
 }
-
 .apps-link .apps {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
-
 .apps-link .apps span {
   display: inline-block;
   padding: 0.3rem;
   margin: 1rem 1.1rem;
   font-size: 2.2rem;
-  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   cursor: pointer;
 }
-
 .apps-link .apps span:nth-child(1) :hover {
   color: #0d98f5;
 }
-
 .apps-link .apps span:nth-child(2) :hover {
   color: #e22bab;
 }
-
 .apps-link .apps span:nth-child(3) :hover {
   color: tomato;
 }
-
 .apps-link .apps span:nth-child(4) :hover {
   color: blueviolet;
 }
-
 .apps-link .apps p {
   font-size: 0.9rem;
 }
@@ -355,49 +283,36 @@ footer {
 }
 
 .box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 11rem;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   background-color: #3f3844;
   font-weight: bold;
 }
-
 .box h2 {
   margin-right: -20px;
   line-height: 2.5rem;
   color: white;
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
   text-orientation: upright;
 }
-
 .box h3 {
   line-height: 2.5rem;
   color: #3f3844;
   background: white;
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
   text-orientation: unset;
   letter-spacing: 0.2rem;
   text-transform: uppercase;
 }
-
 .box h4 {
   margin-left: -20px;
   line-height: 2.5rem;
   color: white;
-  -webkit-writing-mode: vertical-lr;
-      -ms-writing-mode: tb-lr;
-          writing-mode: vertical-lr;
+  -ms-writing-mode: tb-lr;
+      writing-mode: vertical-lr;
   text-orientation: upright;
-}
-/*# sourceMappingURL=costem_style.css.map */
+}/*# sourceMappingURL=costem_style.css.map */

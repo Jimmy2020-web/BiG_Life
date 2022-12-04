@@ -153,8 +153,6 @@ body {
 }
 .abInfo p {
   padding: 10px 25px;
-  overflow: hidden;
-  width: 1600px;
 }
 
 .card {
@@ -397,6 +395,8 @@ body {
     display: block;
   }
   .abInfo p {
+    overflow: hidden !important;
+    width: 1600px;
     -webkit-animation: lineSlid 30s ease 99;
             animation: lineSlid 30s ease 99;
   }
