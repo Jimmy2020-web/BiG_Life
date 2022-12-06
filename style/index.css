@@ -12,7 +12,7 @@ html {
 body {
   font-family: "Nunito", sans-serif;
   background: #F7EBD5;
-  color: #2A61BC;
+  color: #00556A;
   overflow-x: hidden;
 }
 
@@ -22,7 +22,7 @@ body {
   justify-content: space-between;
   width: 100%;
   height: 50px;
-  background: #2A61BC;
+  background: #00556A;
   color: #F7EBD5;
   padding: 0px 1rem;
   position: fixed;
@@ -86,7 +86,7 @@ body {
     height: 0px;
     left: 0;
     right: 0;
-    background: #2A61BC;
+    background: #00556A;
     transform: 0.3s ease;
     display: block !important;
     width: -webkit-fit-content;
@@ -148,7 +148,7 @@ body {
 }
 
 .abInfo {
-  background: #2A61BC;
+  background: #00556A;
   color: #fff;
 }
 .abInfo p {
@@ -181,7 +181,7 @@ body {
   transition: all 0.3s ease;
 }
 .card .contact i:hover {
-  color: #2A61BC;
+  color: #00556A;
 }
 
 .owner {
@@ -198,7 +198,7 @@ body {
   justify-content: center;
   align-items: center;
   padding: 1rem;
-  background: #2A61BC;
+  background: #00556A;
   border-top-right-radius: 15px;
 }
 .owner .profile .avator img {
@@ -226,8 +226,8 @@ body {
 }
 .serviceCard a {
   text-decoration: none;
-  border: 2px solid #2A61BC;
-  color: #2A61BC;
+  border: 2px solid #00556A;
+  color: #00556A;
   padding: 15px 20px;
   margin: 15px;
   font-weight: bold;
@@ -235,7 +235,7 @@ body {
   transition: all 0.3s ease;
 }
 .serviceCard a:hover {
-  background: #2A61BC;
+  background: #00556A;
   color: #fff;
 }
 
@@ -253,7 +253,7 @@ body {
   text-transform: capitalize;
 }
 .service .serData table th {
-  background: #2A61BC;
+  background: #00556A;
   color: #fff;
   text-align: left;
   padding: 15px 20px;
@@ -304,6 +304,73 @@ body {
 }
 .poplurService .cardWraper .sCard .textDiv h3, .poplurService .aplayCard .sCard .textDiv h3 {
   padding-top: 0.5rem;
+}
+
+.taning {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100%;
+  margin: 2rem 0;
+}
+.taning .traningCard {
+  position: relative;
+  background: #00556A;
+  color: #fff;
+  text-align: center;
+  padding: 1rem;
+  width: 240px;
+  height: 330px;
+  border-radius: 0.4rem;
+  transition: all 0.3s ease;
+  z-index: 2 !important;
+}
+.taning .traningCard:hover {
+  box-shadow: 0px 3px 12px rgba(0, 4, 54, 0.7411764706);
+}
+.taning .traningCard .card-top {
+  position: absolute;
+  top: -1.6rem;
+  left: 1.9rem;
+  color: #00556A;
+  border: 1px solid;
+  background: #fff;
+  padding: 0.5rem;
+  font-size: 1.6rem;
+  padding-bottom: 0;
+  font-weight: bold;
+  width: 180px;
+  border-radius: 0.4rem;
+  box-shadow: 0px 8px 12px rgba(1, 49, 63, 0.9450980392);
+}
+.taning .traningCard .card-top p {
+  font-size: 1.2rem;
+  font-weight: 400;
+}
+.taning .traningCard .card-body {
+  padding-top: 5.5rem;
+  line-height: 30px;
+  text-align: left;
+  padding-left: 15px;
+}
+.taning .traningCard .card-body i {
+  margin-right: 8px;
+}
+.taning .traningCard .btnDiv button {
+  padding: 10px 55px;
+  font-size: 15px;
+  position: absolute;
+  bottom: 15px;
+  left: 2.1rem;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  color: #00556A;
+  box-shadow: 0px 8px 12px rgba(1, 49, 63, 0.9450980392);
+}
+.taning .traningCard .btnDiv button i {
+  margin-right: 8px;
 }
 
 .footer {
@@ -442,6 +509,13 @@ body {
 @media only screen and (max-width: 920px) {
   .owner {
     display: block !important;
+  }
+  .taning {
+    display: block;
+    margin-left: 10%;
+  }
+  .taning .traningCard {
+    margin-top: 4rem !important;
   }
   .cardWraper, .aplayCard {
     grid-template-columns: auto auto auto !important;
