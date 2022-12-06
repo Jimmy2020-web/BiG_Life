@@ -262,14 +262,18 @@ for (var index = 0; index < titleArray.length; index++) {
   cardBody.innerHTML =
     `
   <div class="sCard">
+                    <div class="card-inner">
                     <div class="imgDiv">
                             <img src="${imgArray[index]}" alt="" srcset="">
+                            <p>${element}</p>
+                            <p> Dedline: ${dateArray[index]}</p>
                         </div>
                         <div class="textDiv">
-                            <h3>${element}</h3>
+                            <p>${element}</p>
                             <p> Dedline: ${dateArray[index]}</p>
                         </div>
                     </div>
+                  </div>
   ` + cardBody2;
 }
 
@@ -300,13 +304,17 @@ for (var index = 0; index < titleArray.length; index++) {
   aplayCard.innerHTML =
     `
   <div class="sCard">
+                  <div class="card-inner">
                     <div class="imgDiv">
                             <img src="${imgArray[index]}" alt="" srcset="">
+                            <p>${element}</p>
+                            <p> Dedline: ${dateArray[index]}</p>
                         </div>
                         <div class="textDiv">
-                            <h3>${element}</h3>
+                            <p>${element}</p>
                             <p> Dedline: ${dateArray[index]}</p>
                         </div>
                     </div>
+                  </div>
   ` + aplayCard2;
 }
