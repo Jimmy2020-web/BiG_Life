@@ -356,6 +356,12 @@ body {
         display: block;
     }
 
+    .service .serData table tr td {
+            padding: 5px;
+    }
+    .service {
+        padding: .8rem;
+    }
     .avator {
         justify-content: start !important;
     }
@@ -427,7 +433,7 @@ body {
             opacity: 1;
             transform: translateX(0px);
         }90%{
-            transform: translateX(-1080px);
+            transform: translateX(-180px);
             opacity: 1;
         }92%{
             opacity: 0;
