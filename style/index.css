@@ -314,6 +314,9 @@ body {
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
 }
+.poplurService .cardWraper .sCard .imgDiv p, .poplurService .aplayCard .sCard .imgDiv p {
+  padding: 12px 0;
+}
 .poplurService .cardWraper .sCard .imgDiv img, .poplurService .aplayCard .sCard .imgDiv img {
   width: 100%;
 }
@@ -396,6 +399,57 @@ body {
 
 .traningCard:hover .card-top {
   color: #E83F46;
+}
+
+.contastDiv .form {
+  width: 340px;
+  height: 440px;
+  background: #e6e6e6;
+  border-radius: 8px;
+  padding: 20px 30px;
+  max-width: calc(100vw - 40px);
+}
+.contastDiv h2 {
+  margin: 10px 0;
+  padding-bottom: 10px;
+  width: 180px;
+  color: #78788c;
+  border-bottom: 3px solid #78788c;
+}
+.contastDiv input {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+  background: none;
+  outline: none;
+  resize: none;
+  border: 0;
+  transition: all 0.3s;
+  border-bottom: 2px solid #bebed2;
+}
+.contastDiv input:focus {
+  border-bottom: 2px solid #78788c;
+}
+.contastDiv p:before {
+  content: attr(type);
+  display: block;
+  margin: 28px 0 0;
+  font-size: 14px;
+  color: #5a5a5a;
+}
+.contastDiv button {
+  float: right;
+  padding: 8px 12px;
+  margin: 35px 0 0;
+  border: 2px solid #78788c;
+  background: 0;
+  color: #5a5a6e;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.contastDiv button:hover {
+  background: #78788c;
+  color: #fff;
 }
 
 .footer {

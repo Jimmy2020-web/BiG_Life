@@ -95,81 +95,93 @@ let serviceListEn = [
   },
   {
     sl: "10",
-    sname: " NID correction  Applicatin ",
+    sname: "New NID Downlode & Print ",
     serTime: "Instant",
     price: "100 Tk",
   },
   {
     sl: "11",
-    sname: " NID Reissue/Damage Applicatin ",
+    sname: " NID correction  Applicatin ",
     serTime: "Instant",
     price: "100 Tk",
   },
   {
     sl: "12",
+    sname: " NID Reissue/Damage Applicatin ",
+    serTime: "Instant",
+    price: "100 Tk",
+  },
+  {
+    sl: "13",
     sname: "New Birth/Death Applicatin ",
     serTime: "Instant",
     price: "50 Tk",
   },
   {
-    sl: "13",
+    sl: "14",
     sname: " Birth/Death Correction Applicatin ",
     serTime: "Instant",
     price: "50 Tk",
   },
   {
-    sl: "14",
+    sl: "15",
     sname: " Birth/Death Reissue/Damage Applicatin ",
     serTime: "Instant",
     price: "50 Tk",
   },
   {
-    sl: "15",
+    sl: "16",
     sname: " Online Bus Ticket Booking ",
     serTime: "Instant",
     price: "30 Tk",
   },
   {
-    sl: "16",
+    sl: "17",
     sname: " Online Train Ticket Booking ",
     serTime: "Instant",
     price: "50 Tk",
   },
   {
-    sl: "17",
+    sl: "18",
     sname: " Online Airlies Ticket Booking ",
     serTime: "Instant",
     price: "200 Tk",
   },
   {
-    sl: "18",
+    sl: "19",
     sname: "Zabeda Khatian",
     serTime: "20 Days",
     price: "200 Tk",
   },
   {
-    sl: "19",
+    sl: "20",
     sname: "Khatian (Online Copy)",
     serTime: "Instant",
     price: "50 Tk",
   },
   {
-    sl: "20",
+    sl: "21",
     sname: "Covid-19 Reg:/Certificate",
     serTime: "Instant",
     price: "30 Tk",
   },
   {
-    sl: "21",
+    sl: "22",
     sname: "BMET Regastation",
     serTime: "3 Days",
     price: "400 Tk",
   },
   {
-    sl: "22",
+    sl: "23",
     sname: "Probashi training Certificate",
     serTime: "Instant",
     price: "60 Tk",
+  },
+  {
+    sl: "24",
+    sname: "School & Instute ID Card Making",
+    serTime: "2-7 Days",
+    price: "30 Tk",
   },
 ];
 let serviceListBn = [
@@ -220,18 +232,14 @@ serviceTable();
 var titleArray = [
   "VWD Applation",
   "BDRIS Applation",
-  "MIS Applation",
   "BMET Applation",
   "COVID-19 Applation",
   "E-Papoert Applation",
   "1-9 Class Addmation",
   "Mother & Chalild Applation",
   "XI Class Addmation",
-  "DC Naogaon Job",
 ];
 var imgArray = [
-  "./style/images/computer.jpg",
-  "./style/images/computer.jpg",
   "./style/images/computer.jpg",
   "./style/images/computer.jpg",
   "./style/images/computer.jpg",
@@ -242,8 +250,6 @@ var imgArray = [
   "./style/images/DC-Naogaon.jpg",
 ];
 var dateArray = [
-  "30/11/2022",
-  "05/10/2022",
   "30/11/2022",
   "05/10/2022",
   "30/11/2022",
@@ -266,7 +272,6 @@ for (var index = 0; index < titleArray.length; index++) {
                     <div class="imgDiv">
                             <img src="${imgArray[index]}" alt="" srcset="">
                             <p>${element}</p>
-                            <p> Dedline: ${dateArray[index]}</p>
                         </div>
                         <div class="textDiv">
                             <p>${element}</p>
@@ -291,7 +296,7 @@ var imgArray = [
   "./style/images/DC-Naogaon.jpg",
 ];
 var dateArray = [
-  "06/12/2022",
+  "End Applation",
   "25/12/2022",
   "Comening soon",
   "10/12/2022"
@@ -309,7 +314,6 @@ for (var index = 0; index < titleArray.length; index++) {
                     <div class="imgDiv">
                             <img src="${imgArray[index]}" alt="" srcset="">
                             <p>${element}</p>
-                            <p> Dedline: ${dateArray[index]}</p>
                         </div>
                         <div class="textDiv">
                             <p>${element}</p>
