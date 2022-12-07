@@ -271,6 +271,7 @@ for (var index = 0; index < titleArray.length; index++) {
                         <div class="textDiv">
                             <p>${element}</p>
                             <p> Dedline: ${dateArray[index]}</p>
+                            <p>${element[index]}</p>
                         </div>
                     </div>
                   </div>
