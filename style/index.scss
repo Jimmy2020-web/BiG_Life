@@ -64,7 +64,7 @@ body {
 }
 
 .navManu ul li :hover {
-    background: #09036c;
+    background: $text_color;
     border-radius: 50px;
     padding: 6px 16px;
     transition: .3s ease;
@@ -125,7 +125,7 @@ body {
 }
 .hero {
     width: 100%;
-    background: url(./images/cover.jpg);
+    background: url(./images/digital.webp);
     background-size: cover;
     background-position: center;
     height: 350px;
@@ -133,7 +133,6 @@ body {
     .heroWraper{
         width: 100%;
         height: 100%;
-        background: #00043691;
         .slider{
             display: flex;
             justify-content: center;
@@ -141,13 +140,16 @@ body {
             width: 100%;
             height: 100%;
             padding: 1rem;
-            p {
-                max-width: 600px;
+            h2 {
+                max-width: 900px;
                 padding: 2rem;
-                background: #ffffffa4;
                 border-radius: 1rem;
-                text-align: center;
-                color: #000;
+                text-align: left;
+                font-size: 3.2rem;
+                font-weight: bold;
+                background: linear-gradient(90deg, #1f005c, #5b0060, #870160, #ac255e, #ca485c, #e16b5c, #f39060, #ffb56b);
+                -webkit-background-clip: text;
+                -webkit-text-fill-color: transparent;
             }
         }
     }

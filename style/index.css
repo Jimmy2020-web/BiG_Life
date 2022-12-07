@@ -57,7 +57,7 @@ body {
 }
 
 .navManu ul li :hover {
-  background: #09036c;
+  background: #00556A;
   border-radius: 50px;
   padding: 6px 16px;
   transition: 0.3s ease;
@@ -119,7 +119,7 @@ body {
 
 .hero {
   width: 100%;
-  background: url(./images/cover.jpg);
+  background: url(./images/digital.webp);
   background-size: cover;
   background-position: center;
   height: 350px;
@@ -128,7 +128,6 @@ body {
 .hero .heroWraper {
   width: 100%;
   height: 100%;
-  background: rgba(0, 4, 54, 0.568627451);
 }
 .hero .heroWraper .slider {
   display: flex;
@@ -138,13 +137,16 @@ body {
   height: 100%;
   padding: 1rem;
 }
-.hero .heroWraper .slider p {
-  max-width: 600px;
+.hero .heroWraper .slider h2 {
+  max-width: 900px;
   padding: 2rem;
-  background: rgba(255, 255, 255, 0.6431372549);
   border-radius: 1rem;
-  text-align: center;
-  color: #000;
+  text-align: left;
+  font-size: 3.2rem;
+  font-weight: bold;
+  background: linear-gradient(90deg, #1f005c, #5b0060, #870160, #ac255e, #ca485c, #e16b5c, #f39060, #ffb56b);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .abInfo {

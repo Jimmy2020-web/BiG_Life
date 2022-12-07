@@ -41,7 +41,7 @@ let tableHade = ["SL NO", "Name of Service", "Service Time", "Price (P/P)"]
 let serviceListEn = [
   {
     sl: "01",
-    sname: "Photo Copy (Digital Masation)",
+    sname: "Photo Copy (Digital Machine)",
     serTime: "Instant",
     price: "2.5 Tk",
   },
@@ -65,7 +65,7 @@ let serviceListEn = [
   },
   {
     sl: "05",
-    sname: "Computer Compoge & Print",
+    sname: "Computer Compoge & Print (A4-1 Page)",
     serTime: "1-2 Hour",
     price: "100 Tk",
   },
