@@ -298,8 +298,14 @@ var imgArray = [
 var dateArray = [
   "End Applation",
   "25/12/2022",
-  "Comening soon",
+  "15/12/2022",
   "10/12/2022"
+];
+var detlisArray = [
+  "End Applation",
+  "25/12/2022",
+  "সর্বোচ্চ 10 এবং সর্বনিম্ন 5টি পছন্দ। </br> চার্জ ব্যতীত 150 টাকা ফি প্রদান। </br> অভিভাবকের মোবাইল নম্বর এবং জাতীয় পরিচয়পত্র প্রয়োজন৷ </br> সাধারণ বিভাগে বিজ্ঞান/মানবিক/ব্যবসা শাখায় আবেদন করা যাবে।",
+  "10/12/2022",
 ];
 
 var aplayCard = document.querySelector(".aplayCard");
@@ -316,8 +322,8 @@ for (var index = 0; index < titleArray.length; index++) {
                             <p>${element}</p>
                         </div>
                         <div class="textDiv">
-                            <p>${element}</p>
-                            <p> Dedline: ${dateArray[index]}</p>
+                        <h3> Dedline: ${dateArray[index]}</h3>
+                        <p>${detlisArray[index]}</p>
                         </div>
                     </div>
                   </div>

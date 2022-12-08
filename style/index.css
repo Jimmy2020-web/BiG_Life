@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100;200;300;400;500;600;700;800;900&family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -28,6 +29,7 @@ body {
   position: fixed;
   top: 0;
   box-shadow: 0px 5px 20px rgba(0, 4, 54, 0.7411764706);
+  z-index: 999;
 }
 .navWarp .logo {
   font-weight: bold;
@@ -318,11 +320,14 @@ body {
 }
 .poplurService .cardWraper .sCard .imgDiv p, .poplurService .aplayCard .sCard .imgDiv p {
   padding: 12px 0;
+  text-align: center;
 }
 .poplurService .cardWraper .sCard .imgDiv img, .poplurService .aplayCard .sCard .imgDiv img {
   width: 100%;
 }
 .poplurService .cardWraper .sCard .textDiv, .poplurService .aplayCard .sCard .textDiv {
+  font-family: "Noto Serif Bengali", serif;
+  text-align: left;
   color: #fff;
   transform: rotateY(180deg);
 }
