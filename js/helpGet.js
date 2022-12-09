@@ -7,6 +7,15 @@
    "Shakil Hossain",
    "Abu Rahib",
  ]
+ var imgarry = [
+  "../style/images/rakib.jpg",
+  "../style/images/sovo.jpg",
+  "../style/images/Profile.jpeg",
+  "../style/images/Profile.jpeg",
+  "../style/images/Profile.jpeg",
+  "../style/images/Profile.jpeg",
+  "../style/images/Profile.jpeg",
+];
  var degnation = [
    "Chaiman",
    "Casher",
@@ -45,7 +54,8 @@
    mamberCard.innerHTML =
      `<div class="cardBody">
                         <div id="cflx" class="cradFont">
-                            <span>${element}</span>
+                            <img src="${imgarry[index]}" alt="" srcset="">
+                            <span>${degnation[index]}</span>
                         </div>
                         <div class="cardBack">
                             <h2>${mamberName[index]}</h2>
@@ -56,22 +66,22 @@
                                     <p>Mamber</p>
                                 </div>
                                 <div>
-                                    <p>${16*450}</p>
+                                    <p>${16 * 450}</p>
                                     <p>Club</p>
                                 </div>
                                 <div>
-                                    <p>${(16*450)-tChada[index]}</p>
+                                    <p>${16 * 450 - tChada[index]}</p>
                                     <p>Due TK</p>
                                 </div>
                             </div>
                             <p class="joinD">Join Date: ${joinDate[index]}</p>
                         </div>
                         <div class="btnDiv">
-                            <button id="moreBtn">Help-Get-Club ${degnation[index]}</button>
+                            <button id="moreBtn">Name: ${
+                              mamberName[index]
+                            }</button>
                             <div class="angilLeft"></div>
                             <div class="angilRight"></div>
                         </div>
                     </div>` + mamberCard2;
  }
-
- console.log(mamberName.length);

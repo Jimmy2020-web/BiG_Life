@@ -79,7 +79,7 @@ body {
   .active {
     box-shadow: 0px 6px 20px rgba(0, 4, 54, 0.7960784314);
     opacity: 1 !important;
-    height: 220px !important;
+    height: 280px !important;
   }
   .navManu ul {
     position: absolute;
@@ -472,12 +472,12 @@ body {
   width: 250px;
   height: 350px;
   background: #fff;
-  border-radius: 20px;
+  border-radius: 22px;
   margin-top: 5rem;
   border: 2px solid #00556A;
   cursor: pointer;
 }
-.cardWraper2 .cardBody:hover .cradFont {
+.cardWraper2 .cardBody:hover .cradFont img {
   top: 10px;
   width: 100px;
   height: 100px;
@@ -486,22 +486,23 @@ body {
   background-position: top;
   background-size: cover;
   border: 2px solid #00556A;
+  left: 75px;
 }
 .cardWraper2 .cardBody:hover .cradFont > span {
   display: none;
 }
-.cardWraper2 .cardBody .cradFont {
-  padding-top: 25px;
+.cardWraper2 .cardBody .cradFont img {
+  left: 0;
   width: 246px;
-  height: 350px;
+  height: 320px;
   position: absolute;
-  background: url(./images/Profile.jpeg);
-  border-radius: 20px;
+  border-radius: 20px 20px 0px 0px;
   background-position: center;
   background-size: cover;
   transition: all 0.7s ease;
 }
-.cardWraper2 .cardBody .cradFont span {
+.cardWraper2 .cardBody span {
+  position: absolute;
   color: #003340;
   font-weight: bold;
   padding: 5px 8px;
@@ -509,6 +510,9 @@ body {
   border-radius: 0px 15px 15px 0px;
   transition: 0.3s;
   transition-delay: 0.7s;
+  top: 25px;
+  left: -1px;
+  border: 1px solid #00556A;
 }
 .cardWraper2 .cardBody .cardBack {
   padding: 16px;
@@ -620,7 +624,7 @@ body {
   }
   .cardWraper2 {
     display: block;
-    margin: 20% !important;
+    margin-left: 40px !important;
   }
   .owner {
     display: block;
