@@ -459,73 +459,115 @@ body {
   color: #fff;
 }
 
-.cardWraper {
-  z-index: 0;
+.cardWraper2 {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  justify-content: space-around;
+  width: 100%;
 }
-.cardWraper .cardBody {
+.cardWraper2 .cardBody {
   position: relative;
   display: flex;
   justify-content: center;
-  width: 320px;
-  height: 450px;
-  background: #ddd;
+  width: 250px;
+  height: 350px;
+  background: #fff;
   border-radius: 20px;
   margin-top: 5rem;
   border: 2px solid #00556A;
+  cursor: pointer;
 }
-.cardWraper .cardBody:hover .cradFont {
-  top: 30px;
+.cardWraper2 .cardBody:hover .cradFont {
+  top: 10px;
   width: 100px;
   height: 100px;
   position: absolute;
   border-radius: 50%;
   background-position: top;
   background-size: cover;
-  border: 4px solid #00556A;
+  border: 2px solid #00556A;
 }
-.cardWraper .cardBody:hover .cradFont > span {
+.cardWraper2 .cardBody:hover .cradFont > span {
   display: none;
 }
-.cardWraper .cardBody .cradFont {
+.cardWraper2 .cardBody .cradFont {
   padding-top: 25px;
-  width: 316px;
-  height: 450px;
+  width: 246px;
+  height: 350px;
   position: absolute;
   background: url(./images/Profile.jpeg);
   border-radius: 20px;
   background-position: center;
   background-size: cover;
-  transition: all 0.6s ease;
+  transition: all 0.7s ease;
 }
-.cardWraper .cardBody .cradFont span {
+.cardWraper2 .cardBody .cradFont span {
   color: #003340;
   font-weight: bold;
   padding: 5px 8px;
   background: yellow;
   border-radius: 0px 15px 15px 0px;
-  transition: 0.7s;
-  transition-delay: 0.6s;
+  transition: 0.3s;
+  transition-delay: 0.7s;
 }
-.cardWraper .cardBody .btnDiv {
-  width: 400px;
-  height: 87px;
+.cardWraper2 .cardBody .cardBack {
+  padding: 16px;
+  padding-top: 115px;
+  text-align: center;
+}
+.cardWraper2 .cardBody .cardBack .tk {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+.cardWraper2 .cardBody .cardBack .tk div {
+  color: #00556A;
+  padding: 8px 0;
+  width: 60px;
+  height: 50px;
+  margin: 5px;
+  border: 1px solid #00556A;
+  border-radius: 5px;
+  font-size: 14px;
+  transition: all 0.3s ease;
+}
+.cardWraper2 .cardBody .cardBack .tk div:hover {
+  background: #00556A;
+  color: #fff;
+}
+.cardWraper2 .cardBody .cardBack .joinD {
+  margin-top: 20px;
+  padding: 8px 16px;
+  border: 1px solid;
+  transition: all 0.3s ease;
+}
+.cardWraper2 .cardBody .cardBack .joinD:hover {
+  background: #00556A;
+  color: #fff;
+}
+.cardWraper2 .cardBody .btnDiv {
+  width: 320px;
+  height: 57px;
   position: absolute;
-  bottom: 0px;
+  bottom: -30px;
   text-align: center;
   background: linear-gradient(90deg, rgb(0, 72, 89) 0%, rgb(38, 183, 219) 50%, rgb(0, 72, 89) 100%);
   box-shadow: 0px 4px 5px rgba(0, 0, 0, 0.25);
 }
-.cardWraper .cardBody .btnDiv button {
+.cardWraper2 .cardBody .btnDiv button {
   padding: 10px 20px;
   font-size: 16px;
   outline: none;
   border: none;
-  margin: 25px;
+  margin: 10px;
   cursor: pointer;
   border-radius: 5px;
-  background: yellow;
+  background: transparent;
+  color: #ffffff;
+  font-weight: bold;
+  text-shadow: 1px 2px 4px #000;
 }
-.cardWraper .cardBody .btnDiv .angilLeft {
+.cardWraper2 .cardBody .btnDiv .angilLeft {
   position: absolute;
   width: 60px;
   height: 60px;
@@ -535,7 +577,7 @@ body {
   transform: rotate(53.23deg);
   z-index: -1;
 }
-.cardWraper .cardBody .btnDiv .angilRight {
+.cardWraper2 .cardBody .btnDiv .angilRight {
   position: absolute;
   width: 60px;
   height: 60px;
@@ -575,6 +617,10 @@ body {
   body {
     font-size: 80%;
     overflow-x: hidden !important;
+  }
+  .cardWraper2 {
+    display: block;
+    margin: 20% !important;
   }
   .owner {
     display: block;
@@ -680,6 +726,9 @@ body {
   }
 }
 @media only screen and (max-width: 920px) {
+  .cardWraper2 {
+    grid-template-columns: auto auto;
+  }
   .owner {
     display: block !important;
   }
