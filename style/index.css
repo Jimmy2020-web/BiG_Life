@@ -473,7 +473,7 @@ body {
   height: 350px;
   background: #fff;
   border-radius: 22px;
-  margin-top: 5rem;
+  margin-top: 3rem;
   border: 2px solid #00556A;
   cursor: pointer;
 }
@@ -592,6 +592,43 @@ body {
   z-index: -1;
 }
 
+.dasbord {
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+  gap: 25px;
+  margin-top: 5rem;
+}
+.dasbord .clubBalance {
+  height: 220px;
+  background: linear-gradient(45deg, #FF5370, #ff869a);
+  color: #ffffff;
+  box-shadow: 0 1px 2.94px 0.06px rgba(4, 26, 55, 0.16);
+  border-radius: 20px;
+  padding: 15px;
+  text-align: center;
+}
+.dasbord .clubBalance h2 {
+  width: 100px;
+  height: 100px;
+  border: 5px solid #fff;
+  border-radius: 50%;
+  margin: 15px;
+  padding: 30px 8px;
+  margin-left: 28%;
+}
+
+.clubBalance:nth-child(1) {
+  background: linear-gradient(45deg, #4099ff, #73b4ff);
+}
+
+.clubBalance:nth-child(2) {
+  background: linear-gradient(45deg, #FFB64D, #ffcb80);
+}
+
+.clubBalance:nth-child(3) {
+  background: linear-gradient(45deg, #2ed8b6, #59e0c5);
+}
+
 .footer {
   margin-top: 2.5rem;
   height: 100px;
@@ -625,6 +662,9 @@ body {
   .cardWraper2 {
     display: block;
     margin-left: 40px !important;
+  }
+  .dasbord {
+    display: block;
   }
   .owner {
     display: block;

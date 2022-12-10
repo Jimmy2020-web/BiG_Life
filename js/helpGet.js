@@ -1,3 +1,18 @@
+var clubTk = document.querySelector("#ctk");
+var MamberTk = document.querySelector("#Mtk");
+var invest = document.querySelector("#invest");
+var cash = document.querySelector("#cash");
+
+var clubBlance = (15 * 400)*22;
+var mamberTk = 9200;
+var invast = 106000;
+var captial = clubBlance - invast;
+ 
+clubTk.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${clubBlance}`;
+MamberTk.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${clubBlance}`;
+invest.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${invast}`;
+cash.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${captial}`;
+ 
  var mamberName = [
    "Rakib Hossain",
    "Mahadhi Hasan",
@@ -6,16 +21,16 @@
    "Mir Hossain",
    "Shakil Hossain",
    "Abu Rahib",
- ]
+ ].reverse();
  var imgarry = [
-  "../style/images/rakib.jpg",
-  "../style/images/sovo.jpg",
-  "../style/images/Profile.jpeg",
-  "../style/images/Profile.jpeg",
-  "../style/images/Profile.jpeg",
-  "../style/images/Profile.jpeg",
-  "../style/images/Profile.jpeg",
-];
+   "../style/images/rakib.jpg",
+   "../style/images/sovo.jpg",
+   "../style/images/Profile.jpeg",
+   "../style/images/Profile.jpeg",
+   "../style/images/Profile.jpeg",
+   "../style/images/Profile.jpeg",
+   "../style/images/Profile.jpeg",
+ ].reverse();
  var degnation = [
    "Chaiman",
    "Casher",
@@ -24,7 +39,7 @@
    "Mamber",
    "Mamber",
    "Mamber",
- ]
+ ].reverse();
 
  var tChada = [
    "5500",
@@ -34,7 +49,7 @@
    "4550",
    "4550",
    "4550",
- ]
+ ].reverse();
 
  var joinDate = [
    "01/10/2019",
@@ -44,7 +59,7 @@
    "01/10/2019",
    "01/10/2019",
    "01/10/2019",
- ]
+ ].reverse();
 
  var mamberCard = document.querySelector(".cardWraper2");
 
