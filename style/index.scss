@@ -641,10 +641,20 @@ body {
         text-align: center;
         cursor: pointer;
         position: relative;
+        span{
+            position: absolute;
+            top: 65px;
+            right: 0px;
+            width: 100%;
+            z-index: 10;
+            color: #04088d;
+            font-weight: bold;
+            font-size: 22px;
+        }
         h2 {
             width: 100px;
             height: 100px;
-            background: conic-gradient(#04088d 3.7deg, #fff 0deg);
+            background: conic-gradient(#04088d 43.7deg, #fff 0deg);
             border-radius: 50%;
             margin: 15px auto;
             padding: 30px 8px;
@@ -656,7 +666,7 @@ body {
                 position: absolute;
                 top: 10px;
                 left: 10px;
-                background: #fff;
+                background: #d1d1d1;
                 border-radius: 50%;
             }
         }

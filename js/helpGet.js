@@ -6,6 +6,10 @@ var invest2 = document.querySelector("#invest2");
 var cash = document.querySelector("#cash");
 var cash2 = document.querySelector("#cash2");
 var cir = document.querySelector("#cir");
+var psValu = document.querySelector("#psValu");
+var psValu2 = document.querySelector("#psValu2");
+var psValu3 = document.querySelector("#psValu3");
+var psValu4 = document.querySelector("#psValu4");
 
 var countDownDate = new Date("Aug 1, 2021 15:37:25").getTime();
 var now = new Date().getTime();
@@ -26,9 +30,10 @@ clubTk.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${clubBlan
 MamberTk.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${mamberTk}`;
 invest.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${invast}`;
 cash.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${captial}`;
-MamberTk2.innerHTML = `${mTk100}%`;
-invast2.innerHTML = `${invastTk100}%`;
-cash2.innerHTML = `${cashTk100}%`;
+psValu.innerHTML = "100%";
+psValu2.innerHTML = `${mTk100}%`;
+psValu3.innerHTML = `${invastTk100}%`;
+psValu4.innerHTML = `${cashTk100}%`;
 
 MamberTk2.style.background = `conic-gradient(#04088d ${
   mTk100 * 3.7}deg, #fff  0deg)`;
