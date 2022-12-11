@@ -1,73 +1,81 @@
 var clubTk = document.querySelector("#ctk");
 var MamberTk = document.querySelector("#Mtk");
+var MamberTk2 = document.querySelector("#Mtk2");
 var invest = document.querySelector("#invest");
+var invest2 = document.querySelector("#invest2");
 var cash = document.querySelector("#cash");
+var cash2 = document.querySelector("#cash2");
 
-var clubBlance = (15 * 400)*22;
-var mamberTk = 9200;
-var invast = 106000;
-var captial = clubBlance - invast;
- 
+var countDownDate = new Date("Aug 1, 2021 15:37:25").getTime();
+var now = new Date().getTime();
+var distance = now - countDownDate;
+var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+var month = Math.floor(days / 30);
+var mamberLength = month * 23;
+
+var clubBlance = `${(550 * 23) + (mamberLength * 400)}`;
+var mamberTk = 128670;
+var invast = 113115;
+var captial = mamberTk - invast;
+var mTk100 = Math.floor((mamberTk / clubBlance) * 100);
+var invastTk100 = Math.floor((invast / mamberTk) * 100);
+var cashTk100 = Math.floor((captial / mamberTk) * 100);
+
 clubTk.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${clubBlance}`;
-MamberTk.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${clubBlance}`;
+MamberTk.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${mamberTk}`;
 invest.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${invast}`;
 cash.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${captial}`;
- 
- var mamberName = [
-   "Rakib Hossain",
-   "Mahadhi Hasan",
-   "Shahinur Islam",
-   "Murad Hossain",
-   "Mir Hossain",
-   "Shakil Hossain",
-   "Abu Rahib",
- ].reverse();
- var imgarry = [
-   "../style/images/rakib.jpg",
-   "../style/images/sovo.jpg",
-   "../style/images/Profile.jpeg",
-   "../style/images/Profile.jpeg",
-   "../style/images/Profile.jpeg",
-   "../style/images/Profile.jpeg",
-   "../style/images/Profile.jpeg",
- ].reverse();
- var degnation = [
-   "Chaiman",
-   "Casher",
-   "Secritary",
-   "Mamber",
-   "Mamber",
-   "Mamber",
-   "Mamber",
- ].reverse();
+MamberTk2.innerHTML = `${mTk100}%`;
+invast2.innerHTML = `${invastTk100}%`;
+cash2.innerHTML = `${cashTk100}%`;
 
- var tChada = [
-   "5500",
-   "5050",
-   "4500",
-   "4550",
-   "4550",
-   "4550",
-   "4550",
- ].reverse();
+var mamberName = [
+  "Rakib Hossain",
+  "Mahadhi Hasan",
+  "Shahinur Islam",
+  "Murad Hossain",
+  "Mir Hossain",
+  "Shakil Hossain",
+  "Abu Rahib",
+].reverse();
+var imgarry = [
+  "../style/images/rakib.jpg",
+  "../style/images/sovo.jpg",
+  "../style/images/Profile.jpeg",
+  "../style/images/Profile.jpeg",
+  "../style/images/Profile.jpeg",
+  "../style/images/Profile.jpeg",
+  "../style/images/Profile.jpeg",
+].reverse();
+var degnation = [
+  "Chaiman",
+  "Casher",
+  "Secritary",
+  "Mamber",
+  "Mamber",
+  "Mamber",
+  "Mamber",
+].reverse();
 
- var joinDate = [
-   "01/10/2019",
-   "01/10/2019",
-   "01/10/2019",
-   "01/10/2019",
-   "01/10/2019",
-   "01/10/2019",
-   "01/10/2019",
- ].reverse();
+var tChada = ["5500", "5050", "4500", "4550", "4550", "4550", "4550"].reverse();
 
- var mamberCard = document.querySelector(".cardWraper2");
+var joinDate = [
+  "01/10/2019",
+  "01/10/2019",
+  "01/10/2019",
+  "01/10/2019",
+  "01/10/2019",
+  "01/10/2019",
+  "01/10/2019",
+].reverse();
 
- for (let index = 0; index < mamberName.length; index++) {
-   const element = mamberName[index];
-   var mamberCard2 = document.querySelector(".cardWraper2").innerHTML;
-   mamberCard.innerHTML =
-     `<div class="cardBody">
+var mamberCard = document.querySelector(".cardWraper2");
+
+for (let index = 0; index < mamberName.length; index++) {
+  const element = mamberName[index];
+  var mamberCard2 = document.querySelector(".cardWraper2").innerHTML;
+  mamberCard.innerHTML =
+    `<div class="cardBody">
                         <div id="cflx" class="cradFont">
                             <img src="${imgarry[index]}" alt="" srcset="">
                             <span>${degnation[index]}</span>
@@ -99,4 +107,4 @@ cash.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${captial}`;
                             <div class="angilRight"></div>
                         </div>
                     </div>` + mamberCard2;
- }
+}
