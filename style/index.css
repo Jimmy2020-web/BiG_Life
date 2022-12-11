@@ -619,7 +619,7 @@ body {
   font-weight: bold;
   font-size: 22px;
 }
-.dasbord .clubBalance h2 {
+.dasbord .clubBalance #Mtk1, .dasbord .clubBalance #Mtk2, .dasbord .clubBalance #invast2, .dasbord .clubBalance #cash2 {
   width: 100px;
   height: 100px;
   background: conic-gradient(#04088d 43.7deg, #fff 0deg);
@@ -628,7 +628,7 @@ body {
   padding: 30px 8px;
   position: relative;
 }
-.dasbord .clubBalance h2::before {
+.dasbord .clubBalance #Mtk1::before, .dasbord .clubBalance #Mtk2::before, .dasbord .clubBalance #invast2::before, .dasbord .clubBalance #cash2::before {
   content: "";
   width: 80px;
   height: 80px;

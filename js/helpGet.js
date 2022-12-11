@@ -1,8 +1,9 @@
 var clubTk = document.querySelector("#ctk");
 var MamberTk = document.querySelector("#Mtk");
+var Clube1 = document.querySelector("#Mtk1");
 var MamberTk2 = document.querySelector("#Mtk2");
 var invest = document.querySelector("#invest");
-var invest2 = document.querySelector("#invest2");
+var invast2 = document.querySelector("#invast2");
 var cash = document.querySelector("#cash");
 var cash2 = document.querySelector("#cash2");
 var cir = document.querySelector("#cir");
@@ -35,8 +36,15 @@ psValu2.innerHTML = `${mTk100}%`;
 psValu3.innerHTML = `${invastTk100}%`;
 psValu4.innerHTML = `${cashTk100}%`;
 
+Clube1.style.background = `conic-gradient(#04088d ${360}deg, #fff  0deg)`;
 MamberTk2.style.background = `conic-gradient(#04088d ${
   mTk100 * 3.7}deg, #fff  0deg)`;
+
+invast2.style.background = `conic-gradient(#04088d ${
+  invastTk100 * 3.7}deg, #fff  0deg)`;
+
+cash2.style.background = `conic-gradient(#04088d ${
+  cashTk100 * 3.7}deg, #fff  0deg)`;
 
 var mamberName = [
   "Rakib Hossain",
