@@ -5,6 +5,7 @@ var invest = document.querySelector("#invest");
 var invest2 = document.querySelector("#invest2");
 var cash = document.querySelector("#cash");
 var cash2 = document.querySelector("#cash2");
+var cir = document.querySelector("#cir");
 
 var countDownDate = new Date("Aug 1, 2021 15:37:25").getTime();
 var now = new Date().getTime();
@@ -13,7 +14,7 @@ var days = Math.floor(distance / (1000 * 60 * 60 * 24));
 var month = Math.floor(days / 30);
 var mamberLength = month * 23;
 
-var clubBlance = `${(550 * 23) + (mamberLength * 400)}`;
+var clubBlance = `${550 * 23 + mamberLength * 400}`;
 var mamberTk = 128670;
 var invast = 113115;
 var captial = mamberTk - invast;
@@ -28,6 +29,9 @@ cash.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${captial}`;
 MamberTk2.innerHTML = `${mTk100}%`;
 invast2.innerHTML = `${invastTk100}%`;
 cash2.innerHTML = `${cashTk100}%`;
+
+MamberTk2.style.background = `conic-gradient(#04088d ${
+  mTk100 * 3.7}deg, #fff  0deg)`;
 
 var mamberName = [
   "Rakib Hossain",
@@ -89,11 +93,11 @@ for (let index = 0; index < mamberName.length; index++) {
                                     <p>Mamber</p>
                                 </div>
                                 <div>
-                                    <p>${16 * 450}</p>
+                                    <p>${month * 400}</p>
                                     <p>Club</p>
                                 </div>
                                 <div>
-                                    <p>${16 * 450 - tChada[index]}</p>
+                                    <p>${month * 400 - tChada[index]}</p>
                                     <p>Due TK</p>
                                 </div>
                             </div>
