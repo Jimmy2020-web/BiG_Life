@@ -36,7 +36,6 @@ LangBton.addEventListener("click", () => {
 });
 
 var heroTitle = document.querySelector("#hTitle");
-
 setInterval(() => {
   let x = Math.floor(Math.random() * 100);
   if (x < 32) {
@@ -48,8 +47,7 @@ setInterval(() => {
     heroTitle.innerHTML =
       "মাতৃ ভাতার আবেদন চলছে আবেদনের শেষ তারিখ: ৩১/১২/২০২২ ইং।";
   }
-  console.log(x)
-}, 1000);
+}, 3000);
 
 let tableHade = ["SL NO", "Name of Service", "Service Time", "Price (P/P)"]
 
@@ -255,30 +253,18 @@ var titleArray = [
   "BDRIS Applation",
   "BMET Applation",
   "COVID-19 Applation",
-  "E-Papoert Applation",
-  "1-9 Class Addmation",
-  "Mother & Chalild Applation",
-  "XI Class Addmation",
 ];
 var imgArray = [
   "./style/images/computer.jpg",
   "./style/images/computer.jpg",
   "./style/images/computer.jpg",
   "./style/images/computer.jpg",
-  "./style/images/dshe.png",
-  "./style/images/25-8.png",
-  "./style/images/IXCLASS.jpg",
-  "./style/images/DC-Naogaon.jpg",
 ];
 var dateArray = [
   "30/11/2022",
   "05/10/2022",
   "30/11/2022",
   "05/10/2022",
-  "06/12/2022",
-  "25/12/2022",
-  "Comening soon",
-  "10/12/2022",
 ];
 
 var cardBody = document.querySelector(".cardWraper");

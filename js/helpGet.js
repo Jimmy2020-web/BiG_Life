@@ -31,6 +31,7 @@ clubTk.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${clubBlan
 MamberTk.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${mamberTk}`;
 invest.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${invast}`;
 cash.innerHTML = `<i class="fa-solid fa-bangladeshi-taka-sign"></i> ${captial}`;
+
 psValu.innerHTML = "100%";
 psValu2.innerHTML = `${mTk100}%`;
 psValu3.innerHTML = `${invastTk100}%`;

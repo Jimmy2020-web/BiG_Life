@@ -148,7 +148,7 @@ body {
   font-weight: bold;
   font-family: "Noto Serif Bengali";
   text-align: center;
-  background: linear-gradient(90deg, rgb(248, 250, 2) 0%, rgb(253, 29, 29) 40%, rgb(252, 176, 69) 100%);
+  background: linear-gradient(90deg, rgb(248, 250, 2) 0%, rgb(253, 29, 29) 60%, rgb(252, 176, 69) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
