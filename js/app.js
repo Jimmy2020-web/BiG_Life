@@ -33,8 +33,10 @@ LangBton.addEventListener("click", () => {
     localStorage.setItem("cLung", "Bangla");
     isShow = true;
   }
-
 });
+
+var heroTitle = document.querySelector("#hTitle");
+heroTitle.innerHTML = "বাংলাদেশ সেনাবাহীনিতে আবেদন চলছে শেষ তারিখ: ৩১/০১/২০২২ ইং।";
 
 let tableHade = ["SL NO", "Name of Service", "Service Time", "Price (P/P)"]
 
