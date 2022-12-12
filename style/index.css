@@ -683,6 +683,12 @@ body {
     font-size: 80%;
     overflow-x: hidden !important;
   }
+  .hero {
+    height: 350px;
+  }
+  .hero #hTitle {
+    font-size: 35px;
+  }
   .cardWraper2 {
     display: block;
     margin-left: 40px !important;
