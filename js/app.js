@@ -36,7 +36,20 @@ LangBton.addEventListener("click", () => {
 });
 
 var heroTitle = document.querySelector("#hTitle");
-heroTitle.innerHTML = "বাংলাদেশ সেনাবাহীনিতে আবেদন চলছে শেষ তারিখ: ৩১/০১/২০২২ ইং।";
+
+setInterval(() => {
+  let x = Math.floor(Math.random() * 100);
+  if (x < 32) {
+    heroTitle.innerHTML =
+      "বাংলাদেশ সেনাবাহীনিতে আবেদন চলছে শেষ তারিখ: ৩১/০১/২০২২ ইং।";
+  } else if (x < 64) {
+    heroTitle.innerHTML = "একাদশ শ্রেনীতে ভর্তীর আবেদন চলছে শেষ তারিখ ১৫/১২/২০২২ ইং।";
+  } else if (x < 100){
+    heroTitle.innerHTML =
+      "মাতৃ ভাতার আবেদন চলছে আবেদনের শেষ তারিখ: ৩১/১২/২০২২ ইং।";
+  }
+  console.log(x)
+}, 1000);
 
 let tableHade = ["SL NO", "Name of Service", "Service Time", "Price (P/P)"]
 
@@ -184,6 +197,12 @@ let serviceListEn = [
     sname: "School & Instute ID Card Making",
     serTime: "2-7 Days",
     price: "30 Tk",
+  },
+  {
+    sl: "25",
+    sname: "Land Tax Paymant",
+    serTime: "Instant",
+    price: "50 Tk",
   },
 ];
 let serviceListBn = [

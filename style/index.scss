@@ -716,9 +716,9 @@ body {
         overflow-x: hidden !important;
     }
     .hero{
-        height: 350px;
+        height: 250px;
         #hTitle{
-            font-size: 35px;
+            font-size: 25px;
         }
     }
     .cardWraper2 {
@@ -772,11 +772,11 @@ body {
         display: block;
     }
 
-    .simg {
-        margin-top: 1rem;
-        max-width: 100% !important;
-        max-height: 320px !important;
-    }
+    // .simg {
+    //     margin-top: 1rem;
+    //     max-width: 100% !important;
+    //     max-height: 320px !important;
+    // }
     .cardWraper, .aplayCard {
         display: block !important;
         padding: 1rem;
@@ -806,7 +806,8 @@ body {
 
     .abInfo p{
         overflow: hidden !important;
-        animation: lineSlid 30s ease 99;
+        // animation: lineSlid 30s ease 99;
+        height: 50px;
     }
 
     @keyframes lineSlid {
