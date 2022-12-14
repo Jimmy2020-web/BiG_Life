@@ -60,10 +60,10 @@ var imgarry = [
   "../style/images/rakib.jpg",
   "../style/images/sovo.jpg",
   "../style/images/Profile.jpeg",
-  "../style/images/Profile.jpeg",
-  "../style/images/Profile.jpeg",
-  "../style/images/Profile.jpeg",
-  "../style/images/Profile.jpeg",
+  "../style/images/user.jpg",
+  "../style/images/user.jpg",
+  "../style/images/user.jpg",
+  "../style/images/user.jpg",
 ].reverse();
 var degnation = [
   "Chaiman",

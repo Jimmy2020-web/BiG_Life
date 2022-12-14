@@ -156,10 +156,16 @@ body {
 .abInfo {
   background: #00556A;
   color: #fff;
+  font-family: "Noto Serif Bengali";
 }
 .abInfo p {
+  text-align: center;
   overflow: hidden;
   padding: 10px 25px;
+}
+.abInfo p #sliderLine {
+  font-size: 20px;
+  font-family: "Noto Serif Bengali";
 }
 
 .card {
@@ -499,6 +505,8 @@ body {
   width: 246px;
   height: 320px;
   position: absolute;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 20px 20px 0px 0px;
   background-position: center;
   background-size: cover;
