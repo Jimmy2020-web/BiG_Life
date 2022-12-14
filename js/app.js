@@ -201,6 +201,18 @@ let serviceListEn = [
     serTime: "Instant",
     price: "50 Tk",
   },
+  {
+    sl: "26",
+    sname: "Online Visa Chaking",
+    serTime: "Instant",
+    price: "200 Tk",
+  },
+  {
+    sl: "27",
+    sname: "Lamanating (A6/A4)",
+    serTime: "Instant",
+    price: "20/30 Tk",
+  },
 ];
 let serviceListBn = [
   { sl: '০১', sname: "ফটোকপি", serTime: "তাৎক্ষণিক", price: "২.৫ Tk (P/P)"}
