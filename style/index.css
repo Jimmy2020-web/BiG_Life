@@ -148,7 +148,7 @@ body {
   font-weight: bold;
   font-family: "Noto Serif Bengali";
   text-align: center;
-  background: linear-gradient(90deg, rgb(248, 250, 2) 0%, rgb(253, 29, 29) 60%, rgb(252, 176, 69) 100%);
+  background: linear-gradient(90deg, rgb(248, 250, 2) 0%, rgb(253, 29, 29) 40%, rgb(252, 176, 69) 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -326,6 +326,7 @@ body {
 }
 .poplurService .cardWraper .sCard .imgDiv img, .poplurService .aplayCard .sCard .imgDiv img {
   width: 100%;
+  border-radius: 15px 15px 0 0;
 }
 .poplurService .cardWraper .sCard .textDiv, .poplurService .aplayCard .sCard .textDiv {
   font-family: "Noto Serif Bengali", serif;
@@ -536,12 +537,15 @@ body {
   border-radius: 5px;
   font-size: 14px;
   transition: all 0.3s ease;
+  background: rgba(0, 151, 189, 0.1568627451);
 }
 .cardWraper2 .cardBody .cardBack .tk div:hover {
   background: #00556A;
   color: #fff;
 }
 .cardWraper2 .cardBody .cardBack .joinD {
+  background: rgba(0, 151, 189, 0.1568627451);
+  border-radius: 5px;
   margin-top: 20px;
   padding: 8px 16px;
   border: 1px solid;
