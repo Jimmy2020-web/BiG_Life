@@ -346,4 +346,29 @@ for (var index = 0; index < titleArray.length; index++) {
                     </div>
                   </div>
   ` + aplayCard2;
-}
+};
+
+var payTk = document.querySelector("#payTk");
+const enloll = document.querySelector("#enroll");
+const enloll2 = document.querySelector("#enroll2");
+const enloll3 = document.querySelector("#enroll3");
+enloll.addEventListener("click", () => {
+  payTk.innerHTML = "TK 2999/-";
+  document.querySelector(".paymant_popup").classList.add("d-block");
+});
+enloll2.addEventListener("click", () => {
+  document.querySelector(".paymant_popup").classList.add("d-block");
+  payTk.innerHTML = "TK 3999/-";
+});
+enloll3.addEventListener("click", () => {
+  document.querySelector(".paymant_popup").classList.add("d-block");
+  payTk.innerHTML = "TK 4999/-";
+});
+const clsBtn = document.querySelector("#clsBtn");
+clsBtn.addEventListener("click", () => {
+  document.querySelector(".paymant_popup").classList.remove("d-block");
+});
+const btnpay = document.querySelector(".btn-pay");
+btnpay.addEventListener("click", () => {
+  document.querySelector(".pay-box").classList.add("d-none");
+});
