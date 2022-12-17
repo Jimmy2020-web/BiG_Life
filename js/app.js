@@ -369,6 +369,13 @@ clsBtn.addEventListener("click", () => {
   document.querySelector(".paymant_popup").classList.remove("d-block");
 });
 const btnpay = document.querySelector(".btn-pay");
-btnpay.addEventListener("click", () => {
+btnpay.addEventListener("click", (e) => {
+  e.preventDefault();
   document.querySelector(".pay-box").classList.add("d-none");
+  document.querySelector(".pay-back").classList.add("d-block");
+});
+const cls2 = document.querySelector("#cls2");
+cls2.addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector(".paymant_popup").classList.remove("d-block");
 });

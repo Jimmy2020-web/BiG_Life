@@ -438,7 +438,24 @@ body {
   margin: 50px auto;
   border-radius: 15px;
 }
-.paymant_popup form .pay-box {
+.paymant_popup form .pay-back {
+  opacity: 0;
+}
+.paymant_popup form .pay-back #cls2 {
+  font-size: 45px;
+  background: no-repeat;
+  color: white;
+  border: none;
+  outline: none;
+  display: block;
+  margin: 20px auto;
+  margin-top: 75px;
+  cursor: pointer;
+}
+.paymant_popup form .pay-back p {
+  font-size: 85px;
+}
+.paymant_popup form .pay-box, .paymant_popup form .pay-back {
   position: relative;
   box-shadow: 0px 3px 12px rgba(0, 4, 54, 0.7411764706);
   border: 5px solid;
@@ -450,21 +467,22 @@ body {
   background: #dd1361;
   color: #fff;
 }
-.paymant_popup form .pay-box img {
+.paymant_popup form .pay-box img, .paymant_popup form .pay-back img {
   width: 100px;
   background: #fff;
   padding: 4px 15px;
   border-radius: 5px;
 }
-.paymant_popup form .pay-box .phon {
+.paymant_popup form .pay-box .phon, .paymant_popup form .pay-back .phon {
   display: flex;
+  font-weight: 800;
 }
-.paymant_popup form .pay-box .phon p {
+.paymant_popup form .pay-box .phon p, .paymant_popup form .pay-back .phon p {
   display: inline;
   padding: 4px 6px;
   border: 1px solid #fff;
 }
-.paymant_popup form .pay-box .img1 img {
+.paymant_popup form .pay-box .img1 img, .paymant_popup form .pay-back .img1 img {
   border: 2px solid;
   padding: 5px;
   width: 150px;
@@ -472,7 +490,7 @@ body {
   border-radius: 10px;
   background: #fff;
 }
-.paymant_popup form .pay-box .btn-pay {
+.paymant_popup form .pay-box .btn-pay, .paymant_popup form .pay-back .btn-pay {
   background: #fff;
   color: #00556A;
   padding: 10px;
@@ -483,7 +501,7 @@ body {
   cursor: pointer;
   font-weight: bold;
 }
-.paymant_popup form .pay-box .btn-pay:hover {
+.paymant_popup form .pay-box .btn-pay:hover, .paymant_popup form .pay-back .btn-pay:hover {
   color: #dd1361;
   box-shadow: 0px 3px 12px rgba(0, 4, 54, 0.7411764706);
 }
@@ -499,7 +517,7 @@ body {
 
 .d-block {
   display: block;
-  opacity: 1;
+  opacity: 1 !important;
 }
 
 .d-none {
@@ -784,6 +802,9 @@ body {
   body {
     font-size: 80%;
     overflow-x: hidden !important;
+  }
+  .phon {
+    font-size: 16px;
   }
   .hero {
     height: 250px;

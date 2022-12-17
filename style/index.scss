@@ -457,7 +457,24 @@ body {
         align-items: center;
         margin: 50px auto;
         border-radius: 15px;
-        .pay-box{
+        .pay-back {
+            opacity: 0;
+            #cls2{
+                font-size: 45px;
+                background: no-repeat;
+                color: white;
+                border: none;
+                outline: none;
+                display: block;
+                margin: 20px auto;
+                margin-top: 75px;
+                cursor: pointer;
+            }
+            p{
+                font-size: 85px;
+            }
+        }
+        .pay-box, .pay-back{
             position: relative;
             box-shadow: $B_shadow;
             border: 5px solid;
@@ -476,6 +493,7 @@ body {
             }
             .phon{
                 display: flex;
+                font-weight: 800;
                 p{
                     display: inline;
                     padding: 4px 6px;
@@ -522,7 +540,7 @@ body {
 
 .d-block{
     display: block;
-    opacity: 1;
+    opacity: 1 !important;
 }
 .d-none{
     display: none;
@@ -814,6 +832,9 @@ body {
     body {
         font-size: 80%;
         overflow-x: hidden !important;
+    }
+    .phon {
+        font-size: 16px;
     }
     .hero{
         height: 250px;
