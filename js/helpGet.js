@@ -126,8 +126,7 @@ for (let index = 0; index < mamberName.length; index++) {
                         </div>
                     </div>` + mamberCard2;
 }
-var duePay = document.querySelectorAll(".duePay");
-console.log(duePay[0])
+
 const payTk = document.querySelectorAll("#payTk");
 
 for (index = 0; index < payTk.length; index++) {
@@ -158,3 +157,7 @@ const cls2 = document.querySelector("#cls2");
 cls2.addEventListener("click", () => {
   document.querySelector(".paymant_popup").classList.remove("d-block");
 });
+
+//https://script.google.com/macros/s/AKfycbyfUAMU-RXzI9GA_D1sepCFie8amTprnVZf-zQCixm2YEfgnHO7VuPc-IIHRPvjq4WY/exec
+
+//Deployment ID: AKfycbyfUAMU-RXzI9GA_D1sepCFie8amTprnVZf-zQCixm2YEfgnHO7VuPc-IIHRPvjq4WY

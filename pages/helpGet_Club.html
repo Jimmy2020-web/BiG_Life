@@ -82,12 +82,18 @@
                                 <button class="btn-pay">Next</button>
                             </div>
                             <div class="pay-back">
-                                <p><i class="fa-solid fa-thumbs-up"></i></p>
-                                <h2>Congratulations...!</h2>
-                                <a>
-                                    Save Transaction ID will be notified via SMS within 24 hours.
-                                </a>
-                                <button id="cls2"><i class="fa-solid fa-xmark"></i></button>
+                                <h2>Payment information</h2>
+                                <form action="https://script.google.com/macros/s/AKfycbyfUAMU-RXzI9GA_D1sepCFie8amTprnVZf-zQCixm2YEfgnHO7VuPc-IIHRPvjq4WY/exec" method="post">
+                                    <input type="text" placeholder="Name" required name="name">
+                                    <input type="text" placeholder="Phone Number" required name="phone">
+                                    <input type="text" placeholder="Transaction ID" required name="tID">
+                                    <br> <br>
+                                    <a>
+                                        Save Transaction ID will be notified via SMS within 24 hours.
+                                    </a>
+                                    <br>
+                                    <input id="paybtn2" type="submit">
+                                </form>
                             </div>
                         </div>
                     </form>
