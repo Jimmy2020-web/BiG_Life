@@ -111,11 +111,11 @@ for (let index = 0; index < mamberName.length; index++) {
                                     <p>Club</p>
                                 </div>
                                 <div>
-                                    <p>${month * 400 - tChada[index]}</p>
+                                    <p id="duePay">${month * 400 - tChada[index]}</p>
                                     <p>Due TK</p>
                                 </div>
                             </div>
-                            <p class="joinD">Join Date: ${joinDate[index]}</p>
+                            <p class="joinD">Pay Now : ${joinDate[index]}</p>
                         </div>
                         <div class="btnDiv">
                             <button id="moreBtn">Name: ${
@@ -126,3 +126,35 @@ for (let index = 0; index < mamberName.length; index++) {
                         </div>
                     </div>` + mamberCard2;
 }
+var duePay = document.querySelectorAll(".duePay");
+console.log(duePay[0])
+const payTk = document.querySelectorAll("#payTk");
+
+for (index = 0; index < payTk.length; index++) {
+  payTk[index].innerHTML = "TK 400";
+};
+
+const payBtn = document.querySelectorAll(".joinD");
+
+for (index = 0; index < payBtn.length; index++) {
+  payBtn[index].addEventListener("click", () => {
+  document.querySelector(".paymant_popup").classList.add("d-block");
+});
+};
+
+const clsBtn = document.querySelector("#clsBtn");
+clsBtn.addEventListener("click", () => {
+  document.querySelector(".paymant_popup").classList.remove("d-block");
+});
+
+const btnpay = document.querySelector(".btn-pay");
+btnpay.addEventListener("click", (e) => {
+  e.preventDefault();
+  document.querySelector(".pay-box").classList.add("d-none");
+  document.querySelector(".pay-back").classList.add("d-block");
+});
+
+const cls2 = document.querySelector("#cls2");
+cls2.addEventListener("click", () => {
+  document.querySelector(".paymant_popup").classList.remove("d-block");
+});

@@ -375,7 +375,7 @@ btnpay.addEventListener("click", (e) => {
   document.querySelector(".pay-back").classList.add("d-block");
 });
 const cls2 = document.querySelector("#cls2");
-cls2.addEventListener("click", (e) => {
-  e.preventDefault();
+cls2.addEventListener("click", () => {
   document.querySelector(".paymant_popup").classList.remove("d-block");
+  document.querySelector(".pay-back").classList.add("d-block");
 });
