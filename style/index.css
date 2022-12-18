@@ -522,6 +522,20 @@ form input[type=text] {
   margin: 8px 0px;
   background: #fffefe;
 }
+form input[type=tel] {
+  border: none;
+  outline: none;
+  padding: 8px 5px;
+  margin: 8px 0px;
+  background: #fffefe;
+}
+form input[type=number] {
+  border: none;
+  outline: none;
+  padding: 8px 5px;
+  margin: 8px 0px;
+  background: #fffefe;
+}
 form input[type=submit] {
   padding: 10px 20px;
   border: none;

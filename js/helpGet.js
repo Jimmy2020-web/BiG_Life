@@ -152,12 +152,3 @@ btnpay.addEventListener("click", (e) => {
   document.querySelector(".pay-box").classList.add("d-none");
   document.querySelector(".pay-back").classList.add("d-block");
 });
-
-const cls2 = document.querySelector("#cls2");
-cls2.addEventListener("click", () => {
-  document.querySelector(".paymant_popup").classList.remove("d-block");
-});
-
-//https://script.google.com/macros/s/AKfycbyfUAMU-RXzI9GA_D1sepCFie8amTprnVZf-zQCixm2YEfgnHO7VuPc-IIHRPvjq4WY/exec
-
-//Deployment ID: AKfycbyfUAMU-RXzI9GA_D1sepCFie8amTprnVZf-zQCixm2YEfgnHO7VuPc-IIHRPvjq4WY
