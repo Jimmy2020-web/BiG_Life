@@ -472,6 +472,7 @@ body {
   background: #fff;
   padding: 4px 15px;
   border-radius: 5px;
+  margin-bottom: 15px;
 }
 .paymant_popup form .pay-box .phon, .paymant_popup form .pay-back .phon {
   display: flex;
@@ -500,6 +501,10 @@ body {
   border-radius: 5px;
   cursor: pointer;
   font-weight: bold;
+  -webkit-text-decoration: dashed;
+          text-decoration: dashed;
+  display: block;
+  margin: 0 auto;
 }
 .paymant_popup form .pay-box .btn-pay:hover, .paymant_popup form .pay-back .btn-pay:hover {
   color: #dd1361;

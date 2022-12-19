@@ -490,6 +490,7 @@ body {
                 background: #fff;
                 padding: 4px 15px;
                 border-radius: 5px;
+                margin-bottom: 15px;
             }
             .phon{
                 display: flex;
@@ -520,6 +521,9 @@ body {
                 border-radius: 5px;
                 cursor: pointer;
                 font-weight: bold;
+                text-decoration: dashed;
+                display: block;
+                margin: 0 auto;
                 &:hover {
                     color: #dd1361;
                     box-shadow: $B_shadow;

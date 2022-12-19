@@ -159,9 +159,9 @@ clsBtn.addEventListener("click", () => {
   document.querySelector(".paymant_popup").classList.remove("d-block");
 });
 
-const btnpay = document.querySelector(".btn-pay");
-btnpay.addEventListener("click", (e) => {
-  e.preventDefault();
-  document.querySelector(".pay-box").classList.add("d-none");
-  document.querySelector(".pay-back").classList.add("d-block");
-});
+// const btnpay = document.querySelector(".btn-pay");
+// btnpay.addEventListener("click", (e) => {
+//   e.preventDefault();
+//   document.querySelector(".pay-box").classList.add("d-none");
+//   document.querySelector(".pay-back").classList.add("d-block");
+// });
