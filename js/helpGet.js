@@ -1,3 +1,10 @@
+const hambergurManu = document.querySelector(".hamburger");
+
+hambergurManu.onclick = function () {
+  const navBar = document.querySelector(".ul");
+  navBar.classList.toggle("active");
+};
+
 var clubTk = document.querySelector("#ctk");
 var MamberTk = document.querySelector("#Mtk");
 var Clube1 = document.querySelector("#Mtk1");
@@ -22,7 +29,7 @@ var mamberLength = month * 22;
 var clubBlance = `${550 * 23 + mamberLength * 400}`;
 var mamberTk = 128670;
 var invast = 113115;
-var captial = (mamberTk - invast) + 8450;
+var captial = mamberTk - invast + 8450;
 var mTk100 = Math.floor((mamberTk / clubBlance) * 100);
 var invastTk100 = Math.floor((invast / mamberTk) * 100);
 var cashTk100 = Math.floor((captial / mamberTk) * 100);
@@ -39,13 +46,16 @@ psValu4.innerHTML = `${cashTk100}%`;
 
 Clube1.style.background = `conic-gradient(#04088d ${360}deg, #fff  0deg)`;
 MamberTk2.style.background = `conic-gradient(#04088d ${
-  mTk100 * 3.7}deg, #fff  0deg)`;
+  mTk100 * 3.7
+}deg, #fff  0deg)`;
 
 invast2.style.background = `conic-gradient(#04088d ${
-  invastTk100 * 3.7}deg, #fff  0deg)`;
+  invastTk100 * 3.7
+}deg, #fff  0deg)`;
 
 cash2.style.background = `conic-gradient(#04088d ${
-  cashTk100 * 3.7}deg, #fff  0deg)`;
+  cashTk100 * 3.7
+}deg, #fff  0deg)`;
 
 var mamberName = [
   "Rakib Hossain",
@@ -107,11 +117,13 @@ for (let index = 0; index < mamberName.length; index++) {
                                     <p>Mamber</p>
                                 </div>
                                 <div>
-                                    <p>${(month * 400) + 550}</p>
+                                    <p>${month * 400 + 550}</p>
                                     <p>Club</p>
                                 </div>
                                 <div>
-                                    <p id="duePay">${month * 400 - tChada[index]}</p>
+                                    <p id="duePay">${
+                                      month * 400 - tChada[index]
+                                    }</p>
                                     <p>Due TK</p>
                                 </div>
                             </div>
@@ -127,19 +139,20 @@ for (let index = 0; index < mamberName.length; index++) {
                     </div>` + mamberCard2;
 }
 
-const payTk = document.querySelectorAll("#payTk");
+const duePay = document.querySelectorAll("#duePay");
+const payTk = document.querySelector("#payTk");
 
-for (index = 0; index < payTk.length; index++) {
-  payTk[index].innerHTML = "TK 400";
-};
+for (x = 0; x < duePay.length; x++) {
+  payTk.innerHTML = duePay[x].outerText;
+}
 
 const payBtn = document.querySelectorAll(".joinD");
 
 for (index = 0; index < payBtn.length; index++) {
   payBtn[index].addEventListener("click", () => {
-  document.querySelector(".paymant_popup").classList.add("d-block");
-});
-};
+    document.querySelector(".paymant_popup").classList.add("d-block");
+  });
+}
 
 const clsBtn = document.querySelector("#clsBtn");
 clsBtn.addEventListener("click", () => {
