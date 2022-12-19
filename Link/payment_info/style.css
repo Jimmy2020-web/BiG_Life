@@ -29,7 +29,8 @@ form {
   margin: 0 auto;
   max-width: 400px;
   min-height: 380px;
-  transform: translateY(25%);
+  max-height: 520px;
+  transform: translateY(10%);
   display: flex;
   flex-direction: column;
   align-items: center;
