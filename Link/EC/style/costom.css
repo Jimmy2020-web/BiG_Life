@@ -83,7 +83,7 @@ body {
   margin-top: 30px;
   margin-bottom: 40px;
   min-width: 300px;
-  max-width: 850px;
+  max-width: 830px;
   padding: 15px;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -192,6 +192,53 @@ input:focus {
   border-radius: 10px;
   padding: 10px;
   padding-top: 20px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.presantAdd:nth-child(1):hover, .adtional:nth-child(1):hover, .identyUP:nth-child(1):hover {
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(1):hover > #infoText, .adtional:nth-child(1):hover > #infoText, .identyUP:nth-child(1):hover > #infoText {
+  color: #027941;
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(2):hover, .adtional:nth-child(2):hover, .identyUP:nth-child(2):hover {
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(2):hover > #infoText, .adtional:nth-child(2):hover > #infoText, .identyUP:nth-child(2):hover > #infoText {
+  color: #027941;
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(3):hover, .adtional:nth-child(3):hover, .identyUP:nth-child(3):hover {
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(3):hover > #infoText, .adtional:nth-child(3):hover > #infoText, .identyUP:nth-child(3):hover > #infoText {
+  color: #027941;
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(4):hover, .adtional:nth-child(4):hover, .identyUP:nth-child(4):hover {
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(4):hover > #infoText, .adtional:nth-child(4):hover > #infoText, .identyUP:nth-child(4):hover > #infoText {
+  color: #027941;
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(5):hover, .adtional:nth-child(5):hover, .identyUP:nth-child(5):hover {
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(5):hover > #infoText, .adtional:nth-child(5):hover > #infoText, .identyUP:nth-child(5):hover > #infoText {
+  color: #027941;
+  border-color: #1c9e61be;
 }
 
 #infoText {
@@ -202,5 +249,12 @@ input:focus {
   padding: 5px 30px;
   border-radius: 25px;
   background: white;
+}
+
+#stText {
+  line-height: 45px;
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+  color: #a91e2c;
 }
 /*# sourceMappingURL=costom.css.map */
