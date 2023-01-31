@@ -1,0 +1,53 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.tCenter{
+    text-align: center;
+}
+.textRight{
+    text-align: right;
+}
+.underLine{
+    text-decoration: underline;
+    font-weight: 600;
+    padding: 0 .5rem;
+}
+body{
+    font-family: 'Noto Serif Bengali', serif;
+    background: #dbdada;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+}
+
+#printingPge{
+    line-height: 32px;
+}
+
+.printPge1, .printPge2{
+    width: 8.3in;
+    height: 10in;
+    background: #ffffff;
+    padding: 0 5rem;
+    margin: 25px 0;
+    .titleText{
+        line-height: normal;
+        text-align: center;
+        font-weight: bold;
+    }
+    .local_EC_Office, .address, .address2{
+        padding-left: 3rem;
+    }
+}
+
+.post{
+    margin-left: 250px;
+    padding-right: 2rem;
+}
+.Line{
+    border-bottom: 1px solid #000;
+}

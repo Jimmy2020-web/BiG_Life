@@ -1,0 +1,206 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: NikoshBAN;
+  font-weight: 100;
+  font-style: normal;
+  src: url(./Fonts/NikoshBAN.ttf);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  color: #262833;
+  background-color: #e6e7ee;
+  font-family: 'Noto Serif Bengali', sans-serif;
+}
+
+.dignerInfo {
+  padding: 1.5rem;
+  border: 1px solid #d1d9e6;
+  border-radius: 0.55rem;
+  -webkit-box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+          box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+  position: fixed;
+  top: 30px;
+  right: -5px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  place-items: center;
+  gap: 5px;
+  padding: 8px;
+  font-size: 10px;
+  border-top-left-radius: 35px !important;
+  border-bottom-left-radius: 35px !important;
+}
+
+.dignerInfo:hover {
+  border: 1px solid #d1d9e6;
+  -webkit-box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff !important;
+          box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff !important;
+  cursor: pointer;
+  -webkit-transition: all .3s linear;
+  transition: all .3s linear;
+}
+
+.dignerInfo .info1 {
+  padding-right: 10px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.dignerInfo .info1 h3 {
+  color: #a91e2c;
+}
+
+.dignerInfo .info1 p {
+  color: #024601;
+}
+
+.dignerInfo .info1 img {
+  width: 50px;
+  border-radius: 50%;
+  margin-bottom: -5px;
+}
+
+#mainContent {
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#usre_ui {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 40px;
+  min-width: 300px;
+  max-width: 850px;
+  padding: 15px;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 10px;
+  padding: 1.5rem;
+  border: 1px solid #d1d9e6;
+  border-radius: 0.55rem;
+  -webkit-box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+          box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+}
+
+#usre_ui h2 {
+  background: -webkit-gradient(linear, left top, right top, from(#ff0022), color-stop(#1b2c2c), to(#1a00fd));
+  background: linear-gradient(90deg, #ff0022, #1b2c2c, #1a00fd);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto auto;
+      grid-template-columns: auto auto auto;
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+#usre_ui h2 img {
+  width: 60px;
+}
+
+#usre_ui .btnSet {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.protionBox {
+  display: -ms-grid;
+  display: grid;
+  text-align: left;
+}
+
+input[type=text] {
+  background: #fbfbfb57;
+  border: none;
+  outline: none;
+  height: 34px;
+  border-radius: 8px;
+  width: 43%;
+  padding: 10px;
+  font-family: 'NikoshBAN';
+  font-size: 20px;
+  border: 1px solid #d1d9e6;
+  -webkit-box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff !important;
+          box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff !important;
+  margin: 14px;
+  text-shadow: #d2d2d2 0px 1px 4px;
+}
+
+input:focus {
+  -webkit-box-shadow: inset 4px 6px 10px -4px rgba(0, 0, 0, 0.7), 0 1px 1px -1px rgba(255, 255, 255, 0.3);
+          box-shadow: inset 4px 6px 10px -4px rgba(0, 0, 0, 0.7), 0 1px 1px -1px rgba(255, 255, 255, 0.3);
+  background: rgba(15, 245, 26, 0.3);
+  -webkit-transition: 1s ease;
+  transition: 1s ease;
+}
+
+.btn {
+  border-radius: 50px;
+  border-width: 0;
+  line-height: 30px;
+  width: 70px;
+  display: inline-block;
+  cursor: pointer;
+  font-size: 1em;
+  line-height: 30px;
+  padding: 10 20px;
+  -webkit-box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+          box-shadow: 3px 3px 6px #b8b9be, -3px -3px 6px #fff;
+  padding: 0.25rem;
+  border-radius: 0.55rem;
+  border: 1px solid #d1d9e6;
+  margin: .2rem .5rem;
+  font-weight: bold;
+  font-family: 'Poppins', sans-serif;
+  color: #262833;
+}
+
+.btn:hover {
+  -webkit-box-shadow: inset 3px 3px 6px #b8b9be,inset -3px -3px 6px #fff;
+          box-shadow: inset 3px 3px 6px #b8b9be,inset -3px -3px 6px #fff;
+  padding: 0.25rem;
+  border-radius: 0.55rem;
+  border: 1px solid #d1d9e6;
+  margin: .2rem .5rem;
+  color: #a91e2c;
+  -webkit-transition: all .2s linear;
+  transition: all .2s linear;
+}
+
+.presantAdd, .adtional, .identyUP {
+  position: relative;
+  margin: 25px 0;
+  border: 1px solid #a1a9b6;
+  border-radius: 10px;
+  padding: 10px;
+  padding-top: 20px;
+}
+
+#infoText {
+  position: absolute;
+  top: -20px;
+  left: 28px;
+  border: 1px solid #a1a9b6;
+  padding: 5px 30px;
+  border-radius: 25px;
+  background: white;
+}
+/*# sourceMappingURL=costom.css.map */
