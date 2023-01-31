@@ -27,11 +27,17 @@ body {
 .top-bar {
   background-color: #f4f6f6;
   font-size: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   color: #666464;
 }
+
 .top-bar i {
   margin-right: 0.5rem;
   padding: 0.5rem 0rem;
@@ -45,6 +51,7 @@ body {
   background-size: cover;
   background-attachment: fixed;
 }
+
 .protact-detels .prodact-conent {
   position: absolute;
   width: 100%;
@@ -53,15 +60,17 @@ body {
   -webkit-backdrop-filter: blur(0.8rem);
           backdrop-filter: blur(0.8rem);
 }
+
 .protact-detels .prodact-conent .sticky-top {
   top: 3rem !important;
 }
 
 .table2 {
   background-color: #fff;
-  border-radius: 0.5rem;
+  border-radius: .5rem;
   margin-top: 3rem;
-  box-shadow: 0px 0px 1.5rem rgba(61, 61, 61, 0.5411764706);
+  -webkit-box-shadow: 0px 0px 1.5rem #3d3d3d8a;
+          box-shadow: 0px 0px 1.5rem #3d3d3d8a;
 }
 
 #phoneData .Over-view {
@@ -72,6 +81,7 @@ body {
   background: white;
   display: block;
 }
+
 #phoneData .table {
   font-size: 1rem;
   font-weight: normal;
@@ -83,16 +93,19 @@ body {
   background-position: left;
   background-size: 300%;
   color: white;
-  border-radius: 0.5rem;
-  box-shadow: 0px 0px 1.5rem rgba(61, 61, 61, 0.5411764706);
+  border-radius: .5rem;
+  -webkit-box-shadow: 0px 0px 1.5rem #3d3d3d8a;
+          box-shadow: 0px 0px 1.5rem #3d3d3d8a;
   -webkit-animation: bgAnimation 10s infinite alternate;
           animation: bgAnimation 10s infinite alternate;
 }
+
 .phoneImg img {
   width: 18rem;
   height: auto;
   margin-top: 1.5rem;
 }
+
 .phoneImg .p-title {
   padding-top: 2rem;
 }
@@ -114,6 +127,7 @@ body {
     background-position: right;
   }
 }
+
 footer {
   background: #eeeeee;
   width: 100%;
@@ -122,9 +136,12 @@ footer {
 
 .profile-fottur {
   opacity: 0;
-  transform: translateY(-150px);
-  transform: scale(0.5);
-  box-sizing: border-box;
+  -webkit-transform: translateY(-150px);
+          transform: translateY(-150px);
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   padding: 2rem;
 }
 
@@ -143,6 +160,7 @@ footer {
   background: #fdfafc;
   border: 2px solid #3f3844;
 }
+
 .pro-img img {
   width: 6.125rem;
   height: auto;
@@ -151,14 +169,18 @@ footer {
 
 .pro-detls {
   opacity: 0;
-  transform: translateY(-150px);
-  transform: scale(0.5);
+  -webkit-transform: translateY(-150px);
+          transform: translateY(-150px);
+  -webkit-transform: scale(0.5);
+          transform: scale(0.5);
   padding-top: 2rem;
   color: #3f3844;
 }
+
 .pro-detls .parson a {
   text-decoration: none;
 }
+
 .pro-detls .parson a i {
   font-size: 1.8rem;
   color: #3f3844;
@@ -167,7 +189,11 @@ footer {
 
 .fadeanimation-add {
   opacity: 1;
-  transform: scale(1);
+  -webkit-transform: scale(1);
+          transform: scale(1);
+  -webkit-transition: all 0.5s ease;
   transition: all 0.5s ease;
-  transform: translateX(0px);
-}/*# sourceMappingURL=Symphony.css.map */
+  -webkit-transform: translateX(0px);
+          transform: translateX(0px);
+}
+/*# sourceMappingURL=Symphony.css.map */
