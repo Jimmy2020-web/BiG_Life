@@ -276,9 +276,13 @@ input:focus {
             transform: translateX(210px);
   }
   #stText {
+    font-size: 14px;
     line-height: 16px;
     -webkit-transform: translateX(5px);
             transform: translateX(5px);
+  }
+  #usre_ui {
+    margin-top: 0px;
   }
 }
 /*# sourceMappingURL=costom.css.map */
