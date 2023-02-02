@@ -100,3 +100,24 @@ printPge2.innerHTML = `
                     <p>গ্রহণকারীর স্বাক্ষর</p>
                 </div>
             </div>`;
+
+var activeBtn = document.querySelector("#activ");
+var activtion = document.querySelector(".activtion");
+
+activeBtn.addEventListener("mouseleave", () => {
+    let code = "252527";
+    if (code === activeBtn.value) {
+        document.getElementById("helpText").innerHTML = "Activation Success...!"
+        setTimeout(() => {
+            activtion.classList.add("activtionOk");
+        }, 1000);
+    }else{
+        document.getElementById("helpText").innerHTML = "Wrong Activation Code..!";
+        document.querySelector(".info").classList.add("wrong");
+    }
+    setTimeout(() => {
+        document.querySelector(".info").classList.remove("wrong");
+        document.getElementById("helpText").innerHTML = "Please Enter activation Code"
+    }, 3000);
+});
+
