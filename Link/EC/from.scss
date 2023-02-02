@@ -74,6 +74,7 @@ body{
     align-items: center;
     .info{
         background: #ffffff;
+        color: #02492e;
         width: 300px;
         font-family: 'Itim', cursive;
         border-radius: 10px;
@@ -86,17 +87,19 @@ body{
             padding: 10px 5px;
             width: 80%;
             border: 1px solid #027247;
-            background: #027247;
+            background: #ffffff;
             letter-spacing: 20px;
             font-size: 20px;
-            color: white;
+            color: #027247;
             font-weight: 600;
             border-radius: 5px;
             margin: 10px 0;
             text-align: end;
             font-family: 'Itim', cursive;
             &:focus{
+                transition: all .3s;
                 background: #02492e;
+                color: white;
             }
         }
     }
