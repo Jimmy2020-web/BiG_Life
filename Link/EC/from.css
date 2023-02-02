@@ -21,9 +21,11 @@
 }
 
 .activtionOk {
-  opacity: 0;
+  -webkit-transition: all .3s ease;
+  transition: all .3s ease;
   -webkit-transform: translateY(100%);
           transform: translateY(100%);
+  opacity: 0;
 }
 
 body {
@@ -123,8 +125,8 @@ body {
 }
 
 .wrong {
-  -webkit-animation: tilt-shaking .3s 2;
-          animation: tilt-shaking .3s 2;
+  -webkit-animation: tilt-shaking .4s 2;
+          animation: tilt-shaking .4s 2;
   color: orangered !important;
 }
 

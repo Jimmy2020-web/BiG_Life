@@ -20,8 +20,9 @@
     padding: 0 .5rem;
 }
 .activtionOk{
-    opacity: 0;
+    transition: all .3s ease;
     transform: translateY(100%);
+    opacity: 0;
 }
 body{
     font-family: 'Noto Serif Bengali', serif;
@@ -102,7 +103,7 @@ body{
 }
 
 .wrong {
-    animation: tilt-shaking .3s 2;
+    animation: tilt-shaking .4s 2;
     color: orangered !important;
 }
 
