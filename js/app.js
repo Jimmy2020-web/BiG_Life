@@ -35,18 +35,45 @@ LangBton.addEventListener("click", () => {
   }
 });
 
-var heroTitle = document.querySelector("#hTitle");
-setInterval(() => {
-  let x = Math.floor(Math.random() * 100);
-  if (x < 32) {
-    heroTitle.innerHTML =
-      "বাংলাদেশ সেনাবাহিনীতে আবেদন চলছে শেষ তারিখ: ৩১/০১/২০২২ ইং।";
-  } else if (x < 64) {
-    heroTitle.innerHTML = "একাদশ শ্রেনীতে ভর্তীর আবেদন চলছে শেষ তারিখ ১৫/১২/২০২২ ইং।";
-  } else if (x < 100){
-    heroTitle.innerHTML = "বাংলাদেশ পুলিশ বাহিনীতে আবেদন চলছে শেষ তারিখ: ৩১/১২/২০২২ ইং।";
+const slides =document.querySelectorAll("#slide");
+var counter = 0;
+
+slides.forEach( (slide, index) => {
+  slide.style.left = `${index * 100}%`;
+})
+
+const goPrev = () => {
+  if (counter>0) {
+    counter--
   }
-}, 3000);
+  slideImg()
+}
+const goNext = () => {
+  if (counter<2) {
+    counter++
+  }
+  slideImg()
+}
+
+window.onload= function () {
+  setInterval(() => {
+    if (counter<2) {
+      counter++
+    }else if (counter > 0) {
+      counter = "0";
+    } else {
+      console.log(counter);
+    }
+    slideImg()
+  }, 5000);
+}
+
+
+const slideImg = () => {
+  slides.forEach( (slide) => {
+    slide.style.transform = `translateX(-${counter * 100}%)`;
+  })
+}
 
 let tableHade = ["SL NO", "Name of Service", "Service Time", "Price (P/P)"]
 
