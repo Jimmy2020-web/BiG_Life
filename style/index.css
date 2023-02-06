@@ -20,7 +20,7 @@ html {
 }
 
 body {
-  font-family: 'Nunito', sans-serif;
+  font-family: 'Nunito', 'Noto Serif Bengali', sans-serif;
   background: #F7EBD5;
   color: #00556A;
   overflow-x: hidden;
@@ -210,6 +210,7 @@ body {
   height: 70%;
   -o-object-fit: cover;
      object-fit: cover;
+  border-radius: 20px;
 }
 
 .hero .heroWraper .slider #sliderimg #slide span {
