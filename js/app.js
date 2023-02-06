@@ -81,7 +81,7 @@ let serviceListEn = [
   {
     sl: "০১",
     sname: "ফটোকপি (ডিজিটাল মেশিন)",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "২.৫ Tk",
   },
   {
@@ -93,13 +93,13 @@ let serviceListEn = [
   {
     sl: "০৩",
     sname: "স্ক্যান কপি (Color & B/W)",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "২০ Tk",
   },
   {
     sl: "০৫",
     sname: "স্ক্যান & ই-মেইল (PDF, JPG, & Docmant File)",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "৫০ Tk",
   },
   {
@@ -117,73 +117,73 @@ let serviceListEn = [
   {
     sl: "০৭",
     sname: "অনলাইনে চাকুরী আবেদন",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "৫০ Tk",
   },
   {
     sl: "০৭",
     sname: "অনলাইনে ভর্তির আবেদন",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "৫০ Tk",
   },
   {
     sl: "০৯",
     sname: "নতুন জাতীয়পরিচয়পত্রের(ভোটার) আবেদন",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "১০০ Tk",
   },
   {
     sl: "১০",
     sname: "নতুন জাতীয়পরিচয়পত্রের(ভোটার) প্রিন্ট ",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "১০০ Tk",
   },
   {
     sl: "১১",
     sname: "জাতীয়পরিচয়পত্রের(ভোটার) তথ্য সংশোধনের আবেদন",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "১০০ Tk",
   },
   {
     sl: "১২",
     sname: " হারানো/নষ্ট জাতীয়পরিচয়পত্রের(ভোটার) প্রাপ্তির আবেদন ",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "১০০ Tk",
   },
   {
     sl: "১৩",
     sname: "নতুন জন্ম/মৃত্যু নিবন্ধনের আবেদন",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "৫০ Tk",
   },
   {
     sl: "১৪",
     sname: "জন্ম/মৃত্যু নিবন্ধনে তথ্য সংশোধন আবেদন",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "৫০ Tk",
   },
   {
     sl: "১৫",
     sname: " হারানো/নষ্ট জন্ম/মৃত্যু প্রাপ্তির আবেদন ",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "৫০ Tk",
   },
   {
     sl: "১৬",
     sname: "অনলাইনে বাস টিকিট বুকিং",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "৩০ Tk",
   },
   {
     sl: "১৭",
     sname: "অনলাইনে ট্রেন টিকিট বুকিং",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "৫০ Tk",
   },
   {
     sl: "১৮",
     sname: "অনলাইনে বিমানের টিকিট বুকিং",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "২০০ Tk",
   },
   {
@@ -195,13 +195,13 @@ let serviceListEn = [
   {
     sl: "২০",
     sname: "খতিয়ানের অনলাইন কপি",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "৫০ Tk",
   },
   {
     sl: "২১",
     sname: "কভিড-১৯ টিকা/সনদ",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "৩০ Tk",
   },
   {
@@ -213,7 +213,7 @@ let serviceListEn = [
   {
     sl: "২৩",
     sname: "প্রবাসী প্রশিক্ষণ সনদ",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "৬০ Tk",
   },
   {
@@ -225,19 +225,19 @@ let serviceListEn = [
   {
     sl: "২৫",
     sname: "ভূমি কর(খাজনা) পরিষদ",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "৫০ Tk",
   },
   {
     sl: "২৬",
     sname: "অনলাইনে ভিসা চেকেইং",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "২০০ Tk",
   },
   {
     sl: "২৭",
     sname: "লেমেনেটিং (6R 6RL/A4)",
-    serTime: "তাৎখনিক",
+    serTime: "তাৎক্ষণিক",
     price: "২০/৩০ Tk",
   },
 ];

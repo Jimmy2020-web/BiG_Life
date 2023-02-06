@@ -908,6 +908,14 @@ form {
         font-size: 80%;
         overflow-x: hidden !important;
     }
+    #sliderimg{
+        height: 240px !important;
+    }
+    #slide{
+        img{
+            display: none;
+        }
+    }
     .phon {
         font-size: 16px;
     }
