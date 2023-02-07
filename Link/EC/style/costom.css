@@ -121,6 +121,11 @@ body {
           justify-content: flex-end;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
 .protionBox {
   display: -ms-grid;
   display: grid;
