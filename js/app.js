@@ -406,3 +406,7 @@ cls2.addEventListener("click", () => {
   document.querySelector(".paymant_popup").classList.remove("d-block");
   document.querySelector(".pay-back").classList.add("d-block");
 });
+
+function websiteVisits(response) {
+  document.querySelector("#visitor").textContent = response.value;
+}
