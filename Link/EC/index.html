@@ -25,6 +25,7 @@
     </header>
     <main id="mainContent">
         <section id="usre_ui">
+        <form name="submit-to-google-sheet">
             <h2>
                 <span>
                     <img src="./style/image/eclogo1.png" alt="" srcset="">
@@ -39,51 +40,52 @@
             </h2>
             <div class="protionBox">
                 <div class="adtional">
-                    <p id="infoText">আবেদনকারীর সংক্রান্ত তথ্যাদি-</p>
-                    <input type="text" id="name" placeholder="আবেদনকারীর নাম" />
-                    <input type="text" id="name1" placeholder="জাতীয় পরিচয়পত্র নম্বর" />
-                    <input type="text" id="name2" placeholder="জন্ম তারিখ" />
+                    <p id="infoText">* আবেদনকারীর সংক্রান্ত তথ্যাদি-</p>
+                    <input type="text" name="applientName" id="name" placeholder="আবেদনকারীর নাম" />
+                    <input type="number" name="NIDno" id="name1" maxlength="17" placeholder="জাতীয় পরিচয়পত্র নম্বর" />
+                    <input type="date" name="DateOfBirth" id="name2" placeholder="জন্ম তারিখ (দিন/মাস/বছর)" />
                   </div>
                   <div class="presantAdd">
-                      <p id="infoText">বর্তমান ভোটার তালিকাভুক্তি সংক্রান্ত তথ্যাদি-</p>
-                      <input type="text" id="name5" placeholder="ভোটার নম্বর" />
+                      <p id="infoText">* বর্তমান ভোটার তালিকাভুক্তি সংক্রান্ত তথ্যাদি-</p>
+                      <input type="number" id="name5" placeholder="ভোটার নম্বর" />
                       <input type="text" id="name6" placeholder="ভোটার এলাকার নাম" />
-                      <input type="text" id="name26" placeholder="ভোটার এলাকার নম্বর" />
+                      <input type="number" id="name26" placeholder="ভোটার এলাকার নম্বর" />
                       <input type="text" id="name7" placeholder="উপজেলা/থানা" />
                       <input type="text" id="name8" placeholder="জেলা" />
                       <input type="text" id="name9" placeholder="গ্রাম/রাস্তার নাম ও নম্বর" />
                       <input type="text" id="name10" placeholder="বাসা/হোল্ডিং নম্বর" />
                   </div>
                   <div class="presantAdd">
-                      <p id="infoText">যে এলাকায় ভোটার স্থানান্তর করিতে ইচ্ছুক-</p>
-                      <input type="text" id="name11" placeholder="জেলা" />
-                      <input type="text" id="name12" placeholder="উপজেলা/থানা" />
-                      <input type="text" id="name13" placeholder="সিটি কোর্পোরেশন/পৌরসভা/ইউনিয়ন/ক্যান্ট বোর্ড" />
-                      <input type="text" id="name14" placeholder="ওয়ার্ড নম্বর" />
+                      <p id="infoText">* যে এলাকায় ভোটার স্থানান্তর করিতে ইচ্ছুক-</p>
+                      <input type="text" name="district" id="name11" placeholder="জেলা" />
+                      <input type="text" name="thana" id="name12" placeholder="উপজেলা/থানা" />
+                      <input type="text" name="union" id="name13" placeholder="সিটি কোর্পোরেশন/পৌরসভা/ইউনিয়ন/ক্যান্ট বোর্ড" />
+                      <input type="number" id="name14" placeholder="ওয়ার্ড নম্বর" />
                       <input type="text" id="name15" placeholder="ভোটার এলাকার নাম" />
-                      <input type="text" id="name16" placeholder="ভোটার এলাকার নম্বর" />
+                      <input type="number" id="name16" placeholder="ভোটার এলাকার নম্বর" />
                       <input type="text" id="name17" placeholder="গ্রাম/রাস্তার নাম ও নম্বর" />
                       <input type="text" id="name18" placeholder="বাসা/হোল্ডিং নম্বর" />
-                      <input type="text" id="name19" placeholder="টেলিফোন/মোবাইল ফোন নম্বর" />
+                      <input type="tel" name="phoneNo" id="name19" maxlength="11" placeholder="টেলিফোন/মোবাইল ফোন নম্বর" />
                       <input type="text" id="name20" placeholder="ডাকঘর" />
-                      <input type="text" id="name21" placeholder="পোষ্ট কোড" />
+                      <input type="number" id="name21" maxlength="4" placeholder="পোষ্ট কোড" />
                   </div>
                   <div class="adtional">
-                      <p id="infoText">আনুসাঙ্গিক তথ্য-</p>
+                      <p id="infoText">* আনুসাঙ্গিক তথ্য-</p>
                       <input type="text" id="name22" placeholder="বর্ণিত ঠিকানায় যে সময় হইতে অবস্থান করিতেছেন" />
                       <input type="text" id="name23" placeholder="নাম স্থানান্তরের কারণ" />
                   </div>
                   <div class="identyUP">
-                      <p id="infoText">আবেদনকারীর সনাক্তকারীর তথ্য-</p>
+                      <p id="infoText">* আবেদনকারীর সনাক্তকারীর তথ্য-</p>
                       <input type="text" id="name24" placeholder="সনাক্তকারীর নাম" />
-                      <input type="text" id="name25" placeholder="সনাক্তকারীর জাতীয় পরিচয়পত্র নম্বর" />
+                      <input type="number" id="name25" maxlength="17" placeholder="সনাক্তকারীর জাতীয় পরিচয়পত্র নম্বর" />
                   </div>
             </div>
             <div class="btnSet">
                 <p id="stText">বিশেষ দ্রষ্টব্যঃ ফরম টি প্রিন্ট করার পরে নির্ধারিত নির্বাচন অফিসে জমা দিন। ধন্যবাদ..!</p>
                 <P id="clear" class="btn" href=""> Clear</P>
-                <P id="print"><input class="btn" type="submit" value="Print" onclick="passvalue()"></P>
+                <p id="print"><input class="btn" type="submit" value="Print" onclick="passvalue()"></p>
             </div>
+        </form>
         </section>
     </main>
     <footer></footer>
