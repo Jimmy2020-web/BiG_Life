@@ -102,22 +102,32 @@ printPge2.innerHTML = `
             </div>`;
 
 var activeBtn = document.querySelector("#activ");
+var inputCode = document.querySelector("#inputCode");
 var activtion = document.querySelector(".activtion");
 
-activeBtn.addEventListener("mouseleave", () => {
+inputCode.addEventListener("keyup", () => {
+    if (inputCode.value.length === 6) {
+        activeBtn.removeAttribute("disabled");
+        activeBtn.style.opacity = 1;
+    }else{
+        activeBtn.setAttribute("disabel")
+        activeBtn.style.opacity = 0.5;
+    }
+})
+
+activeBtn.addEventListener("click", () => {
     let code = "252527";
-    if (code === activeBtn.value) {
-        document.getElementById("helpText").innerHTML = "Activation Success...!"
+    if (code === inputCode.value) {
+        document.getElementById("helpText").innerHTML = "Activation Success...! <br> Call: 01761-293854"
         setTimeout(() => {
             activtion.classList.add("activtionOk");
         }, 1000);
     }else{
-        document.getElementById("helpText").innerHTML = "Wrong Activation Code..!";
+        document.getElementById("helpText").innerHTML = "Wrong Activation Code..! <br> Call: 01761-293854";
         document.querySelector(".info").classList.add("wrong");
     }
     setTimeout(() => {
         document.querySelector(".info").classList.remove("wrong");
-        document.getElementById("helpText").innerHTML = "Please Enter activation Code"
+        document.getElementById("helpText").innerHTML = "Please Enter activation Code <br> Call: 01761-293854"
     }, 3000);
 });
-
