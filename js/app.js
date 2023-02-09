@@ -49,7 +49,7 @@ const goPrev = () => {
   slideImg()
 }
 const goNext = () => {
-  if (counter<2) {
+  if (counter<3) {
     counter++
   }
   slideImg()
@@ -57,7 +57,7 @@ const goNext = () => {
 
 window.onload= function () {
   setInterval(() => {
-    if (counter<2) {
+    if (counter<3) {
       counter++
     }else if (counter > 0) {
       counter = "0";
