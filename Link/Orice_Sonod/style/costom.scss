@@ -63,82 +63,141 @@ body{
     display: none;
     justify-content: center;
     align-items: center;
-    background: linear-gradient(45deg, #297fb944, #6dd4fa49, #ffffff42);
-	background-size: 300%;
-	background-position: center;
-
-	animation: sky 30s ease-in-out infinite;
-
-	flex-direction: column;
-	gap: 1em;
-	place-items: center;
-	place-content: center;
-}
-h3 {
-	font-family: "verdana", sans-serif;
-	color: rgba(50, 50, 50, 0.95);
-	font-weight: 300;
-}
-.container {
-	display: grid;
-	grid: 1fr / 1fr;
-
-	width: clamp(100px, 50vw, 10em);
-	aspect-ratio: 1;
-}
-.wheel {
-	grid-column: 1;
-	grid-row: 1;
-
-	background-image: url(https://raw.githubusercontent.com/akaLaws/doodles/c08f1865c1b56cc896a2d1eae480574467512187/wheelnew.svg);
-
-	background-repeat: no-repeat;
-	filter: invert(15%);
-
-	opacity: 0.9;
-
-	width: 100%;
-	height: 100%;
-
-	animation: spin 5s linear infinite;
-}
-.wheel:nth-of-type(2) {
-	opacity: 0.7;
-	animation: spin-reverse 5s linear infinite;
-}
-
-@keyframes spin {
-	to {
-		transform: rotate(0deg);
-	}
-	from {
-		transform: rotate(1turn);
-	}
-}
-@keyframes spin-reverse {
-	to {
-		transform: rotate(0deg) scaleX(-1);
-	}
-	from {
-		transform: rotate(-1turn) scaleX(-1);
-	}
-}
-
-@keyframes sky {
-	0%,
-	100% {
-		background-position: center;
-	}
-	25% {
-		background-position: left;
-	}
-	70% {
-		background-position: bottom;
-	}
-	90% {
-		background-position: right;
-	}
-}
+    .loading {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 160px;
+        width: 170px;
+        position: relative;
+        margin: 0px;
+        padding: 0px;
+    }
+    .circle {
+        border: 5px transparent solid;
+        position: absolute;
+        width: 100px;
+        height: 100px;
+        border-radius: 69%;
+    }
+    .cyan {
+        top: 0px;
+        border-top: 5px cyan solid;
+        animation-delay: 4s;
+        animation: cyan 1.5s infinite;
+    }
+    /*:after element = circle at the end of each line.
+    :before element = cap in be start of each line*/
+    .cyan:after {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: cyan;
+        border-radius: 69%;
+        right: 5px;
+        top: 10px;
+        box-shadow: 0px 0px 20px cyan;
+    }
+    .cyan:before {
+        content: " ";
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        background: cyan;
+        top: 10px;
+        left: 11px;
+        border-radius: 69%;
+    }
+    .magenta {
+        left: 0px;
+        bottom: 0px;
+        border-top: 5px magenta solid;
+        animation: magenta 1.5s infinite;
+    }
+    .magenta:after {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: magenta;
+        border-radius: 69%;
+        right: 5px;
+        top: 10px;
+        box-shadow: 0px 0px 20px magenta;
+    }
+    .magenta:before {
+        content: " ";
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        background: magenta;
+        top: 10px;
+        left: 11px;
+        border-radius: 69%;
+    }
+    .yellow {
+        right: 0px;
+        bottom: 0px;
+        border-top: 5px yellow solid;
+        animation: yellow 1.5s infinite;
+    }
+    .yellow:after {
+        position: absolute;
+        content: "";
+        width: 10px;
+        height: 10px;
+        background: yellow;
+        border-radius: 69%;
+        right: 5px;
+        top: 10px;
+        box-shadow: 0px 0px 20px yellow;
+    }
+    .yellow:before {
+        content: " ";
+        width: 5px;
+        height: 5px;
+        position: absolute;
+        background: yellow;
+        top: 10px;
+        left: 11px;
+        border-radius: 69%;
+    }
+    @keyframes cyan {
+        0% {
+            transform: rotate(0deg);
+        }
+        100% {
+            transform: rotate(360deg);
+        }
+    }
+    @keyframes magenta {
+        0% {
+            transform: rotate(240deg);
+        }
+        100% {
+            transform: rotate(600deg);
+        }
+    }
+    @keyframes yellow {
+        0% {
+            transform: rotate(120deg);
+        }
+        100% {
+            transform: rotate(480deg);
+        }
+    }
+    p{
+        font-family: roboto, sans-serif;
+        color: #eee;
+        position: absolute;
+        top: 175px;
+        font-size: 1.5em;
+        letter-spacing: 0.15em;
+        font-weight: 100;
+        filter: drop-shadow(2px 2px 15px #ffffff70);
+    }
+};
 
 .dignerInfo{
     @include BoxShadwo1;
