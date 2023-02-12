@@ -82,10 +82,13 @@ function passvalue() {
 
 var printBtn = document.querySelector('#print');
 var clearBtn = document.querySelector('#clear');
+var counter = 0;
 
 printBtn.addEventListener('click', ()=> {
     document.querySelector(".popUp").style.display = "flex";
+    counter = parseInt(counter) + 1;
     prossing()
+    localStorage.setItem("srial", counter);
 });
 
 function prossing() {

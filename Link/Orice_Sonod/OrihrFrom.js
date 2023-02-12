@@ -48,12 +48,12 @@ var coment9 = localStorage.getItem("oriceInfo35");
 var applientName = localStorage.getItem("oriceInfo36");
 var applientNameFaName = localStorage.getItem("oriceInfo37");
 var cdate = localStorage.getItem("cdate");
-
+var srial = localStorage.getItem("srial");
 
 const page1 = document.querySelector(".printPge1");
 page1.innerHTML = `
 <div class="tileDiv">
-<p id="">আবেদন নম্বরঃ 0001/2022-23</p>
+<p id="">আবেদন নম্বরঃ ${srial}/2022-23</p>
 <p id="cdate">${cdate}</p>
 </div>
 বরাবর, <br>
