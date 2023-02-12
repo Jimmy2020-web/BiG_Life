@@ -91,9 +91,9 @@ printBtn.addEventListener('click', ()=> {
 function prossing() {
     setTimeout(() => {
         passvalue()
-        window.open("/Orish_From.html");
+        window.open("./Orish_From.html");
         document.querySelector(".popUp").style.display = "none";
-    }, 3000);
+    }, 4000);
 }
 
 clearBtn.addEventListener('click', () =>{
