@@ -28,7 +28,9 @@ body {
   color: yellow;
   -webkit-backdrop-filter: blur(5px);
           backdrop-filter: blur(5px);
-  display: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -421,11 +423,58 @@ input:focus {
 
 .presantAdd, .adtional, .identyUP {
   position: relative;
-  margin: 25px 0;
+  margin: 50px 0;
   border: 1px solid #a1a9b6;
   border-radius: 10px;
   padding: 10px;
   padding-top: 20px;
+  -webkit-transition: .3s ease-in-out;
+  transition: .3s ease-in-out;
+}
+
+.presantAdd:nth-child(1):hover, .adtional:nth-child(1):hover, .identyUP:nth-child(1):hover {
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(1):hover > #infoText, .adtional:nth-child(1):hover > #infoText, .identyUP:nth-child(1):hover > #infoText {
+  color: #027941;
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(2):hover, .adtional:nth-child(2):hover, .identyUP:nth-child(2):hover {
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(2):hover > #infoText, .adtional:nth-child(2):hover > #infoText, .identyUP:nth-child(2):hover > #infoText {
+  color: #027941;
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(3):hover, .adtional:nth-child(3):hover, .identyUP:nth-child(3):hover {
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(3):hover > #infoText, .adtional:nth-child(3):hover > #infoText, .identyUP:nth-child(3):hover > #infoText {
+  color: #027941;
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(4):hover, .adtional:nth-child(4):hover, .identyUP:nth-child(4):hover {
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(4):hover > #infoText, .adtional:nth-child(4):hover > #infoText, .identyUP:nth-child(4):hover > #infoText {
+  color: #027941;
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(5):hover, .adtional:nth-child(5):hover, .identyUP:nth-child(5):hover {
+  border-color: #1c9e61be;
+}
+
+.presantAdd:nth-child(5):hover > #infoText, .adtional:nth-child(5):hover > #infoText, .identyUP:nth-child(5):hover > #infoText {
+  color: #027941;
+  border-color: #1c9e61be;
 }
 
 #infoText {

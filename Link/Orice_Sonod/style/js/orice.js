@@ -82,13 +82,14 @@ function passvalue() {
 
 var printBtn = document.querySelector('#print');
 var clearBtn = document.querySelector('#clear');
-var counter = 0;
+
+window.addEventListener('load', () => {
+    document.querySelector(".popUp").style.display = "none";
+})
 
 printBtn.addEventListener('click', ()=> {
     document.querySelector(".popUp").style.display = "flex";
-    counter = parseInt(counter) + 1;
     prossing()
-    localStorage.setItem("srial", counter);
 });
 
 function prossing() {
@@ -114,3 +115,22 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbwEz03akDkBN3kF062EGB
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))
   })
+
+//   https://docs.google.com/spreadsheets/d/1TFwKqWHzA9ATUR0PQYvHlq2QPTKO2XRBIodLDKUWVDY/edit?usp=sharing
+const url = 'https://docs.google.com/spreadsheets/d/1TFwKqWHzA9ATUR0PQYvHlq2QPTKO2XRBIodLDKUWVDY/gviz/tq?';
+
+fetch(url)
+.then(res => res.text())
+.then(rep => {
+    const data = JSON.parse(rep.substr(47).slice(0,-2));
+    data.table.cols.forEach((heading=>{
+        // console.log(heading);
+    }))
+    console.log(data.table.rows.length+2);
+    var lastItem = (data.table.rows.length+2);
+    localStorage.setItem("srial",lastItem);
+    data.table.rows.forEach((main=>{
+        var lastItem = main.c;
+        // console.log(lastItem.length - 1)
+    }))
+})

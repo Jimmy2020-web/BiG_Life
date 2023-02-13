@@ -1250,4 +1250,227 @@ form input[type="submit"] {
         grid-template-columns: auto auto auto !important;
   }
 }
+
+.popUp {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000000c0;
+  color: yellow;
+  -webkit-backdrop-filter: blur(5px);
+          backdrop-filter: blur(5px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  /*:after element = circle at the end of each line.
+    :before element = cap in be start of each line*/
+}
+
+.popUp .loading {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 160px;
+  width: 170px;
+  position: relative;
+  margin: 0px;
+  padding: 0px;
+}
+
+.popUp .circle {
+  border: 5px transparent solid;
+  position: absolute;
+  width: 100px;
+  height: 100px;
+  border-radius: 69%;
+}
+
+.popUp .cyan {
+  top: 0px;
+  border-top: 5px cyan solid;
+  -webkit-animation-delay: 4s;
+          animation-delay: 4s;
+  -webkit-animation: cyan 1.5s infinite;
+          animation: cyan 1.5s infinite;
+}
+
+.popUp .cyan:after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: cyan;
+  border-radius: 69%;
+  right: 5px;
+  top: 10px;
+  -webkit-box-shadow: 0px 0px 20px cyan;
+          box-shadow: 0px 0px 20px cyan;
+}
+
+.popUp .cyan:before {
+  content: " ";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  background: cyan;
+  top: 10px;
+  left: 11px;
+  border-radius: 69%;
+}
+
+.popUp .magenta {
+  left: 0px;
+  bottom: 0px;
+  border-top: 5px magenta solid;
+  -webkit-animation: magenta 1.5s infinite;
+          animation: magenta 1.5s infinite;
+}
+
+.popUp .magenta:after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: magenta;
+  border-radius: 69%;
+  right: 5px;
+  top: 10px;
+  -webkit-box-shadow: 0px 0px 20px magenta;
+          box-shadow: 0px 0px 20px magenta;
+}
+
+.popUp .magenta:before {
+  content: " ";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  background: magenta;
+  top: 10px;
+  left: 11px;
+  border-radius: 69%;
+}
+
+.popUp .yellow {
+  right: 0px;
+  bottom: 0px;
+  border-top: 5px yellow solid;
+  -webkit-animation: yellow 1.5s infinite;
+          animation: yellow 1.5s infinite;
+}
+
+.popUp .yellow:after {
+  position: absolute;
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: yellow;
+  border-radius: 69%;
+  right: 5px;
+  top: 10px;
+  -webkit-box-shadow: 0px 0px 20px yellow;
+          box-shadow: 0px 0px 20px yellow;
+}
+
+.popUp .yellow:before {
+  content: " ";
+  width: 5px;
+  height: 5px;
+  position: absolute;
+  background: yellow;
+  top: 10px;
+  left: 11px;
+  border-radius: 69%;
+}
+
+@-webkit-keyframes cyan {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@keyframes cyan {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+
+@-webkit-keyframes magenta {
+  0% {
+    -webkit-transform: rotate(240deg);
+            transform: rotate(240deg);
+  }
+  100% {
+    -webkit-transform: rotate(600deg);
+            transform: rotate(600deg);
+  }
+}
+
+@keyframes magenta {
+  0% {
+    -webkit-transform: rotate(240deg);
+            transform: rotate(240deg);
+  }
+  100% {
+    -webkit-transform: rotate(600deg);
+            transform: rotate(600deg);
+  }
+}
+
+@-webkit-keyframes yellow {
+  0% {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  100% {
+    -webkit-transform: rotate(480deg);
+            transform: rotate(480deg);
+  }
+}
+
+@keyframes yellow {
+  0% {
+    -webkit-transform: rotate(120deg);
+            transform: rotate(120deg);
+  }
+  100% {
+    -webkit-transform: rotate(480deg);
+            transform: rotate(480deg);
+  }
+}
+
+.popUp p {
+  font-family: roboto, sans-serif;
+  color: #eee;
+  position: absolute;
+  top: 175px;
+  font-size: 1.5em;
+  letter-spacing: 0.15em;
+  font-weight: 100;
+  -webkit-filter: drop-shadow(2px 2px 15px #ffffff70);
+          filter: drop-shadow(2px 2px 15px #ffffff70);
+}
 /*# sourceMappingURL=index.css.map */

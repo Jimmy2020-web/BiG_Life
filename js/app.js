@@ -410,3 +410,6 @@ cls2.addEventListener("click", () => {
 function websiteVisits(response) {
   document.querySelector("#visitor").textContent = response.value;
 }
+window.addEventListener('load', () => {
+  document.querySelector(".popUp").style.display = "none";
+})

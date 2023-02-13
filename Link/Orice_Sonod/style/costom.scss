@@ -60,7 +60,7 @@ body{
     background: #000000c0;
     color: yellow;
     backdrop-filter: blur(5px);
-    display: none;
+    display: flex;
     justify-content: center;
     align-items: center;
     .loading {
@@ -333,11 +333,61 @@ body{
 }
 .presantAdd, .adtional, .identyUP {
     position: relative;
-    margin: 25px 0;
+    margin: 50px 0;
     border: 1px solid #a1a9b6;
     border-radius: 10px;
     padding: 10px;
     padding-top: 20px;
+    transition: .3s ease-in-out;
+    &:nth-child(1){
+        &:hover{
+            border-color: #1c9e61be;
+        }
+        &:hover>#infoText{
+            color: #027941;
+            border-color: #1c9e61be;
+        }
+    }
+    &:nth-child(2){
+        &:hover{
+            border-color: #1c9e61be;
+        }
+        &:hover>#infoText{
+            color: #027941;
+            border-color: #1c9e61be;
+        }
+        
+    }
+    &:nth-child(3){
+        &:hover{
+            border-color: #1c9e61be;
+        }
+        &:hover>#infoText{
+            color: #027941;
+            border-color: #1c9e61be;
+        }
+        
+    }
+    &:nth-child(4){
+        &:hover{
+            border-color: #1c9e61be;
+        }
+        &:hover>#infoText{
+            color: #027941;
+            border-color: #1c9e61be;
+        }
+        
+    }
+    &:nth-child(5){
+        &:hover{
+            border-color: #1c9e61be;
+        }
+        &:hover>#infoText{
+            color: #027941;
+            border-color: #1c9e61be;
+        }
+        
+    }
 }
 
 #infoText {

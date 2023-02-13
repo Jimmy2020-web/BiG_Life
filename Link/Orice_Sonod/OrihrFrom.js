@@ -8,7 +8,11 @@ function cuerntdate() {
     localStorage.setItem("cdate", cdate)
   };
   cuerntdate();
-  
+  function websiteVisits(response) {
+    var srial = response.value;
+    localStorage.setItem("srial",srial)
+  }
+
 var lateManName = localStorage.getItem("oriceInfo1");
 var lateManFatherName = localStorage.getItem("oriceInfo2");
 var lateDate = localStorage.getItem("oriceInfo3");
