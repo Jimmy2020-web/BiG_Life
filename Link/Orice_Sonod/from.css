@@ -2,8 +2,7 @@
 * {
   margin: 0;
   padding: 0;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 .tCenter {
@@ -17,19 +16,15 @@
 .underLine {
   text-decoration: underline;
   font-weight: 600;
-  padding: 0 .5rem;
+  padding: 0 0.5rem;
 }
 
 body {
-  font-family: 'Noto Serif Bengali', serif;
+  font-family: "Noto Serif Bengali", serif;
   background: #dbdada;
   font-size: 16px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 
 .printPge1, .printPge2 {
@@ -39,17 +34,13 @@ body {
   padding: 0 5rem;
   margin: 25px 0;
 }
-
 .printPge1 .local_EC_Office, .printPge1 .address, .printPge1 .address2, .printPge2 .local_EC_Office, .printPge2 .address, .printPge2 .address2 {
   padding-left: 3rem;
 }
 
 .tileDiv {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  justify-content: space-around;
 }
 
 .printPge1 {
@@ -68,26 +59,19 @@ body {
 .table {
   border: 1px solid #000;
 }
-
 .table p {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 100px auto 100px 100px;
-      grid-template-columns: 100px auto 100px 100px;
+  grid-template-columns: 100px auto 100px 100px;
 }
-
 .table p:nth-child(1) {
   border-bottom: 1px solid #000;
   text-align: center;
 }
-
 .table p span {
   padding: 2px 4px;
   border-left: 1px solid #000;
   padding-left: 20px;
 }
-
 .table p span:nth-child(1) {
   border-left: none;
-}
-/*# sourceMappingURL=from.css.map */
+}/*# sourceMappingURL=from.css.map */
