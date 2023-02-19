@@ -88,8 +88,30 @@ window.addEventListener('load', () => {
 })
 
 printBtn.addEventListener('click', ()=> {
-    document.querySelector(".popUp").style.display = "flex";
-    prossing()
+    if (oriceInfo1.value == "") {
+        alert("মৃত ব্যক্তির নাম লিখুন..!   😡");
+    } else if(oriceInfo2.value == "") {
+        alert("মৃত ব্যক্তির পিতার নাম লিখুন..!   😡")
+    } else if(oriceInfo4.value == "") {
+        alert("ঠিকানায় জেলার নাম লিখুন..!   😡")
+    } else if(oriceInfo5.value == "") {
+        alert("ঠিকানায় উপজেলার নাম লিখুন..!   😡")
+    } else if(oriceInfo38.value == "") {
+        alert("ঠিকানায় ইউনিয়নের নাম লিখুন..!   😡")
+    } else if(oriceInfo6.value == "") {
+        alert("ঠিকানায় গ্রামের নাম লিখুন..!   😡")
+    } else if(oriceInfo7.value == "") {
+        alert("ঠিকানায় ডাকঘরের নাম লিখুন..!   😡")
+    } else if(oriceInfo9.value == "") {
+        alert("ওয়ারিশ গণের নাম লিখুন..!   😡")
+    } else if(oriceInfo36.value == "") {
+        alert("আবেদনকারীর নাম লিখুন..!   😡")
+    } else if(oriceInfo37.value == "") {
+        alert("আবেদনকারীর পিতার নাম লিখুন..!   😡")
+    } else {
+        document.querySelector(".popUp").style.display = "flex";
+        prossing();
+    }
 });
 
 function prossing() {
@@ -103,7 +125,6 @@ function prossing() {
 clearBtn.addEventListener('click', () =>{
     var inputs = document.querySelectorAll('input');
     inputs.forEach(input => input.value = "");
-    window.location.reload(true);
 });
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwEz03akDkBN3kF062EGBqpHUha8JDikLusIZbsYeSKF_ZkhoUWsYfsTWLsJSCjK_O7/exec'
@@ -111,10 +132,32 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbwEz03akDkBN3kF062EGB
 
   form.addEventListener('submit', e => {
     e.preventDefault()
+    if (oriceInfo1.value == "") {
+        alert("মৃত ব্যক্তির নাম লিখুন..!   😡");
+    } else if(oriceInfo2.value == "") {
+        alert("মৃত ব্যক্তির পিতার নাম লিখুন..!   😡")
+    } else if(oriceInfo4.value == "") {
+        alert("ঠিকানায় জেলার নাম লিখুন..!   😡")
+    } else if(oriceInfo5.value == "") {
+        alert("ঠিকানায় উপজেলার নাম লিখুন..!   😡")
+    } else if(oriceInfo38.value == "") {
+        alert("ঠিকানায় ইউনিয়নের নাম লিখুন..!   😡")
+    } else if(oriceInfo6.value == "") {
+        alert("ঠিকানায় গ্রামের নাম লিখুন..!   😡")
+    } else if(oriceInfo7.value == "") {
+        alert("ঠিকানায় ডাকঘরের নাম লিখুন..!   😡")
+    } else if(oriceInfo9.value == "") {
+        alert("ওয়ারিশ গণের নাম লিখুন..!   😡")
+    } else if(oriceInfo36.value == "") {
+        alert("আবেদনকারীর নাম লিখুন..!   😡")
+    } else if(oriceInfo37.value == "") {
+        alert("আবেদনকারীর পিতার নাম লিখুন..!   😡")
+    }else{
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => console.log('Success!', response))
       .catch(error => console.error('Error!', error.message))
-  })
+    }
+});
 
 //   https://docs.google.com/spreadsheets/d/1TFwKqWHzA9ATUR0PQYvHlq2QPTKO2XRBIodLDKUWVDY/edit?usp=sharing
 const url = 'https://docs.google.com/spreadsheets/d/1TFwKqWHzA9ATUR0PQYvHlq2QPTKO2XRBIodLDKUWVDY/gviz/tq?';
