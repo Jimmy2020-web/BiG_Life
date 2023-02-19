@@ -400,22 +400,13 @@ body{
     background: white;
 }
 
-.notify {
-    border: none;
-    outline: none;
-    background: #262626;
-    padding: 15px;
-    border-radius: 30px;
-    font-size: 22px;
+
+.popup {
     cursor: pointer;
-    color: #ffffff;
-  }
-  
-  .popup {
     position: fixed;
     bottom: -60px;
     right: 10px;
-    background: #008b61;
+    background: orangered;
     padding: 15px;
     font-size: 15px;
     font-family: Noto Serif Bengali;
