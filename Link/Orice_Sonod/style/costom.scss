@@ -406,13 +406,12 @@ body{
     position: fixed;
     bottom: -60px;
     right: 10px;
-    background: orangered;
-    padding: 15px;
+    background: #ffffff;
     font-size: 15px;
     font-family: Noto Serif Bengali;
-    color: #ffffff;
-    border-radius: 14px;
-    animation: popup 5s ease-in-out;
+    color: $bodyTextColor;
+    animation: popup 4s ease-in-out;
+    @include BoxShadwo1;
   }
   
   @keyframes popup {

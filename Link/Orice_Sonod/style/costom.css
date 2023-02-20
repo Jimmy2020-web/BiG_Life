@@ -369,13 +369,15 @@ input:focus {
   position: fixed;
   bottom: -60px;
   right: 10px;
-  background: orangered;
-  padding: 15px;
+  background: #ffffff;
   font-size: 15px;
   font-family: Noto Serif Bengali;
-  color: #ffffff;
-  border-radius: 14px;
-  animation: popup 5s ease-in-out;
+  color: #262833;
+  animation: popup 4s ease-in-out;
+  padding: 1.5rem;
+  border: 1px solid #d1d9e6;
+  border-radius: 0.55rem;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
 }
 
 @keyframes popup {
