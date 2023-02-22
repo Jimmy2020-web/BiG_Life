@@ -116,12 +116,14 @@ printBtn.addEventListener('click', ()=> {
 
 function prossing() {
     setTimeout(() => {
+        var audio = new Audio();
+        audio.src = "correct.mp3";
+        audio.play();
         passvalue()
         window.open("./Orish_From.html");
         document.querySelector(".popUp").style.display = "none";
     }, 4000);
 }
-
 clearBtn.addEventListener('click', () =>{
     var inputs = document.querySelectorAll('input');
     inputs.forEach(input => input.value = "");
@@ -159,7 +161,6 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbwEz03akDkBN3kF062EGB
     }
 });
 
-//   https://docs.google.com/spreadsheets/d/1TFwKqWHzA9ATUR0PQYvHlq2QPTKO2XRBIodLDKUWVDY/edit?usp=sharing
 const url = 'https://docs.google.com/spreadsheets/d/1TFwKqWHzA9ATUR0PQYvHlq2QPTKO2XRBIodLDKUWVDY/gviz/tq?';
 
 fetch(url)
@@ -167,17 +168,14 @@ fetch(url)
 .then(rep => {
     const data = JSON.parse(rep.substr(47).slice(0,-2));
     data.table.cols.forEach((heading=>{
-        // console.log(heading);
     }))
     console.log(data.table.rows.length);
     var lastItem = (data.table.rows.length);
     localStorage.setItem("srial",lastItem);
     data.table.rows.forEach((main=>{
         var lastItem = main.c;
-        // console.log(lastItem.length - 1)
     }))
 });
-
 
 function createPopup(text) {
     let el = document.createElement('DIV');
