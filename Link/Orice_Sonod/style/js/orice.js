@@ -29,7 +29,7 @@ function passvalue() {
     var oriceInfo27 = document.querySelector('#oriceInfo27').value;
     var oriceInfo28 = document.querySelector('#oriceInfo28').value;
     var oriceInfo29 = document.querySelector('#oriceInfo29').value;
-    var oriceInfo30 = document.querySelector('#oriceInfo23').value;
+    var oriceInfo30 = document.querySelector('#oriceInfo30').value;
     var oriceInfo31 = document.querySelector('#oriceInfo31').value;
     var oriceInfo32 = document.querySelector('#oriceInfo32').value;
     var oriceInfo33 = document.querySelector('#oriceInfo33').value;
