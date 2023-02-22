@@ -169,8 +169,8 @@ fetch(url)
     data.table.cols.forEach((heading=>{
         // console.log(heading);
     }))
-    console.log(data.table.rows.length+1);
-    var lastItem = (data.table.rows.length+1);
+    console.log(data.table.rows.length);
+    var lastItem = (data.table.rows.length);
     localStorage.setItem("srial",lastItem);
     data.table.rows.forEach((main=>{
         var lastItem = main.c;
