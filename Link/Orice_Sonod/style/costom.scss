@@ -422,3 +422,15 @@ body{
       bottom: -60px;
     }
   }
+
+#output{
+    position: fixed;
+    top: 110px;
+    right: -10px;
+    @include BoxShadwo1;
+    width: 170px;
+    padding: 8px 15px !important;
+    border-top-left-radius: 20px;
+    border-bottom-left-radius: 20px;
+    cursor: pointer;
+}

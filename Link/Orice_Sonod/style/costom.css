@@ -387,4 +387,18 @@ input:focus {
   100% {
     bottom: -60px;
   }
+}
+#output {
+  position: fixed;
+  top: 110px;
+  right: -10px;
+  padding: 1.5rem;
+  border: 1px solid #d1d9e6;
+  border-radius: 0.55rem;
+  box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+  width: 170px;
+  padding: 8px 15px !important;
+  border-top-left-radius: 20px;
+  border-bottom-left-radius: 20px;
+  cursor: pointer;
 }/*# sourceMappingURL=costom.css.map */

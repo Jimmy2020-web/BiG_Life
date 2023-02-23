@@ -161,21 +161,35 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbwEz03akDkBN3kF062EGB
     }
 });
 
+setInterval(() => {
 const url = 'https://docs.google.com/spreadsheets/d/1TFwKqWHzA9ATUR0PQYvHlq2QPTKO2XRBIodLDKUWVDY/gviz/tq?';
+const output = document.querySelector('#output');
 
 fetch(url)
 .then(res => res.text())
 .then(rep => {
     const data = JSON.parse(rep.substr(47).slice(0,-2));
-    data.table.cols.forEach((heading=>{
-    }))
-    console.log(data.table.rows.length);
+    // const row = document.createElement('tr');
+    // output.append(row);
+    // data.table.cols.forEach((heading=>{
+    //     const cell = document.createElement('td');
+    //     // cell.textContent = heading.label;
+    //     // row.append(cell);
+    // }))
     var lastItem = (data.table.rows.length);
     localStorage.setItem("srial",lastItem);
-    data.table.rows.forEach((main=>{
-        var lastItem = main.c;
-    }))
+    output.innerHTML = `আবেদন ফরম নং :- ${lastItem}`;
+    // data.table.rows.forEach((main=>{
+    //     const container = document.createElement('tr');
+    //     output.append(container);
+    //     main.c.forEach((ele) => {
+    //         const cell = document.createElement('td');
+    //         cell.textContent = ele.v;
+    //         container.append(cell);
+    //     })
+    // }))
 });
+}, 1000);
 
 function createPopup(text) {
     let el = document.createElement('DIV');
