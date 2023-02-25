@@ -129,6 +129,9 @@ clearBtn.addEventListener('click', () =>{
     inputs.forEach(input => input.value = "");
 });
 
+var alartAudio = new Audio();
+alartAudio.src = 'energy-90321.mp3';
+
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwEz03akDkBN3kF062EGBqpHUha8JDikLusIZbsYeSKF_ZkhoUWsYfsTWLsJSCjK_O7/exec'
   const form = document.forms['oriceData']
 
@@ -136,24 +139,34 @@ const scriptURL = 'https://script.google.com/macros/s/AKfycbwEz03akDkBN3kF062EGB
     e.preventDefault()
     if (oriceInfo1.value == "") {
         createPopup('মৃত ব্যক্তির নাম লিখুন..!   😡');
+        alartAudio.play();
     } else if(oriceInfo2.value == "") {
-        createPopup('মৃত ব্যক্তির পিতার নাম লিখুন..!   😡')
+        createPopup('মৃত ব্যক্তির পিতার নাম লিখুন..!   😡');
+        alartAudio.play();
     } else if(oriceInfo4.value == "") {
         createPopup('ঠিকানায় জেলার নাম লিখুন..!   😡');
+        alartAudio.play();
     } else if(oriceInfo5.value == "") {
         createPopup('ঠিকানায় উপজেলার নাম লিখুন..!   😡');
+        alartAudio.play();
     } else if(oriceInfo38.value == "") {
         createPopup('ঠিকানায় ইউনিয়নের নাম লিখুন..!   😡');
+        alartAudio.play();
     } else if(oriceInfo6.value == "") {
         createPopup('ঠিকানায় গ্রামের নাম লিখুন..!   😡');
+        alartAudio.play();
     } else if(oriceInfo7.value == "") {
         createPopup('ঠিকানায় ডাকঘরের নাম লিখুন..!   😡');
+        alartAudio.play();
     } else if(oriceInfo9.value == "") {
         createPopup('ওয়ারিশ গণের নাম লিখুন..!   😡');
+        alartAudio.play();
     } else if(oriceInfo36.value == "") {
         createPopup('আবেদনকারীর নাম লিখুন..!   😡');
+        alartAudio.play();
     } else if(oriceInfo37.value == "") {
         createPopup('আবেদনকারীর পিতার নাম লিখুন..!   😡');
+        alartAudio.play();
     }else{
     fetch(scriptURL, { method: 'POST', body: new FormData(form)})
       .then(response => console.log('Success!', response))
