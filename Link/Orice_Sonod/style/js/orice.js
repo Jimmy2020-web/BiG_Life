@@ -122,7 +122,7 @@ function prossing() {
         passvalue()
         window.open("./Orish_From.html");
         document.querySelector(".popUp").style.display = "none";
-    }, 4000);
+    }, 1000);
 }
 clearBtn.addEventListener('click', () =>{
     var inputs = document.querySelectorAll('input');
@@ -202,7 +202,7 @@ fetch(url)
     //     })
     // }))
 });
-}, 1000);
+}, 1500);
 
 function createPopup(text) {
     let el = document.createElement('DIV');
