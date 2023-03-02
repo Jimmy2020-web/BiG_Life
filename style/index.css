@@ -1161,7 +1161,6 @@ form input[type=submit] {
   grid-template-columns: 200px auto 550px;
   align-items: center;
   border-radius: 0.8rem;
-  font-family: "Noto Serif Bengali" !important;
 }
 .dateCrunt .wraper, .dateCrunt .dowa {
   display: grid;
