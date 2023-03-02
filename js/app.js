@@ -413,3 +413,54 @@ function websiteVisits(response) {
 window.addEventListener('load', () => {
   document.querySelector(".popUp").style.display = "none";
 })
+
+// Eid-Ul Fitue-2023
+var target_date = new Date("Mar 23, 2023 24:00:00").getTime();
+
+var days, hours, minutes, seconds; // variables for time units
+
+var countdown = document.getElementById("counter"); // get tag element
+
+getCountdown();
+
+setInterval(function () { getCountdown(); }, 1000);
+
+function getCountdown(){
+
+	// find the amount of "seconds" between now and target
+	var current_date = new Date().getTime();
+	var seconds_left = (target_date - current_date) / 1000;
+
+	days = pad( parseInt(seconds_left / 86400) );
+	seconds_left = seconds_left % 86400;
+		 
+	hours = pad( parseInt(seconds_left / 3600) );
+	seconds_left = seconds_left % 3600;
+		  
+	minutes = pad( parseInt(seconds_left / 60) );
+	seconds = pad( parseInt( seconds_left % 60 ) );
+
+	// format countdown string + set tag value
+	countdown.innerHTML = `<span> ${days} </span> <span> ${hours} </span><span> ${minutes}</span><span> ${seconds}</span>`; 
+}
+
+function pad(n) {
+	return (n < 10 ? '0' : '') + n;
+}
+months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December');
+
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+
+const todayEn = document.querySelector(".dateEn");
+todayEn.innerHTML = `
+<h2>${yyyy-583} হিজরী</h2>
+        <p>
+          <span>${dd}</span>
+          <span>${mm}</span>
+        </p>
+        <p>Wed</p>
+`;
+
