@@ -1154,28 +1154,43 @@ form input[type=submit] {
 }
 
 .dateCrunt {
+  position: relative;
   color: #ffffff;
   background: #00556A;
   width: 100%;
   display: grid;
-  grid-template-columns: 200px auto 550px;
+  grid-template-columns: 150px auto 550px;
   align-items: center;
   border-radius: 0.8rem;
 }
-.dateCrunt .wraper, .dateCrunt .dowa {
+.dateCrunt .ramjan {
+  position: absolute;
+  left: 305px;
+  bottom: 0.3rem;
+  font-size: 2rem;
+  color: #ffffff;
+  text-shadow: 2px 2px 5px #000000;
+}
+.dateCrunt .wraper {
+  font-size: 1.5rem;
+  padding: 1rem;
+  text-align: center;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px #000;
+}
+.dateCrunt .dowa {
   display: grid;
   grid-template-columns: auto auto;
   text-align: center;
   padding: 1rem;
-}
-.dateCrunt .dowa {
   gap: 1rem;
+  text-shadow: 2px 2px 5px #000;
 }
 .dateCrunt .countDown {
-  background: #FFFFFF;
+  background: #00556A;
   height: 130px;
   display: grid;
-  align-items: center;
+  align-items: start;
   border-radius: 0.3rem;
 }
 .dateCrunt .countDown #counter {
@@ -1185,12 +1200,28 @@ form input[type=submit] {
   display: flex;
 }
 .dateCrunt .countDown #counter span {
-  background: #00556A;
+  background: #01647c;
   padding: 0.7rem 1rem;
   font-size: 2.5rem;
   font-weight: bold;
   margin: 0 0.8rem;
   border-radius: 0.3rem;
-  border: 1px solid #002831;
+  box-shadow: 3px 3px 8px #002a35;
   color: #fff;
+  text-shadow: 2px 2px 5px #002a35;
+}
+
+@media only screen and (max-width: 650px) {
+  .dateCrunt {
+    display: block;
+  }
+  .dateCrunt .ramjan {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    text-align: center;
+  }
+  .dateCrunt .dowa {
+    display: block;
+  }
 }/*# sourceMappingURL=index.css.map */

@@ -449,17 +449,18 @@ function pad(n) {
 }
 
 var today = new Date();
-let dd = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'][new Date().getDay()]
-var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+let dd = ['রবিবার', 'সোমবার', 'মঙ্গলবার', 'বুধবার', 'বৃহস্পতিবার', 'শুক্রবার', 'শনিবার'][new Date().getDay()]
+let fullMonth = ['জানু', 'ফেব্রু', 'মার্চ', 'এপ্রিল',][new Date().getMonth()]
+
 var yyyy = today.getFullYear();
 
 const todayEn = document.querySelector(".dateEn");
 todayEn.innerHTML = `
-<h2>${yyyy-583} হিজরী</h2>
+<p>${yyyy}</p>
         <p>
-          <span>${dd}</span>
-          <span>${mm}</span>
+          <span>${today.getDate()}</span>
+          <span>${fullMonth}</span>
         </p>
-        <p>Wed</p>
+        <p>${dd}</p>
 `;
 
