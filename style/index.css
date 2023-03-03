@@ -1211,6 +1211,28 @@ form input[type=submit] {
   text-shadow: 2px 2px 5px #002a35;
 }
 
+#iftPupup {
+  position: fixed;
+  bottom: 5px;
+  right: 5px;
+  box-shadow: 0px 2px 4px #000000;
+  color: orangered;
+  background: #fff;
+  text-align: center;
+  width: 130px;
+  border-radius: 8px;
+}
+#iftPupup #ifTit {
+  border-radius: 8px;
+  background: orangered;
+  color: #fff;
+  font-weight: 500;
+  padding: 5px;
+}
+#iftPupup #fixIft, #iftPupup #iftTime {
+  line-height: 30px;
+}
+
 @media only screen and (max-width: 650px) {
   .dateCrunt {
     display: block;

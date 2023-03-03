@@ -464,3 +464,42 @@ todayEn.innerHTML = `
         </p>
         <p>${dd}</p>
 `;
+
+const iftDay = Intl.DateTimeFormat('en', {day: 'numeric'}).format(Date.now());
+const iftMonth = Intl.DateTimeFormat('en', {month: 'long'}).format(Date.now());
+
+var iftLocal = iftMonth+iftDay;
+
+var iftTime = {
+  March3:"6:11 PM",
+  March24:"6:12 PM",
+  March25:"6:12 PM",
+  Marchch3:"6:13 PM",
+  March27:"6:13 PM",
+  March28:"6:13 PM",
+  March29:"6:14 PM",
+  March30:"6:14 PM",
+}
+
+var setIfter = iftTimeCount(iftLocal);
+function iftTimeCount(ift) {
+  return iftTime[ift];
+}
+document.querySelector("#fixIft").innerHTML = "সন্ধ্যা " + setIfter;
+
+setInterval(() => {
+  var terget_time = new Date( iftMonth + iftDay +", 2023 " + setIfter).getTime();
+  var Ctime = new Date().getTime();
+  var leftiftS = (terget_time - Ctime);
+
+  var _second = 1000,
+    _minut = _second * 60,
+    _hour = _minut * 60,
+    _day = _hour * 24;
+
+  var hourSet = Math.floor((leftiftS % _day) / _hour);
+  var minutSet = Math.floor((leftiftS % _hour) / _minut);
+  var secondSet = Math.floor((leftiftS % _minut) / _second);
+  const iftTime2 = document.querySelector("#iftTime");
+  iftTime2.innerHTML = `${hourSet}:H ${minutSet}:M ${secondSet}:S`;
+}, 1000);
