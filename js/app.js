@@ -450,17 +450,17 @@ function pad(n) {
 
 var today = new Date();
 let dd = ['রবিবার', 'সোমবার', 'মঙ্গলবার', 'বুধবার', 'বৃহস্পতিবার', 'শুক্রবার', 'শনিবার'][new Date().getDay()]
-let fullMonth = ['জানু', 'ফেব্রু', 'মার্চ', 'এপ্রিল',][new Date().getMonth()]
 
-var yyyy = today.getFullYear();
+const ArDateDay = Intl.DateTimeFormat('en-TN-u-ca-islamic', {day: 'numeric'}).format(Date.now());
+const ArDateMonth= Intl.DateTimeFormat('en-TN-u-ca-islamic', {month: 'long'}).format(Date.now());
+const ArDateYear = Intl.DateTimeFormat('en-TN-u-ca-islamic', {year: 'numeric'}).format(Date.now());
 
 const todayEn = document.querySelector(".dateEn");
 todayEn.innerHTML = `
-<p>${yyyy}</p>
+<p>${ArDateYear}</p>
         <p>
-          <span>${today.getDate()}</span>
-          <span>${fullMonth}</span>
+          <span>${ArDateDay}</span>
+          <span>${ArDateMonth}</span>
         </p>
         <p>${dd}</p>
 `;
-
