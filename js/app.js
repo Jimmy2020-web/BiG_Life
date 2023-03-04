@@ -471,14 +471,36 @@ const iftMonth = Intl.DateTimeFormat('en', {month: 'long'}).format(Date.now());
 var iftLocal = iftMonth+iftDay;
 
 var iftTime = {
-  March3:"6:11 PM",
-  March24:"6:12 PM",
+  March23:"6:11 PM",
+  March4:"6:12 PM",
   March25:"6:12 PM",
   Marchch3:"6:13 PM",
   March27:"6:13 PM",
   March28:"6:13 PM",
   March29:"6:14 PM",
   March30:"6:14 PM",
+  March31:"6:14 PM",
+  April1:"6:15 PM",
+  April2:"6:15 PM",
+  April3:"6:15 PM",
+  April4:"6:16 PM",
+  April5:"6:16 PM",
+  April6:"6:17 PM",
+  April7:"6:17 PM",
+  April8:"6:17 PM",
+  April9:"6:18 PM",
+  April10:"6:18 PM",
+  April11:"6:19 PM",
+  April12:"6:19 PM",
+  April13:"6:19 PM",
+  April14:"6:20 PM",
+  April15:"6:20 PM",
+  April16:"6:20 PM",
+  April17:"6:21 PM",
+  April18:"6:21 PM",
+  April19:"6:22 PM",
+  April20:"6:22 PM",
+  April21:"6:23 PM",
 }
 
 var setIfter = iftTimeCount(iftLocal);

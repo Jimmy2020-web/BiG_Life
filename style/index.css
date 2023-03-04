@@ -1216,18 +1216,21 @@ form input[type=submit] {
   bottom: 5px;
   right: 5px;
   box-shadow: 0px 2px 4px #000000;
-  color: orangered;
+  color: #050505;
   background: #fff;
   text-align: center;
   width: 130px;
-  border-radius: 8px;
+  border-radius: 14px;
+  font-weight: bold;
 }
 #iftPupup #ifTit {
-  border-radius: 8px;
+  border-radius: 14px 14px 0px 0px;
   background: orangered;
   color: #fff;
-  font-weight: 500;
   padding: 5px;
+}
+#iftPupup .dis {
+  border-radius: 0px 0px 14px 14px !important;
 }
 #iftPupup #fixIft, #iftPupup #iftTime {
   line-height: 30px;
