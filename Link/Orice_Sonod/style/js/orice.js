@@ -1,4 +1,12 @@
-
+function cuerntdate() {
+    let today = new Date();
+    let day = `${today.getDate() < 10 ? "0" : ""}${today.getDate()}`;
+    let month = `${(today.getMonth() + 1) < 10 ? "0" : ""}${today.getMonth() + 1}`;
+    let year = today.getFullYear();
+    let cdate = `${day}/${month}/${year} ইং।`;
+    document.getElementById('dateToday').value = cdate;
+  };
+  cuerntdate();
 function passvalue() {
     var oriceInfo1 = document.querySelector('#oriceInfo1').value;
     var oriceInfo2 = document.querySelector('#oriceInfo2').value;
