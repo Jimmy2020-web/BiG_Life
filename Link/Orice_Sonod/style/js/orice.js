@@ -199,7 +199,7 @@ fetch(url)
     // }))
     var lastItem = (data.table.rows.length);
     localStorage.setItem("srial",lastItem);
-    output.innerHTML = `আবেদন ফরম নং :- ${lastItem}`;
+    output.innerHTML = `আবেদন ফরম নং :- ${lastItem} <span class="blink"></span>`;
     // data.table.rows.forEach((main=>{
     //     const container = document.createElement('tr');
     //     output.append(container);
@@ -212,6 +212,13 @@ fetch(url)
 });
 }, 1500);
 
+window.addEventListener("online", () => {
+    createPopup("Online")
+});
+window.addEventListener("offline", () => {
+    createPopup("No Internet")
+});
+
 function createPopup(text) {
     let el = document.createElement('DIV');
     el.classList.add('popup');
@@ -221,3 +228,4 @@ function createPopup(text) {
       el.remove();
     },4000);
 };
+
