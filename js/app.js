@@ -449,10 +449,11 @@ function pad(n) {
 }
 
 var today = new Date();
-let dd = ['রবিবার', 'সোমবার', 'মঙ্গলবার', 'বুধবার', 'বৃহস্পতিবার', 'শুক্রবার', 'শনিবার'][new Date().getDay()]
+var dd = ['রবিবার', 'সোমবার', 'মঙ্গলবার', 'বুধবার', 'বৃহস্পতিবার', 'শুক্রবার', 'শনিবার'][new Date().getDay()]
+const MonthAr = Intl.DateTimeFormat('en-TN-u-ca-islamic', {month: 'numeric'}).format(Date.now());
+var ArDateMonth = ['মহরম', 'সফর', 'রবিউল আউয়াল', 'রবিউস সানি', 'জমাদিউল আউয়াল', 'জমাদিউস সানি', ' রজব', 'শাবান', 'রমজান', "শওয়াল", 'জিলক্বদ', 'জিলহজ্জ'][MonthAr-1]
 
 const ArDateDay = Intl.DateTimeFormat('en-TN-u-ca-islamic', {day: 'numeric'}).format(Date.now());
-const ArDateMonth= Intl.DateTimeFormat('en-TN-u-ca-islamic', {month: 'long'}).format(Date.now());
 const ArDateYear = Intl.DateTimeFormat('en-TN-u-ca-islamic', {year: 'numeric'}).format(Date.now());
 
 const todayEn = document.querySelector(".dateEn");
@@ -472,7 +473,7 @@ var iftLocal = iftMonth+iftDay;
 
 var iftTime = {
   March23:"6:11 PM",
-  March4:"6:12 PM",
+  March24:"6:12 PM",
   March25:"6:12 PM",
   Marchch3:"6:13 PM",
   March27:"6:13 PM",
