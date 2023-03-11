@@ -141,34 +141,43 @@ var alartAudio = new Audio();
 alartAudio.src = 'energy-90321.mp3';
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwEz03akDkBN3kF062EGBqpHUha8JDikLusIZbsYeSKF_ZkhoUWsYfsTWLsJSCjK_O7/exec'
-  const form = document.forms['oriceData']
-
+  const form = document.forms['oriceData'];
+  var height = window.innerHeight;
+    console.log(height);
   form.addEventListener('submit', e => {
     e.preventDefault()
     if (oriceInfo1.value == "") {
         createPopup('মৃত ব্যক্তির নাম লিখুন..!   😡');
         alartAudio.play();
+        window.scrollTo({ top: 200, behavior: 'smooth' });
     } else if(oriceInfo2.value == "") {
         createPopup('মৃত ব্যক্তির পিতার নাম লিখুন..!   😡');
         alartAudio.play();
+        window.scrollTo({ top: 200, behavior: 'smooth' });
     } else if(oriceInfo4.value == "") {
         createPopup('ঠিকানায় জেলার নাম লিখুন..!   😡');
         alartAudio.play();
+        window.scrollTo({ top: 400, behavior: 'smooth' });
     } else if(oriceInfo5.value == "") {
         createPopup('ঠিকানায় উপজেলার নাম লিখুন..!   😡');
         alartAudio.play();
+        window.scrollTo({ top: 400, behavior: 'smooth' });
     } else if(oriceInfo38.value == "") {
         createPopup('ঠিকানায় ইউনিয়নের নাম লিখুন..!   😡');
         alartAudio.play();
+        window.scrollTo({ top: 400, behavior: 'smooth' });
     } else if(oriceInfo6.value == "") {
         createPopup('ঠিকানায় গ্রামের নাম লিখুন..!   😡');
         alartAudio.play();
+        window.scrollTo({ top: 400, behavior: 'smooth' });
     } else if(oriceInfo7.value == "") {
         createPopup('ঠিকানায় ডাকঘরের নাম লিখুন..!   😡');
         alartAudio.play();
+        window.scrollTo({ top: 400, behavior: 'smooth' });
     } else if(oriceInfo9.value == "") {
         createPopup('ওয়ারিশ গণের নাম লিখুন..!   😡');
         alartAudio.play();
+        window.scrollTo({ top: 700, behavior: 'smooth' });
     } else if(oriceInfo36.value == "") {
         createPopup('আবেদনকারীর নাম লিখুন..!   😡');
         alartAudio.play();
