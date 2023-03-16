@@ -4,7 +4,7 @@ function cuerntdate() {
     let month = `${(today.getMonth() + 1) < 10 ? "0" : ""}${today.getMonth() + 1}`;
     let year = today.getFullYear();
     let cdate = `${day}/${month}/${year} ইং।`;
-    document.getElementById('dateToday').value = cdate;
+    document.getElementById('cruntDate').innerText = cdate;
   };
   cuerntdate();
 function passvalue() {

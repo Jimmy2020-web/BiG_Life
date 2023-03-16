@@ -232,16 +232,24 @@ body {
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: grid;
-  grid-template-columns: auto auto auto;
-  font-weight: 500;
-  font-size: 35px;
+  grid-template-columns: auto auto;
+  font-weight: 700;
+  font-size: 40px;
+  position: relative;
+  margin-bottom: 35px;
 }
 #usre_ui h2 img {
-  width: 60px;
+  width: 150px;
+  position: absolute;
+  left: -10px;
 }
 #usre_ui .btnSet {
   display: flex;
   justify-content: flex-end;
+}
+
+#cruntDate {
+  font-size: 25px;
 }
 
 .protionBox {
