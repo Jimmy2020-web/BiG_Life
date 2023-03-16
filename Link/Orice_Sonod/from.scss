@@ -18,17 +18,25 @@
 }
 body{
     font-family: 'Noto Serif Bengali', serif;
-    background: #dbdada;
+    background: #ffffff;
     font-size: 16px;
     display: flex;
     justify-content: center;
+    -webkit-print-color-adjust:exact !important;
+    print-color-adjust:exact !important;
 }
 
+#printingPge{
+    background: url(./style/image/KUP.png);
+    background-position: center;
+    background-size: 70%;
+    background-repeat: no-repeat;
+}
 
 .printPge1, .printPge2{
     width: 8.3in;
     height: 10in;
-    background: #ffffff;
+    background: #ffffffd5;
     padding: 0 5rem;
     margin: 25px 0;
     .local_EC_Office, .address, .address2{
