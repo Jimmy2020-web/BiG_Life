@@ -17,6 +17,10 @@ body {
   position: relative;
 }
 
+#cDate2 {
+  display: none;
+}
+
 .popUp {
   position: fixed;
   width: 100%;

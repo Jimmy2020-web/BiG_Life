@@ -5,6 +5,7 @@ function cuerntdate() {
     let year = today.getFullYear();
     let cdate = `${day}/${month}/${year} ইং।`;
     document.getElementById('cruntDate').innerText = cdate;
+    document.getElementById('cDate2').value = cdate;
   };
   cuerntdate();
 function passvalue() {
@@ -135,6 +136,7 @@ function prossing() {
 clearBtn.addEventListener('click', () =>{
     var inputs = document.querySelectorAll('input');
     inputs.forEach(input => input.value = "");
+    localStorage.clear();
 });
 
 var alartAudio = new Audio();

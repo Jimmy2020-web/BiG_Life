@@ -43,6 +43,9 @@ body {
   font-weight: bold;
   font-size: 1.5rem;
 }
+.navWarp .logo img {
+  width: 40px;
+}
 .navWarp .hamburger {
   font-size: 1.5rem;
   display: none;

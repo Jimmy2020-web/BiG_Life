@@ -526,3 +526,15 @@ setInterval(() => {
   const iftTime2 = document.querySelector("#iftTime");
   iftTime2.innerHTML = `${hourSet}:H ${minutSet}:M ${secondSet}:S`;
 }, 1000);
+
+// const os = require('os');
+
+// const networkInterfaces = os.networkInterfaces();
+// const interface = networkInterfaces['eth0']; // or 'en0' for macOS
+
+// if (interface) {
+//   const macAddress = interface[0].mac;
+//   console.log('MAC address:', macAddress);
+// } else {
+//   console.error('Interface not found');
+// }
