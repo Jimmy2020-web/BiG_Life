@@ -460,7 +460,7 @@ const todayEn = document.querySelector(".dateEn");
 todayEn.innerHTML = `
 <p>${ArDateYear}</p>
         <p>
-          <span>${ArDateDay}</span>
+          <span>${(ArDateDay)}</span>
           <span>${ArDateMonth}</span>
         </p>
         <p>${dd}</p>
@@ -472,7 +472,7 @@ const iftMonth = Intl.DateTimeFormat('en', {month: 'long'}).format(Date.now());
 var iftLocal = iftMonth+iftDay;
 
 var iftTime = {
-  March10:"6:20 PM",
+  March24:"6:20 PM",
   March25:"6:21 PM",
   March26:"6:21 PM",
   March27:"6:22 PM",

@@ -144,8 +144,7 @@ alartAudio.src = 'energy-90321.mp3';
 
 const scriptURL = 'https://script.google.com/macros/s/AKfycbwEz03akDkBN3kF062EGBqpHUha8JDikLusIZbsYeSKF_ZkhoUWsYfsTWLsJSCjK_O7/exec'
   const form = document.forms['oriceData'];
-  var height = window.innerHeight;
-    console.log(height);
+
   form.addEventListener('submit', e => {
     e.preventDefault()
     if (oriceInfo1.value == "") {
