@@ -108,14 +108,14 @@ autoBtn.addEventListener('click', () => {
     }
 });
 
-window.addEventListener('load', () => {
-    if (save === true) {
-        autoBtn.innerHTML = `<i class="material-icons">&#xe9f6</i>`;
-        oriceInfo4.value = "নওগাঁ";
-        oriceInfo5.value = "রাণীনগর";
-        oriceInfo38.value = "০২নং কাশিমপুর";
-    }
-});
+// window.addEventListener('load', () => {
+//     if (save === true) {
+//         autoBtn.innerHTML = `<i class="material-icons">&#xe9f6</i>`;
+//         oriceInfo4.value = "নওগাঁ";
+//         oriceInfo5.value = "রাণীনগর";
+//         oriceInfo38.value = "০২নং কাশিমপুর";
+//     }
+// });
 
 var printBtn = document.querySelector('#print');
 var clearBtn = document.querySelector('#clear');
