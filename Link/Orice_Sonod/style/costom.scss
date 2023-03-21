@@ -53,6 +53,25 @@ body{
 #cDate2{
     display: none;
 }
+#auto{
+    border: 1px solid black;
+    display: inline-block;
+    border-radius: 25px;
+    padding: 5px 10px;
+    padding-right: 60px;
+    #autoBtn{
+        position: relative;
+        text-align: center;
+        cursor: pointer;
+        .material-icons{
+            position: absolute;
+            padding-left: 10px;
+            font-size: 40px !important;
+            top: -8px;
+        };
+    };
+};
+
 .popUp {
     position: fixed;
     width: 100%;
@@ -263,7 +282,7 @@ body{
         font-weight: 700;
         font-size: 40px;
         position: relative;
-        margin-bottom: 35px;
+        margin-bottom: 5px;
         img{
             width: 150px;
             position: absolute;

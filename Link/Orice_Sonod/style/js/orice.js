@@ -87,7 +87,35 @@ function passvalue() {
     localStorage.setItem("oriceInfo37",oriceInfo37);
     localStorage.setItem("oriceInfo38",oriceInfo38);
     return false;
-}
+};
+
+var autoBtn = document.getElementById("autoBtn");
+var save = true;
+
+autoBtn.addEventListener('click', () => {
+    if (save === false) {
+        autoBtn.innerHTML = `<i class="material-icons">&#xe9f5</i>`;
+        oriceInfo4.value = "";
+        oriceInfo5.value = "";
+        oriceInfo38.value = "";
+        return save = true;
+    } if (save === true) {
+        autoBtn.innerHTML = `<i class="material-icons">&#xe9f6</i>`;
+        oriceInfo4.value = "নওগাঁ";
+        oriceInfo5.value = "রাণীনগর";
+        oriceInfo38.value = "০২নং কাশিমপুর";
+        return save = false;
+    }
+});
+
+window.addEventListener('load', () => {
+    if (save === true) {
+        autoBtn.innerHTML = `<i class="material-icons">&#xe9f6</i>`;
+        oriceInfo4.value = "নওগাঁ";
+        oriceInfo5.value = "রাণীনগর";
+        oriceInfo38.value = "০২নং কাশিমপুর";
+    }
+});
 
 var printBtn = document.querySelector('#print');
 var clearBtn = document.querySelector('#clear');
