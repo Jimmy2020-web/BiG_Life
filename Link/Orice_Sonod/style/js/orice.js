@@ -90,7 +90,7 @@ function passvalue() {
 };
 
 var autoBtn = document.getElementById("autoBtn");
-var save = true;
+var save = false;
 
 autoBtn.addEventListener('click', () => {
     if (save === false) {
