@@ -415,7 +415,7 @@ window.addEventListener('load', () => {
 })
 
 // Eid-Ul Fitue-2023
-var target_date = new Date("Mar 23, 2023 24:00:00").getTime();
+var target_date = new Date("Apr 22, 2023 24:00:00").getTime();
 
 var days, hours, minutes, seconds; // variables for time units
 
@@ -460,7 +460,7 @@ const todayEn = document.querySelector(".dateEn");
 todayEn.innerHTML = `
 <p>${ArDateYear}</p>
         <p>
-          <span>${(ArDateDay)}</span>
+          <span>${(ArDateDay)-2}</span>
           <span>${ArDateMonth}</span>
         </p>
         <p>${dd}</p>
@@ -524,7 +524,7 @@ setInterval(() => {
   var minutSet = Math.floor((leftiftS % _hour) / _minut);
   var secondSet = Math.floor((leftiftS % _minut) / _second);
   const iftTime2 = document.querySelector("#iftTime");
-  iftTime2.innerHTML = `${hourSet}:H ${minutSet}:M ${secondSet}:S`;
+  iftTime2.innerHTML = `${hourSet}H ${minutSet}M ${secondSet}S`;
 }, 1000);
 
 // const os = require('os');
