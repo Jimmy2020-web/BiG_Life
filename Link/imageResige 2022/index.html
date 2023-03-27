@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>imageResizer</title>
+    <link rel="stylesheet" href="./styel/styel.css">
+</head>
+<body>
+    <div class="contianer">
+        <h2 class="minTitle">imageResizer Pro V.22</h2>
+        <div class="wrapper">
+            <div class="resizerPnal">
+                <h3 class="reTitle">Orignal Image</h3>
+                <div class="eidtor">
+                    <label id="info" for="">File Name: <span>0</span></label>
+                    <label id="info" for="">File W/H: <span>0</span></label>
+                    <label id="info" for="">File Size: <span>0</span></label>
+                    <label id="info" for="">File Type: <span>0</span></label>
+                </div>
+                <div class="line"></div>
+                <h3 class="reTitle">Resize Image</h3>
+                <div class="eidtor">
+                    <label id="info" for="">File Name: <span>0</span></label>
+                    <label id="info" for="">File W/H: <span>0</span></label>
+                    <label id="info" for="">File Size: <span>0</span></label>
+                    <label id="info" for="">File Resio: <span>0</span></label>
+                </div>
+            </div>
+            <div class="previewPnal">
+                <img src="./styel/image/img031.jpg" alt="" srcset="">
+            </div>
+        </div>
+        <div class="resizerButton">
+            <span id="imgs"><input id="rangInput" type="range" value="3" min="1" max="9" step="any">0<span id="rvalue"></span></span>
+            <input type="file" id="inputFile" accept="image/*" hidden>
+            <button id="chooseBtn">CHOOSE IMAGE</button>
+            <button id="saveBtn">SAVE IMAGE</button>
+        </div>
+    </div>
+    <div>
+        <canvas id="imageCanvas" hidden></canvas>
+        <div id="dimg"></div>
+    </div>
+    <script src="./script/app.js"></script>
+</body>
+</html>
