@@ -5,7 +5,9 @@ function cuerntdate() {
     let year = today.getFullYear();
     let cdate = `${day}/${month}/${year} ইং।`;
     document.getElementById('cruntDate').innerText = cdate;
-    document.getElementById('cDate2').value = cdate;
+    setInterval(() => {
+        document.getElementById('cDate2').value = cdate;
+    }, 500);
   };
   cuerntdate();
 function passvalue() {
@@ -90,7 +92,7 @@ function passvalue() {
 };
 
 var autoBtn = document.getElementById("autoBtn");
-var save = false;
+var save = true;
 
 autoBtn.addEventListener('click', () => {
     if (save === false) {
@@ -108,14 +110,14 @@ autoBtn.addEventListener('click', () => {
     }
 });
 
-// window.addEventListener('load', () => {
-//     if (save === true) {
-//         autoBtn.innerHTML = `<i class="material-icons">&#xe9f6</i>`;
-//         oriceInfo4.value = "নওগাঁ";
-//         oriceInfo5.value = "রাণীনগর";
-//         oriceInfo38.value = "০২নং কাশিমপুর";
-//     }
-// });
+window.addEventListener('load', () => {
+    if (save === true) {
+        autoBtn.innerHTML = `<i class="material-icons">&#xe9f6</i>`;
+        oriceInfo4.value = "নওগাঁ";
+        oriceInfo5.value = "রাণীনগর";
+        oriceInfo38.value = "০২নং কাশিমপুর";
+    }
+});
 
 var printBtn = document.querySelector('#print');
 var clearBtn = document.querySelector('#clear');
