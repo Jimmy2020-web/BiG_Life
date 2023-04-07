@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+// varebule and mixing
+// import font famely
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+Bengali:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// font-family: 'Itim', cursive;
+// font-family: 'Noto Serif Bengali', serif;
+//font-family: 'Noto Sans', sans-serif;
+
+
+// start styeling body
+body {
+    background: rgb(240,19,4);
+    background: linear-gradient(45deg, rgba(240,19,4,1) 0%, rgba(140,93,169,1) 50%, rgba(0,255,106,1) 100%);
+    color: #1A1A1A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-family: 'Noto Serif Bengali', serif;
+}
+
+// Header Designe
+#designeForm {
+    background: #FFFFFF;
+    width: 850px;
+    padding: 2rem;
+    border-radius: .8rem;
+    box-shadow: 0 4px 24px #1A1A1A;
+    .title {
+        display: grid;
+        grid-template-columns: 100px auto 100px;
+        border-bottom: 1px solid #a3a3a3;
+        padding-bottom: 1rem;
+        .logo {
+            img {
+                width: 100px;
+            };
+        };
+        .user{
+            img {
+                width: 100px;
+                border: 1px solid #1A1A1A;
+                border-radius: 50%;
+                height: 100px;
+            };
+        }
+        .sTitle {
+            text-align: center;
+            #eUser{
+                font-weight: bold;
+                color: #FD4C5A;
+            }
+            h3{
+                font-family: 'Noto Sans', sans-serif;
+            }
+        }
+    };
+    form {
+        padding-top: 1rem;
+        padding-left: 15px;
+        .info_All{
+            display: grid;
+            grid-template-columns: auto auto;
+            .info_1 {
+                padding: 1rem 0px 0px 35px;
+                input{
+                    border: 1px solid #c4c3c3;
+                    outline: none;
+                    background: #E7E7E7;
+                    padding: .5rem;
+                    display: block;
+                    width: 85%;
+                    font-size: 16px;
+                    margin-top: .3rem;
+                    padding-left: 1.2rem;
+                    font-family: 'Noto Serif Bengali', serif;
+                    transition: all .2s ease;
+                    &:focus{
+                        border: 1px solid #6e6e6e;
+                    }
+                }
+            }
+        }
+        .btn_All{
+            text-align: right;
+            padding-top: 1.8rem;
+            margin-right: 2rem;
+            position: relative;
+            #log_Out{
+                top: 30px;
+                position: absolute;
+                background: #464646;
+                color: white;
+                border-radius: 5px;
+                padding: 10px 15px;
+                cursor: pointer;
+                font-size: 14px;
+                width: 100px;
+                font-family: 'Noto Sans', sans-serif;
+                transition: all .3s ease;
+                &:hover{
+                    background: #1a1919;
+                }
+                .material-symbols-outlined{
+                    font-size: 20px;
+                    position: absolute;
+                    left: 8px;
+                }
+            }
+            input{
+                background: #FD4C5A;
+                color: #fff;
+                padding: 12px 18px;
+                font-weight: bold;
+                margin-left: 1rem;
+                border-radius: 5px;
+                border: none;
+                outline: none;
+                cursor: pointer;
+                font-family: 'Noto Sans', sans-serif;
+                transition: all .2s ease;
+                &:hover{
+                    background: #b1232e;
+                }
+                &:nth-child(2){
+                    background: #01972e;
+                    transition: all .2s ease;
+                    &:hover{
+                        background: #00581b;
+                    }
+                }
+            }
+        }
+    };
+};
+
+.popUp{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #1a1a1aa9;
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    .popText{
+        width: 350px;
+        background: #fff;
+        border-radius: 1rem;
+        padding: 2rem;
+        text-align: center;
+        .material-symbols-outlined{
+            font-size: 4rem;
+            color: orangered;
+        }
+        .okBtn{
+            background: #01972e;
+            color: #fff;
+            padding: 10px 25px;
+            display: inline-block;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: .5rem;
+            cursor: pointer;
+            font-family: 'Noto Sans',sans-serif;
+            transition: all 0.3s ease-in;
+            &:hover{
+                background: #00581b;
+            }
+        }
+    }
+}
+
+.userInput{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #1a1a1aa9;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .popText{
+        width: 350px;
+        background: #fff;
+        border-radius: 1rem;
+        padding: 2rem;
+        text-align: center;
+        .material-symbols-outlined{
+            font-size: 4rem;
+            color: orangered;
+        }
+        .pwBtn{
+            background: #01972e;
+            color: #fff;
+            padding: 10px 25px;
+            display: inline-block;
+            font-weight: bold;
+            border-radius: 5px;
+            margin-top: .5rem;
+            cursor: pointer;
+            font-family: 'Noto Sans',sans-serif;
+            transition: all 0.3s ease-in;
+            &:hover{
+                background: #00581b;
+            }
+        }
+    }
+}
+
+input#pwd {
+    outline: none;
+    border: 1px solid #a3a3a3;
+    background: #E7E7E7;
+    padding: 8px 10px;
+    letter-spacing: 20px;
+    text-align: center;
+    border-radius: 15px;
+    margin: 10px 0;
+    font-weight: bold;
+}
+
+.okStatus{
+    animation: baonce .2s forwards;
+}
+
+@keyframes baonce {
+    0%{
+        transform: scale(1);
+    }50%{
+        transform: scale(.9);
+    }100%{
+        transform: scale(1);
+    }
+};
+
+#loder{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #1a1a1aa9;
+    backdrop-filter: blur(5px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    .spen{
+        border: 10px solid #f3f3f3;
+        border-radius: 50%;
+        border-top: 10px solid #FD4C5A;
+        width: 100px;
+        height: 100px;
+        animation: spin 2s linear infinite;
+    }
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}

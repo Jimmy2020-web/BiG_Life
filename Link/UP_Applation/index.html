@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VGF/Applation</title>
+    <link rel="stylesheet" href="style/index.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+</head>
+<body>
+    <section id="designeForm">
+        <header class="title">
+            <div class="sTitle logo">
+                <img src="./style/images/upLogo.jpg" alt="" srcset="">
+            </div>
+            <div class="sTitle mainTitle">
+                <h1>কাশিমপুর ইউনিয়ন পরিষদ</h1>
+                <p>উপজেলাঃ রাণীনগর, জেলাঃ নওগাঁ।</p>
+                <p>ব্যবহারকারী: <span id="eUser"></span></p>
+                <h3>Total: 0</h3>
+            </div>
+            <div class="sTitle user">
+                <img src="./style/images/profile.jpg" alt="" srcset="">
+            </div>
+        </header>
+        <form name="VGF_Data">
+            <div class="info_All">
+                <div class="info_1">
+                    <label for="">উপকারভোগীর নাম</label>
+                    <input id="input" name="Name" type="text" placeholder="বাংলায় লিখুন" required>
+                </div>
+                <div class="info_1">
+                    <label for="">উপকারভোগীর পিতা/স্বামীর নাম</label>
+                    <input id="input" name="Father_Name" type="text" placeholder="বাংলায় লিখুন" required>
+                </div>
+                <div class="info_1">
+                    <label for="">উপকারভোগীর জাতীয়পরিচয় পত্র নং</label>
+                    <input id="input" name="NID_No" type="tel" placeholder="অংকে লিখুন" required maxlength="17" minlength="10">
+                </div>
+                <div class="info_1">
+                    <label for="">উপকারভোগীর মোবাইল নং</label>
+                    <input id="input" name="Mobile_No" type="tel" placeholder="অংকে লিখুন" required maxlength="11" minlength="11">
+                </div>
+                <div class="info_1">
+                    <label for="">উপকারভোগীর গ্রাম</label>
+                    <input id="input" name="Village" type="text" placeholder="বাংলায় লিখুন" required>
+                </div>
+                <div class="info_1">
+                    <label for="">উপকারভোগীর ওয়ার্ড নং</label>
+                    <input id="input" name="Word" type="tel" placeholder="অংকে লিখুন" required maxlength="2" minlength="2">
+                </div>
+                <div class="info_1">
+                    <input name="eUser" type="text" id="eUser_info" style="display: none;">
+                </div>
+            </div>
+            <div class="btn_All">
+                <input type="button" id="xBtn" value="Clear all">
+                <input type="submit" id="saveBtn" value="Submit">
+                <p id="log_Out">
+                    <span class="material-symbols-outlined">
+                        power_rounded
+                    </span> Log Out
+                </p>
+            </div>
+        </form>
+    </section>
+    <div class="popUp">
+        <div class="popText">
+            <span class="material-symbols-outlined">
+                task_alt
+                </span>
+            <h3>তথ্য সংক্ষণ সফল হয়েছে...!</h3>
+            <p class="okBtn">Okay</p>
+        </div>
+    </div>
+    <div class="userInput">
+        <div class="popText cpw">
+            <span class="material-symbols-outlined wroang">
+                lock
+                </span>
+            <h3 id="infoPwd">আপনার গোপন সংখ্যা দিন..!</h3>
+            <input type="tel" id="pwd" placeholder="XXXXX" minlength="5" maxlength="5">
+            <p class="pwBtn">Submit</p>
+        </div>
+    </div>
+    <div id="loder">
+        <div class="spen"></div>
+    </div>
+    <script src="./js/app.js"></script>
+</body>
+</html>
