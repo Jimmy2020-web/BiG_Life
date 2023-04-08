@@ -72,8 +72,18 @@ pwBtn.addEventListener("click", () => {
   }
 });
 
+function chake_Value() {
+  var inp = document.querySelectorAll("input");
+  inp.forEach((input) => {
+    if (input !=="") {
+      console.log("0")
+    }
+  });
+};
+
 saveBtn.addEventListener("click", () => {
-    Loder.style.display = "flex";
+  chake_Value();
+  Loder.style.display = "flex";
 });
 
 closePop.addEventListener("click", () => {
@@ -84,10 +94,14 @@ closePop.addEventListener("click", () => {
   }, 300);
 });
 
-xBtn.addEventListener("click", () => {
+function clearInput() {
   var inputs = document.querySelectorAll("#input");
   inputs.forEach((input) => (input.value = ""));
   localStorage.clear();
+};
+
+xBtn.addEventListener("click", () => {
+  clearInput();
 });
 
 log_Out.addEventListener("click", () => {
@@ -105,6 +119,7 @@ formData.addEventListener("submit", e => {
         Loder.style.display = "none";
         closePop.style.display = "flex";
         popText.classList.add("okStatus");
+        clearInput();
         setTimeout(() => {
           popText.classList.remove("okStatus");
         }, 300);

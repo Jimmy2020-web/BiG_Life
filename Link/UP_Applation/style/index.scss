@@ -193,7 +193,7 @@ body {
         text-align: center;
         .material-symbols-outlined{
             font-size: 4rem;
-            color: orangered;
+            color: #01972e;
         }
         .pwBtn{
             background: #01972e;
@@ -218,9 +218,10 @@ input#pwd {
     border: 1px solid #a3a3a3;
     background: #E7E7E7;
     padding: 8px 10px;
+    padding-left: 25px;
     letter-spacing: 20px;
     text-align: center;
-    border-radius: 15px;
+    border-radius: 5px;
     margin: 10px 0;
     font-weight: bold;
 }
