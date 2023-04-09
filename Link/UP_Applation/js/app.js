@@ -126,3 +126,17 @@ formData.addEventListener("submit", e => {
       })
       .catch(error => console.error('Error!', error.message))
 });
+
+
+
+setInterval(() => {
+  const url = 'https://docs.google.com/spreadsheets/d/1yuINvWZ7tMmOcABCxPxFlERWbqM8QE0Sdc6mBdHQCWA/gviz/tq?';
+
+  fetch(url)
+  .then(res => res.text())
+  .then(rep => {
+    const data = JSON.parse(rep.substr(47).slice(0,-2));
+    const lastItem = data.table.rows.length;
+    document.querySelector("#countNo").innerHTML = lastItem;
+  });
+}, 500);
