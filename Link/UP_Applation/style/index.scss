@@ -204,6 +204,8 @@ body {
             border-radius: 5px;
             margin-top: .5rem;
             cursor: pointer;
+            opacity: .5;
+            pointer-events: none;
             font-family: 'Noto Sans',sans-serif;
             transition: all 0.3s ease-in;
             &:hover{
@@ -262,4 +264,14 @@ input#pwd {
 @keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
+}
+
+
+#loder .material-symbols-outlined{
+    color: orangered;
+    border: 2px solid gray;
+    padding: 20px;
+    border-radius: 50%;
+    background: white;
+    font-size: 40px;
 }

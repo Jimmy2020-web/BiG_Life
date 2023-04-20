@@ -14,6 +14,17 @@ Loder.addEventListener("click", () => {
   Loder.style.display = "none";
 });
 
+var pLength = document.querySelector("#pwd");
+pLength.addEventListener("keyup", () => {
+  if (pLength.value.length > 4) {
+    pwBtn.style.opacity = 1;
+    pwBtn.style.pointerEvents = "all";
+  } else if (pLength.value.length < 5) {
+    pwBtn.style.opacity = .5;
+    pwBtn.style.pointerEvents = "none";
+  }
+});
+
 pwBtn.addEventListener("click", () => {
     const eUser_info = document.querySelector("#eUser_info");
     const pwd = document.getElementById("pwd").value;
@@ -127,16 +138,25 @@ formData.addEventListener("submit", e => {
       .catch(error => console.error('Error!', error.message))
 });
 
+function cakeOnline() {
+  if (window.navigator.onLine === true) {
+    setInterval(() => {
+      const url = 'https://docs.google.com/spreadsheets/d/1yuINvWZ7tMmOcABCxPxFlERWbqM8QE0Sdc6mBdHQCWA/gviz/tq?';
+    
+      fetch(url)
+      .then(res => res.text())
+      .then(rep => {
+        const data = JSON.parse(rep.substr(47).slice(0,-2));
+        const lastItem = data.table.rows.length;
+        document.querySelector("#countNo").innerHTML = lastItem;
+      });
+    }, 500);
+  }else{
+    const lode_info = document.querySelector("#loder");
+    lode_info.innerHTML = `<span class="material-symbols-outlined">
+    wifi_off
+    </span>`;
+  }
+};
 
-
-setInterval(() => {
-  const url = 'https://docs.google.com/spreadsheets/d/1yuINvWZ7tMmOcABCxPxFlERWbqM8QE0Sdc6mBdHQCWA/gviz/tq?';
-
-  fetch(url)
-  .then(res => res.text())
-  .then(rep => {
-    const data = JSON.parse(rep.substr(47).slice(0,-2));
-    const lastItem = data.table.rows.length;
-    document.querySelector("#countNo").innerHTML = lastItem;
-  });
-}, 500);
+cakeOnline();
