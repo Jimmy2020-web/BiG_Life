@@ -477,4 +477,10 @@ input:focus {
   padding: 1px 8px;
   font-size: 0.9rem;
   transform: translateX(0px) translateY(-28px);
+}
+
+input:valid {
+  box-shadow: none !important;
+  background: #E6E7EE !important;
+  border-color: #acacad;
 }/*# sourceMappingURL=costom.css.map */

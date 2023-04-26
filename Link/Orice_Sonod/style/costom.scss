@@ -506,4 +506,10 @@ body{
         font-size: .9rem;
         transform: translateX(0px) translateY(-28px);
     }
+};
+
+input:valid {
+    box-shadow: none !important;
+    background: #E6E7EE !important;
+    border-color: #acacad;
 }
