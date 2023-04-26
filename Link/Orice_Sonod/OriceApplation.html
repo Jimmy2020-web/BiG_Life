@@ -42,19 +42,46 @@
               <form name="oriceData">
                 <div class="adtional">
                     <p id="infoText">* মৃত ব্যক্তি সংক্রান্ত তথ্যাদি-</p>
-                    <input type="text" name="LateManName" id="oriceInfo1" placeholder="মৃত ব্যক্তির নাম" />
-                    <input type="text" name="LateManFatherName" id="oriceInfo2" placeholder="মৃত ব্যক্তির পিতা/স্বামীর নাম" />
-                    <input type="text" id="oriceInfo3" placeholder="মৃত্যুর তারিখ (আনুমানিক)" />
+                    <div class="inputBox">
+                    <input type="text" name="LateManName" id="oriceInfo1" required="required"/>
+                    <span>মৃত ব্যক্তির নাম</span>
+                    </div>
+                    <div class="inputBox">
+                    <input type="text" name="LateManFatherName" id="oriceInfo2" required="required"/>
+                    <span>মৃত ব্যক্তির পিতা/স্বামীর নাম</span>
+                    </div>
+                    <div class="inputBox">
+                    <input type="text" id="oriceInfo3" required="required"/>
+                    <span>মৃত্যুর তারিখ (আনুমানিক)</span>
                     <input type="text" name="Date" id="cDate2"/>
+                  </div>
                   </div>
                   <div class="presantAdd">
                       <p id="infoText">* স্থায়ীঠিকানা সংক্রান্ত তথ্যাদি-</p>
-                      <input type="text" id="oriceInfo4" placeholder="জেলার নাম" />
-                      <input type="text" id="oriceInfo5" placeholder="উপজেলা/থানার নাম" />
-                      <input type="text" id="oriceInfo38" placeholder="ইউনিয়নের নাম" />
-                      <input type="text" name="Village" id="oriceInfo6" placeholder="গ্রাম/বাসা/হোল্ডিং নম্বর" />
-                      <input type="text" name="PostOffice" id="oriceInfo7" placeholder="ডাকঘরের নাম" />
-                      <input type="text" id="oriceInfo8" placeholder="পোষ্ট কোড নম্বর" />
+                      <div class="inputBox">
+                      <input type="text" id="oriceInfo4" required="required"/>
+                      <span>জেলার নাম</span>
+                      </div>
+                      <div class="inputBox">
+                      <input type="text" id="oriceInfo5" required="required"/>
+                      <span>উপজেলা/থানার নাম</span>
+                      </div>
+                      <div class="inputBox">
+                      <input type="text" id="oriceInfo38" required="required"/>
+                      <span>ইউনিয়নের নাম</span>
+                      </div>
+                      <div class="inputBox">
+                      <input type="text" name="Village" id="oriceInfo6" required="required"/>
+                      <span>গ্রাম/বাসা/হোল্ডিং নম্বর</span>
+                      </div>
+                      <div class="inputBox">
+                      <input type="text" name="PostOffice" id="oriceInfo7" required="required"/>
+                      <span>ডাকঘরের নাম</span>
+                      </div>
+                      <div class="inputBox">
+                      <input type="text" id="oriceInfo8" required="required"/>
+                      <span>পোষ্ট কোড নম্বর</span>
+                      </div>
                   </div>
                   <div class="presantAdd">
                       <p id="infoText">* ওয়ারিশ গণ সংক্রান্ত তথ্যাদি-</p>
