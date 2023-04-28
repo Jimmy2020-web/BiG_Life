@@ -356,52 +356,10 @@ body{
 }
 #oriceOneRow {
     display: grid;
-    grid-template-columns: 50px 350px 150px 150px 80px;
+    grid-template-columns: 370px 200px 200px;
     max-width: 620px;
     input[type=text] {
         width: auto;
-        margin: 0 5px;
-        padding: 5px 15px;
-    }
-    span{
-        text-align: center;
-    }
-}
-#jsData{
-    margin-top: 20px;
-    span{
-        line-height: 40px;
-    }
-    #oriceOneRow{
-        text-align: center;
-        .material-icons{
-            cursor: pointer;
-            color: orangered;
-            transition: all .3s ease;
-            &:hover{
-                color: #a91e2c;
-            }
-        }
-        input{
-            outline: none;
-            border: none;
-        }
-    }
-    #nameDiv{
-        text-align: left;
-        padding-left: 15px;
-    }
-};
-#table{
-    display: none;
-}
-.sl{
-    padding-top: 10px;
-    color: #019644;
-    cursor: pointer;
-    transition: all .3s ease;
-    &:hover{
-        color: #024601;
     }
 }
 .presantAdd, .adtional, .identyUP {

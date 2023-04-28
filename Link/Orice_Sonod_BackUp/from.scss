@@ -61,13 +61,22 @@ body{
     border-bottom: 1px solid #000;
 }
 
-#oriceOneRow{
-    display: grid;
-    grid-template-columns: 50px 250px 110px 110px 70px;
-    text-align: center;
-    line-height: 30px;
-}
-#nameDiv{
-    text-align: left;
-    padding-left: 15px;
+.table {
+    border: 1px solid #000;
+    p{
+        display: grid;
+        grid-template-columns: 100px auto 100px 100px;
+        &:nth-child(1) {
+            border-bottom: 1px solid #000;
+            text-align: center;
+        }
+        span{
+            padding: 2px 4px;
+            border-left: 1px solid #000;
+            padding-left: 20px;
+            &:nth-child(1){
+                border-left: none;
+            }
+        }
+    }
 }
