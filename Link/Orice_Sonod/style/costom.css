@@ -336,7 +336,7 @@ input:focus {
 
 #oriceOneRow {
   display: grid;
-  grid-template-columns: 50px 350px 150px 150px 80px;
+  grid-template-columns: 50px 350px 150px 150px 40px 40px;
   max-width: 620px;
 }
 #oriceOneRow input[type=text] {
@@ -359,11 +359,11 @@ input:focus {
 }
 #jsData #oriceOneRow .material-icons {
   cursor: pointer;
-  color: orangered;
+  color: #019644;
   transition: all 0.3s ease;
 }
 #jsData #oriceOneRow .material-icons:hover {
-  color: #a91e2c;
+  color: #ff0022;
 }
 #jsData #oriceOneRow input {
   outline: none;

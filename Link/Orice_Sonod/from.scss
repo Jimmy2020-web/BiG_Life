@@ -63,11 +63,15 @@ body{
 
 #oriceOneRow{
     display: grid;
-    grid-template-columns: 50px 250px 110px 110px 70px;
+    grid-template-columns: 75px 290px 120px 110px;
     text-align: center;
     line-height: 30px;
 }
 #nameDiv{
     text-align: left;
     padding-left: 15px;
+}
+
+.material-icons{
+    display: none !important;
 }

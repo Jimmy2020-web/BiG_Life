@@ -84,7 +84,6 @@ page1.innerHTML = `
     <span>ওয়ারিশের নাম</span>
     <span>সম্পর্ক</span>
     <span>মন্তব্য</span>
-    <span>যুক্ত করুন</span>
     <div class="table1">${getTable_Data}</div>
 </div>
 <div class="present_address2">

@@ -83,7 +83,7 @@ var index3 = 1;
 addBtn.addEventListener("click", () => {
   if (inputBox.value === "") {
     alert("ওয়ারিশ গণের নাম লিখুন..!");
-  } else if(inputBox2 === ""){
+  } else if (inputBox2.value === "") {
     alert("সম্পর্ক লিখুন..!");
   } else {
     let slDiv = document.createElement("span");
@@ -110,16 +110,27 @@ addBtn.addEventListener("click", () => {
   saveData();
 });
 
-List.addEventListener(
-  "click",
-  function (e) {
-    if (e.target.innerHTML === "delete") {
-      e.target.parentElement.remove();
-      saveData();
-    }
-  },
-  false
-);
+List.addEventListener("click", function (e) {
+  if (e.target.innerHTML === "edit_square") {
+    i--;
+    index1--;
+    index2--;
+    index3--;
+    inputBox.value = localStorage.getItem("LateName");
+    inputBox2.value = localStorage.getItem("AssName");
+    inputBox3.value = localStorage.getItem("ComName");
+    e.target.parentElement.remove();
+    saveData();
+  } else if (e.target.innerHTML === "delete") {
+    e.target.parentElement.remove();
+    i--;
+    index1--;
+    index2--;
+    index3--;
+    saveData();
+  }
+  false;
+});
 
 function saveData() {
   localStorage.setItem("setData", List.innerHTML);
@@ -132,7 +143,7 @@ function showData() {
 showData();
 
 function deletTable() {
-  List.innerHTML.remove();
+  List.remove();
 }
 
 function linkPage() {
@@ -140,20 +151,28 @@ function linkPage() {
   slDiv.innerHTML = i++;
   List.appendChild(slDiv);
   slDiv.id = "oriceOneRow";
-
+  
   let mDiv = document.createElement("span");
   mDiv.innerHTML = inputBox.value;
   slDiv.appendChild(mDiv);
   mDiv.id = "nameDiv";
-  
+  localStorage.setItem("LateName", mDiv.textContent);
+
   let assDiv = document.createElement("span");
   assDiv.innerHTML = inputBox2.value;
   slDiv.appendChild(assDiv);
-  
+  localStorage.setItem("AssName", assDiv.textContent);
+
   let cmDiv = document.createElement("span");
   cmDiv.innerHTML = inputBox3.value;
   slDiv.appendChild(cmDiv);
-  
+  localStorage.setItem("ComName", cmDiv.textContent);
+
+  let editBtn = document.createElement("span");
+  editBtn.innerHTML = "edit_square";
+  slDiv.appendChild(editBtn);
+  editBtn.classList.add("material-icons");
+
   let delBtn = document.createElement("span");
   delBtn.innerHTML = "delete";
   slDiv.appendChild(delBtn);
@@ -204,7 +223,6 @@ clearBtn.addEventListener("click", () => {
   inputs.forEach((input) => (input.value = ""));
   localStorage.clear();
   deletTable();
-  location.reload();
 });
 
 var alartAudio = new Audio();
@@ -275,7 +293,8 @@ function chakeOnline() {
         output.innerHTML = `আবেদন ফরম নং :- ${lastItem} <span class="blink"></span>`;
       });
   } else {
-    createPopup("No Internet");
+    const output = document.querySelector("#output");
+    output.innerHTML = "ইন্টারনেট সংযোগ নেই!";
   }
 }
 
