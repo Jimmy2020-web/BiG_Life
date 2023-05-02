@@ -70,17 +70,34 @@ window.addEventListener("load", () => {
 var printBtn = document.querySelector("#print");
 var clearBtn = document.querySelector("#clear");
 var addBtn = document.querySelector("#add_Btn");
+var update_Btn = document.querySelector("#update_Btn");
 var inputBox = document.getElementById("oriceInfo9");
 var inputBox2 = document.getElementById("oriceInfo10");
 var inputBox3 = document.getElementById("oriceInfo11");
+var No = document.getElementById("No");
 var List = document.getElementById("jsData");
 var tabe2Data = document.querySelector("#table");
-var i = 1;
-var index1 = 1;
-var index2 = 1;
-var index3 = 1;
+
+let index = [0,];
+let prevSL = "";
+
+update_Btn.style.pointerEvents = "none";
+update_Btn.style.opacity = .5;
+
+update_Btn.addEventListener("click", () => {
+  addBtn.style.pointerEvents = "";
+  addBtn.style.opacity = 1;
+  prevSL = No.innerText;
+
+  update_Btn.style.pointerEvents = "none";
+  update_Btn.style.opacity = .5;
+
+  updateTodo();
+})
 
 addBtn.addEventListener("click", () => {
+  update_Btn.style.pointerEvents = "none";
+  update_Btn.style.opacity = .5;
   if (inputBox.value === "") {
     alert("ওয়ারিশ গণের নাম লিখুন..!");
   } else if (inputBox2.value === "") {
@@ -89,19 +106,22 @@ addBtn.addEventListener("click", () => {
     let slDiv = document.createElement("span");
     tabe2Data.appendChild(slDiv);
     slDiv.id = "oriceOneRow";
+    
     let mDiv = document.createElement("input");
     mDiv.value = inputBox.value;
     slDiv.appendChild(mDiv);
     mDiv.id = "nameDiv";
-    mDiv.setAttribute("name", `OriceName${index1++}`);
+    mDiv.setAttribute("name", `OriceName${index.length}`);
+
     let assDiv = document.createElement("input");
     assDiv.value = inputBox2.value;
     slDiv.appendChild(assDiv);
-    assDiv.setAttribute("name", `Assinding${index2++}`);
+    assDiv.setAttribute("name", `Assinding${index.length}`);
+
     let cmDiv = document.createElement("input");
     cmDiv.value = inputBox3.value;
     slDiv.appendChild(cmDiv);
-    cmDiv.setAttribute("name", `Coment${index3++}`);
+    cmDiv.setAttribute("name", `Coment${index.length}`);
     linkPage();
   }
   inputBox.value = "";
@@ -112,21 +132,23 @@ addBtn.addEventListener("click", () => {
 
 List.addEventListener("click", function (e) {
   if (e.target.innerHTML === "edit_square") {
-    i--;
-    index1--;
-    index2--;
-    index3--;
+    addBtn.style.pointerEvents = "none";
+    addBtn.style.opacity = .5;
+    update_Btn.style.pointerEvents = "";
+    update_Btn.style.opacity = 1;
+    
+    
     inputBox.value = localStorage.getItem("LateName");
     inputBox2.value = localStorage.getItem("AssName");
     inputBox3.value = localStorage.getItem("ComName");
+    index.splice(0,1);
+    No.innerText = localStorage.getItem("SL_NO");
+    
     e.target.parentElement.remove();
     saveData();
   } else if (e.target.innerHTML === "delete") {
     e.target.parentElement.remove();
-    i--;
-    index1--;
-    index2--;
-    index3--;
+    index.splice(0,1);
     saveData();
   }
   false;
@@ -147,11 +169,49 @@ function deletTable() {
 }
 
 function linkPage() {
+
   let slDiv = document.createElement("span");
-  slDiv.innerHTML = i++;
+  slDiv.innerHTML = index.length;
   List.appendChild(slDiv);
   slDiv.id = "oriceOneRow";
+  index.push(slDiv.innerText);
+  localStorage.setItem("SL_NO", slDiv.textContent);
   
+  let mDiv = document.createElement("span");
+  mDiv.innerHTML = inputBox.value;
+  slDiv.appendChild(mDiv);
+  mDiv.id = "nameDiv";
+  localStorage.setItem("LateName", mDiv.textContent);
+
+  let assDiv = document.createElement("span");
+  assDiv.innerHTML = inputBox2.value;
+  slDiv.appendChild(assDiv);
+  localStorage.setItem("AssName", assDiv.textContent);
+
+  let cmDiv = document.createElement("span");
+  cmDiv.innerHTML = inputBox3.value;
+  slDiv.appendChild(cmDiv);
+  localStorage.setItem("ComName", cmDiv.textContent);
+
+  let editBtn = document.createElement("span");
+  editBtn.innerHTML = "edit_square";
+  slDiv.appendChild(editBtn);
+  editBtn.classList.add("material-icons");
+
+  let delBtn = document.createElement("span");
+  delBtn.innerHTML = "delete";
+  slDiv.appendChild(delBtn);
+  delBtn.classList.add("material-icons");
+}
+
+function updateTodo() {
+  let slDiv = document.createElement("span");
+  slDiv.innerHTML = prevSL;
+  List.appendChild(slDiv);
+  slDiv.id = "oriceOneRow";
+  index.push(slDiv.innerText);
+  localStorage.setItem("SL_NO", slDiv.textContent);
+
   let mDiv = document.createElement("span");
   mDiv.innerHTML = inputBox.value;
   slDiv.appendChild(mDiv);

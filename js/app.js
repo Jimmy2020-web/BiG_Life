@@ -415,7 +415,7 @@ window.addEventListener('load', () => {
 })
 
 // Eid-Ul Fitue-2023
-var target_date = new Date("Apr 22, 2023 24:00:00").getTime();
+var target_date = new Date("Jun 27, 2023 24:00:00").getTime();
 
 var days, hours, minutes, seconds; // variables for time units
 
@@ -471,47 +471,16 @@ const iftMonth = Intl.DateTimeFormat('en', {month: 'long'}).format(Date.now());
 
 var iftLocal = iftMonth+iftDay;
 
-var iftTime = {
-  March24:"6:20 PM",
-  March25:"6:21 PM",
-  March26:"6:21 PM",
-  March27:"6:22 PM",
-  March28:"6:22 PM",
-  March29:"6:23 PM",
-  March30:"6:23 PM",
-  March31:"6:24 PM",
-  April1:"6:24 PM",
-  April2:"6:25 PM",
-  April3:"6:25 PM",
-  April4:"6:26 PM",
-  April5:"6:26 PM",
-  April6:"6:27 PM",
-  April7:"6:27 PM",
-  April8:"6:27 PM",
-  April9:"6:28 PM",
-  April10:"6:28 PM",
-  April11:"6:29 PM",
-  April12:"6:29 PM",
-  April13:"6:30 PM",
-  April14:"6:30 PM",
-  April15:"6:30 PM",
-  April16:"6:31 PM",
-  April17:"6:31 PM",
-  April18:"6:32 PM",
-  April19:"6:32 PM",
-  April20:"6:33 PM",
-  April21:"6:33 PM",
-  April22:"6:34 PM",
-}
 
-var setIfter = iftTimeCount(iftLocal);
-function iftTimeCount(ift) {
-  return iftTime[ift];
-}
-document.querySelector("#fixIft").innerHTML = "সন্ধ্যা " + setIfter;
+var iftTime = `{
+  ${iftLocal}:"6:20 PM"
+}`;
+
+
+document.querySelector("#fixIft").innerHTML = "সন্ধ্যা " + "6:20 PM";
 
 setInterval(() => {
-  var terget_time = new Date( iftMonth + iftDay +", 2023 " + setIfter).getTime();
+  var terget_time = new Date( iftMonth + iftDay +", 2023 " + "6:20 PM").getTime();
   var Ctime = new Date().getTime();
   var leftiftS = (terget_time - Ctime);
 
