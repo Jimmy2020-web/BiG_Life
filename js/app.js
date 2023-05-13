@@ -473,7 +473,7 @@ var iftLocal = iftMonth+iftDay;
 
 
 var iftTime = `{
-  ${iftLocal}:"6:20 PM"
+  ${iftLocal}:"6:40 PM"
 }`;
 
 

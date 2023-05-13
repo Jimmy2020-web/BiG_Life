@@ -1,0 +1,81 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+// imput font bangla
+@import url('https://fonts.googleapis.com/css2?family=Itim&family=Noto+Sans:ital,wght@0,100;0,200;0,300;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Noto+Serif+Bengali:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+// font-family: 'Itim', cursive;
+// font-family: 'Noto Sans', sans-serif;
+// font-family: 'Noto Serif Bengali', serif;
+
+//End
+#main{
+    margin: 0 auto;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    max-width: 1080px;
+    min-width: 550px;
+    height: 100vh;
+    text-align: center;
+    background: #f6f6f6;
+    .title_Head{
+        font-family: 'Noto Serif Bengali', serif;
+        margin: 10px 0;
+    }
+}
+.searce_input {
+    margin: 15px 0;
+    label{
+        position: relative;
+        padding: 10px;
+        border-radius: 10px;
+        border: 1px solid #016b36;
+        background: white;
+        input[type="text"] {
+            width: 420px;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            border-radius: 10px;
+            background: transparent;
+        }
+        .material-symbols-outlined{
+            background: #016b36;
+            color: white;
+            padding: 7px 15px;
+            position: absolute;
+            right: -1px;
+            top: -1px;
+            border-radius: 0px 9px 9px 0px;
+            cursor: pointer;
+        }
+    }
+}
+.table {
+    display: grid;
+    grid-template-columns: 50px repeat(3, 1fr) 50px;
+    font-family: 'Noto Serif Bengali', serif;
+    font-size: 18px;
+    height: 70vh;
+    overflow-x: hidden;
+    span{
+        display: inherit;
+        border-bottom: 1px solid #ddd;
+        padding: 10px;
+        text-align: left;
+    }
+    .view_btn {
+        .material-symbols-outlined{
+            line-height: 29px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            &:hover{
+                background: #016b36;
+                color: white;
+            }
+        }
+    }
+}

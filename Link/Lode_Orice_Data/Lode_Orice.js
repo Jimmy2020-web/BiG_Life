@@ -1,0 +1,49 @@
+let Shet_ID = "1TFwKqWHzA9ATUR0PQYvHlq2QPTKO2XRBIodLDKUWVDY";
+let Shet_NAME = "Sheet1";
+var Arry_Length = "";
+let Shet_RANGE = `A2:AO${Arry_Length}`;
+
+let FULL_URL = ("https://docs.google.com/spreadsheets/d/" + Shet_ID + "/gviz/tq?sheet=" + Shet_NAME + "&range=" + Shet_RANGE);
+
+fetch(FULL_URL)
+.then(res => res.text())
+.then(rep => {
+    let data = JSON.parse(rep.substr(47).slice(0, -2));
+    let lode_Data = document.querySelector(".lode_Data");
+    let lode_Data2 = document.querySelector(".lode_Data2");
+    let sl_div = document.querySelector(".sl_div");
+    Arry_Length = data.table.rows.length;
+    let total_Data_no = document.querySelector("#total_Data_no");
+    total_Data_no.innerHTML = `সর্বমোট ${Arry_Length} [ ০১/০৩/২০২৩ হহিতে ]`;
+    let view_btn = document.querySelector(".view_btn");
+    let velige = document.querySelector(".velige");
+
+    for (let i = 0; i < Arry_Length; i++) {
+        let NewBox  = document.createElement("span");
+        NewBox.id = ("box" + i);
+        NewBox.className = "Grid";
+        lode_Data.append(NewBox);
+        NewBox.innerHTML = data.table.rows[i].c[0].v;
+
+        let sl = document.createElement("span");
+        sl.innerHTML = `${i+1}`;
+        sl_div.append(sl);
+        
+
+        let NewBox1  = document.createElement("span");
+        NewBox1.id = ("box" + i);
+        NewBox1.className = "Grid";
+        lode_Data2.append(NewBox1);
+        NewBox1.innerHTML = data.table.rows[i].c[1].v;
+
+        let veligeName = document.createElement("span");
+        veligeName.innerHTML = data.table.rows[i].c[2].v;
+        velige.append(veligeName);
+
+        let viewBtn = document.createElement("span");
+        viewBtn.id = ("btn" + i);
+        viewBtn.className = ("material-symbols-outlined");
+        viewBtn.innerHTML = "visibility";
+        view_btn.append(viewBtn);
+    }
+});
