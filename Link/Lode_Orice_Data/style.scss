@@ -34,9 +34,10 @@
         border-radius: 10px;
         border: 1px solid #016b36;
         background: white;
-        input[type="number"] {
+        input[type="tel"] {
+            padding-left: 10px;
             width: 420px;
-            font-size: 18px;
+            font-size: 14px;
             border: none;
             outline: none;
             border-radius: 10px;
@@ -51,6 +52,10 @@
             top: -1px;
             border-radius: 0px 9px 9px 0px;
             cursor: pointer;
+            transition: all .3s ease;
+            &:hover{
+                background: green;
+            }
         }
     }
 }
@@ -79,3 +84,26 @@
         }
     }
 }
+
+.popup {
+    position: fixed;
+    top: -60px;
+    left: 40%;
+    background: #ca0460;
+    padding: 15px 40px;
+    font-size: 16px;
+    font-family: sans-serif;
+    color: #ffffff;
+    border-radius: 40px;
+    animation: popup 5s ease-in-out;
+    box-shadow: 0 2px 15px #3f3f3f;
+  }
+  
+  @keyframes popup {
+    10%, 90% {
+      top: 20px;
+    }
+    100% {
+      top: -60px;
+    }
+  }

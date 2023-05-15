@@ -5,10 +5,15 @@ let Shet_ID = "1TFwKqWHzA9ATUR0PQYvHlq2QPTKO2XRBIodLDKUWVDY";
 let Shet_NAME = "Sheet1";
 var Arry_Length = "";
 let Shet_RANGE = `A2:AO${Arry_Length}`;
-var data = '';
+var data = "";
 
 sBtn.addEventListener("click", () => {
-    let sKye = Number(user_input.value - 1);
+    let sKye = Number(user_input.value - 253);
+    if (sKye > Arry_Length) {
+        createPopup('এই নাম্বার কোন সনদ নেই!');
+    } else if(sKye <= -1) {
+        createPopup('এই নাম্বার কোন সনদ নেই!');
+    }else{
     let lode_Data = document.querySelector(".lode_Data");
     let lode_Data2 = document.querySelector(".lode_Data2");
     let sl_div = document.querySelector(".sl_div");
@@ -24,7 +29,7 @@ sBtn.addEventListener("click", () => {
         NewBox.innerHTML = data.table.rows[sKye].c[0].v;
 
         let sl = document.createElement("span");
-        sl.innerHTML = `${sKye+1}`;
+        sl.innerHTML = `${sKye+253}`;
         sl_div.append(sl);
         
 
@@ -43,6 +48,7 @@ sBtn.addEventListener("click", () => {
         viewBtn.className = ("material-symbols-outlined");
         viewBtn.innerHTML = "visibility";
         view_btn.append(viewBtn);
+    }
 });
 
 let FULL_URL = ("https://docs.google.com/spreadsheets/d/" + Shet_ID + "/gviz/tq?sheet=" + Shet_NAME + "&range=" + Shet_RANGE);
@@ -97,3 +103,12 @@ fetch(FULL_URL)
 
 fetchData(0);
 
+function createPopup(text) {
+    let el = document.createElement('DIV');
+    el.classList.add('popup');
+    el.innerHTML = text;
+    document.body.appendChild(el);
+    setTimeout(() => {
+      el.remove();
+    },5000);
+}
