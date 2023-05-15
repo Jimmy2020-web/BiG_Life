@@ -31,7 +31,7 @@
   border: 1px solid #016b36;
   background: white;
 }
-.searce_input label input[type=text] {
+.searce_input label input[type=number] {
   width: 420px;
   font-size: 18px;
   border: none;
@@ -52,14 +52,14 @@
 
 .table {
   display: grid;
-  grid-template-columns: 50px 300px 300px 180px 50px;
+  grid-template-columns: 50px repeat(3, 1fr) 50px;
   font-family: "Noto Serif Bengali", serif;
   font-size: 18px;
   height: 70vh;
   overflow-x: hidden;
 }
 .table span {
-  display: inherit;
+  display: block;
   border-bottom: 1px solid #ddd;
   padding: 10px;
   text-align: left;
