@@ -124,11 +124,15 @@ addBtn.addEventListener("click", () => {
     cmDiv.setAttribute("name", `Coment${index.length}`);
     linkPage();
   }
+  emtyInput();
+  saveData();
+});
+
+function emtyInput() {
   inputBox.value = "";
   inputBox2.value = "";
   inputBox3.value = "";
-  saveData();
-});
+};
 
 List.addEventListener("click", function (e) {
   if (e.target.innerHTML === "edit_square") {
@@ -138,11 +142,12 @@ List.addEventListener("click", function (e) {
     update_Btn.style.opacity = 1;
     
     
-    inputBox.value = localStorage.getItem("LateName");
-    inputBox2.value = localStorage.getItem("AssName");
-    inputBox3.value = localStorage.getItem("ComName");
+    
+    inputBox.value = localStorage.getItem("LateName"+this.className);
+    inputBox2.value = localStorage.getItem("AssName"+this.className);
+    inputBox3.value = localStorage.getItem("ComName"+this.className);
     index.splice(0,1);
-    No.innerText = localStorage.getItem("SL_NO");
+    No.innerText = localStorage.getItem("SL_NO"+this.className);
     
     e.target.parentElement.remove();
     saveData();
@@ -174,24 +179,26 @@ function linkPage() {
   slDiv.innerHTML = index.length;
   List.appendChild(slDiv);
   slDiv.id = "oriceOneRow";
+  List.className = index.length;
   index.push(slDiv.innerText);
-  localStorage.setItem("SL_NO", slDiv.textContent);
+  localStorage.setItem("SL_NO"+index.length, slDiv.textContent);
+  
   
   let mDiv = document.createElement("span");
   mDiv.innerHTML = inputBox.value;
   slDiv.appendChild(mDiv);
   mDiv.id = "nameDiv";
-  localStorage.setItem("LateName", mDiv.textContent);
+  localStorage.setItem("LateName"+index.length, mDiv.textContent);
 
   let assDiv = document.createElement("span");
   assDiv.innerHTML = inputBox2.value;
   slDiv.appendChild(assDiv);
-  localStorage.setItem("AssName", assDiv.textContent);
+  localStorage.setItem("AssName"+index.length, assDiv.textContent);
 
   let cmDiv = document.createElement("span");
   cmDiv.innerHTML = inputBox3.value;
   slDiv.appendChild(cmDiv);
-  localStorage.setItem("ComName", cmDiv.textContent);
+  localStorage.setItem("ComName"+index.length, cmDiv.textContent);
 
   let editBtn = document.createElement("span");
   editBtn.innerHTML = "edit_square";
@@ -237,6 +244,8 @@ function updateTodo() {
   delBtn.innerHTML = "delete";
   slDiv.appendChild(delBtn);
   delBtn.classList.add("material-icons");
+  emtyInput();
+  
 }
 
 window.addEventListener("load", () => {

@@ -10,9 +10,9 @@ var data = "";
 sBtn.addEventListener("click", () => {
     let sKye = Number(user_input.value - 253);
     if (sKye > Arry_Length) {
-        createPopup('এই নাম্বার কোন সনদ নেই!');
+        createPopup((sKye+253)+' - এই নাম্বার কোন সনদ নেই!');
     } else if(sKye <= -1) {
-        createPopup('এই নাম্বার কোন সনদ নেই!');
+        createPopup((sKye+253)+' - এই নাম্বার কোন সনদ নেই!');
     }else{
     let lode_Data = document.querySelector(".lode_Data");
     let lode_Data2 = document.querySelector(".lode_Data2");
