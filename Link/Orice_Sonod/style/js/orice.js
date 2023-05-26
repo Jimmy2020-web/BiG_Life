@@ -357,7 +357,7 @@ function chakeOnline() {
       .then((res) => res.text())
       .then((rep) => {
         const data = JSON.parse(rep.substr(47).slice(0, -2));
-        var lastItem = data.table.rows.length;
+        var lastItem = data.table.rows.length +253;
         localStorage.setItem("srial", lastItem);
         output.innerHTML = `আবেদন ফরম নং :- ${lastItem} <span class="blink"></span>`;
       });
