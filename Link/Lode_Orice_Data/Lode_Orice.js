@@ -9,6 +9,7 @@ var data = "";
 
 sBtn.addEventListener("click", () => {
     let sKye = Number(user_input.value - 253);
+    
     if (sKye > Arry_Length) {
         createPopup((sKye+253)+' - এই নাম্বার কোন সনদ নেই!');
     } else if(sKye <= -1) {
@@ -49,8 +50,8 @@ sBtn.addEventListener("click", () => {
         viewBtn.className = ("material-symbols-outlined");
         viewBtn.innerHTML = "print";
         view_btn.append(viewBtn);
+        window.open("./page/print.html")
     }
-    window.open("./page/print.html")
 });
 
 let FULL_URL = ("https://docs.google.com/spreadsheets/d/" + Shet_ID + "/gviz/tq?sheet=" + Shet_NAME + "&range=" + Shet_RANGE);
@@ -109,7 +110,7 @@ fetchData(0);
 function createPopup(text) {
     let el = document.createElement('DIV');
     el.classList.add('popup');
-    el.innerHTML = text;
+    el.innerHTML = text;  
     document.body.appendChild(el);
     setTimeout(() => {
       el.remove();
