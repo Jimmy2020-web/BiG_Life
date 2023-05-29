@@ -1,0 +1,54 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100;200;300;400;500;600;700;800;900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Noto Serif Bengali", serif;
+}
+
+body {
+  background: #EEF4F9;
+}
+
+.A4_page {
+  margin: 15px auto;
+  width: 8.5in;
+  height: 11.5in;
+  background: #ffffff;
+  box-shadow: 0 4px 10px #a8c7e0;
+  border-radius: 8px;
+  padding: 15px;
+}
+.A4_page .outline {
+  border: 20px solid transparent;
+  -o-border-image: url(https://jimmy2020-web.github.io/demo-project-1/pages/BD24.jpg);
+     border-image: url(https://jimmy2020-web.github.io/demo-project-1/pages/BD24.jpg);
+  border-image-slice: 50;
+  border-image-repeat: initial;
+  padding: 25px;
+}
+.A4_page .outline .hader {
+  text-align: center;
+}
+.A4_page .outline .dateStamp {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.A4_page .outline .aother {
+  text-align: center;
+}
+.A4_page .outline .lateMan_address {
+  text-align: justify;
+}
+.A4_page .outline .dataTable {
+  display: grid;
+  grid-template-columns: 120px auto 120px 120px;
+}
+.A4_page .outline .dataTable span {
+  text-align: center;
+  border: 1px solid #303030;
+}
+.A4_page .outline .aother {
+  padding-top: 80px;
+}/*# sourceMappingURL=print.css.map */

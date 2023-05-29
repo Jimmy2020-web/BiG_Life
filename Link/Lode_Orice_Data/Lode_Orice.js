@@ -18,6 +18,7 @@ sBtn.addEventListener("click", () => {
     let lode_Data2 = document.querySelector(".lode_Data2");
     let sl_div = document.querySelector(".sl_div");
     Arry_Length = data.table.rows.length;
+    localStorage.setItem("sKey", sKye);
     
     let view_btn = document.querySelector(".view_btn");
     let velige = document.querySelector(".velige");
@@ -46,9 +47,10 @@ sBtn.addEventListener("click", () => {
         let viewBtn = document.createElement("span");
         viewBtn.id = ("btn" + sKye);
         viewBtn.className = ("material-symbols-outlined");
-        viewBtn.innerHTML = "visibility";
+        viewBtn.innerHTML = "print";
         view_btn.append(viewBtn);
     }
+    window.open("./page/print.html")
 });
 
 let FULL_URL = ("https://docs.google.com/spreadsheets/d/" + Shet_ID + "/gviz/tq?sheet=" + Shet_NAME + "&range=" + Shet_RANGE);
@@ -102,6 +104,7 @@ fetch(FULL_URL)
 }
 
 fetchData(0);
+
 
 function createPopup(text) {
     let el = document.createElement('DIV');
