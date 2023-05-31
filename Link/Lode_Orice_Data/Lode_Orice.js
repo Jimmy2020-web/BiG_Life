@@ -8,51 +8,46 @@ let Shet_RANGE = `A2:AO${Arry_Length}`;
 var data = "";
 
 sBtn.addEventListener("click", () => {
-    let sKye = Number(user_input.value - 253);
-    
-    if (sKye > Arry_Length) {
-        createPopup((sKye+253)+' - এই নাম্বার কোন সনদ নেই!');
-    } else if(sKye <= -1) {
-        createPopup((sKye+253)+' - এই নাম্বার কোন সনদ নেই!');
-    }else{
-    let lode_Data = document.querySelector(".lode_Data");
-    let lode_Data2 = document.querySelector(".lode_Data2");
-    let sl_div = document.querySelector(".sl_div");
+  let sKye = Number(user_input.value - 253);
+
+  if (sKye > Arry_Length) {
+    createPopup(sKye + 253 + " - এই নাম্বার কোন সনদ নেই!");
+  } else if (sKye <= -1) {
+    createPopup(sKye + 253 + " - এই নাম্বার কোন সনদ নেই!");
+  } else if (navigator.onLine === false) {
+    createPopup("কোন ইন্টারনেট সংযোগ নেই..!");
+  } else {
     Arry_Length = data.table.rows.length;
     localStorage.setItem("sKey", sKye);
-    
-    let view_btn = document.querySelector(".view_btn");
-    let velige = document.querySelector(".velige");
-
-    let NewBox  = document.createElement("span");
-        NewBox.id = ("box" + sKye);
-        NewBox.className = "Grid";
-        lode_Data.append(NewBox);
-        NewBox.innerHTML = data.table.rows[sKye].c[0].v;
-
-        let sl = document.createElement("span");
-        sl.innerHTML = `${sKye+253}`;
-        sl_div.append(sl);
-        
-
-        let NewBox1  = document.createElement("span");
-        NewBox1.id = ("box" + sKye);
-        NewBox1.className = "Grid";
-        lode_Data2.append(NewBox1);
-        NewBox1.innerHTML = data.table.rows[sKye].c[1].v;
-
-        let veligeName = document.createElement("span");
-        veligeName.innerHTML = data.table.rows[sKye].c[2].v;
-        velige.append(veligeName);
-
-        let viewBtn = document.createElement("span");
-        viewBtn.id = ("btn" + sKye);
-        viewBtn.className = ("material-symbols-outlined");
-        viewBtn.innerHTML = "print";
-        view_btn.append(viewBtn);
-        window.open("./page/print.html")
+    let filterData = data.table.rows[sKye].c;
+    let fill = filterData.filter((item) => item !== null);
+    let tabBtn = document.querySelector(".tab");
+    const table = document.createElement("table");
+    const tbody = document.createElement("tbody");
+    fill.forEach((item) => {
+      const row = document.createElement("tr");
+      const cell = document.createElement("td");
+      cell.textContent = item.v;
+      row.appendChild(cell);
+      tbody.appendChild(row);
+    });
+    table.appendChild(tbody);
+    tabBtn.appendChild(table);
+    print();
     }
 });
+
+function print() {
+  let printBtn = document.querySelector(".print");
+    printBtn.addEventListener("click", () => {
+    printBtn.classList.add("bounce");
+      setTimeout(() => {
+        window.open("./page/print.html", "Blank", "width=600px");
+        window.location.reload();
+    }, 2000);
+  });
+}
+
 
 let FULL_URL = ("https://docs.google.com/spreadsheets/d/" + Shet_ID + "/gviz/tq?sheet=" + Shet_NAME + "&range=" + Shet_RANGE);
 
@@ -63,44 +58,10 @@ fetch(FULL_URL)
 .then(rep => {
     data = JSON.parse(rep.substr(47).slice(0, -2));
 
-    // let lode_Data = document.querySelector(".lode_Data");
-    // let lode_Data2 = document.querySelector(".lode_Data2");
-    // let sl_div = document.querySelector(".sl_div");
     Arry_Length = data.table.rows.length;
     let total_Data_no = document.querySelector("#total_Data_no");
     total_Data_no.innerHTML = `সর্বমোট ${Arry_Length} [ ০১/০৩/২০২৩ হহিতে ]`;
-    // let view_btn = document.querySelector(".view_btn");
-    // let velige = document.querySelector(".velige");
-    // filterData.push(data);
-    
-    // for (let i = 0; i < Arry_Length; i++) {
-    //     let NewBox  = document.createElement("span");
-    //     NewBox.id = ("box" + i);
-    //     NewBox.className = "Grid";
-    //     lode_Data.append(NewBox);
-    //     NewBox.innerHTML = data.table.rows[i].c[0].v;
 
-    //     let sl = document.createElement("span");
-    //     sl.innerHTML = `${i+1}`;
-    //     sl_div.append(sl);
-        
-
-    //     let NewBox1  = document.createElement("span");
-    //     NewBox1.id = ("box" + i);
-    //     NewBox1.className = "Grid";
-    //     lode_Data2.append(NewBox1);
-    //     NewBox1.innerHTML = data.table.rows[i].c[1].v;
-
-    //     let veligeName = document.createElement("span");
-    //     veligeName.innerHTML = data.table.rows[i].c[2].v;
-    //     velige.append(veligeName);
-
-    //     let viewBtn = document.createElement("span");
-    //     viewBtn.id = ("btn" + i);
-    //     viewBtn.className = ("material-symbols-outlined");
-    //     viewBtn.innerHTML = "visibility";
-    //     view_btn.append(viewBtn);
-    // }
 });
 }
 

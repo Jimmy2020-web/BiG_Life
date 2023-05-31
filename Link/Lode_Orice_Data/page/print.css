@@ -47,7 +47,7 @@ body {
 }
 .A4_page .outline .dataTable span {
   text-align: center;
-  border: 1px solid #303030;
+  padding: 5px 0;
 }
 .A4_page .outline .aother {
   padding-top: 80px;

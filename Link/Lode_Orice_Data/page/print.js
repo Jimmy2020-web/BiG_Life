@@ -16,23 +16,30 @@ let FULL_URL =
 
 const sKey = Number(localStorage.getItem("sKey"));
 
-function cake_Valu() {
-  if (sKey > Arry_Length) {
-    console.log(sKey);
-  } else {
-    console.log(sKey);
-  }
-}
-
-cake_Valu();
-
 function fetchData() {
   fetch(FULL_URL)
     .then((res) => res.text())
     .then((rep) => {
       data = JSON.parse(rep.substr(47).slice(0, -2));
       Arry_Length = data.table.rows.length;
+      
       const html_Value = document.querySelector(".outline");
+        
+      let filterData = data.table.rows[sKey].c;
+      let fill = filterData.filter(item => item !== null);
+      let tabBtn = document.querySelector(".tab");
+      const table = document.createElement("table");
+      const tbody = document.createElement("tbody");
+      fill.forEach(item => {
+        const row = document.createElement("tr");
+        const cell = document.createElement("td");
+        cell.textContent = item.v;
+        row.appendChild(cell);
+        tbody.appendChild(row);
+      });
+      table.appendChild(tbody);
+      tabBtn.appendChild(table);
+      
       
       html_Value.innerHTML = `
         <div class="hader">
@@ -61,9 +68,26 @@ function fetchData() {
                 <span>ক্রমিক</span>
                 <span>ওয়ারিশের নাম</span>
                 <span>সম্পর্ক</span>
-                <span>মন্তব্য</span>
-                <div class=""></div>
+                <span>মন্তব্য</span>               
             </div>
+            <table id="table_js">
+              <thead>
+                <tr>
+                  <th>ক্রমিক</th>
+                  <th>ওয়ারিশের নাম</th>
+                  <th>সম্পর্ক</th>
+                  <th>মন্তব্য</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr id="inject">
+                  <td>1</td>
+                  <td>sd</td>
+                  <td>sd</td>
+                  <td>dg</td>
+                </tr>
+              </tbody>
+            </table>
             <div class="dateStamp">
             
             <div class="">
