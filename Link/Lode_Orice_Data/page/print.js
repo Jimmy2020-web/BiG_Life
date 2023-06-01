@@ -34,10 +34,9 @@ function fetchData() {
 
       const tbody = document.createElement("tbody");
 
-      let fill2 = fill.slice(4, -1).filter(item => item.v !== "-");
-      console.log(fill2);
+      let fill2 = fill.slice(4, -1);
 
-      for (let i = 0; i < fill2.length / 2; i++) {
+      for (let i = 0; i < fill2.length / 3; i++) {
         
         const numberSpan = document.createElement('td');
         numberSpan.innerText = (i + 1) + '। ';

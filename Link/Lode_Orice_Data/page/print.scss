@@ -13,6 +13,8 @@
 
 body {
     background: #EEF4F9;
+    -webkit-print-color-adjust:exact !important;
+    print-color-adjust:exact !important;
 }
 //https://jimmy2020-web.github.io/demo-project-1/pages/BD24.jpg
 .A4_page {
