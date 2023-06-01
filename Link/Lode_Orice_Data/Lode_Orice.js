@@ -42,7 +42,7 @@ function print() {
     printBtn.addEventListener("click", () => {
     printBtn.classList.add("bounce");
       setTimeout(() => {
-        window.open("./page/print.html", "Blank", "width=600px");
+        window.open("./page/print.html", "Blank");
         window.location.reload();
     }, 2000);
   });

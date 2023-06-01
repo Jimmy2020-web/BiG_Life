@@ -21,8 +21,8 @@ body {
 }
 .A4_page .outline {
   border: 20px solid transparent;
-  -o-border-image: url(https://jimmy2020-web.github.io/demo-project-1/pages/BD24.jpg);
-     border-image: url(https://jimmy2020-web.github.io/demo-project-1/pages/BD24.jpg);
+  -o-border-image: url(./boderA4.png);
+     border-image: url(./boderA4.png);
   border-image-slice: 50;
   border-image-repeat: initial;
   padding: 25px;
@@ -38,14 +38,15 @@ body {
   font-weight: bold;
   padding: 10px 0;
   position: relative;
+  font-size: 20px;
 }
 .A4_page .outline .hader #sonod_T span {
   position: absolute;
-  left: 42%;
-  top: -3px;
+  left: 39.5%;
+  top: -8px;
 }
 .A4_page .outline .hader #sonod_T span img {
-  width: 110px;
+  width: 150px;
 }
 .A4_page .outline .dateStamp {
   display: flex;
@@ -74,20 +75,30 @@ body {
 }
 .A4_page .outline .dataTable {
   display: grid;
-  grid-template-columns: 120px auto 120px 120px;
+  grid-template-columns: 122px 360px repeat(2, 120px);
   border: 1px solid #acabab;
   border-bottom: none;
 }
 .A4_page .outline .dataTable span {
   text-align: center;
   padding: 5px 0;
+  border-left: 1px solid #acabab;
+}
+.A4_page .outline .dataTable span:nth-child(1) {
+  border: none;
 }
 .A4_page .outline table tbody {
+  margin-top: -2px;
   display: grid;
-  grid-template-columns: 380px repeat(2, 120px);
+  grid-template-columns: 360px repeat(2, 120px);
 }
 .A4_page .outline table tbody tr {
-  padding: 8px 0;
+  padding: 8px 12px;
+  border-left: 1px solid #acabab;
+}
+
+h3.hader {
+  padding: 15px 0;
 }
 
 .Grid2 {
@@ -99,4 +110,12 @@ body {
   background-size: 55%;
   background-repeat: no-repeat;
   min-height: 45%;
+}
+.Grid2 .list {
+  font-size: 15px;
+}
+.Grid2 .list td {
+  display: block;
+  text-align: center;
+  padding-top: 20px;
 }/*# sourceMappingURL=print.css.map */

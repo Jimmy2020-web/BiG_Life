@@ -11,24 +11,24 @@
 // font-family: 'Noto Serif Bengali', serif;
 
 //End
+body {
+    background: #f6f6f6;
+}
+
 #main{
     margin: 0 auto;
-    display: grid;
-    justify-content: center;
-    align-items: center;
-    max-width: 1080px;
-    min-width: 550px;
-    min-height: 600px;
+    min-width: 560px;
+    height: 100%;
     text-align: center;
-    background: #f6f6f6;
+    position: relative;
     .title_Head{
         font-family: 'Noto Serif Bengali', serif;
-        margin: 10px 0;
+        margin: 20px 0;
     }
 }
 .searce_input {
-    margin: 15px 0;
-    label{
+        margin: 20px 0;
+        label{
         position: relative;
         padding: 10px;
         border-radius: 10px;
@@ -61,6 +61,8 @@
 }
 
 table{
+    display: flex;
+    justify-content: center;
     tbody{
         display: grid;
         grid-template-columns: repeat(4, 220px);

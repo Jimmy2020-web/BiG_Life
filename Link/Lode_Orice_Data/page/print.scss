@@ -14,7 +14,7 @@
 body {
     background: #EEF4F9;
 }
-
+//https://jimmy2020-web.github.io/demo-project-1/pages/BD24.jpg
 .A4_page {
     margin: 15px auto;
     width: 8.5in;
@@ -25,7 +25,7 @@ body {
     padding: 15px;
     .outline{
         border: 20px solid transparent;
-        border-image: url(https://jimmy2020-web.github.io/demo-project-1/pages/BD24.jpg);
+        border-image: url(./boderA4.png);
         border-image-slice: 50;
         border-image-repeat: initial;
         padding: 25px;
@@ -39,12 +39,13 @@ body {
                 font-weight: bold;
                 padding: 10px 0;
                 position: relative;
+                font-size: 20px;
                 span{
                     position: absolute;
-                    left: 42%;
-                    top: -3px;
+                    left: 39.5%;
+                    top: -8px;
                     img{
-                        width: 110px;
+                        width: 150px;
                     }
                 }
             }
@@ -78,26 +79,34 @@ body {
         }
         .dataTable{
             display: grid;
-            grid-template-columns: 120px auto 120px 120px;
+            grid-template-columns: 122px 360px repeat(2, 120px);
             border: 1px solid #acabab;
             border-bottom: none;
             span{
                 text-align: center;
                 padding: 5px 0;
+                border-left: 1px solid #acabab;
+                &:nth-child(1){
+                    border: none;
+                }
             }
         }
         table{
             tbody{
+                margin-top: -2px;
                 display: grid;
-                grid-template-columns: 380px repeat(2, 120px);
+                grid-template-columns: 360px repeat(2, 120px);
                 tr{
-                    padding: 8px 0;
+                    padding: 8px 12px;
+                    border-left: 1px solid #acabab;
                 }
             }
         }
     };
 };
-
+h3.hader {
+    padding: 15px 0;
+}
 .Grid2{
     display: grid;
     grid-template-columns: 120px auto;
@@ -107,4 +116,12 @@ body {
     background-size: 55%;
     background-repeat: no-repeat;
     min-height: 45%;
+    .list{
+        font-size: 15px;
+        td{
+            display: block;
+            text-align: center;
+            padding-top: 20px;
+        }
+    }
 }

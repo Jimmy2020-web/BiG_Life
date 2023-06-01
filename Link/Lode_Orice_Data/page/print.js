@@ -29,10 +29,22 @@ function fetchData() {
       let filterData = data.table.rows[sKey].c;
       let fill = filterData.filter(item => item !== null);
       let tabBtn = document.querySelector(".tab");
+      let list = document.querySelector(".list");
       const table = document.createElement("table");
 
       const tbody = document.createElement("tbody");
-      
+
+      let fill2 = fill.slice(4, -1).filter(item => item.v !== "-");
+      console.log(fill2);
+
+      for (let i = 0; i < fill2.length / 2; i++) {
+        
+        const numberSpan = document.createElement('td');
+        numberSpan.innerText = (i + 1) + '। ';
+        const itemSpan = document.createElement('tr');
+        itemSpan.innerText = fill2[i];
+        list.appendChild(numberSpan);
+      }
       fill.slice(4, -1).forEach(item => {
         const row = document.createElement("tr");
         const cell = document.createElement("td");
