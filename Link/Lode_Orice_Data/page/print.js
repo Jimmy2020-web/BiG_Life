@@ -23,14 +23,17 @@ function fetchData() {
       data = JSON.parse(rep.substr(47).slice(0, -2));
       Arry_Length = data.table.rows.length;
       
-      const html_Value = document.querySelector(".outline");
+      const html_Value = document.querySelector(".prat1");
+      const html_Value2 = document.querySelector(".prat2");
         
       let filterData = data.table.rows[sKey].c;
       let fill = filterData.filter(item => item !== null);
       let tabBtn = document.querySelector(".tab");
       const table = document.createElement("table");
+
       const tbody = document.createElement("tbody");
-      fill.forEach(item => {
+      
+      fill.slice(4, -1).forEach(item => {
         const row = document.createElement("tr");
         const cell = document.createElement("td");
         cell.textContent = item.v;
@@ -45,7 +48,9 @@ function fetchData() {
         <div class="hader">
                 <h2>০২নং কাশিমপুর ইউনিয়ন পরিষদ</h2>
                 <p>উপজেলাঃ রাণীনগর, জেলাঃ নওগাঁ</p>
-                <p>ওয়ারিশ সনদ পত্র</p>
+                <p id="sonod_T">ওয়ারিশ সনদ পত্র
+                <span><img src="./Sonod.png" alt="" srcset=""></span>
+                </p>
             </div>
             <div class="dateStamp">
             <p id="">আবেদন নম্বরঃ ${sKey + 253}/2022-23</p>
@@ -70,7 +75,33 @@ function fetchData() {
                 <span>সম্পর্ক</span>
                 <span>মন্তব্য</span>               
             </div>
-            <table id="table_js">
+    `;
+
+    html_Value2.innerHTML = `
+    <div class="dateStamp">
+            
+      <div class="">
+          <p id="">সুপারিশ ইউিপ সদস্য </p>
+      </div>
+      <div class="QR"><img src="./Verify.png" alt="" srcset=""></div>
+        <div class="aother">
+        <img src="./char.png" alt="" srcset="">
+            <p>
+                চেয়ারম্যান <br>
+                মোঃ মকলেছুর রহমান বাবু <br>
+                ০২নং কাশিমপুর ইউনিয়ন পরিষদ <br>
+                রাণীনগর, নওগাঁ। <br>
+            </p>
+        </div>
+      </div>
+    `;
+
+  });
+}
+
+fetchData();
+
+{/* <table id="table_js">
               <thead>
                 <tr>
                   <th>ক্রমিক</th>
@@ -87,23 +118,4 @@ function fetchData() {
                   <td>dg</td>
                 </tr>
               </tbody>
-            </table>
-            <div class="dateStamp">
-            
-            <div class="">
-                <p id="">সুপারিশ ইউিপ সদস্য </p>
-            </div>
-            <div class="aother">
-                <p>
-                    চেয়ারম্যান <br>
-                    মোঃ মকলেছুর রহমান বাবু <br>
-                    ০২নং কাশিমপুর ইউনিয়ন পরিষদ <br>
-                    রাণীনগর, নওগাঁ। <br>
-                </p>
-            </div>
-        </div>
-    `;
-    });
-}
-
-fetchData();
+            </table> */}

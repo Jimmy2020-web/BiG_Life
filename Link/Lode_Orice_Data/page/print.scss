@@ -29,16 +29,49 @@ body {
         border-image-slice: 50;
         border-image-repeat: initial;
         padding: 25px;
+        height: 100%;
         .hader{
             text-align: center;
+            h2{
+                font-size: 35px;
+            }
+            #sonod_T{
+                font-weight: bold;
+                padding: 10px 0;
+                position: relative;
+                span{
+                    position: absolute;
+                    left: 42%;
+                    top: -3px;
+                    img{
+                        width: 110px;
+                    }
+                }
+            }
         };
         .dateStamp{
             display: flex;
             justify-content: space-between;
             align-items: center;
+            .QR{
+                img {
+                    width: 90px;
+                    padding: 5px;
+                    border: 1px solid;
+                    border-radius: 10px;
+                }
+            }
         }
         .aother{
             text-align: center;
+            position: relative;
+            padding-top: 80px;
+            img{
+                position: absolute;
+                left: 8px;
+                top: -10px;
+                width: 175px;
+            }
         }
         .lateMan_address{
             text-align: justify;
@@ -46,13 +79,32 @@ body {
         .dataTable{
             display: grid;
             grid-template-columns: 120px auto 120px 120px;
+            border: 1px solid #acabab;
+            border-bottom: none;
             span{
                 text-align: center;
                 padding: 5px 0;
             }
         }
-        .aother{
-            padding-top: 80px;
+        table{
+            tbody{
+                display: grid;
+                grid-template-columns: 380px repeat(2, 120px);
+                tr{
+                    padding: 8px 0;
+                }
+            }
         }
     };
 };
+
+.Grid2{
+    display: grid;
+    grid-template-columns: 120px auto;
+    border: 1px solid #acabab;
+    background-image: url(./KUP.png);
+    background-position: center;
+    background-size: 55%;
+    background-repeat: no-repeat;
+    min-height: 45%;
+}

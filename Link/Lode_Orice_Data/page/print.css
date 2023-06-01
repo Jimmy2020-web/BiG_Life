@@ -26,17 +26,48 @@ body {
   border-image-slice: 50;
   border-image-repeat: initial;
   padding: 25px;
+  height: 100%;
 }
 .A4_page .outline .hader {
   text-align: center;
+}
+.A4_page .outline .hader h2 {
+  font-size: 35px;
+}
+.A4_page .outline .hader #sonod_T {
+  font-weight: bold;
+  padding: 10px 0;
+  position: relative;
+}
+.A4_page .outline .hader #sonod_T span {
+  position: absolute;
+  left: 42%;
+  top: -3px;
+}
+.A4_page .outline .hader #sonod_T span img {
+  width: 110px;
 }
 .A4_page .outline .dateStamp {
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
+.A4_page .outline .dateStamp .QR img {
+  width: 90px;
+  padding: 5px;
+  border: 1px solid;
+  border-radius: 10px;
+}
 .A4_page .outline .aother {
   text-align: center;
+  position: relative;
+  padding-top: 80px;
+}
+.A4_page .outline .aother img {
+  position: absolute;
+  left: 8px;
+  top: -10px;
+  width: 175px;
 }
 .A4_page .outline .lateMan_address {
   text-align: justify;
@@ -44,11 +75,28 @@ body {
 .A4_page .outline .dataTable {
   display: grid;
   grid-template-columns: 120px auto 120px 120px;
+  border: 1px solid #acabab;
+  border-bottom: none;
 }
 .A4_page .outline .dataTable span {
   text-align: center;
   padding: 5px 0;
 }
-.A4_page .outline .aother {
-  padding-top: 80px;
+.A4_page .outline table tbody {
+  display: grid;
+  grid-template-columns: 380px repeat(2, 120px);
+}
+.A4_page .outline table tbody tr {
+  padding: 8px 0;
+}
+
+.Grid2 {
+  display: grid;
+  grid-template-columns: 120px auto;
+  border: 1px solid #acabab;
+  background-image: url(./KUP.png);
+  background-position: center;
+  background-size: 55%;
+  background-repeat: no-repeat;
+  min-height: 45%;
 }/*# sourceMappingURL=print.css.map */
