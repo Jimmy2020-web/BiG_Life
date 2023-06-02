@@ -112,21 +112,43 @@ function fetchData() {
 
 fetchData();
 
-{/* <table id="table_js">
-              <thead>
-                <tr>
-                  <th>ক্রমিক</th>
-                  <th>ওয়ারিশের নাম</th>
-                  <th>সম্পর্ক</th>
-                  <th>মন্তব্য</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr id="inject">
-                  <td>1</td>
-                  <td>sd</td>
-                  <td>sd</td>
-                  <td>dg</td>
-                </tr>
-              </tbody>
-            </table> */}
+const pwBtn = document.querySelector(".pwBtn");
+const chakePw = document.querySelector(".cpw");
+const pwBuserInputtn = document.querySelector(".userInput");
+
+var pLength = document.querySelector("#pwd");
+pLength.addEventListener("keyup", () => {
+  if (pLength.value.length > 4) {
+    pwBtn.style.opacity = 1;
+    pwBtn.style.pointerEvents = "all";
+  } else if (pLength.value.length < 5) {
+    pwBtn.style.opacity = .5;
+    pwBtn.style.pointerEvents = "none";
+  }
+});
+
+pwBtn.addEventListener("click", () => {
+  const pwd = document.getElementById("pwd").value;
+
+  if (pwd === "01925") {
+    chakePw.classList.add("okStatus");
+    document.querySelector(".wroang").innerHTML = "lock_open";
+    setTimeout(() => {
+      chakePw.classList.remove("okStatus");
+      pwBuserInputtn.style.display = "none";
+    }, 500);
+    
+  } else {
+    document.querySelector("#infoPwd").innerHTML = "আপনার গোপন সংখ্যাটি ভুল..?";
+    let wrong_info = document.querySelector(".wroang");
+    wrong_info.innerHTML = "cancel";
+    wrong_info.style.color = "orangered";
+    chakePw.classList.add("okStatus");
+    setTimeout(() => {
+      wrong_info.innerHTML = "lock";
+      chakePw.classList.remove("okStatus");
+      document.querySelector("#infoPwd").innerHTML = "আপনার গোপন সংখ্যাটি দিন..!";
+      wrong_info.style.color = "#01972e";
+    }, 2500);
+  }
+});
