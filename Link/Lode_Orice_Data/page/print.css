@@ -8,6 +8,8 @@
 
 body {
   background: #EEF4F9;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
 }
 
 .A4_page {
@@ -20,6 +22,7 @@ body {
   padding: 15px;
 }
 .A4_page .outline {
+  position: relative;
   border: 20px solid transparent;
   -o-border-image: url(./boderA4.png);
      border-image: url(./boderA4.png);
@@ -27,6 +30,12 @@ body {
   border-image-repeat: initial;
   padding: 25px;
   height: 100%;
+  background-image: url(./KUP.png);
+  background-position: center;
+  background-size: 55%;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-position-y: 66%;
 }
 .A4_page .outline .hader {
   text-align: center;
@@ -89,6 +98,7 @@ body {
 }
 .A4_page .outline table tbody {
   margin-top: -2px;
+  margin-bottom: -2px;
   display: grid;
   grid-template-columns: 360px repeat(2, 120px);
 }
@@ -98,18 +108,20 @@ body {
 }
 
 h3.hader {
+  position: relative;
   padding: 15px 0;
+}
+h3.hader img {
+  position: absolute;
+  width: 350px;
+  top: 1px;
+  left: 174px;
 }
 
 .Grid2 {
   display: grid;
   grid-template-columns: 120px auto;
   border: 1px solid #acabab;
-  background-image: url(./KUP.png);
-  background-position: center;
-  background-size: 55%;
-  background-repeat: no-repeat;
-  min-height: 45%;
 }
 .Grid2 .list {
   font-size: 15px;
@@ -118,4 +130,16 @@ h3.hader {
   display: block;
   text-align: center;
   padding-top: 20px;
+}
+
+.shakkor {
+  position: absolute;
+  bottom: 15px;
+  width: 700px;
+}
+
+@media print {
+  .outlined {
+    box-shadow: none !important;
+  }
 }/*# sourceMappingURL=print.css.map */

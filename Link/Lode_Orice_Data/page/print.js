@@ -79,7 +79,7 @@ function fetchData() {
       }</span>, উপজেলাঃ <span>রাণীনগর</span>, জেলাঃ <span>নওগাঁ</span>। অত্র ০২নং কাশিমপুর ইউনিয়নের স্থায়ী বাসিন্দা ছিলেন। তিনি মৃত্যুকালে নিন্ম লিখিত উত্তরাধীকার গণকে রাখিয়া মৃত্যু বরণ করেন। আমার জানামতে নিন্ম লিখিত উত্তরাধীকার ছাড়া অন্য কোন উত্তরাধীকার নাই।
             </div>
             
-            <h3 class="hader">উত্তরাধীকারগণের নাম ও সম্পর্ক</h3>
+            <h3 class="hader">উত্তরাধীকারগণের নাম ও সম্পর্ক <img src="./Rebon.png" alt=""> </h3>
             <div class="dataTable" id="">
                 <span>ক্রমিক</span>
                 <span>ওয়ারিশের নাম</span>
@@ -89,7 +89,7 @@ function fetchData() {
     `;
 
     html_Value2.innerHTML = `
-    <div class="dateStamp">
+    <div class="dateStamp shakkor">
             
       <div class="">
           <p id="">সুপারিশ ইউিপ সদস্য </p>
