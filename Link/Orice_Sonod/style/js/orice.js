@@ -102,6 +102,8 @@ addBtn.addEventListener("click", () => {
     alert("ওয়ারিশ গণের নাম লিখুন..!");
   } else if (inputBox2.value === "") {
     alert("সম্পর্ক লিখুন..!");
+  } else if (inputBox3.value === "") {
+    alert("মন্তব্য লিখুন..!");
   } else {
     let slDiv = document.createElement("span");
     tabe2Data.appendChild(slDiv);

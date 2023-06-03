@@ -132,7 +132,7 @@ pwBtn.addEventListener("click", () => {
 
   if (pwd === "01925") {
     chakePw.classList.add("okStatus");
-    document.querySelector(".wroang").innerHTML = "lock_open";
+    document.querySelector(".wroang").innerHTML = "lock_open_right";
     setTimeout(() => {
       chakePw.classList.remove("okStatus");
       pwBuserInputtn.style.display = "none";
