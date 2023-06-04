@@ -21,10 +21,12 @@ sBtn.addEventListener("click", () => {
     localStorage.setItem("sKey", sKye);
     let filterData = data.table.rows[sKye].c;
     let fill = filterData.filter((item) => item !== null);
+    let fillData2 = fill.filter((el) => el.v !== "-");
+    
     let tabBtn = document.querySelector(".tab");
     const table = document.createElement("table");
     const tbody = document.createElement("tbody");
-    fill.forEach((item) => {
+    fillData2.forEach((item) => {
       const row = document.createElement("tr");
       const cell = document.createElement("td");
       cell.textContent = item.v;
