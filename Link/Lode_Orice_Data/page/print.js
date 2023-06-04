@@ -66,7 +66,7 @@ function fetchData() {
             <div class="dateStamp">
             <p id="">আবেদন নম্বরঃ ${sKey + 253}/2023-24</p>
             <p id="">তারিখঃ ${data.table.rows[sKey].c[40].v}</p>
-            </div><br>
+            </div>
             <div class="lateMan_address">
                 এই মর্মে উত্তরাধীকার সনদ পত্র প্রদান করিতেছি যে, মৃত <span>${
                   data.table.rows[sKey].c[0].v
