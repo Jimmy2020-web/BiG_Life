@@ -77,20 +77,41 @@ table{
     }
 }
 
+.tab {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .print{
-    border: none;
+    font-family: 'Noto Serif Bengali', serif;
+    border: 1px solid green;
     outline: none;
     padding: 10px 20px;
-    color: #5c5b5b;
-    background: #e0e0e0;
+    color: green;
+    background: #fff;
     cursor: pointer;
     border-radius: 8px;
     font-size: 20px;
+    margin-top: 30px;
     transition: all .3s ease-in-out;
     &:hover{
         color: #ffffff;
-        background: #929191;
+        background: green;
+        border: 1px solid #004925;
     }
+}
+
+#toulTip{
+    width: 35%;
+    height: 250px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    border: 15px solid #e4e1e1;
+    margin-top: 50px;
+    font-family: 'Noto Serif Bengali', serif;
+    color: #696868;
 }
 
 .popup {

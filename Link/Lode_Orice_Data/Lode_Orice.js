@@ -17,6 +17,8 @@ sBtn.addEventListener("click", () => {
   } else if (navigator.onLine === false) {
     createPopup("কোন ইন্টারনেট সংযোগ নেই..!");
   } else {
+    let toulTip = document.querySelector("#toulTip");
+    toulTip.style.display = "none";
     Arry_Length = data.table.rows.length;
     localStorage.setItem("sKey", sKye);
     let filterData = data.table.rows[sKye].c;
@@ -42,7 +44,7 @@ sBtn.addEventListener("click", () => {
 function print() {
   let printBtn = document.querySelector(".print");
     printBtn.addEventListener("click", () => {
-    printBtn.innerHTML = "Loding...!";
+    printBtn.innerHTML = "অপেক্ষা করুন..!";
     printBtn.classList.add("bounce");
       setTimeout(() => {
         window.open("./page/print.html", "Blank");
