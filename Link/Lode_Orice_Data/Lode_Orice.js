@@ -44,7 +44,7 @@ sBtn.addEventListener("click", () => {
 function print() {
   let printBtn = document.querySelector(".print");
     printBtn.addEventListener("click", () => {
-    printBtn.innerHTML = "অপেক্ষা করুন..!";
+    printBtn.innerHTML = "অপেক্ষা করুন";
     printBtn.classList.add("bounce");
       setTimeout(() => {
         window.open("./page/print.html", "Blank");
