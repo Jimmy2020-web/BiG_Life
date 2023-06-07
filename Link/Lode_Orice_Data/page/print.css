@@ -25,12 +25,12 @@ body {
 }
 .A4_page .outline {
   position: relative;
-  border: 20px solid transparent;
-  -o-border-image: url(./boderA4.png);
-     border-image: url(./boderA4.png);
-  border-image-slice: 50;
+  border: 30px solid transparent;
+  -o-border-image: url(./boderA41.png);
+     border-image: url(./boderA41.png);
+  border-image-slice: 130;
   border-image-repeat: initial;
-  padding: 25px;
+  padding: 15px;
   height: 100%;
   background-image: url(./KUP.png);
   background-position: center;
