@@ -7,6 +7,7 @@ var Arry_Length = "";
 let Shet_RANGE = `A2:AO${Arry_Length}`;
 var data = "";
 
+
 sBtn.addEventListener("click", () => {
   let sKye = Number(user_input.value - 253);
 
@@ -24,7 +25,8 @@ sBtn.addEventListener("click", () => {
     let filterData = data.table.rows[sKye].c;
     let fill = filterData.filter((item) => item !== null);
     let fillData2 = fill.filter((el) => el.v !== "-");
-    
+
+       
     let tabBtn = document.querySelector(".tab");
     const table = document.createElement("table");
     const tbody = document.createElement("tbody");
@@ -40,6 +42,7 @@ sBtn.addEventListener("click", () => {
     print();
     }
 });
+
 
 function print() {
   let printBtn = document.querySelector(".print");

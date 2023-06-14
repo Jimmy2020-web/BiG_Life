@@ -15,28 +15,26 @@ body {
 
 .A4_page {
   margin: 0 auto;
-  width: 8.5in;
-  height: 11.5in;
+  width: 8.3in;
+  height: 11.7in;
   background: #ffffff;
   box-shadow: 0 4px 10px #a8c7e0;
-  border-radius: 8px;
-  padding: 15px;
+  border: 0px solid transparent;
+  -o-border-image: url(./boderA41.png);
+     border-image: url(./boderA41.png);
+  border-image-slice: 135 fill;
+  border-image-repeat: initial;
   font-size: 17px;
+  padding: 25px;
 }
 .A4_page .outline {
   position: relative;
-  border: 30px solid transparent;
-  -o-border-image: url(./boderA41.png);
-     border-image: url(./boderA41.png);
-  border-image-slice: 130;
-  border-image-repeat: initial;
   padding: 15px;
   height: 100%;
   background-image: url(./KUP.png);
   background-position: center;
   background-size: 55%;
   background-repeat: no-repeat;
-  background-position: center;
   background-position-y: 66%;
 }
 .A4_page .outline .hader {
@@ -117,7 +115,7 @@ h3.hader img {
   position: absolute;
   width: 350px;
   top: 1px;
-  left: 174px;
+  left: 182px;
 }
 
 .Grid2 {
