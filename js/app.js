@@ -407,9 +407,6 @@ cls2.addEventListener("click", () => {
   document.querySelector(".pay-back").classList.add("d-block");
 });
 
-function websiteVisits(response) {
-  document.querySelector("#visitor").textContent = response.value;
-}
 window.addEventListener('load', () => {
   document.querySelector(".popUp").style.display = "none";
 })
