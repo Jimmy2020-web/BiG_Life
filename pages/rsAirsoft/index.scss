@@ -1,0 +1,265 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Caprasimo&family=Noto+Serif+Bengali:wght@100;200;300;400;500;600;700;800;900&family=Rubik:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// font Name
+// font-family: 'Caprasimo', cursive;
+// font-family: 'Noto Serif Bengali', serif;
+// font-family: 'Rubik', sans-serif;
+
+$bgcolor: #678E61;
+$textcolor: #fff;
+$textcolor2: #313131;
+
+@mixin buy_btn {
+    padding: 12px 20px;
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    background: $bgcolor;
+    color: $textcolor;
+    cursor: pointer;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+
+body {
+    background: #ffffff;
+    color: $textcolor2;
+    font-family: 'Noto Serif Bengali', serif;
+}
+
+.navBar{
+    background: $bgcolor;
+    color: $textcolor;
+    .grid_nav{
+        display: grid;
+        grid-template-columns: 220px 760px;
+        .logo{
+            padding: 10px;
+            font-size: 26px;
+            font-family: 'Caprasimo', sans-serif;
+            cursor: pointer;
+            transition: all .3s ease-in;
+            &:hover{
+                color: #fae902;
+            }
+        }
+        .nIten{
+            display: flex;
+            align-items: center;
+            justify-content: end;
+            p{
+                padding: 5px 15px;
+                cursor: pointer;
+                transition: all .3s ease-in;
+                &:hover{
+                    color: #fff;
+                }
+            }
+        }
+    }
+}
+
+.continer{
+    max-width: 1050px;
+    margin: 0 auto;
+}   
+
+.hero_bg{
+    width: 100%;
+    height: 500px;
+    background: url(./image/Pellets.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center;
+    .hero_text{
+        background: #101010b2;
+        color: #fff;
+        width: 100%;
+        height: 100%;
+        .info{
+            width: 70%;
+            font-size: 70px;
+            font-weight: bold;
+            padding: 100px;
+        }
+        button {
+            @include buy_btn;
+        }
+    }
+}
+
+.shop_Step{
+     margin: 50px 0;
+    .title{
+        text-align: center;
+        padding: 10px 0;
+        font-size: 35px;
+    }
+    .card, .Price_card{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        justify-content: space-between;
+        gap: 15px;
+        .card_item{
+            position: relative;
+            width: 250px;
+            height: 320px;
+            border: 1px solid $bgcolor;
+            padding: 10px;
+            border-radius: 8px;
+            &:hover{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+            .infoText{
+                z-index: 3;
+                color: $bgcolor;
+                text-align: center;
+                button{
+                    margin-top: 190px;
+                    @include buy_btn;
+                }
+            }
+            img{
+                position: absolute;
+                width: 230px;
+                z-index: -1;
+                bottom: 0;
+                transition: all .3s ease-in;
+            }
+        }
+    }
+}
+.xprice{
+    color: gray;
+    text-decoration: line-through;
+}
+.bullets{
+    
+    .box{
+        display: grid;
+        grid-template-columns: 500px 550px;
+        background: #f3f3f3;
+        .infoBul{
+            padding: 15px;
+            border: 1px solid $bgcolor;
+            text-align: justify;
+            border-radius: 12px;
+            img{
+                width: 480px;
+            }
+            &:nth-child(1){
+                border-right: none;
+            }
+        }
+    }
+}
+
+.profile{
+    display: grid;
+    grid-template-columns: auto 380px;
+    align-items: center;
+    justify-content: space-around;
+    img{
+        width: 300px;
+        border: 5px solid #bebdbd;
+        border-radius: 50%;
+        background: #fff;
+        margin: 20px 0;
+    }
+}
+.Pr_card_item{
+    img{
+        width: 220px;
+    }
+}
+
+.Pr_card_item, .profile{
+    background: #f3f3f3;
+    padding: 15px;
+    border-radius: 8px;
+    position: relative;
+    border: 1px solid #dad9d9;
+    transition: all .3s ease-in-out;
+    &:hover{
+        border: 1px solid #bebdbd;
+        box-shadow: 0px 2px 8px #bebdbd;
+    }
+    .cardText{
+        color: $textcolor2;
+        button{
+            margin-top: 10px;
+            @include buy_btn;
+        }
+    }
+}
+
+.policy{
+    background: #f3f3f3;
+    color: $textcolor2;
+    font-weight: bold;
+    padding: 25px 0px;
+    border-radius: 8px;
+    border: 1px solid #bebdbd;
+    // box-shadow: 0px 2px 8px #bebdbd;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    align-items: center;
+    justify-content: space-around;
+    span{
+        text-align: center;
+        img{
+            width: 100px;
+        }
+    }
+}
+
+footer{
+    background: #f3f3f3;
+    color: #747373;
+    padding: 30px 0;
+    text-align: center;
+}
+
+@media screen and (max-width: 590px) {
+    .navBar .grid_nav {
+        display: grid;
+        grid-template-columns: 203px 170px;
+    }
+    .hero_bg{
+        background-size: 100%;
+        height: 250px;
+    }
+    .hero_bg .hero_text .info {
+    width: 100%;
+    font-size: 20px;
+    }
+    .shop_Step .title {
+        text-align: center;
+        padding: 8px 0;
+        font-size: 25px;
+    }
+    .shop_Step .card, .shop_Step .Price_card {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 50px;
+    }
+    .bullets .box {
+        display: flex;
+        background: #f3f3f3;
+        flex-direction: column;
+        gap: 50px;
+        margin: 0 20px;
+        img{
+            width: 260px !important;
+        }
+    }
+}
