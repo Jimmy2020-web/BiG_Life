@@ -7,6 +7,7 @@ const products = [
         image: "./image/bulltes.png",
         stars: 4.5,
         price: 1520,
+        xPrice: 1600,
     },
     {
         id:"rs02ex",
@@ -16,6 +17,7 @@ const products = [
         image: "./image/bulltes.png",
         stars: 4.2,
         price: 1320,
+        xPrice: 1400,
     },
     {
         id:"rs03ex",
@@ -25,6 +27,7 @@ const products = [
         image: "./image/bulltes.png",
         stars: 5,
         price: 1020,
+        xPrice: 1200,
     },
     {
         id:"rs04ex",
@@ -34,5 +37,6 @@ const products = [
         image: "./image/bulltes.png",
         stars: 4,
         price: 1220,
+        xPrice: 1280,
     }
 ];

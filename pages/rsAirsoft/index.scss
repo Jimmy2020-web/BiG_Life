@@ -40,6 +40,9 @@ body {
 .navBar{
     background: $bgcolor;
     color: $textcolor;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
     .grid_nav{
         display: grid;
         grid-template-columns: 220px auto;
@@ -101,7 +104,7 @@ body {
         width: 100%;
         height: 100%;
         .info{
-            width: 70%;
+            width: 80%;
             font-size: 70px;
             font-weight: bold;
             padding: 100px;
@@ -166,6 +169,7 @@ body {
 .xprice{
     color: gray;
     text-decoration: line-through;
+    font-style: italic;
 }
 .bullets{
     
@@ -289,13 +293,15 @@ footer{
         height: 250px;
     }
     .hero_bg .hero_text .info {
-    width: 100%;
-    font-size: 20px;
+        width: 100%;
+        font-size: 35px;
+        padding: 50px;
     }
     .shop_Step .title {
         text-align: center;
-        padding: 8px 0;
-        font-size: 25px;
+        padding: 6px 0;
+        font-size: 30px;
+        margin-left: 15px;
     }
     .shop_Step .card, .shop_Step .Price_card {
         display: flex;
@@ -322,9 +328,9 @@ footer{
 
     .policy{
         margin: 15px;
-        font-size: 70%;
+        font-size: 80%;
         img{
-            transform: scale(.8);
+            transform: scale(.7);
         }
     }
 }
