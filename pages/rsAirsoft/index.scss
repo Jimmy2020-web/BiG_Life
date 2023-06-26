@@ -6,12 +6,12 @@
 // font-family: 'Noto Serif Bengali', serif;
 // font-family: 'Rubik', sans-serif;
 
-$bgcolor: #678E61;
+$bgcolor: #01977e;
 $textcolor: #fff;
 $textcolor2: #313131;
 
 @mixin buy_btn {
-    padding: 12px 20px;
+    padding: 10px 12px;
     border-radius: 5px;
     border: none;
     outline: none;
@@ -31,6 +31,10 @@ body {
     background: #ffffff;
     color: $textcolor2;
     font-family: 'Noto Serif Bengali', serif;
+}
+
+.fa-star-half-stroke, .fa-star{
+    color: #fda402;
 }
 
 .navBar{
@@ -174,6 +178,11 @@ body {
         background: #fff;
         margin: 20px 0;
     }
+    .pro_Text{
+        span{
+            padding-right: 10px;
+        }
+    }
 }
 .Pr_card_item{
     img{
@@ -215,6 +224,7 @@ body {
     justify-content: space-around;
     span{
         text-align: center;
+        font-size: 30px;
         img{
             width: 100px;
         }

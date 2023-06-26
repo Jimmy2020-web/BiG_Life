@@ -11,8 +11,12 @@ body {
   font-family: "Noto Serif Bengali", serif;
 }
 
+.fa-star-half-stroke, .fa-star {
+  color: #fda402;
+}
+
 .navBar {
-  background: #678E61;
+  background: #01977e;
   color: #fff;
 }
 .navBar .grid_nav {
@@ -69,11 +73,11 @@ body {
   padding: 100px;
 }
 .hero_bg .hero_text button {
-  padding: 12px 20px;
+  padding: 10px 12px;
   border-radius: 5px;
   border: none;
   outline: none;
-  background: #678E61;
+  background: #01977e;
   color: #fff;
   cursor: pointer;
 }
@@ -96,7 +100,7 @@ body {
   position: relative;
   width: 250px;
   height: 320px;
-  border: 1px solid #678E61;
+  border: 1px solid #01977e;
   padding: 10px;
   border-radius: 8px;
 }
@@ -105,16 +109,16 @@ body {
 }
 .shop_Step .card .card_item .infoText, .shop_Step .Price_card .card_item .infoText {
   z-index: 3;
-  color: #678E61;
+  color: #01977e;
   text-align: center;
 }
 .shop_Step .card .card_item .infoText button, .shop_Step .Price_card .card_item .infoText button {
   margin-top: 190px;
-  padding: 12px 20px;
+  padding: 10px 12px;
   border-radius: 5px;
   border: none;
   outline: none;
-  background: #678E61;
+  background: #01977e;
   color: #fff;
   cursor: pointer;
 }
@@ -138,7 +142,7 @@ body {
 }
 .bullets .box .infoBul {
   padding: 15px;
-  border: 1px solid #678E61;
+  border: 1px solid #01977e;
   text-align: justify;
   border-radius: 12px;
 }
@@ -162,6 +166,9 @@ body {
   background: #fff;
   margin: 20px 0;
 }
+.profile .pro_Text span {
+  padding-right: 10px;
+}
 
 .Pr_card_item img {
   width: 220px;
@@ -184,11 +191,11 @@ body {
 }
 .Pr_card_item .cardText button, .profile .cardText button {
   margin-top: 10px;
-  padding: 12px 20px;
+  padding: 10px 12px;
   border-radius: 5px;
   border: none;
   outline: none;
-  background: #678E61;
+  background: #01977e;
   color: #fff;
   cursor: pointer;
 }
@@ -207,6 +214,7 @@ body {
 }
 .policy span {
   text-align: center;
+  font-size: 30px;
 }
 .policy span img {
   width: 100px;
