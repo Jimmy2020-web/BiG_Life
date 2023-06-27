@@ -1,0 +1,84 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Ysabeau+Infant:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: #313131;
+  font-family: "Nunito", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+body .box_Content {
+  border-radius: 10px;
+  width: 360px;
+  height: 420px;
+  background: #f3f3f3;
+  box-shadow: 0px 4px 10px #8b8b8b;
+}
+body .box_Content h2 {
+  color: #fff;
+  text-align: center;
+  font-weight: bold;
+  font-family: "Ysabeau Infant", sans-serif;
+  text-transform: uppercase;
+  background: #ca0404;
+  padding: 8px 0;
+  border-radius: 8px 8px 0 0;
+}
+body .box_Content .auth {
+  display: grid;
+  grid-template-columns: 100px auto;
+  align-items: center;
+  padding: 25px;
+}
+body .box_Content .auth img {
+  width: 80px;
+  border-radius: 50%;
+  border: 2px solid #ca0404;
+}
+body .box_Content .Login {
+  padding: 25px;
+}
+body .box_Content .Login span {
+  display: block;
+  padding: 8px;
+  border: 1px solid #bbbbbb;
+  border-radius: 5px;
+  margin: 12px 0;
+}
+body .box_Content .Login span:nth-child(3) {
+  border: none;
+  text-align: center;
+  margin-top: 40px;
+}
+body .box_Content .Login span input[type=password], body .box_Content .Login span input[type=text] {
+  border: none;
+  outline: none;
+  font-size: 16px;
+  background: transparent;
+}
+body .box_Content .Login span input[type=submit] {
+  min-width: 100px;
+  border: none;
+  outline: none;
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: #fff;
+  background: #ca0404;
+  border: 1px solid #ca0404;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold !important;
+  transition: all 0.3s ease-in-out;
+}
+body .box_Content .Login span input[type=submit]:hover {
+  background: #fff;
+  color: #ca0404;
+}/*# sourceMappingURL=style.css.map */

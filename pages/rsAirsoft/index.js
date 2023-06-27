@@ -10,7 +10,7 @@ function lodeData() {
       data.forEach((item) => {
         productList += `
         <div class="Pr_card_item">
-            <img src="${item.image}" alt="" srcset="">
+            <img src="./image/${item.image}" alt="" srcset="">
             <div class="cardText">
                 <p>${item.brand}</p>
                 <h3>${item.pName}</h3>

@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
-    <h1>login page</h1>
+    <div class="box_Content">
+        <h2>login to rs.Arisoft.bd</h2>
+        <div class="auth">
+            <img src="./rakib.jpg" alt="" srcset="">
+            <span>
+                <h3>Rakib Hossain</h3>
+                <p>+880 1761 293 854</p>
+            </span>
+        </div>
+        <form class="Login" onsubmit="return false">
+            <span>USER ID
+                <input type="text" id="user" required>
+            </span>
+            <span>PASSWORD
+                <input type="password" id="password" required>
+            </span>
+            <span>
+                <input type="submit" value="Login" onclick="auth()">
+            </span>
+        </form>
+    </div>
+    <script src="./auth.js"></script>
 </body>
 </html>
