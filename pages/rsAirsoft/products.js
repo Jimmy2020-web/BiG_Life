@@ -1,7 +1,7 @@
 const products = [
     {
         id:"rs01ex",
-        catagore:"paltest",
+        category:"paltest",
         brand:"FX",
         pName:"FX Have Plates",
         image: "./image/bulltes.png",
@@ -11,7 +11,7 @@ const products = [
     },
     {
         id:"rs02ex",
-        catagore:"paltest",
+        category:"paltest",
         brand:"FX",
         pName:"FX Javeries",
         image: "./image/bulltes.png",
@@ -21,7 +21,7 @@ const products = [
     },
     {
         id:"rs03ex",
-        catagore:"paltest",
+        category:"paltest",
         brand:"FX",
         pName:"FX Hanmer",
         image: "./image/bulltes.png",
@@ -31,7 +31,7 @@ const products = [
     },
     {
         id:"rs04ex",
-        catagore:"paltest",
+        category:"paltest",
         brand:"FX",
         pName:"FX Have Plates",
         image: "./image/bulltes.png",
