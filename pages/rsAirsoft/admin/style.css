@@ -15,7 +15,7 @@ body {
 }
 body .box_Content {
   border-radius: 10px;
-  width: 360px;
+  width: 340px;
   height: 420px;
   background: #f3f3f3;
   box-shadow: 0px 4px 10px #8b8b8b;
@@ -61,9 +61,10 @@ body .box_Content .Login span input[type=password], body .box_Content .Login spa
   outline: none;
   font-size: 16px;
   background: transparent;
+  width: 120px;
 }
 body .box_Content .Login span input[type=submit] {
-  min-width: 100px;
+  min-width: 170px;
   border: none;
   outline: none;
   padding: 10px 12px;
