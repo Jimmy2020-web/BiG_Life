@@ -14,7 +14,7 @@ function lodeData() {
             <div class="cardText">
                 <p>${item.brand}</p>
                 <h3>${item.pName}</h3>
-                <p>Rating: <span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-solid fa-star"></i></span><span><i class="fa-regular fa-star-half-stroke"></i></span></p>
+                <p>${item.stars}</p>
                 <p><sapn><i class="fa-solid fa-bangladeshi-taka-sign"></i></sapn> ${item.price} <span class="xprice">[${item.xPrice}]</span></p>
                 <button Class="cart_Btn" data-pName="${item.pName}">Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
             </div>
