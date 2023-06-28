@@ -1,19 +1,18 @@
 let SearchBtn = document.querySelector("#Search");
 let trackLocation = document.querySelector("#trackLocation");
 SearchBtn.addEventListener("click", () => {
-  SearchBtn.innerHTML = "okay";
-  console.log(trackLocation);
+  window.scrollTo(0, trackLocation.scrollHeight+600);
 });
 
 let erroe = `<img src="./image/errorPage.jpg" alt="" srcset="">`;
 
 setInterval(() => {
-  if (navigator.onLine === false) {
+  if (navigator.onLine) {
     lodeData();
   } else {
     document.querySelector(".Price_card").innerHTML = `${erroe}`;
   }
-}, 10000);
+}, 1000);
 
 function lodeData() {
   fetch(
