@@ -1,3 +1,19 @@
+let SearchBtn = document.querySelector("#Search");
+let trackLocation = document.querySelector("#trackLocation");
+SearchBtn.addEventListener("click", () => {
+  SearchBtn.innerHTML = "okay";
+  console.log(trackLocation);
+});
+
+let erroe = `<img src="./image/errorPage.jpg" alt="" srcset="">`;
+
+setInterval(() => {
+  if (navigator.onLine === false) {
+    lodeData();
+  } else {
+    document.querySelector(".Price_card").innerHTML = `${erroe}`;
+  }
+}, 10000);
 
 function lodeData() {
   fetch(
@@ -5,6 +21,8 @@ function lodeData() {
   )
     .then((response) => response.json())
     .then((data) => {
+      document.querySelector("#totalProduct").innerHTML = data.length;
+
       let productList = "";
 
       data.forEach((item) => {
@@ -56,5 +74,3 @@ function lodeData() {
       console.log("Error:", error);
     });
 }
-
-lodeData();
