@@ -1,18 +1,32 @@
 let SearchBtn = document.querySelector("#Search");
 let trackLocation = document.querySelector("#trackLocation");
-SearchBtn.addEventListener("click", () => {
-  window.scrollTo(0, trackLocation.scrollHeight+600);
+
+
+SearchBtn.addEventListener("input", (e) => {
+  let inputValue = e.target.value.toLowerCase();
+  let Price_card = document.querySelector(".Price_card");
+  let Pr_card_item = document.querySelectorAll(".Pr_card_item");
+  let productTitle = Price_card.getElementsByTagName("h3");
+
+  for (let i = 0; i < productTitle.length; i++) {
+    let match = Pr_card_item[i].getElementsByTagName('h3')[0];
+    let match2 = Pr_card_item[i].getElementsByTagName('p')[0];
+    if (match){
+      let textValue = match.textContent || match.innerHTML;
+      let textValue2 = match2.textContent || match2.innerHTML;
+      let AllText = textValue + textValue2;
+
+      if (AllText.toLowerCase().indexOf(inputValue) > -1) {
+        Pr_card_item[i].style.display = '';
+      }else{
+        Pr_card_item[i].style.display = 'none';
+      }
+    }
+  }
+  
 });
 
-let erroe = `<img src="./image/errorPage.jpg" alt="" srcset="">`;
 
-setInterval(() => {
-  if (navigator.onLine) {
-    lodeData();
-  } else {
-    document.querySelector(".Price_card").innerHTML = `${erroe}`;
-  }
-}, 1000);
 
 function lodeData() {
   fetch(
@@ -24,10 +38,11 @@ function lodeData() {
 
       let productList = "";
 
-      data.forEach((item) => {
+       data.forEach((item) => {
         productList += `
         <div class="Pr_card_item">
             <img src="./image/${item.image}" alt="" srcset="">
+            <p class="category">${item.category}</p>
             <div class="cardText">
                 <p>${item.brand}</p>
                 <h3>${item.pName}</h3>
@@ -73,3 +88,5 @@ function lodeData() {
       console.log("Error:", error);
     });
 }
+
+lodeData();
