@@ -279,9 +279,11 @@ body {
     }
     .cardText{
         color: $textcolor2;
+        font-size: 14px;
         button{
-            margin-top: 10px;
             @include buy_btn;
+            font-size: 14px;
+            margin-top: 10px;
         }
     }
 }

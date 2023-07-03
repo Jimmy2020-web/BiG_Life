@@ -90,9 +90,9 @@ function lodeData() {
 
 lodeData();
 
-const filterBtn = document.querySelectorAll(".filterBtnGrup button");
-const filterCards = document.querySelectorAll("div.Price_card .Pr_card_item");
-console.log(filterCards);
+let filterBtn = document.querySelectorAll(".filterBtnGrup button");
+let filterCards = document.querySelectorAll("Price_card .Pr_card_item");
+
 const filterData = e => {
   document.querySelector(".active").classList.remove("active");
   e.target.classList.add("active");
@@ -107,3 +107,5 @@ const filterData = e => {
 };
 
 filterBtn.forEach(button => button.addEventListener("click", filterData));
+
+console.log(filterCards);

@@ -257,9 +257,9 @@ body {
 }
 .Pr_card_item .cardText, .profile .cardText {
   color: #313131;
+  font-size: 14px;
 }
 .Pr_card_item .cardText button, .profile .cardText button {
-  margin-top: 10px;
   padding: 10px 12px;
   border-radius: 5px;
   border: none;
@@ -269,6 +269,8 @@ body {
   cursor: pointer;
   font-size: 15px;
   transition: all 0.3s ease-in-out;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .policy {
