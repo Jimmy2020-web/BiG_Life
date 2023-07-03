@@ -205,13 +205,14 @@ body {
     .box{
         display: grid;
         grid-template-columns: 500px 550px;
-        background: #f3f3f3;
+        // background: #f3f3f3;
         .infoBul{
             padding: 15px;
             border: 1px solid $bgcolor;
             text-align: justify;
             border-radius: 12px;
             object-fit: contain;
+            background: #f3f3f3;
             img{
                 width: 100%;
             }
@@ -313,6 +314,29 @@ body {
     }
 }
 
+.active{
+    background: $bgcolor !important;
+    color: #fff !important;
+}
+
+.filterBtnGrup{
+    margin-top: -35px;
+    margin-bottom: 30px;
+    button{
+        @include buy_btn_outline;
+        margin: 5px 0;
+        margin-right: 10px;
+        &:hover{
+            background: $bgcolor;
+            color: #fff;
+        }
+    }
+}
+
+.hide{
+    display: none;
+}
+
 footer{
     background-color: #310e68;
 background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
@@ -353,48 +377,36 @@ background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
     }
     .bullets .box {
         display: flex;
-        background: #f3f3f3;
         flex-direction: column;
         gap: 50px;
         margin: 0 20px;
         img{
             width: 260px !important;
         }
+        .infoBul{
+            &:nth-child(1){
+                border: 1px solid $bgcolor;
+            }
+        }
     }
     .profile{
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin: 15px;
+        max-width: 390px;
+        transform: scale(.9);
     }
 
     .policy{
-        margin: 15px;
-        font-size: 80%;
+        max-width: 390px;
+        font-size: 65%;
+        transform: scale(.9);
         img{
             transform: scale(.7);
         }
     }
-}
-
-.active{
-    background: $bgcolor !important;
-    color: #fff !important;
-}
-
-.filterBtnGrup{
-    margin-top: -30px;
-    margin-bottom: 30px;
-    button{
-        @include buy_btn_outline;
-        margin-right: 10px;
-        &:hover{
-            background: $bgcolor;
-            color: #fff;
-        }
+    .filterBtnGrup{
+        margin-left: 15px;
     }
 }
 
-.hide{
-    display: none;
-}
