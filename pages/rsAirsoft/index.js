@@ -15,7 +15,7 @@ SearchBtn.addEventListener("input", (e) => {
       let textValue = match.textContent || match.innerHTML;
       let textValue2 = match2.textContent || match2.innerHTML;
       let AllText = textValue + textValue2;
-
+      console.log(textValue2.indexOf(inputValue));
       if (AllText.toLowerCase().indexOf(inputValue) > -1) {
         Pr_card_item[i].style.display = '';
       }else{
@@ -25,7 +25,6 @@ SearchBtn.addEventListener("input", (e) => {
   }
   
 });
-
 
 
 function lodeData() {
@@ -40,7 +39,7 @@ function lodeData() {
 
        data.forEach((item) => {
         productList += `
-        <div class="Pr_card_item">
+        <div class="Pr_card_item" data-name="${item.category}">
             <img src="./image/${item.image}" alt="" srcset="">
             <p class="category">${item.category}</p>
             <div class="cardText">
@@ -90,3 +89,21 @@ function lodeData() {
 }
 
 lodeData();
+
+const filterBtn = document.querySelectorAll(".filterBtnGrup button");
+const filterCards = document.querySelectorAll("div.Price_card .Pr_card_item");
+console.log(filterCards);
+const filterData = e => {
+  document.querySelector(".active").classList.remove("active");
+  e.target.classList.add("active");
+
+  filterCards.forEach(card => {
+    card.classList.add("hide");
+
+    if (card.dataset.name === e.target.dataset.name || e.target.dataset.name === "all") {
+      card.classList.remove("hide");
+    }
+  });
+};
+
+filterBtn.forEach(button => button.addEventListener("click", filterData));

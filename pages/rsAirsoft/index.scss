@@ -17,6 +17,19 @@ $textcolor2: #313131;
     color: $textcolor;
     cursor: pointer;
     font-size: 15px;
+    transition: all .3s ease-in-out;
+}
+
+@mixin buy_btn_outline {
+    padding: 10px 12px;
+    border-radius: 5px;
+    border: 1px solid $bgcolor;
+    outline: none;
+    background: #fff;
+    color: $bgcolor;
+    cursor: pointer;
+    font-size: 15px;
+    transition: all .3s ;
 }
 
 *{
@@ -31,10 +44,6 @@ body {
     background: #ffffff;
     color: $textcolor2;
     font-family: 'Ysabeau Infant', serif;
-}
-
-.fa-star-half-stroke, .fa-star{
-    color: #fda402;
 }
 
 .navBar{
@@ -67,7 +76,7 @@ body {
                 padding: 4px 6px;
                 width: 30px;
                 transition: all .3s ease-in-out;
-                border-radius: 5px;
+                border-radius: 4px;
                 opacity: 0.5;
                 &:hover,:focus{
                     opacity: 1;
@@ -156,6 +165,7 @@ body {
             border: 1px solid $bgcolor;
             padding: 10px;
             border-radius: 8px;
+            object-fit: cover;
             &:hover{
                 img{
                     transform: scale(1.1);
@@ -177,7 +187,7 @@ body {
             }
             img{
                 position: absolute;
-                width: 230px;
+                width: 100%;
                 z-index: -1;
                 bottom: 0;
                 transition: all .3s ease-in;
@@ -201,8 +211,9 @@ body {
             border: 1px solid $bgcolor;
             text-align: justify;
             border-radius: 12px;
+            object-fit: contain;
             img{
-                width: 480px;
+                width: 100%;
             }
             &:nth-child(1){
                 border-right: none;
@@ -303,8 +314,9 @@ body {
 }
 
 footer{
-    background: #f3f3f3;
-    color: #747373;
+    background-color: #310e68;
+background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
+    color: #fff;
     padding: 30px 0;
     text-align: center;
 }
@@ -363,4 +375,26 @@ footer{
             transform: scale(.7);
         }
     }
+}
+
+.active{
+    background: $bgcolor !important;
+    color: #fff !important;
+}
+
+.filterBtnGrup{
+    margin-top: -30px;
+    margin-bottom: 30px;
+    button{
+        @include buy_btn_outline;
+        margin-right: 10px;
+        &:hover{
+            background: $bgcolor;
+            color: #fff;
+        }
+    }
+}
+
+.hide{
+    display: none;
 }

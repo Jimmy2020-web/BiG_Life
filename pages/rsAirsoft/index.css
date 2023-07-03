@@ -12,10 +12,6 @@ body {
   font-family: "Ysabeau Infant", serif;
 }
 
-.fa-star-half-stroke, .fa-star {
-  color: #fda402;
-}
-
 .navBar {
   background: #ca0404;
   color: #fff;
@@ -49,7 +45,7 @@ body {
   padding: 4px 6px;
   width: 30px;
   transition: all 0.3s ease-in-out;
-  border-radius: 5px;
+  border-radius: 4px;
   opacity: 0.5;
 }
 .navBar .grid_nav .nIten #Search:hover, .navBar .grid_nav .nIten #Search :focus {
@@ -113,6 +109,7 @@ body {
   color: #fff;
   cursor: pointer;
   font-size: 15px;
+  transition: all 0.3s ease-in-out;
 }
 
 .shop_Step {
@@ -144,6 +141,8 @@ body {
   border: 1px solid #ca0404;
   padding: 10px;
   border-radius: 8px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .shop_Step .card .card_item:hover img, .shop_Step .Price_card .card_item:hover img {
   transform: scale(1.1);
@@ -168,10 +167,11 @@ body {
   color: #fff;
   cursor: pointer;
   font-size: 15px;
+  transition: all 0.3s ease-in-out;
 }
 .shop_Step .card .card_item img, .shop_Step .Price_card .card_item img {
   position: absolute;
-  width: 230px;
+  width: 100%;
   z-index: -1;
   bottom: 0;
   transition: all 0.3s ease-in;
@@ -193,9 +193,11 @@ body {
   border: 1px solid #ca0404;
   text-align: justify;
   border-radius: 12px;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .bullets .box .infoBul img {
-  width: 480px;
+  width: 100%;
 }
 .bullets .box .infoBul:nth-child(1) {
   border-right: none;
@@ -266,6 +268,7 @@ body {
   color: #fff;
   cursor: pointer;
   font-size: 15px;
+  transition: all 0.3s ease-in-out;
 }
 
 .policy {
@@ -296,8 +299,9 @@ body {
 }
 
 footer {
-  background: #f3f3f3;
-  color: #747373;
+  background-color: #310e68;
+  background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
+  color: #fff;
   padding: 30px 0;
   text-align: center;
 }
@@ -355,4 +359,33 @@ footer {
   .policy img {
     transform: scale(0.7);
   }
+}
+.active {
+  background: #ca0404 !important;
+  color: #fff !important;
+}
+
+.filterBtnGrup {
+  margin-top: -30px;
+  margin-bottom: 30px;
+}
+.filterBtnGrup button {
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: 1px solid #ca0404;
+  outline: none;
+  background: #fff;
+  color: #ca0404;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s;
+  margin-right: 10px;
+}
+.filterBtnGrup button:hover {
+  background: #ca0404;
+  color: #fff;
+}
+
+.hide {
+  display: none;
 }/*# sourceMappingURL=index.css.map */

@@ -11,3 +11,12 @@ formData1.addEventListener("submit", e => {
         })
         .catch(error => console.error('Error!', error.message))
 });
+
+fetch(
+    "https://script.google.com/macros/s/AKfycbx22mCPUviT4JWcoyHNuSB8H4_Y_RPHeqzjMSnY2Ku0lRLtSKNhy3aUoA5PEl9g073FKg/exec"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+      document.querySelector("#countPd").innerHTML = data.length;
+      document.querySelector("#pdid").value = `rsPd0${data.length+1}`;
+      });
