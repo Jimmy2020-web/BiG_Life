@@ -37,28 +37,62 @@ function lodeData() {
 
       let productList = "";
 
-       data.forEach((item) => {
+      data.forEach((item) => {
         productList += `
         <div class="Pr_card_item" data-name="${item.category}">
+          <div class="firstPart">
             <img src="./image/${item.image}" alt="" srcset="">
             <p class="category">${item.category}</p>
             <div class="cardText">
                 <p>${item.brand}</p>
                 <h3>${item.pName}</h3>
                 <p>${item.stars}</p>
-                <p><sapn><i class="fa-solid fa-bangladeshi-taka-sign"></i></sapn> ${item.price} <span class="xprice">[${item.xPrice}]</span></p>
-                <button Class="cart_Btn" data-pName="${item.pName}">Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
+                <p><sapn><i class="fa-solid fa-bangladeshi-taka-sign"></i></sapn> ${
+                  item.price
+                } <span class="xprice">[${item.xPrice}]</span></p>
+                <button Class="cart_Btn" data-pName="${
+                  item.pName
+                }">Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
             </div>
+          </div>
+          <div class="secendPart">
+          <p>${item.brand + item.pName + item.stars}</p>
+          </div>
         </div>
         `;
       });
 
       document.querySelector(".Price_card").innerHTML = productList;
 
+      function dataListFilter() {
+        let filterBtn = document.querySelectorAll(".filterBtnGrup button");
+        let filterCards = document.querySelectorAll(".Price_card .Pr_card_item");
+      
+        const filterData = (e) => {
+          document.querySelector(".active").classList.remove("active");
+          e.target.classList.add("active");
+      
+          filterCards.forEach((card) => {
+            card.classList.add("hide");
+      
+            if (
+              card.dataset.name === e.target.dataset.name ||
+              e.target.dataset.name === "all"
+            ) {
+              card.classList.remove("hide");
+            }
+          });
+        };
+      
+        filterBtn.forEach((button) => button.addEventListener("click", filterData));
+      }
+
+      dataListFilter();
+
       document.querySelectorAll(".cart_Btn").forEach((button) => {
         button.addEventListener("click", () => {
           const productName = button.dataset.pname;
-
+          
           let matchItem;
           cart.forEach((item) => {
             if (productName === item.productName) {
@@ -90,22 +124,3 @@ function lodeData() {
 
 lodeData();
 
-let filterBtn = document.querySelectorAll(".filterBtnGrup button");
-let filterCards = document.querySelectorAll("Price_card .Pr_card_item");
-
-const filterData = e => {
-  document.querySelector(".active").classList.remove("active");
-  e.target.classList.add("active");
-
-  filterCards.forEach(card => {
-    card.classList.add("hide");
-
-    if (card.dataset.name === e.target.dataset.name || e.target.dataset.name === "all") {
-      card.classList.remove("hide");
-    }
-  });
-};
-
-filterBtn.forEach(button => button.addEventListener("click", filterData));
-
-console.log(filterCards);

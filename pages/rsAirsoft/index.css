@@ -228,8 +228,17 @@ body {
   padding-right: 10px;
 }
 
+.Pr_card_item {
+  display: flex;
+  width: 240px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
 .Pr_card_item img {
-  width: 220px;
+  width: 100%;
+}
+.Pr_card_item .secendPart {
+  display: none;
 }
 
 .Pr_card_item, .profile {
@@ -398,5 +407,8 @@ footer {
   }
   .filterBtnGrup {
     margin-left: 15px;
+  }
+  .Pr_card_item {
+    width: 280px !important;
   }
 }/*# sourceMappingURL=index.css.map */
