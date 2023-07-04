@@ -50,13 +50,13 @@ function lodeData() {
                 <p><sapn><i class="fa-solid fa-bangladeshi-taka-sign"></i></sapn> ${
                   item.price
                 } <span class="xprice">[${item.xPrice}]</span></p>
-                <button Class="cart_Btn" data-pName="${
-                  item.pName
-                }">Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
             </div>
           </div>
           <div class="secendPart">
-          <p>${item.brand + item.pName + item.stars}</p>
+          <p>${item.Ditels}</p>
+          <button Class="cart_Btn" data-pName="${
+            item.pName
+          }">Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
           </div>
         </div>
         `;
