@@ -16,9 +16,8 @@ body {
   height: 100vh;
 }
 body section {
-  margin-top: 4%;
+  margin-top: 10px;
   width: 360px;
-  height: 520px;
   background: #f3f3f3;
   padding: 20px;
   border-radius: 10px;
@@ -47,6 +46,13 @@ body section form .inputBox input[type=text] {
   border: none;
   background: transparent;
   border-bottom: 1px solid rgba(202, 4, 4, 0.3960784314);
+}
+body section form .inputBox textarea {
+  outline: none;
+  border: 1px solid rgba(202, 4, 4, 0.3960784314);
+  padding: 5px;
+  margin: 10px 0px 0px 0;
+  width: 305%;
 }
 body section form input[type=submit] {
   padding: 10px 12px;
