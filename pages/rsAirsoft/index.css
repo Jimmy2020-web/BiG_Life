@@ -48,7 +48,8 @@ body {
   border-radius: 4px;
   opacity: 0.5;
 }
-.navBar .grid_nav .nIten #Search:hover, .navBar .grid_nav .nIten #Search :focus {
+.navBar .grid_nav .nIten #Search:hover,
+.navBar .grid_nav .nIten #Search :focus {
   opacity: 1;
   width: 160px;
 }
@@ -128,13 +129,15 @@ body {
   font-weight: bold;
   text-transform: uppercase;
 }
-.shop_Step .card, .shop_Step .Price_card {
+.shop_Step .card,
+.shop_Step .Price_card {
   display: grid;
   grid-template-columns: auto auto auto auto;
   justify-content: space-between;
   gap: 15px;
 }
-.shop_Step .card .card_item, .shop_Step .Price_card .card_item {
+.shop_Step .card .card_item,
+.shop_Step .Price_card .card_item {
   position: relative;
   width: 250px;
   height: 320px;
@@ -144,20 +147,24 @@ body {
   -o-object-fit: cover;
      object-fit: cover;
 }
-.shop_Step .card .card_item:hover img, .shop_Step .Price_card .card_item:hover img {
+.shop_Step .card .card_item:hover img,
+.shop_Step .Price_card .card_item:hover img {
   transform: scale(1.1);
 }
-.shop_Step .card .card_item .category, .shop_Step .Price_card .card_item .category {
+.shop_Step .card .card_item .category,
+.shop_Step .Price_card .card_item .category {
   position: absolute;
   top: 5px;
   right: 5px;
 }
-.shop_Step .card .card_item .infoText, .shop_Step .Price_card .card_item .infoText {
+.shop_Step .card .card_item .infoText,
+.shop_Step .Price_card .card_item .infoText {
   z-index: 3;
   color: #ca0404;
   text-align: center;
 }
-.shop_Step .card .card_item .infoText button, .shop_Step .Price_card .card_item .infoText button {
+.shop_Step .card .card_item .infoText button,
+.shop_Step .Price_card .card_item .infoText button {
   margin-top: 190px;
   padding: 10px 12px;
   border-radius: 5px;
@@ -169,7 +176,8 @@ body {
   font-size: 15px;
   transition: all 0.3s ease-in-out;
 }
-.shop_Step .card .card_item img, .shop_Step .Price_card .card_item img {
+.shop_Step .card .card_item img,
+.shop_Step .Price_card .card_item img {
   position: absolute;
   width: 100%;
   z-index: -1;
@@ -216,12 +224,14 @@ body {
   background: #fff;
   margin: 20px 0;
 }
-.profile .pro_Text h3, .profile .pro_Text p {
+.profile .pro_Text h3,
+.profile .pro_Text p {
   line-height: 33px;
   cursor: pointer;
   transition: all 0.3s linear;
 }
-.profile .pro_Text h3:hover, .profile .pro_Text p:hover {
+.profile .pro_Text h3:hover,
+.profile .pro_Text p:hover {
   color: #ca0404;
 }
 .profile .pro_Text span {
@@ -258,7 +268,8 @@ body {
   opacity: 1;
 }
 
-.Pr_card_item, .profile {
+.Pr_card_item,
+.profile {
   position: relative;
   background: #f3f3f3;
   padding: 15px;
@@ -266,7 +277,8 @@ body {
   border: 1px solid #dad9d9;
   transition: all 0.3s ease-in-out;
 }
-.Pr_card_item .category, .profile .category {
+.Pr_card_item .category,
+.profile .category {
   position: absolute;
   top: 8px;
   right: 8px;
@@ -276,20 +288,24 @@ body {
   border-radius: 5px;
   font-family: "Nunito";
 }
-.Pr_card_item:hover, .profile:hover {
+.Pr_card_item:hover,
+.profile:hover {
   border: 1px solid #bebdbd;
   box-shadow: 0px 2px 8px #bebdbd;
 }
-.Pr_card_item .cardText, .profile .cardText {
+.Pr_card_item .cardText,
+.profile .cardText {
   color: #313131;
   font-size: 14px;
 }
-.Pr_card_item .secendPart, .profile .secendPart {
+.Pr_card_item .secendPart,
+.profile .secendPart {
   width: 100%;
   height: 100%;
   padding: 10px;
 }
-.Pr_card_item .secendPart button, .profile .secendPart button {
+.Pr_card_item .secendPart button,
+.profile .secendPart button {
   position: absolute;
   top: 260px;
   right: 10px;
@@ -325,11 +341,13 @@ body {
 .policy span img {
   width: 100px;
 }
-.policy span, .policy p {
+.policy span,
+.policy p {
   cursor: pointer;
   transition: all 0.3s;
 }
-.policy span:hover, .policy p:hover {
+.policy span:hover,
+.policy p:hover {
   color: #ca0404;
 }
 
@@ -368,8 +386,46 @@ footer {
   background-color: #310e68;
   background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
   color: #fff;
-  padding: 30px 0;
-  text-align: center;
+  padding: 15px 0;
+  font-family: "Nunito", sans-serif;
+}
+footer .fot {
+  text-align: left;
+}
+footer .fot h3 {
+  letter-spacing: 10px;
+  border-bottom: 1px solid;
+  display: inline;
+}
+footer .fot p {
+  padding: 5px 0;
+  font-size: 14px;
+}
+footer .fot p span {
+  padding-right: 15px;
+}
+footer .imgDiv {
+  width: 120px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+footer .imgDiv img {
+  width: 100%;
+  border: 3px solid;
+  border-radius: 50%;
+  background: #f3f3f3;
+}
+footer .skill {
+  font-size: 30px;
+  margin: 45px 0;
+}
+footer .skill span {
+  padding: 15px;
+}
+footer .grid {
+  display: grid;
+  grid-template-columns: 140px auto auto;
+  align-items: center;
 }
 
 @media screen and (max-width: 550px) {
@@ -396,7 +452,8 @@ footer {
     font-size: 30px;
     margin-left: 15px;
   }
-  .shop_Step .card, .shop_Step .Price_card {
+  .shop_Step .card,
+  .shop_Step .Price_card {
     display: flex;
     flex-direction: column;
     align-items: center;

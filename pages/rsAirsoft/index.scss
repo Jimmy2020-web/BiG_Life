@@ -1,5 +1,4 @@
-
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Ysabeau+Infant:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Ysabeau+Infant:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
 
 // font-family: 'Nunito', sans-serif;
 // font-family: 'Ysabeau Infant', sans-serif;
@@ -9,441 +8,482 @@ $textcolor: #fff;
 $textcolor2: #313131;
 
 @mixin buy_btn {
-    padding: 10px 12px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    background: $bgcolor;
-    color: $textcolor;
-    cursor: pointer;
-    font-size: 15px;
-    transition: all .3s ease-in-out;
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: $bgcolor;
+  color: $textcolor;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease-in-out;
 }
 
 @mixin buy_btn_outline {
-    padding: 10px 12px;
-    border-radius: 5px;
-    border: 1px solid $bgcolor;
-    outline: none;
-    background: #fff;
-    color: $bgcolor;
-    cursor: pointer;
-    font-size: 15px;
-    transition: all .3s ;
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: 1px solid $bgcolor;
+  outline: none;
+  background: #fff;
+  color: $bgcolor;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s;
 }
 
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    scroll-behavior: smooth;
-
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
+  background: #ffffff;
+  color: $textcolor2;
+  font-family: "Ysabeau Infant", serif;
+}
+
+.navBar {
+  background: $bgcolor;
+  color: $textcolor;
+  width: 100%;
+  position: fixed;
+  z-index: 99;
+  .grid_nav {
+    display: grid;
+    grid-template-columns: 220px auto;
+    .logo {
+      padding: 10px;
+      font-size: 26px;
+      font-family: "Nunito", sans-serif;
+      cursor: pointer;
+      transition: all 0.3s ease-in;
+      &:hover {
+        color: #fae902;
+      }
+    }
+    .nIten {
+      display: flex;
+      align-items: center;
+      justify-content: end;
+      #Search {
+        border: none;
+        outline: none;
+        font-size: 16px;
+        padding: 4px 6px;
+        width: 30px;
+        transition: all 0.3s ease-in-out;
+        border-radius: 4px;
+        opacity: 0.5;
+        &:hover,
+        :focus {
+          opacity: 1;
+          width: 160px;
+        }
+      }
+      p {
+        padding: 5px 15px;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+        &:hover {
+          color: #fff;
+        }
+      }
+      .fa-cart-shopping {
+        font-size: 25px;
+      }
+      .cartBord {
+        position: relative;
+      }
+      #cartTotal {
+        color: rgb(253, 253, 253);
+        font-weight: bold !important;
+        position: absolute;
+        right: -3px;
+        bottom: 1px;
+        font-size: 25px;
+      }
+    }
+  }
+}
+
+.continer {
+  max-width: 1050px;
+  margin: 0 auto;
+}
+
+.hero_bg {
+  width: 100%;
+  min-height: 250px;
+  background: url(./image/Pellets.jpg);
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+  .hero_text {
+    background: #101010b2;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    .info {
+      width: 80%;
+      font-size: 70px;
+      font-weight: bold;
+      padding: 100px;
+    }
+    button {
+      @include buy_btn;
+    }
+  }
+}
+
+.shop_Step {
+  margin: 50px 0;
+  .title {
+    color: $textcolor2;
+    border-bottom: 3px solid;
+    margin-bottom: 40px;
+    padding: 5px 0px;
+    font-size: 35px;
+    display: inline-block;
+    &::first-letter {
+      color: #e90000;
+      font-weight: bold;
+      text-transform: uppercase;
+    }
+  }
+  .card,
+  .Price_card {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: space-between;
+    gap: 15px;
+    .card_item {
+      position: relative;
+      width: 250px;
+      height: 320px;
+      border: 1px solid $bgcolor;
+      padding: 10px;
+      border-radius: 8px;
+      object-fit: cover;
+      &:hover {
+        img {
+          transform: scale(1.1);
+        }
+      }
+      .category {
+        position: absolute;
+        top: 5px;
+        right: 5px;
+      }
+      .infoText {
+        z-index: 3;
+        color: $bgcolor;
+        text-align: center;
+        button {
+          margin-top: 190px;
+          @include buy_btn;
+        }
+      }
+      img {
+        position: absolute;
+        width: 100%;
+        z-index: -1;
+        bottom: 0;
+        transition: all 0.3s ease-in;
+      }
+    }
+  }
+}
+.xprice {
+  color: gray;
+  text-decoration: line-through;
+  font-style: italic;
+}
+.bullets {
+  .box {
+    display: grid;
+    grid-template-columns: 500px 550px;
+    // background: #f3f3f3;
+    .infoBul {
+      padding: 15px;
+      border: 1px solid $bgcolor;
+      text-align: justify;
+      border-radius: 12px;
+      object-fit: contain;
+      background: #f3f3f3;
+      img {
+        width: 100%;
+      }
+      &:nth-child(1) {
+        border-right: none;
+      }
+    }
+  }
+}
+
+.profile {
+  display: grid;
+  grid-template-columns: auto 380px;
+  align-items: center;
+  justify-content: space-around;
+  img {
+    width: 300px;
+    border: 5px solid #bebdbd;
+    border-radius: 50%;
+    background: #fff;
+    margin: 20px 0;
+  }
+  .pro_Text {
+    h3,
+    p {
+      line-height: 33px;
+      cursor: pointer;
+      transition: all 0.3s linear;
+      &:hover {
+        color: $bgcolor;
+      }
+    }
+    span {
+      padding-right: 10px;
+    }
+  }
+}
+.Pr_card_item {
+  overflow: hidden;
+  display: flex;
+  width: 240px;
+  object-fit: cover;
+  img {
+    width: 100%;
+  }
+  .firstPart {
+    transition: all 0.4s ease-in-out;
+  }
+  .secendPart {
+    transition: all 0.3s ease-in-out;
+    position: absolute;
+    top: -120px;
+    left: 0px;
+    opacity: 0;
+    text-align: justify;
+  }
+  &:hover {
+    .firstPart {
+      opacity: 0;
+    }
+    .secendPart {
+      top: 0px;
+      left: 0px;
+      opacity: 1;
+    }
+  }
+}
+
+.Pr_card_item,
+.profile {
+  position: relative;
+  background: #f3f3f3;
+  padding: 15px;
+  border-radius: 8px;
+  border: 1px solid #dad9d9;
+  transition: all 0.3s ease-in-out;
+  .category {
+    position: absolute;
+    top: 8px;
+    right: 8px;
     background: #ffffff;
     color: $textcolor2;
-    font-family: 'Ysabeau Infant', serif;
-}
-
-.navBar{
-    background: $bgcolor;
-    color: $textcolor;
-    width: 100%;
-    position: fixed;
-    z-index: 99;
-    .grid_nav{
-        display: grid;
-        grid-template-columns: 220px auto;
-        .logo{
-            padding: 10px;
-            font-size: 26px;
-            font-family: 'Nunito', sans-serif;
-            cursor: pointer;
-            transition: all .3s ease-in;
-            &:hover{
-                color: #fae902;
-            }
-        }
-        .nIten{
-            display: flex;
-            align-items: center;
-            justify-content: end;
-            #Search{
-                border: none;
-                outline: none;
-                font-size: 16px;
-                padding: 4px 6px;
-                width: 30px;
-                transition: all .3s ease-in-out;
-                border-radius: 4px;
-                opacity: 0.5;
-                &:hover,:focus{
-                    opacity: 1;
-                    width: 160px;
-                }
-            }
-            p{
-                padding: 5px 15px;
-                cursor: pointer;
-                transition: all .3s ease-in;
-                &:hover{
-                    color: #fff;
-                }
-            }
-            .fa-cart-shopping{
-                font-size: 25px;
-            }
-            .cartBord{
-                position: relative;
-            }
-            #cartTotal{
-                color: rgb(253, 253, 253);
-                font-weight: bold !important;
-                position: absolute;
-                right: -3px;
-                bottom: 1px;
-                font-size: 25px;
-            }
-        }
-    }
-}
-
-.continer{
-    max-width: 1050px;
-    margin: 0 auto;
-}   
-
-.hero_bg{
-    width: 100%;
-    min-height: 250px;
-    background: url(./image/Pellets.jpg);
-    background-attachment: fixed;
-    background-size: cover;
-    background-position: center;
-    .hero_text{
-        background: #101010b2;
-        color: #fff;
-        width: 100%;
-        height: 100%;
-        .info{
-            width: 80%;
-            font-size: 70px;
-            font-weight: bold;
-            padding: 100px;
-        }
-        button {
-            @include buy_btn;
-        }
-    }
-}
-
-.shop_Step{
-     margin: 50px 0;
-    .title{
-        color: $textcolor2;
-        border-bottom: 3px solid;
-        margin-bottom: 40px;
-        padding: 5px 0px;
-        font-size: 35px;
-        display: inline-block;
-        &::first-letter{
-            color: #e90000;
-            font-weight: bold;
-            text-transform: uppercase;
-        }
-    }
-    .card, .Price_card{
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        justify-content: space-between;
-        gap: 15px;
-        .card_item{
-            position: relative;
-            width: 250px;
-            height: 320px;
-            border: 1px solid $bgcolor;
-            padding: 10px;
-            border-radius: 8px;
-            object-fit: cover;
-            &:hover{
-                img{
-                    transform: scale(1.1);
-                }
-            }
-            .category{
-                position: absolute;
-                top: 5px;
-                right: 5px;
-            }
-            .infoText{
-                z-index: 3;
-                color: $bgcolor;
-                text-align: center;
-                button{
-                    margin-top: 190px;
-                    @include buy_btn;
-                }
-            }
-            img{
-                position: absolute;
-                width: 100%;
-                z-index: -1;
-                bottom: 0;
-                transition: all .3s ease-in;
-            }
-        }
-    }
-}
-.xprice{
-    color: gray;
-    text-decoration: line-through;
-    font-style: italic;
-}
-.bullets{
-    
-    .box{
-        display: grid;
-        grid-template-columns: 500px 550px;
-        // background: #f3f3f3;
-        .infoBul{
-            padding: 15px;
-            border: 1px solid $bgcolor;
-            text-align: justify;
-            border-radius: 12px;
-            object-fit: contain;
-            background: #f3f3f3;
-            img{
-                width: 100%;
-            }
-            &:nth-child(1){
-                border-right: none;
-            }
-        }
-    }
-}
-
-.profile{
-    display: grid;
-    grid-template-columns: auto 380px;
-    align-items: center;
-    justify-content: space-around;
-    img{
-        width: 300px;
-        border: 5px solid #bebdbd;
-        border-radius: 50%;
-        background: #fff;
-        margin: 20px 0;
-    }
-    .pro_Text{
-        h3, p{
-            line-height: 33px;
-            cursor: pointer;
-            transition: all .3s linear;
-            &:hover{
-                color: $bgcolor;
-            }
-        }
-        span{
-            padding-right: 10px;
-        }
-    }
-}
-.Pr_card_item{
-    overflow: hidden;
-    display: flex;
-    width: 240px;
-    object-fit: cover;
-    img{
-        width: 100%;
-    }
-    .firstPart{
-        transition: all .4s ease-in-out;
-    }
-    .secendPart{
-        transition: all .3s ease-in-out;
-        position: absolute;
-        top: -120px;
-        left: 0px;
-        opacity: 0;
-        text-align: justify;
-    }
-        &:hover{
-            .firstPart{
-                opacity: 0;
-            }
-            .secendPart{
-                top: 0px;
-                left: 0px;
-                opacity: 1;
-            }
-        }
-}
-
-.Pr_card_item, .profile{
-    position: relative;
-    background: #f3f3f3;
-    padding: 15px;
-    border-radius: 8px;
-    border: 1px solid #dad9d9;
-    transition: all .3s ease-in-out;
-    .category{
-        position: absolute;
-        top: 8px;
-        right: 8px;
-        background: #ffffff;
-        color: $textcolor2;
-        padding: 5px 8px;
-        border-radius: 5px;
-        font-family: 'Nunito';
-    }
-    &:hover{
-        border: 1px solid #bebdbd;
-        box-shadow: 0px 2px 8px #bebdbd;
-    }
-    .cardText{
-        color: $textcolor2;
-        font-size: 14px;
-    }
-    .secendPart{
-        width: 100%;
-        height: 100%;
-        padding: 10px;
-        button{
-            position: absolute;
-            top: 260px;
-            right: 10px;
-            @include buy_btn;
-            font-size: 14px;
-            margin-top: 10px;
-        }
-    }
-}
-
-.policy{
-    background: #f3f3f3;
-    color: $textcolor2;
-    font-weight: bold;
-    padding: 25px 0px;
-    border-radius: 8px;
+    padding: 5px 8px;
+    border-radius: 5px;
+    font-family: "Nunito";
+  }
+  &:hover {
     border: 1px solid #bebdbd;
-    // box-shadow: 0px 2px 8px #bebdbd;
-    display: grid;
-    grid-template-columns: repeat(4, auto);
-    align-items: center;
-    justify-content: space-around;
-    span{
-        text-align: center;
-        font-size: 30px;
-        img{
-            width: 100px;
-        }
+    box-shadow: 0px 2px 8px #bebdbd;
+  }
+  .cardText {
+    color: $textcolor2;
+    font-size: 14px;
+  }
+  .secendPart {
+    width: 100%;
+    height: 100%;
+    padding: 10px;
+    button {
+      position: absolute;
+      top: 260px;
+      right: 10px;
+      @include buy_btn;
+      font-size: 14px;
+      margin-top: 10px;
     }
-    span, p{
-        cursor: pointer;
-        transition: all .3s;
-        &:hover{
-            color: $bgcolor;
-        }
-    }
+  }
 }
 
-.active{
-    background: $bgcolor !important;
-    color: #fff !important;
-}
-
-.filterBtnGrup{
-    margin-top: -35px;
-    margin-bottom: 30px;
-    button{
-        @include buy_btn_outline;
-        margin: 5px 0;
-        margin-right: 10px;
-        &:hover{
-            background: $bgcolor;
-            color: #fff;
-        }
-    }
-}
-
-.hide{
-    display: none;
-}
-
-footer{
-    background-color: #310e68;
-background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
-    color: #fff;
-    padding: 30px 0;
+.policy {
+  background: #f3f3f3;
+  color: $textcolor2;
+  font-weight: bold;
+  padding: 25px 0px;
+  border-radius: 8px;
+  border: 1px solid #bebdbd;
+  // box-shadow: 0px 2px 8px #bebdbd;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  align-items: center;
+  justify-content: space-around;
+  span {
     text-align: center;
+    font-size: 30px;
+    img {
+      width: 100px;
+    }
+  }
+  span,
+  p {
+    cursor: pointer;
+    transition: all 0.3s;
+    &:hover {
+      color: $bgcolor;
+    }
+  }
+}
+
+.active {
+  background: $bgcolor !important;
+  color: #fff !important;
+}
+
+.filterBtnGrup {
+  margin-top: -35px;
+  margin-bottom: 30px;
+  button {
+    @include buy_btn_outline;
+    margin: 5px 0;
+    margin-right: 10px;
+    &:hover {
+      background: $bgcolor;
+      color: #fff;
+    }
+  }
+}
+
+.hide {
+  display: none;
+}
+
+footer {
+  background-color: #310e68;
+  background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
+  color: #fff;
+  padding: 15px 0;
+  font-family: 'Nunito', sans-serif;
+  .fot{
+    text-align: left;
+    h3{
+        letter-spacing: 10px;
+        border-bottom: 1px solid;
+        display: inline;
+    }
+    p{
+        padding: 5px 0;
+        font-size: 14px;
+        span{
+            padding-right: 15px;
+        }
+    }
+  }
+  .imgDiv{
+        width: 120px;
+        object-fit: cover;
+    img{
+        width: 100%;
+        border: 3px solid;
+        border-radius: 50%;
+        background: #f3f3f3;
+    }
+  }
+  .skill {
+    font-size: 30px;
+    margin: 45px 0;
+    span{
+        padding: 15px;
+    }
+    }
+  .grid{
+    display: grid;
+    grid-template-columns: 140px auto auto;
+    align-items: center;
+    // justify-content: center;
+  }
 }
 
 @media screen and (max-width: 550px) {
-    body{
-        overflow-x: hidden;
-        scroll-behavior: smooth;
+  body {
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+  }
+  .navBar .grid_nav {
+    display: grid;
+    grid-template-columns: 203px 170px;
+  }
+  .hero_bg {
+    background-size: 100%;
+    height: 250px;
+  }
+  .hero_bg .hero_text .info {
+    width: 100%;
+    font-size: 35px;
+    padding: 50px;
+  }
+  .shop_Step .title {
+    text-align: center;
+    padding: 6px 0;
+    font-size: 30px;
+    margin-left: 15px;
+  }
+  .shop_Step .card,
+  .shop_Step .Price_card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 50px;
+  }
+  .bullets .box {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin: 0 20px;
+    img {
+      width: 260px !important;
     }
-    .navBar .grid_nav {
-        display: grid;
-        grid-template-columns: 203px 170px;
+    .infoBul {
+      &:nth-child(1) {
+        border: 1px solid $bgcolor;
+      }
     }
-    .hero_bg{
-        background-size: 100%;
-        height: 250px;
-    }
-    .hero_bg .hero_text .info {
-        width: 100%;
-        font-size: 35px;
-        padding: 50px;
-    }
-    .shop_Step .title {
-        text-align: center;
-        padding: 6px 0;
-        font-size: 30px;
-        margin-left: 15px;
-    }
-    .shop_Step .card, .shop_Step .Price_card {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 50px;
-    }
-    .bullets .box {
-        display: flex;
-        flex-direction: column;
-        gap: 50px;
-        margin: 0 20px;
-        img{
-            width: 260px !important;
-        }
-        .infoBul{
-            &:nth-child(1){
-                border: 1px solid $bgcolor;
-            }
-        }
-    }
-    .profile{
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        max-width: 390px;
-        transform: scale(.9);
-    }
+  }
+  .profile {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 390px;
+    transform: scale(0.9);
+  }
 
-    .policy{
-        max-width: 390px;
-        font-size: 65%;
-        transform: scale(.9);
-        img{
-            transform: scale(.7);
-        }
+  .policy {
+    max-width: 390px;
+    font-size: 65%;
+    transform: scale(0.9);
+    img {
+      transform: scale(0.7);
     }
-    .filterBtnGrup{
-        margin-left: 15px;
-    }
-    .Pr_card_item{
-        width: 280px !important;
-    }
+  }
+  .filterBtnGrup {
+    margin-left: 15px;
+  }
+  .Pr_card_item {
+    width: 280px !important;
+  }
 }
-
