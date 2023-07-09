@@ -43,10 +43,10 @@ body {
   outline: none;
   font-size: 16px;
   padding: 4px 6px;
-  width: 30px;
+  width: 50px;
   transition: all 0.3s ease-in-out;
   border-radius: 4px;
-  opacity: 0.5;
+  opacity: 0.7;
 }
 .navBar .grid_nav .nIten #Search:hover,
 .navBar .grid_nav .nIten #Search :focus {
@@ -492,5 +492,8 @@ footer .grid {
   }
   .Pr_card_item {
     width: 280px !important;
+  }
+  .skill {
+    margin: 5px 0;
   }
 }/*# sourceMappingURL=index.css.map */

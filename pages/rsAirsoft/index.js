@@ -15,7 +15,6 @@ SearchBtn.addEventListener("input", (e) => {
       let textValue = match.textContent || match.innerHTML;
       let textValue2 = match2.textContent || match2.innerHTML;
       let AllText = textValue + textValue2;
-      console.log(textValue2.indexOf(inputValue));
       if (AllText.toLowerCase().indexOf(inputValue) > -1) {
         Pr_card_item[i].style.display = '';
       }else{

@@ -54,6 +54,18 @@ body section form .inputBox textarea {
   margin: 10px 0px 0px 0;
   width: 305%;
 }
+body section form .inputBox select, body section form .inputBox option {
+  padding: 0 5px;
+  font-family: "Ysabeau Infant";
+  font-size: 18px;
+  border: none;
+  outline: none;
+  transform: translateY(-5px);
+  background: transparent;
+  color: #313131;
+  border-bottom: 1px solid rgba(202, 4, 4, 0.3960784314);
+  cursor: pointer;
+}
 body section form input[type=submit] {
   padding: 10px 12px;
   border-radius: 5px;
