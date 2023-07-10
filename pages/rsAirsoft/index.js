@@ -1,3 +1,13 @@
+let root = document.querySelector(":root");
+let rootStyle = getComputedStyle(root);
+let bgColor = rootStyle.getPropertyValue("--bgClor");
+// let textColor = rootStyle.getPropertyValue("--textColor2");
+let inputColor = document.querySelector("input[type=color]");
+
+inputColor.addEventListener("change", event => {
+  root.style.setProperty("--bgClor", event.target.value);
+});
+
 let SearchBtn = document.querySelector("#Search");
 let trackLocation = document.querySelector("#trackLocation");
 
