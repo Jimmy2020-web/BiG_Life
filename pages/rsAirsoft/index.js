@@ -1,11 +1,31 @@
 let root = document.querySelector(":root");
 let rootStyle = getComputedStyle(root);
 let bgColor = rootStyle.getPropertyValue("--bgClor");
-// let textColor = rootStyle.getPropertyValue("--textColor2");
-let inputColor = document.querySelector("input[type=color]");
+let textColor = rootStyle.getPropertyValue("--textColor");
+let inputColor = document.querySelector(".bgCl");
+let inputColor2 = document.querySelector(".txC1");
+let inputColor3 = document.querySelector(".txC2");
+
+let flyBtn = document.querySelector(".fa-palette");
+let flyBtnClose = document.querySelector(".fa-circle-xmark");
+let flyManu = document.querySelector(".flyManu");
+
+flyBtn.addEventListener("click", () => {
+  flyManu.style.bottom = "15px";
+});
+
+flyBtnClose.addEventListener("click", () => {
+  flyManu.style.bottom = "-200px";
+});
 
 inputColor.addEventListener("change", event => {
   root.style.setProperty("--bgClor", event.target.value);
+});
+inputColor2.addEventListener("change", event => {
+  root.style.setProperty("--textColor", event.target.value);
+});
+inputColor3.addEventListener("change", event => {
+  root.style.setProperty("--textColor2", event.target.value);
 });
 
 let SearchBtn = document.querySelector("#Search");

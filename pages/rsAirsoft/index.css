@@ -16,6 +16,7 @@ body {
   background: #ffffff;
   color: var(--textColor2);
   font-family: "Ysabeau Infant", serif;
+  position: relative;
 }
 
 .navBar {
@@ -82,14 +83,50 @@ body {
   font-size: 25px;
 }
 
-input#cls {
+.thmeManu {
+  position: fixed;
+  bottom: 15px;
+  right: 15px;
+  z-index: 99;
+}
+.thmeManu .fa-palette {
+  color: var(--bgClor);
+  cursor: pointer;
+  background: var(--textColor);
+  padding: 5px;
+  border: 2px solid var(--textColor2);
+  border-radius: 50%;
+  outline-offset: 2px solid var(--bgClor);
+}
+.thmeManu .flyManu {
+  position: fixed;
+  background: rgba(255, 255, 255, 0.6784313725);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  bottom: -200px;
+  right: 15px;
+  padding: 10px;
+  border-radius: 12px;
+  box-shadow: 0px 2px 12px var(--textColor2);
+  transition: all 0.3s ease-in;
+}
+.thmeManu .flyManu span {
+  display: block;
+  padding: 5px;
+}
+.thmeManu .flyManu span input {
   outline: none;
   border: none;
-  width: 25px;
-  border-radius: 40%;
-  padding: 3px 5px;
-  margin: 0 9px;
   cursor: pointer;
+  margin-left: 10px;
+}
+.thmeManu .flyManu .fa-circle-xmark {
+  position: absolute;
+  top: 12px;
+  cursor: pointer;
+  color: var(--textColor2);
+  font-size: 20px;
+  transform: translateX(130px);
 }
 
 .continer {
@@ -141,7 +178,7 @@ input#cls {
   display: inline-block;
 }
 .shop_Step .title::first-letter {
-  color: #e90000;
+  color: var(--bgClor);
   font-weight: bold;
   text-transform: uppercase;
 }
