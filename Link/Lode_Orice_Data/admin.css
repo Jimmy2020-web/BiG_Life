@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Nunito", sans-serif;
+}
+
+:root {
+  --bgColor: #100B2D;
+  --bgColor2: #ffffff10;
+  --textColor:#7D7F8A;
+  --textColor2: #44A5FF;
+  --bgSecend: #FFBF40;
+}
+
+body {
+  display: flex;
+  background: var(--bgColor);
+  color: var(--textColor);
+  position: relative;
+  font-family: "Nunito", sans-serif;
+}
+
+.sideManu {
+  width: 270px;
+  height: 100%;
+  background: var(--bgColor2);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+}
+.sideManu .logo {
+  border-bottom: 1px solid;
+  display: flex;
+  align-items: center;
+  padding: 12px 0 12px 25px;
+  cursor: pointer;
+}
+.sideManu .logo img {
+  width: 50px;
+  margin-right: 15px;
+}
+.sideManu .logo p {
+  padding: 10px;
+  text-align: center;
+  font-size: 20px;
+  color: #fff;
+}
+.sideManu .manuItem {
+  margin-top: 20px;
+}
+.sideManu .manuItem li {
+  list-style: none;
+  padding: 15px 0;
+  cursor: pointer;
+  border-left: 5px solid transparent;
+  transition: all 0.3s ease-in;
+}
+.sideManu .manuItem li:hover {
+  background: var(--bgColor2);
+  color: var(--bgSecend);
+  border-left: 5px solid var(--bgSecend);
+}
+.sideManu .manuItem li:hover:hover a {
+  color: var(--bgSecend);
+}
+.sideManu .manuItem li i {
+  width: 27px;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  margin: 0 10px 0 25px;
+}
+.sideManu .manuItem li a {
+  text-decoration: none;
+  color: var(--textColor);
+}
+
+.interface {
+  width: calc(100% - 270px);
+}
+
+.navBar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--bgColor2);
+  padding: 10px 25px;
+  border-bottom: 1px solid;
+}
+.navBar .navhead .search {
+  border-radius: 8px;
+  background: var(--bgColor);
+}
+.navBar .navhead .search input[type=text] {
+  background: transparent;
+  border: none;
+  outline: none;
+  font-size: 16px;
+  padding: 8px 10px;
+  color: var(--textColor);
+}
+.navBar .navhead .search .fa-search {
+  cursor: pointer;
+  margin: 0 15px;
+  transition: all 0.3s linear;
+}
+.navBar .navhead .search .fa-search:hover {
+  color: var(--bgSecend);
+}
+.navBar .profile .proInfo {
+  display: flex;
+  align-items: center;
+  border: 2px solid var(--bgColor2);
+  padding: 0 15px;
+  border-radius: 12px;
+}
+.navBar .profile .proInfo img {
+  width: 50px;
+}
+
+.chartBord {
+  padding: 20px;
+}
+.chartBord .card {
+  display: flex;
+}
+.chartBord .card .content {
+  width: 250px;
+  background: var(--bgColor2);
+  margin: 15px 25px;
+  padding: 20px 0;
+  text-align: center;
+  border-radius: 10px;
+}
+.chartBord .card .content i, .chartBord .card .content p, .chartBord .card .content h2 {
+  padding: 5px;
+}
+.chartBord .card .content h2 {
+  color: var(--bgSecend);
+  font-size: 40px;
+}/*# sourceMappingURL=admin.css.map */
