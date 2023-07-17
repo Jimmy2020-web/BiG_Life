@@ -3,7 +3,6 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Nunito", sans-serif;
 }
 
 :root {
@@ -19,12 +18,13 @@ body {
   background: var(--bgColor);
   color: var(--textColor);
   position: relative;
-  font-family: "Nunito", sans-serif;
+  font-family: "Nunito", sans-serif !important;
+  font-size: 14px;
 }
 
 .sideManu {
-  width: 270px;
-  height: 100%;
+  width: 250px;
+  height: 100vh;
   background: var(--bgColor2);
   -webkit-backdrop-filter: blur(10px);
           backdrop-filter: blur(10px);
@@ -77,7 +77,7 @@ body {
 }
 
 .interface {
-  width: calc(100% - 270px);
+  width: calc(100% - 250px);
 }
 
 .navBar {
@@ -124,11 +124,13 @@ body {
 }
 .chartBord .card {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 .chartBord .card .content {
-  width: 250px;
+  min-width: 250px;
   background: var(--bgColor2);
-  margin: 15px 25px;
+  margin-bottom: 25px;
   padding: 20px 0;
   text-align: center;
   border-radius: 10px;
@@ -137,6 +139,29 @@ body {
   padding: 5px;
 }
 .chartBord .card .content h2 {
+  font-size: 35px;
+}
+.chartBord .contentList {
+  padding: 20px;
+  background: var(--bgColor2);
+  border-radius: 10px;
+}
+.chartBord .contentList table {
+  border-collapse: collapse;
+  width: 100%;
+}
+.chartBord .contentList table tr {
+  border: 1px solid var(--bgColor2);
+}
+.chartBord .contentList table tr:hover {
+  background: var(--bgColor2);
   color: var(--bgSecend);
-  font-size: 40px;
+  border-left-color: var(--bgSecend);
+}
+.chartBord .contentList table th {
+  background: var(--bgColor2);
+  padding: 15px;
+}
+.chartBord .contentList table td {
+  padding: 15px;
 }/*# sourceMappingURL=admin.css.map */
