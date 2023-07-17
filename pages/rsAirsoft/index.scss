@@ -186,7 +186,19 @@ body {
     }
   }
 }
-
+.brandName{
+  background: var(--textColor2);
+  color: var(--textColor);
+  .brandItem{
+    display: flex;
+    justify-content: space-around;
+    span{
+      padding: 10px 15px;
+      text-transform: uppercase;
+      font-weight: bold
+    }
+  }
+}
 .shop_Step {
   margin: 50px 0;
   .title {
@@ -260,6 +272,7 @@ body {
 }
 .bullets {
   .box {
+    margin-top: -20px;
     display: grid;
     grid-template-columns: 500px 550px;
     // background: #f3f3f3;
@@ -281,6 +294,7 @@ body {
 }
 
 .profile {
+  margin-top: -20px;
   display: grid;
   grid-template-columns: auto 380px;
   align-items: center;
@@ -380,6 +394,7 @@ body {
 }
 
 .policy {
+  margin-top: -20px;
   background: #f3f3f3;
   color: $textcolor2;
   font-weight: bold;
@@ -557,6 +572,9 @@ footer {
     .skill {
       font-size: 25px !important;
       margin: 10px 0 !important;
+      p span {
+        padding-right: 8px;
+      }
     }
   }
 }

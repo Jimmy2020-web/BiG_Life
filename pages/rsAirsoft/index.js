@@ -63,8 +63,19 @@ function lodeData() {
     .then((response) => response.json())
     .then((data) => {
       document.querySelector("#totalProduct").innerHTML = data.length;
-
+      
       let productList = "";
+      let brandList = "";
+
+      const filteredData = data.filter((item, index, array) => {
+        return array.findIndex(obj => obj.brand === item.brand) === index;
+      });
+
+      filteredData.forEach(product => {
+        brandList += `
+        <span>${product.brand}</span>
+        `
+      });
 
       data.forEach((item) => {
         productList += `
@@ -92,6 +103,7 @@ function lodeData() {
       });
 
       document.querySelector(".Price_card").innerHTML = productList;
+      document.querySelector(".brandItem").innerHTML = brandList;
 
       function dataListFilter() {
         let filterBtn = document.querySelectorAll(".filterBtnGrup button");

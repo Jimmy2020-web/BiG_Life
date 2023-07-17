@@ -22,6 +22,7 @@ function lodeData() {
     .then((data) => {
       document.querySelector("#countPd").innerHTML = data.length;
       document.querySelector("#pdid").value = `rsPd0${data.length + 1}`;
+      document.querySelector("#imges").value = `rsPd0${data.length + 1}.png`;
     });
 }
 
