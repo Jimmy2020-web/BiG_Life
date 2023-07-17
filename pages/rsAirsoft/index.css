@@ -170,17 +170,25 @@ body {
   margin: 50px 0;
 }
 .shop_Step .title {
+  font-family: "Nunito", sans-serif;
   color: var(--textColor2);
   border-bottom: 3px solid;
   margin-bottom: 40px;
   padding: 5px 0px;
-  font-size: 35px;
+  font-size: 25px;
   display: inline-block;
 }
 .shop_Step .title::first-letter {
   color: var(--bgClor);
   font-weight: bold;
   text-transform: uppercase;
+}
+.shop_Step span#totalProduct {
+  background: var(--bgClor);
+  color: var(--textColor);
+  padding: 3px 6px;
+  border-radius: 50%;
+  font-size: 18px;
 }
 .shop_Step .card,
 .shop_Step .Price_card {
@@ -503,7 +511,7 @@ footer .grid {
   .shop_Step .title {
     text-align: center;
     padding: 6px 0;
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 15px;
   }
   .shop_Step .card,
@@ -548,5 +556,16 @@ footer .grid {
   }
   .skill {
     margin: 5px 0;
+  }
+  .grid {
+    grid-template-columns: 110px auto auto !important;
+  }
+  .grid .imgDiv {
+    width: 90px !important;
+    padding-left: 10px;
+  }
+  .grid .skill {
+    font-size: 25px !important;
+    margin: 10px 0 !important;
   }
 }/*# sourceMappingURL=index.css.map */

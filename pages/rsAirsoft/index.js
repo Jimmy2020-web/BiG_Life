@@ -71,7 +71,7 @@ function lodeData() {
         <div class="Pr_card_item" data-name="${item.category}">
           <div class="firstPart">
             <img src="./image/${item.image}" alt="" srcset="">
-            <p class="category">${item.category}</p>
+            <span class="category">${item.category}</span>
             <div class="cardText">
                 <p>${item.brand}</p>
                 <h3>${item.pName}</h3>

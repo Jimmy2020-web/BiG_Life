@@ -190,11 +190,12 @@ body {
 .shop_Step {
   margin: 50px 0;
   .title {
+    font-family: 'Nunito', sans-serif;
     color: $textcolor2;
     border-bottom: 3px solid;
     margin-bottom: 40px;
     padding: 5px 0px;
-    font-size: 35px;
+    font-size: 25px;
     display: inline-block;
     &::first-letter {
       color: $bgcolor;
@@ -202,6 +203,13 @@ body {
       text-transform: uppercase;
     }
   }
+  span#totalProduct {
+    background: var(--bgClor);
+    color: var(--textColor);
+    padding: 3px 6px;
+    border-radius: 50%;
+    font-size: 18px;
+}
   .card,
   .Price_card {
     display: grid;
@@ -491,7 +499,7 @@ footer {
   .shop_Step .title {
     text-align: center;
     padding: 6px 0;
-    font-size: 30px;
+    font-size: 20px;
     margin-left: 15px;
   }
   .shop_Step .card,
@@ -539,5 +547,16 @@ footer {
   }
   .skill {
     margin: 5px 0;
+  }
+  .grid{
+    grid-template-columns: 110px  auto auto !important;
+    .imgDiv{
+      width: 90px !important;
+      padding-left: 10px;
+    }
+    .skill {
+      font-size: 25px !important;
+      margin: 10px 0 !important;
+    }
   }
 }
