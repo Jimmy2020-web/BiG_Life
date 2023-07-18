@@ -322,7 +322,8 @@ body {
   }
 }
 .Pr_card_item {
-  overflow: hidden;
+  transition: transform .4s ease;
+  overflow-x: hidden;
   display: flex;
   width: 240px;
   object-fit: cover;
@@ -352,6 +353,7 @@ body {
   }
 }
 
+
 .Pr_card_item,
 .profile {
   position: relative;
@@ -377,6 +379,10 @@ body {
   .cardText {
     color: $textcolor2;
     font-size: 14px;
+    #code{
+      text-transform: uppercase;
+      color: var(--bgClor);
+    }
   }
   .secendPart {
     width: 100%;
@@ -557,8 +563,21 @@ footer {
   .filterBtnGrup {
     margin-left: 15px;
   }
+  .Price_card{
+    overflow-x: hidden;
+  }
   .Pr_card_item {
+    opacity: 0;
+    transform: translateX(120%);
     width: 280px !important;
+  }
+  .Pr_card_item:nth-of-type(even){
+    transform: translateX(-120%);
+  }
+  
+  .showCard{
+    opacity: 1 !important;
+    transform: translateX(0)!important;
   }
   .skill {
     margin: 5px 0;
@@ -572,6 +591,7 @@ footer {
     .skill {
       font-size: 25px !important;
       margin: 10px 0 !important;
+      display: none !important;
       p span {
         padding-right: 8px;
       }

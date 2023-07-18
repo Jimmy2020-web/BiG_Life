@@ -84,10 +84,10 @@ function lodeData() {
             <img src="./image/${item.image}" alt="" srcset="">
             <span class="category">${item.category}</span>
             <div class="cardText">
-                <p>${item.brand}</p>
+                <p>${item.brand} <span id="code">[#${item.id}]</span> </p>
                 <h3>${item.pName}</h3>
                 <p>${item.stars}</p>
-                <p><sapn><i class="fa-solid fa-bangladeshi-taka-sign"></i></sapn> ${
+                <p id="Xprice"><sapn><i class="fa-solid fa-bangladeshi-taka-sign"></i></sapn> ${
                   item.price
                 } <span class="xprice">[${item.xPrice}]</span></p>
             </div>
@@ -164,4 +164,21 @@ function lodeData() {
 }
 
 lodeData();
+
+
+window.addEventListener("scroll", () => {
+  let Pr_card_item = document.querySelectorAll(".Pr_card_item");
+  const triggerBottm= window.innerHeight / 5 * 3.5;
+  console.log(triggerBottm);
+  Pr_card_item.forEach(box => {
+    const boxTop = box.getBoundingClientRect().top;
+
+    if (boxTop < triggerBottm) {
+      box.classList.add("showCard");
+      console.log(boxTop + "boxtop");
+    }else{
+      box.classList.remove("showCard");
+    }
+  });
+});
 

@@ -316,7 +316,8 @@ body {
 }
 
 .Pr_card_item {
-  overflow: hidden;
+  transition: transform 0.4s ease;
+  overflow-x: hidden;
   display: flex;
   width: 240px;
   -o-object-fit: cover;
@@ -374,6 +375,11 @@ body {
 .profile .cardText {
   color: var(--textColor2);
   font-size: 14px;
+}
+.Pr_card_item .cardText #code,
+.profile .cardText #code {
+  text-transform: uppercase;
+  color: var(--bgClor);
 }
 .Pr_card_item .secendPart,
 .profile .secendPart {
@@ -568,8 +574,20 @@ footer .grid {
   .filterBtnGrup {
     margin-left: 15px;
   }
+  .Price_card {
+    overflow-x: hidden;
+  }
   .Pr_card_item {
+    opacity: 0;
+    transform: translateX(120%);
     width: 280px !important;
+  }
+  .Pr_card_item:nth-of-type(even) {
+    transform: translateX(-120%);
+  }
+  .showCard {
+    opacity: 1 !important;
+    transform: translateX(0) !important;
   }
   .skill {
     margin: 5px 0;
@@ -584,6 +602,7 @@ footer .grid {
   .grid .skill {
     font-size: 25px !important;
     margin: 10px 0 !important;
+    display: none !important;
   }
   .grid .skill p span {
     padding-right: 8px;
