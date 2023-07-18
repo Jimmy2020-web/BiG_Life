@@ -50,15 +50,8 @@ body {
   outline: none;
   font-size: 16px;
   padding: 4px 6px;
-  width: 50px;
   transition: all 0.3s ease-in-out;
   border-radius: 4px;
-  opacity: 0.7;
-}
-.navBar .grid_nav .nIten #Search:hover,
-.navBar .grid_nav .nIten #Search :focus {
-  opacity: 1;
-  width: 160px;
 }
 .navBar .grid_nav .nIten p {
   padding: 5px 15px;
@@ -525,6 +518,15 @@ footer .grid {
   .hero_bg {
     background-size: 100%;
     height: 250px;
+  }
+  #Search {
+    position: absolute !important;
+    top: 45px !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    border-radius: 30px !important;
+    padding-left: 20px !important;
+    border: 2px solid var(--bgClor) !important;
   }
   .hero_bg .hero_text .info {
     width: 100%;
