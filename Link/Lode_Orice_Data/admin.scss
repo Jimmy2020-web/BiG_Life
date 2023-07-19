@@ -8,7 +8,7 @@
 
 :root{
     --bgColor: #100B2D;
-    --bgColor2: #ffffff10;
+    --bgColor2: #ffffff0e;
     --textColor:#7D7F8A;
     --textColor2: #44A5FF;
     --bgSecend: #FFBF40;
@@ -16,19 +16,57 @@
 
 
 body{
-    display: flex;
     background: var(--bgColor);
     color: var(--textColor);
     position: relative;
     font-family: 'Nunito', sans-serif !important;
     font-size: 14px;
 }
+#main{
+    display: flex;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #18181879;
+    backdrop-filter: blur(15px);
+}
+.bgAnis{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    gap: 80px;
+    flex-wrap: wrap;
+    .box{
+        position: relative;
+        width: 30px;
+        height: 30px;
+        background: #160f36;
+    }
+}
+
+.animated{
+    animation: animated 2s linear forwards;
+}
+
+@keyframes animated {
+    0%{
+        filter: hue-rotate(0deg);
+    }
+    50%{
+        background: #0f0f;
+    }
+    100%{
+        filter: hue-rotate(360deg);
+    }
+}
 
 .sideManu{
+    background: var(--bgColor2);
     width: 250px;
     height: 100vh;
-    background: var(--bgColor2);
-    backdrop-filter: blur(10px);
     .logo{
         border-bottom: 1px solid;
         display: flex;
