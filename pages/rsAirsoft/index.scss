@@ -193,16 +193,45 @@ body {
   }
 }
 .brandName{
-  padding: 15px 0;
+  line-height: 25px;
   border-bottom: 1px solid var(--textColor2);
+  border-top: 1px solid var(--textColor2);
+  background: var(--textColor2);
   .brandItem{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+    background: var(--textColor);
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: 180px;
+    text-align: center;
+    overflow-x: scroll;
+    overscroll-behavior-inline: contain;
+    scrollbar-width: none;
+    
+    &::-webkit-scrollbar{
+      display: none !important;
+    }
     span{
+      animation: scroolAnimation 30s infinite;
+      background: var(--textColor2);
       padding: 5px;
       text-transform: uppercase;
+      color: var(--textColor);
+      border-left: 1px solid;
+      border-right: 1px solid;
     }
+  }
+}
+
+@keyframes scroolAnimation {
+  0%{
+    transform: translateX(140%);
+  }25%{
+    transform: translateX(0%);
+  }50%{
+    transform: translateX(-600%);
+  }
+  100%{
+    transform: translateX(140%);
   }
 }
 .shop_Step {

@@ -169,13 +169,11 @@ lodeData();
 window.addEventListener("scroll", () => {
   let Pr_card_item = document.querySelectorAll(".Pr_card_item");
   const triggerBottm= window.innerHeight / 5 * 3.5;
-  console.log(triggerBottm);
   Pr_card_item.forEach(box => {
     const boxTop = box.getBoundingClientRect().top;
 
     if (boxTop < triggerBottm) {
       box.classList.add("showCard");
-      console.log(boxTop + "boxtop");
     }else{
       box.classList.remove("showCard");
     }
