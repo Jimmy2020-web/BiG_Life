@@ -193,7 +193,7 @@ body {
 
 @keyframes scroolAnimation {
   0% {
-    transform: translateX(140%);
+    transform: translateX(50%);
   }
   25% {
     transform: translateX(0%);
@@ -202,7 +202,7 @@ body {
     transform: translateX(-600%);
   }
   100% {
-    transform: translateX(140%);
+    transform: translateX(50%);
   }
 }
 .shop_Step {
@@ -246,10 +246,6 @@ body {
   border-radius: 8px;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.shop_Step .card .card_item:hover img,
-.shop_Step .Price_card .card_item:hover img {
-  transform: scale(1.1);
 }
 .shop_Step .card .card_item .category,
 .shop_Step .Price_card .card_item .category {
@@ -341,8 +337,8 @@ body {
 }
 
 .Pr_card_item {
+  margin: 8px 0;
   transition: transform 0.4s ease;
-  overflow-x: hidden;
   display: flex;
   width: 240px;
   -o-object-fit: cover;
@@ -357,7 +353,7 @@ body {
 .Pr_card_item .secendPart {
   transition: all 0.3s ease-in-out;
   position: absolute;
-  top: -120px;
+  top: -10px;
   left: 0px;
   opacity: 0;
   text-align: justify;
@@ -415,7 +411,7 @@ body {
 .Pr_card_item .secendPart button,
 .profile .secendPart button {
   position: absolute;
-  top: 260px;
+  top: 245px;
   right: 10px;
   padding: 10px 12px;
   border-radius: 5px;
@@ -570,6 +566,9 @@ footer .grid {
   .heroBtn {
     font-size: 8px !important;
     letter-spacing: 0px !important;
+  }
+  .brandName {
+    line-height: 20px !important;
   }
   .shop_Step .title {
     text-align: center;
