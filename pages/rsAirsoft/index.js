@@ -66,6 +66,7 @@ function lodeData() {
       
       let productList = "";
       let brandList = "";
+      let categoryFilter = "";
 
       const filteredData = data.filter((item, index, array) => {
         return array.findIndex(obj => obj.brand === item.brand) === index;
@@ -74,6 +75,16 @@ function lodeData() {
       filteredData.forEach(product => {
         brandList += `
         <span>${product.brand}</span>
+        `
+      });
+
+      const brandButton = data.filter((brand, index, array) => {
+        return array.findIndex(obj => obj.category === brand.category) === index;
+      })
+
+      brandButton.forEach(brand => {
+        categoryFilter += `
+        <button data-name="${brand.category}">${brand.category}</button>
         `
       });
 
@@ -104,6 +115,7 @@ function lodeData() {
 
       document.querySelector(".Price_card").innerHTML = productList;
       document.querySelector(".brandItem").innerHTML = brandList;
+      document.querySelector(".filterGrup").innerHTML = categoryFilter;
 
       function dataListFilter() {
         let filterBtn = document.querySelectorAll(".filterBtnGrup button");

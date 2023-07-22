@@ -23,7 +23,21 @@ function lodeData() {
       document.querySelector("#countPd").innerHTML = data.length;
       document.querySelector("#pdid").value = `rsPd0${data.length + 1}`;
       document.querySelector("#imges").value = `rsPd0${data.length + 1}.png`;
+
+      let categoryFilter = "";
+
+      const brandButton = data.filter((brand, index, array) => {
+        return array.findIndex(obj => obj.category === brand.category) === index;
+      })
+
+      brandButton.forEach(brand => {
+        categoryFilter += `
+        <option value="${brand.category}">${brand.category}</option> 
+        `
+      });
+      document.querySelector("#filterGrup").innerHTML = categoryFilter;
     });
-}
+  }
+
 
 lodeData();

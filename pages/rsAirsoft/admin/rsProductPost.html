@@ -15,11 +15,8 @@
                     <span >Product ID:</span>
                     <input id="pdid" type="text" name="id" required value="rsPd">
                     <span>Category:</span>
-                    <select name="category" required>
-                        <option value="">Select One</option>    
-                        <option value="Pellet">Pellets</option>    
-                        <option value="Spring">Springs</option>    
-                        <option value="Scope">Scopes</option>    
+                    <select id="filterGrup" name="category" required>
+                        <!-- coming form API -->
                     </select>
                     <span>Brand Name:</span>
                     <input type="text" name="brand" required>
@@ -34,7 +31,7 @@
                     <span>Image Path:</span>
                     <input type="text" id="imges" name="image" required value="">
                     <!-- <span>Details:</span> -->
-                    <textarea placeholder="Details type hear..." name="Ditels" cols="20" rows="5"></textarea>
+                    <textarea placeholder="Details type hear... Max 300 words" name="Ditels" cols="20" rows="5" maxlength="500"></textarea>
                 </div>
                 <input id="btnSubmit" type="submit" value="Add Product">
                 
