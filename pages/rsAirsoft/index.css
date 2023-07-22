@@ -582,6 +582,7 @@ footer .grid {
     flex-direction: column;
     align-items: center;
     gap: 50px;
+    overflow: hidden;
   }
   .bullets .box {
     display: flex;
@@ -614,7 +615,7 @@ footer .grid {
     margin-left: 15px;
   }
   .Price_card {
-    overflow-x: hidden;
+    overflow: hidden;
   }
   .Pr_card_item {
     opacity: 0;
