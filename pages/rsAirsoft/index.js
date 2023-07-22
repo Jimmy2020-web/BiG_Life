@@ -57,6 +57,7 @@ SearchBtn.addEventListener("input", (e) => {
 
 
 function lodeData() {
+  document.querySelector("#onlode").classList.add("loder");
   fetch(
     "https://script.google.com/macros/s/AKfycbx22mCPUviT4JWcoyHNuSB8H4_Y_RPHeqzjMSnY2Ku0lRLtSKNhy3aUoA5PEl9g073FKg/exec"
   )
@@ -169,6 +170,7 @@ function lodeData() {
           document.querySelector("#cartTotal").innerHTML = cartQuantity;
         });
       });
+      document.querySelector("#onlode").classList.remove("loder");
     })
     .catch((error) => {
       console.log("Error:", error);
