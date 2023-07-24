@@ -29,7 +29,7 @@ $textcolor2: var(--textColor2);
 }
 
 @mixin buy_btn_outline {
-  padding: 10px 12px;
+  padding: 6px 8px;
   border-radius: 5px;
   border: 1px solid $bgcolor;
   outline: none;
@@ -172,7 +172,6 @@ body {
   background-position: center;
   background-color: #fff;
   .hero_text {
-    background: rgba(16, 16, 16, 0.116);
     color: $textcolor2;
     width: 100%;
     height: 100%;
@@ -198,6 +197,16 @@ body {
   border-bottom: 1px solid var(--textColor2);
   border-top: 1px solid var(--textColor2);
   background: var(--textColor2);
+  position: relative;
+  #roter{
+    color: var(--textColor);
+    position: absolute;
+    left: 5%;
+    z-index: 10;
+    bottom: 2px;
+    font-size: 30px;
+    animation: roter 80s infinite;
+  }
   .brandItem{
     background: var(--textColor);
     display: grid;
@@ -212,7 +221,7 @@ body {
       display: none !important;
     }
     span{
-      animation: scroolAnimation 30s infinite;
+      animation: scroolAnimation 80s infinite;
       background: var(--textColor2);
       padding: 5px;
       text-transform: uppercase;
@@ -225,16 +234,24 @@ body {
 
 @keyframes scroolAnimation {
   0%{
-    transform: translateX(50%);
-  }25%{
     transform: translateX(0%);
   }50%{
     transform: translateX(-600%);
-  }
-  100%{
-    transform: translateX(50%);
+  }100%{
+    transform: translateX(10%);
   }
 }
+
+@keyframes roter {
+  0%{
+    transform: rotate(0deg);
+  }50%{
+    transform: rotate(1440deg);
+  }100%{
+    transform: rotate(0deg);
+  }
+}
+
 .shop_Step {
   margin: 20px 0;
   .title {

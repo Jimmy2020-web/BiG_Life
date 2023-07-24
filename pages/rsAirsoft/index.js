@@ -143,31 +143,34 @@ function lodeData() {
 
       dataListFilter();
 
-      document.querySelectorAll(".cart_Btn").forEach((button) => {
+      document.querySelectorAll(".cart_Btn").forEach((button, index) => {
+        // button.addEventListener("click", () => {
+        //   const productName = button.dataset.pname;
+        //   let matchItem;
+        //   cart.forEach((item) => {
+        //     if (productName === item.productName) {
+        //       matchItem = item;
+        //     }
+        //   });
+
+        //   if (matchItem) {
+        //     matchItem.quantity += 1;
+        //   } else {
+        //     cart.push({
+        //       productName: productName,
+        //       quantity: 1,
+        //     });
+        //   }
+
+        //   let cartQuantity = 0;
+        //   cart.forEach((item) => {
+        //     cartQuantity += item.quantity;
+        //   });
+        //   document.querySelector("#cartTotal").innerHTML = cartQuantity;
+        // });
         button.addEventListener("click", () => {
-          const productName = button.dataset.pname;
-          
-          let matchItem;
-          cart.forEach((item) => {
-            if (productName === item.productName) {
-              matchItem = item;
-            }
-          });
-
-          if (matchItem) {
-            matchItem.quantity += 1;
-          } else {
-            cart.push({
-              productName: productName,
-              quantity: 1,
-            });
-          }
-
-          let cartQuantity = 0;
-          cart.forEach((item) => {
-            cartQuantity += item.quantity;
-          });
-          document.querySelector("#cartTotal").innerHTML = cartQuantity;
+          window.open("https://www.facebook.com/profile.php?id=100009359734347&mibextid=ZbWKwL");
+          console.log(index);
         });
       });
       document.querySelector("#onlode").classList.remove("loder");
@@ -194,3 +197,13 @@ window.addEventListener("scroll", () => {
   });
 });
 
+let faceBookBtn = document.querySelector(".facebook");
+let mailBtn = document.querySelector(".mail");
+
+faceBookBtn.addEventListener("click", () =>{
+  window.open("https://www.facebook.com/profile.php?id=100009359734347&mibextid=ZbWKwL");
+});
+
+mailBtn.addEventListener("click", () =>{
+  window.open("https://mail.google.com/mail/u/0/#inbox?compose=new");
+});
