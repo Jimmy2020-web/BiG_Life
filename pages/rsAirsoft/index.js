@@ -169,8 +169,9 @@ function lodeData() {
         //   document.querySelector("#cartTotal").innerHTML = cartQuantity;
         // });
         button.addEventListener("click", () => {
-          window.open("https://www.facebook.com/profile.php?id=100009359734347&mibextid=ZbWKwL");
-          console.log(index);
+          // window.open("https://www.facebook.com/profile.php?id=100009359734347&mibextid=ZbWKwL");
+          localStorage.setItem("btnIndex", index);
+          window.location.assign("./pages/view.html");
         });
       });
       document.querySelector("#onlode").classList.remove("loder");

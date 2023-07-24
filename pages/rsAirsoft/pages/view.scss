@@ -1,0 +1,286 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Ysabeau+Infant:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&display=swap');
+
+// font-family: 'Nunito', sans-serif;
+// font-family: 'Ysabeau Infant', sans-serif;
+// font-family: 'DM Serif Display', serif;
+
+:root{
+  --bgClor:#e90000;
+  --textColor: #ffffff;
+  --textColor2: #444444;
+}
+
+$bgcolor: var(--bgClor);
+$textcolor: var(--textColor);
+$textcolor2: var(--textColor2);
+
+@mixin buy_btn {
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  background: $bgcolor;
+  color: $textcolor;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease-in-out;
+}
+
+@mixin buy_btn_outline {
+  padding: 6px 8px;
+  border-radius: 5px;
+  border: 1px solid $bgcolor;
+  outline: none;
+  background: #fff;
+  color: $bgcolor;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+.continer {
+    max-width: 1050px;
+    margin: 0 auto;
+  }
+
+body {
+    background: #ffffff;
+    color: $textcolor2;
+    font-family: "Ysabeau Infant", serif;
+    width: 100%;
+    height: 100%;
+  }
+
+  
+  .navBar {
+    background: $bgcolor;
+    color: $textcolor;
+    width: 100%;
+    position: fixed;
+    z-index: 99;
+    .grid_nav {
+      display: grid;
+      grid-template-columns: 220px auto;
+      .logo {
+        padding: 10px;
+        letter-spacing: 2px;
+        font-weight: bold;
+        font-size: 25px;
+        font-family: 'DM Serif Display', serif;
+        cursor: pointer;
+        transition: all 0.3s ease-in;
+        &:hover {
+          color: #fae902;
+        }
+      }
+      .nIten {
+        display: flex;
+        align-items: center;
+        justify-content: end;
+        #Search {
+          border: none;
+          outline: none;
+          font-size: 16px;
+          padding: 4px 6px;
+          transition: all 0.3s ease-in-out;
+          border-radius: 45px;
+          padding-left: 15px;
+        }
+        p {
+          padding: 5px 15px;
+          cursor: pointer;
+          transition: all 0.3s ease-in;
+          &:hover {
+            color: #fff;
+          }
+        }
+        .fa-cart-shopping {
+          font-size: 25px;
+        }
+        .cartBord {
+          position: relative;
+        }
+        #cartTotal {
+          color: rgb(253, 253, 253);
+          font-weight: bold !important;
+          position: absolute;
+          right: -3px;
+          bottom: 1px;
+          font-size: 25px;
+        }
+      }
+    }
+  }
+
+// Main content design
+.pathManu {
+    padding-top: 5rem;
+    padding-bottom: 2rem;
+    font-size: 18px;
+
+}
+.cardBox {
+    display: grid;
+    grid-template-columns: 280px auto 330px;
+    padding: 1.5rem;
+    border: 1px solid #d1d1d1;
+    border-radius: 15px;
+    margin-bottom: 3rem;
+    .gridBox{
+        #pd4{
+            padding: .3rem 0;
+        }
+        .xprice {
+            color: gray;
+            text-decoration: line-through;
+            font-style: italic;
+            font-size: 14px;
+          }
+        .imgBox {
+            object-fit: cover;
+            img{
+                width: 100%;
+            }
+        }
+        h2 {
+            margin-bottom: 10px;
+        }
+        p{
+            .fa-star{
+                color: rgb(255, 153, 0);
+            }
+        }
+        .price{
+            padding: .5rem 0;
+            color: var(--bgClor);
+            span{
+                padding-right: 10px;
+            }
+        }
+        .condation{
+            line-height: 2.5rem;
+            padding-left: 15px;
+            background:#efeded;
+            span {
+                padding-right: 10px;
+            }
+        }
+    }
+    .btn{
+        margin-top: 2.5rem;
+        button{
+            @include buy_btn();
+            margin-right: 15px;
+            transition: all .3s ease;
+            &:hover{
+                background: var(--textColor2);
+            }
+            &:nth-child(1){
+                background: var(--textColor2);
+                &:hover{
+                    background: var(--bgClor);
+                }
+            }
+        }
+        p{
+            line-height: 2.5rem;
+            background:#efeded;
+            padding: 0 1rem;
+        }
+    }
+}
+
+  footer {
+    border-top: 4px dotted;
+    background-color: #310e68;
+    background-image: linear-gradient(316deg, #310e68 0%, #5f0f40 74%);
+    color: #fff;
+    padding: 15px 0;
+    font-family: 'Nunito', sans-serif;
+    .fot{
+      text-align: left;
+      h3{
+          letter-spacing: 10px;
+          border-bottom: 1px solid;
+          display: inline;
+      }
+      p{
+          padding: 5px 0;
+          font-size: 14px;
+          span{
+              padding-right: 15px;
+          }
+      }
+    }
+    .imgDiv{
+          width: 120px;
+          object-fit: cover;
+      img{
+          width: 100%;
+          border: 3px solid;
+          border-radius: 50%;
+          background: #f3f3f3;
+      }
+    }
+    .skill {
+      font-size: 30px;
+      margin: 45px 0;
+      span{
+          padding: 15px;
+      }
+      }
+    .grid{
+      display: grid;
+      grid-template-columns: 140px auto auto;
+      align-items: center;
+      // justify-content: center;
+    }
+  }
+
+  .loder{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #00000052;
+    z-index: 99;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    .spin{
+      position: absolute;
+      top: 10%;
+      border: 10px solid var(--textColor);
+      border-radius: 50%;
+      border-top: 10px solid var(--bgClor);
+      border-bottom: 10px solid var(--bgClor);
+      width: 100px;
+      height: 100px;
+      animation: spin 2s linear infinite;
+    }
+  }
+  
+  @keyframes spin {
+    0%{
+      transform: rotate(0deg);
+    }100%{
+      transform: rotate(360deg);
+    }
+  }
+
+
+  @media screen and (max-width: 550px) {
+    .cardBox {
+        grid-template-columns: auto;
+        padding: 25px;
+    }
+
+  };

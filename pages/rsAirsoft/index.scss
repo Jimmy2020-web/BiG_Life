@@ -313,10 +313,16 @@ body {
     }
   }
 }
+#Xprice {
+  font-size: 18px;
+  font-weight: bold;
+  color: $bgcolor;
+}
 .xprice {
   color: gray;
   text-decoration: line-through;
   font-style: italic;
+  font-size: 14px;
 }
 .bullets {
   .box {
