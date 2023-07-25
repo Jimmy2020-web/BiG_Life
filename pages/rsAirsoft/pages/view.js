@@ -1,11 +1,18 @@
 let btnIndex = localStorage.getItem("btnIndex");
 function lodeAPIdata() {
+
     let onlode = document.querySelector("#onlode");
+    let bodyHight = document.querySelector(".input");
+
     onlode.classList.add("loder");
+    bodyHight.style.height = "100vh";
+
     fetch("https://script.google.com/macros/s/AKfycbx22mCPUviT4JWcoyHNuSB8H4_Y_RPHeqzjMSnY2Ku0lRLtSKNhy3aUoA5PEl9g073FKg/exec")
     .then((response) => response.json())
     .then((data) => {
+
         onlode.classList.remove("loder");
+        bodyHight.style.height = "100%";
         document.querySelector(".input").innerHTML = `
 
         <div class="pathManu continer">
@@ -39,7 +46,7 @@ function lodeAPIdata() {
             </div>
             <div class="gridBox">
                 <h2 class="condation">Conditions</h2>
-                <p class="condation"> <span><i class="fa-solid fa-location-dot"></i></span> Enayetpur, Raninagar, Naogaon-6500</p>
+                <p class="condation"> <span><i class="fa-solid fa-location-dot"></i></span> Enayetpur, Raninagar, Naogaon.</p>
                 <p class="condation"> <span><i class="fa-solid fa-truck"></i></span> Standard Delivery 7 - 13 Day(s)</p>
                 <p class="condation"> <span><i class="fa-solid fa-sack-dollar"></i></span> Cash on Delivery Available</p>
                 <p class="condation"> <span><i class="fa-solid fa-clock-rotate-left"></i></span> Retrun Option Not Available</p>

@@ -141,26 +141,30 @@ body {
   margin-top: 2.5rem;
 }
 .cardBox .btn button {
-  padding: 10px 12px;
+  padding: 6px 8px;
   border-radius: 5px;
-  border: none;
+  border: 1px solid var(--bgClor);
   outline: none;
-  background: var(--bgClor);
-  color: var(--textColor);
+  background: #fff;
+  color: var(--bgClor);
   cursor: pointer;
   font-size: 15px;
-  transition: all 0.3s ease-in-out;
+  transition: all 0.3s;
   margin-right: 15px;
-  transition: all 0.3s ease;
+  transition: all 0.5s ease;
 }
 .cardBox .btn button:hover {
-  background: var(--textColor2);
+  background: var(--bgClor);
+  color: var(--textColor);
 }
 .cardBox .btn button:nth-child(1) {
+  color: var(--textColor);
   background: var(--textColor2);
+  border-color: var(--textColor2);
 }
 .cardBox .btn button:nth-child(1):hover {
   background: var(--bgClor);
+  border-color: var(--bgClor);
 }
 .cardBox .btn p {
   line-height: 2.5rem;
