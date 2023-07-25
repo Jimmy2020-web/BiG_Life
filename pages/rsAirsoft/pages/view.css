@@ -275,6 +275,9 @@ footer .grid {
     padding-left: 20px !important;
     border: 1px solid var(--bgClor) !important;
   }
+  .cardBox .btn button {
+    margin-right: 5px !important;
+  }
   .skill {
     margin: 5px 0;
   }
