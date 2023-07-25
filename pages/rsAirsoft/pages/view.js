@@ -9,9 +9,9 @@ function lodeAPIdata() {
         document.querySelector(".input").innerHTML = `
 
         <div class="pathManu continer">
-            <span>Categories: ${data[btnIndex].category} <i class="fa-solid fa-chevron-right"></i></span>
-            <span>Brand: ${data[btnIndex].brand} <i class="fa-solid fa-chevron-right"></i></span>
-            <span>Product Name: ${data[btnIndex].pName} </span>
+            <span>RS.Arisoft/ ${data[btnIndex].category} <i class="fa-solid fa-chevron-right"></i></span>
+            <span> ${data[btnIndex].brand} <i class="fa-solid fa-chevron-right"></i></span>
+            <span> ${data[btnIndex].pName} </span>
         </div>
         <div class="cardBox continer">
             <div class="gridBox">

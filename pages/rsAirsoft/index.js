@@ -108,7 +108,7 @@ function lodeData() {
           <p>${item.Ditels}</p>
           <button Class="cart_Btn" data-pName="${
             item.pName
-          }">Add to Cart <i class="fa-solid fa-cart-plus"></i></button>
+          }">Details <i class="fa-solid fa-cart-plus"></i></button>
           </div>
         </div>
         `;
