@@ -32,8 +32,8 @@ body {
   grid-template-columns: 220px auto;
 }
 .navBar .grid_nav .logo {
-  width: 180px;
-  padding: 5px 0;
+  width: 160px;
+  padding: 10px 0;
   cursor: pointer;
   transition: all 0.3s ease-in;
 }
@@ -580,12 +580,16 @@ footer .grid {
   }
   #Search {
     position: absolute !important;
-    top: 50px !important;
+    top: 40px !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
     border-radius: 30px !important;
     padding-left: 20px !important;
     border: 1px solid var(--bgClor) !important;
+  }
+  .logo {
+    width: 140px !important;
+    padding-left: 20px !important;
   }
   .hero_bg .hero_text .info {
     width: 100%;
