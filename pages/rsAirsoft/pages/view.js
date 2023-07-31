@@ -1,4 +1,11 @@
+let homePage = document.querySelector(".logo, img");
+
+homePage.addEventListener("click", () => {
+    window.location.assign("https://jimmy2020-web.github.io/BiG_Life/pages/rsAirsoft/index.html")
+});
+
 let btnIndex = localStorage.getItem("btnIndex");
+
 function lodeAPIdata() {
 
     let onlode = document.querySelector("#onlode");

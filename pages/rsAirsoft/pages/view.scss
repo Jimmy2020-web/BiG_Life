@@ -70,15 +70,15 @@ body {
     display: grid;
     grid-template-columns: 220px auto;
     .logo {
-      padding: 10px;
-      letter-spacing: 2px;
-      font-weight: bold;
-      font-size: 25px;
-      font-family: "DM Serif Display", serif;
+      width: 180px;
+      padding: 5px 0;
       cursor: pointer;
       transition: all 0.3s ease-in;
       &:hover {
         color: #fae902;
+      }
+      img{
+        width: 100%;
       }
     }
     .nIten {
