@@ -1,3 +1,20 @@
+function scrolUP() {
+  const duration = 800;
+  const scrollSetup = window.scrollY / (duration * 15);
+  let scrollinterval = setInterval(() => {
+    if (window.scrollY !== 0) {
+      window.scrollBy(0, scrollSetup);
+    }else {
+      clearInterval(scrollinterval);
+    }
+  }, 15);
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  scrolUP();
+});
+
+
 let root = document.querySelector(":root");
 let rootStyle = getComputedStyle(root);
 let bgColor = rootStyle.getPropertyValue("--bgClor");

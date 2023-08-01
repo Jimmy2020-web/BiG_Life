@@ -49,7 +49,7 @@ function lodeAPIdata() {
                 <p id="pd4">Brand: ${data[btnIndex].brand}</p>
                 <p id="pd4">Details: ${data[btnIndex].stars}</p>
                 <p id="pd4">Quantity: 400 Ps</p>
-                <p id="pd4">Delivery Charge: 100/- Tk</p>
+                <p id="pd4">Delivery Charge: 150/- Tk</p>
             </div>
             <div class="gridBox">
                 <h2 class="condation">Conditions</h2>
@@ -60,7 +60,7 @@ function lodeAPIdata() {
                 <p class="condation"> <span><i class="fa-solid fa-shield-halved"></i></span> Warranty Not Available</p>
             </div>
             <div class="btn">
-                <p>Model: ${data[btnIndex].brand}</p>
+                <p>Total Price: ${data[btnIndex].price + 150} Product + Delivery</p>
             </div>
             <div class="btn">
                 <button id="shop"> <i class="fa-solid fa-cart-shopping"></i> Shop Now</button>
