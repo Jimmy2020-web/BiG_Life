@@ -1,13 +1,17 @@
 function scrolUP() {
-  const duration = 800;
-  const scrollSetup = window.scrollY / (duration * 15);
-  let scrollinterval = setInterval(() => {
-    if (window.scrollY !== 0) {
-      window.scrollBy(0, scrollSetup);
-    }else {
-      clearInterval(scrollinterval);
-    }
-  }, 15);
+  const duration = 300;
+  // const scrollSetup = window.scrollY;
+  // let scrollinterval = setInterval(() => {
+  //   if (window.scrollY !== 0) {
+  //     window.scrollBy(0, scrollSetup);
+  //   }else {
+  //     clearInterval(scrollinterval);
+  //   }
+// }, 15);
+setTimeout(() => {
+  window.scrollBy(0, duration);
+}, 2000);
+
 }
 
 document.addEventListener('DOMContentLoaded', () => {
