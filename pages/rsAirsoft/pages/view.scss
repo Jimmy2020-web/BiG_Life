@@ -283,14 +283,72 @@ footer {
   }
 }
 
+.popup{
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background: #020202c7;
+  .popBix{
+    position: relative;
+    background: #f3f3f3;
+    color: var(--bgClor);
+    height: 180px;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0px 2px 8px var(--textColor2);
+    text-align: center;
+    .closeBtn{
+      position: absolute;
+      top: -1rem;
+      right: -1rem;
+      background: #f3f3f3;
+      padding: 2px 6px;
+      border-radius: 50%;
+      font-size: 21px;
+      color: $textcolor2;
+      cursor: pointer;
+      transition: all .3s ease;
+      &:hover{
+        color: $bgcolor;
+      }
+    }
+    .btnGrup{
+      .fa-whatsapp{
+        color: #075e54;
+        &:hover{
+          color: $textcolor2;
+        }
+      }
+      .fa-facebook-messenger{
+        color: #006AFF;
+        &:hover{
+          color: $textcolor2;
+        }
+      }
+      font-size: 30px;
+      span{
+        padding: 20px 15px;
+        cursor: pointer;
+        transition: all 0.3s ease;
+      }
+    }
+  }
+}
+
 @media screen and (max-width: 550px) {
   .pathManu {
     margin: 0 1.5rem;
     padding-bottom: 1rem;
 }
 
-  .input {
-    height: 100% !important;
+.logo{
+    width: 140px !important;
+    padding-left: 20px !important;
 }
   .cardBox {
     grid-template-columns: auto;
@@ -304,7 +362,7 @@ footer {
 
   #Search {
     position: absolute !important;
-    top: 50px !important;
+    top: 40px !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
     border-radius: 30px !important;

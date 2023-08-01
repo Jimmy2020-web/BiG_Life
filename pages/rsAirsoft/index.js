@@ -200,6 +200,7 @@ window.addEventListener("scroll", () => {
 
 let faceBookBtn = document.querySelector(".facebook");
 let mailBtn = document.querySelector(".mail");
+let whatsAppBtn = document.querySelector(".whatsApp");
 
 faceBookBtn.addEventListener("click", () =>{
   window.open("https://www.facebook.com/profile.php?id=100009359734347&mibextid=ZbWKwL");
@@ -207,4 +208,8 @@ faceBookBtn.addEventListener("click", () =>{
 
 mailBtn.addEventListener("click", () =>{
   window.open("https://mail.google.com/mail/u/0/#inbox?compose=new");
+});
+
+whatsAppBtn.addEventListener("click", () =>{
+  window.open("https://wa.me/+966571418190");
 });

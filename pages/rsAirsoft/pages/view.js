@@ -1,7 +1,7 @@
 let homePage = document.querySelector(".logo, img");
 
 homePage.addEventListener("click", () => {
-    window.location.assign("https://jimmy2020-web.github.io/BiG_Life/pages/rsAirsoft/index.html")
+    window.location.assign("../index.html")
 });
 
 let btnIndex = localStorage.getItem("btnIndex");
@@ -79,7 +79,7 @@ function lodeAPIdata() {
             window.location.assign("../index.html")
         });
         shopBtn.addEventListener('click', () => {
-            window.location.assign("https://www.facebook.com/profile.php?id=100009359734347&mibextid=ZbWKwL")
+            document.querySelector(".popup").style.display = "flex";
         });
 
     });
@@ -87,3 +87,18 @@ function lodeAPIdata() {
 
 lodeAPIdata();
 
+let popupClose = document.querySelector(".closeBtn");
+let whatsapp = document.querySelector(".fa-whatsapp");
+let messenger = document.querySelector(".fa-facebook-messenger");
+
+messenger.addEventListener("click", () => {
+    window.location.assign("https://www.facebook.com/profile.php?id=100009359734347&mibextid=ZbWKwL")
+});
+
+whatsapp.addEventListener("click", () => {
+    window.open("https://wa.me/+966571418190");
+});
+
+popupClose.addEventListener("click", () => {
+    document.querySelector(".popup").style.display = "none";
+});
