@@ -1,3 +1,14 @@
+const cakeValue = document.querySelector("#textarea");
+cakeValue.addEventListener("keyup", () => {
+  if (cakeValue.value.length > 245) {
+    cakeValue.style.background = "#ca0404";
+    cakeValue.style.color = "#fff";
+  }else{
+    cakeValue.style.background = "#fff";
+    cakeValue.style.color = "#313131";
+  }
+});
+
 const URL =
   "https://script.google.com/macros/s/AKfycbyItFpoDLwEJDxTuHJE9n4-xtuwSV3X1iH3otAgW1NZH_cNzzWafxTHaQR_nY-wHCCvYg/exec";
 
