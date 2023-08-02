@@ -5,10 +5,12 @@ const formData1 = document.forms["listData"];
 
 formData1.addEventListener("submit", (e) => {
   document.querySelector("#btnSubmit").value = "Prossasing..!";
+  document.querySelector(".loder").style.display = "flex";
   e.preventDefault();
   fetch(URL, { method: "POST", body: new FormData(formData1) })
     .then(() => {
       document.querySelector("#btnSubmit").value = "Add Product";
+      document.querySelector(".loder").style.display = "none";
       lodeData();
     })
     .catch((error) => console.error("Error!", error.message));
