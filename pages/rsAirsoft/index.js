@@ -110,7 +110,7 @@ function lodeData() {
         `
       });
 
-      data.forEach((item) => {
+      data.reverse().forEach((item) => {
         productList += `
         <div class="Pr_card_item" data-name="${item.category}">
           <div class="firstPart">
