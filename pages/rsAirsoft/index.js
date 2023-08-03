@@ -127,7 +127,7 @@ function lodeData() {
           </div>
           <div class="secendPart">
           <p>${item.Ditels}</p>
-          <button Class="cart_Btn" data-pName="${
+          <button id="${item.id}" Class="cart_Btn" data-pName="${
             item.pName
           }">Details <i class="fa-solid fa-cart-plus"></i></button>
           </div>
@@ -165,33 +165,10 @@ function lodeData() {
       dataListFilter();
 
       document.querySelectorAll(".cart_Btn").forEach((button, index) => {
-        // button.addEventListener("click", () => {
-        //   const productName = button.dataset.pname;
-        //   let matchItem;
-        //   cart.forEach((item) => {
-        //     if (productName === item.productName) {
-        //       matchItem = item;
-        //     }
-        //   });
-
-        //   if (matchItem) {
-        //     matchItem.quantity += 1;
-        //   } else {
-        //     cart.push({
-        //       productName: productName,
-        //       quantity: 1,
-        //     });
-        //   }
-
-        //   let cartQuantity = 0;
-        //   cart.forEach((item) => {
-        //     cartQuantity += item.quantity;
-        //   });
-        //   document.querySelector("#cartTotal").innerHTML = cartQuantity;
-        // });
         button.addEventListener("click", () => {
-          // window.open("https://www.facebook.com/profile.php?id=100009359734347&mibextid=ZbWKwL");
-          localStorage.setItem("btnIndex", index);
+          const no = index.length;
+          const cardNo = button.id.slice(5, no) -1;
+          localStorage.setItem("btnIndex", cardNo);
           window.location.assign("./pages/view.html");
         });
       });
