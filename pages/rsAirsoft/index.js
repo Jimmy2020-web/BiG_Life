@@ -166,8 +166,7 @@ function lodeData() {
 
       document.querySelectorAll(".cart_Btn").forEach((button, index) => {
         button.addEventListener("click", () => {
-          const no = index.length;
-          const cardNo = button.id.slice(5, no) -1;
+          const cardNo = button.id.slice(5, 9) -1;
           localStorage.setItem("btnIndex", cardNo);
           window.location.assign("./pages/view.html");
         });
