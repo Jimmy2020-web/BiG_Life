@@ -55,6 +55,7 @@ body {
   justify-content: end;
 }
 .navBar .grid_nav .nIten #Search {
+  display: none;
   border: none;
   outline: none;
   font-size: 16px;

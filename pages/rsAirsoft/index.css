@@ -153,7 +153,7 @@ body {
   color: transparent;
   font-family: "DM Serif Display", serif;
   width: 62%;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: bold;
   letter-spacing: 1px;
   padding: 128px;
@@ -593,7 +593,7 @@ footer .grid {
   }
   .hero_bg .hero_text .info {
     width: 100%;
-    font-size: 14px;
+    font-size: 17px;
     padding: 15px;
     padding-top: 80px;
   }
