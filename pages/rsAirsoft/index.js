@@ -167,8 +167,9 @@ function lodeData() {
       document.querySelectorAll(".cart_Btn").forEach((button, index) => {
         button.addEventListener("click", () => {
           const cardNo = button.id.slice(5, 9) -1;
-          localStorage.setItem("btnIndex", cardNo);
-          window.location.assign("./pages/view.html");
+          // localStorage.setItem("btnIndex", cardNo);
+          // window.location.assign("./pages/view.html");
+          window.location.href = "./pages/view.html?card=" + cardNo;
         });
       });
       document.querySelector("#onlode").classList.remove("loder");

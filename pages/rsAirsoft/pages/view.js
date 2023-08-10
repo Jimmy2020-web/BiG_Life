@@ -4,7 +4,8 @@ homePage.addEventListener("click", () => {
     window.location.assign("../index.html")
 });
 
-let btnIndex = localStorage.getItem("btnIndex");
+var urlParams = new URLSearchParams(window.location.search);
+let btnIndex = urlParams.get("card");;
 
 function lodeAPIdata() {
 
