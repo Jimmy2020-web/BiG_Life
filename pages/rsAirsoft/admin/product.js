@@ -1,3 +1,13 @@
+const authPassword = localStorage.getItem('authPassword');
+const urlParams = new URLSearchParams(window.location.search);
+const authKey = urlParams.get('authKey');
+
+if (authKey === authPassword) {
+  document.querySelector(".authPopup").style.display = "none";
+} else {
+  document.querySelector(".authPopup").style.display = "flex";
+}
+
 const cakeValue = document.querySelector("#textarea");
 cakeValue.addEventListener("keyup", () => {
   if (cakeValue.value.length > 245) {

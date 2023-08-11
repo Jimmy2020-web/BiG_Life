@@ -142,4 +142,33 @@ body section form input[type=submit]:hover {
     height: 72px;
     opacity: 0;
   }
+}
+
+.authPopup {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #ca0404;
+  z-index: 5;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  color: #fff;
+  text-align: center;
+}
+.authPopup .popupBox {
+  border: 2px solid #fff;
+  padding: 20px;
+  border-radius: 8px;
+  height: 280px;
+}
+.authPopup .popupBox i {
+  font-size: 50px;
+  padding: 20px 0;
+}
+.authPopup .popupBox a {
+  text-decoration: none;
+  color: #fff;
 }/*# sourceMappingURL=product.css.map */

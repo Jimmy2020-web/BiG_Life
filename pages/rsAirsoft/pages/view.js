@@ -5,7 +5,7 @@ homePage.addEventListener("click", () => {
 });
 
 var urlParams = new URLSearchParams(window.location.search);
-let btnIndex = urlParams.get("card");;
+let btnIndex = urlParams.get("card");
 
 function lodeAPIdata() {
 
