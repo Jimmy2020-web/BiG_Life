@@ -165,7 +165,7 @@ background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ca0404;
+  background: #f7e99b;
   z-index: 5;
   display: none;
   justify-content: center;
@@ -173,7 +173,8 @@ background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
   color: #fff;
   text-align: center;
   .popupBox{
-    border: 2px solid #fff;
+    background: #ca0404;
+    border: 8px solid #afafaf;
     padding: 20px;
     border-radius: 8px;
     height: 280px;
@@ -184,6 +185,9 @@ background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
     a{
       text-decoration: none;
       color: #fff;
+      i{
+        font-size: 25px !important;
+      }
     }
   }
 }

@@ -150,7 +150,7 @@ body section form input[type=submit]:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: #ca0404;
+  background: #f7e99b;
   z-index: 5;
   display: none;
   justify-content: center;
@@ -159,7 +159,8 @@ body section form input[type=submit]:hover {
   text-align: center;
 }
 .authPopup .popupBox {
-  border: 2px solid #fff;
+  background: #ca0404;
+  border: 8px solid #afafaf;
   padding: 20px;
   border-radius: 8px;
   height: 280px;
@@ -171,4 +172,7 @@ body section form input[type=submit]:hover {
 .authPopup .popupBox a {
   text-decoration: none;
   color: #fff;
+}
+.authPopup .popupBox a i {
+  font-size: 25px !important;
 }/*# sourceMappingURL=product.css.map */
