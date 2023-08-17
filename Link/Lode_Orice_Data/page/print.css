@@ -6,6 +6,12 @@
   font-family: "Noto Serif Bengali", serif;
 }
 
+@font-face {
+  font-family: Nikosh;
+  font-weight: 100;
+  font-style: normal;
+  src: url(./Fonts/NikoshBAN.ttf);
+}
 body {
   background: #EEF4F9;
   -webkit-print-color-adjust: exact !important;
@@ -81,6 +87,9 @@ body {
 }
 .A4_page .outline .lateMan_address {
   text-align: justify;
+}
+.A4_page .outline .lateMan_address span {
+  font-weight: bold;
 }
 .A4_page .outline .dataTable {
   display: grid;

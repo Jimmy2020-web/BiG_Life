@@ -1,3 +1,9 @@
+var today = new Date();
+var dd = String(today.getDate()).padStart(2, '0');
+var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var yyyy = today.getFullYear();
+today = dd + '/' + mm + '/' + yyyy;
+
 let user_input = document.querySelector("#user_input");
 let sBtn = document.querySelector("#sBtn");
 let Shet_ID = "1TFwKqWHzA9ATUR0PQYvHlq2QPTKO2XRBIodLDKUWVDY";
@@ -64,8 +70,8 @@ function fetchData() {
                 </p>
             </div>
             <div class="dateStamp">
-            <p id="">আবেদন নম্বরঃ ${sKey + 253}/2023-24</p>
-            <p id="">তারিখঃ ${data.table.rows[sKey].c[40].v}</p>
+            <p id="nikosh">আবেদন নম্বরঃ ${sKey + 253}/2023-24</p>
+            <p id="nikosh">তারিখঃ ${today}</p>
             </div>
             <div class="lateMan_address">
                 এই মর্মে উত্তরাধীকার সনদ পত্র প্রদান করিতেছি যে, মৃত <span>${
@@ -152,3 +158,5 @@ pwBtn.addEventListener("click", () => {
     }, 2500);
   }
 });
+
+
