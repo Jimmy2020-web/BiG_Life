@@ -1,13 +1,29 @@
-function auth() {
-    let user = document.getElementById('user').value;
-    let password = document.getElementById('password').value;
+function lodeData() {
+  fetch(
+    "https://script.google.com/macros/s/AKfycbx22mCPUviT4JWcoyHNuSB8H4_Y_RPHeqzjMSnY2Ku0lRLtSKNhy3aUoA5PEl9g073FKg/exec"
+  )
+    .then((response) => response.json())
+    .then((data) => {
+        let user = data[0].user;
+        let password = data[0].pass;
 
-    if (user == "Sagor" && password == "admin1") {
-        authToken();
-        alert("Login success Click Okay");
-    }else{
-        alert("Login faild invalid User or password");
-    }
+        let user2 = document.getElementById('user').value;
+    let password2 = document.getElementById('password').value;
+
+        if (user2 == user && password2 == password) {
+          authToken();
+          alert("Authentication Success Full")
+      }else{
+        alert("Authentication Faild ! wrong password");   
+      }
+    })
+    .catch((error) => {
+      console.log("Error:", error);
+    });
+}
+
+function auth() {
+  lodeData()
 };
 
 function authToken() {
