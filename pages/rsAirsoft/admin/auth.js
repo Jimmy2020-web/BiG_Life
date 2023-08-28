@@ -1,14 +1,16 @@
 function lodeData() {
+  document.querySelector(".popBox").style.display = "flex";
   fetch(
     "https://script.google.com/macros/s/AKfycbx22mCPUviT4JWcoyHNuSB8H4_Y_RPHeqzjMSnY2Ku0lRLtSKNhy3aUoA5PEl9g073FKg/exec"
   )
     .then((response) => response.json())
     .then((data) => {
+      document.querySelector(".popBox").style.display = "none";
         let user = data[0].user;
         let password = data[0].pass;
 
         let user2 = document.getElementById('user').value;
-    let password2 = document.getElementById('password').value;
+        let password2 = document.getElementById('password').value;
 
         if (user2 == user && password2 == password) {
           authToken();
