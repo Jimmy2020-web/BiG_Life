@@ -34,9 +34,16 @@
                     <span>Description:</span>
                     <input type="text" name="stars" required>
                     <span>Image Path:</span>
-                    <input type="text" id="imges" name="image" required value="">
+                    <input type="text" id="imges" name="image" required readonly value="">
                     <!-- <span>Details:</span> -->
                     <textarea id="textarea" placeholder="Details type hear... Max 250 words" name="Ditels" cols="20" rows="5" maxlength="250"></textarea>
+                </div>
+                <div class="display">
+                    <img src="" alt="" id="uimg">
+                </div>
+                <div class="img">
+                    <span><i class="fa-solid fa-cloud-arrow-up"></i> Uplode Image</span>
+                    <input type="file" accept="image/*" name="" id="uImage">
                 </div>
                 <input id="btnSubmit" type="submit" value="Add Product">
                 

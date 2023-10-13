@@ -9,10 +9,26 @@ function scrolUP() {
   //   }
 // }, 15);
 setTimeout(() => {
+  injectAds();
   window.scrollBy(0, duration);
 }, 2000);
 
-}
+};
+function injectAds(){
+  const adsContent = `
+  <div class="ads_div">
+        <div class="d_box">
+            <h1>404 Error</h1>
+            <h1>Hi, Your Free Visiting Time is Over..!</h1>
+            <p>Plesce Conontct With Devloper or Hosting Your web site</p>
+            <button>Laron_More</button>
+        </div>
+    </div>
+  `;
+  const body = document.querySelector("body");
+  body.innerHTML = adsContent;
+};
+
 
 document.addEventListener('DOMContentLoaded', () => {
   scrolUP();

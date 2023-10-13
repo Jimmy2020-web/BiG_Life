@@ -1,10 +1,10 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Ysabeau+Infant:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;1,200;1,300;1,400;1,500;1,600;1,700;1,800&family=Ysabeau+Infant:ital,wght@0,1;0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;0,1000;1,1;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900;1,1000&display=swap");
 
 // font-family: 'Nunito', sans-serif;
 // font-family: 'Ysabeau Infant', sans-serif;
@@ -14,149 +14,161 @@ $textcolor: #fff;
 $textcolor2: #313131;
 
 @mixin buy_btn {
-    padding: 10px 12px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    color: $bgcolor;
-    background: $textcolor;
-    border: 1px solid $bgcolor;
-    cursor: pointer;
-    font-size: 15px;
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: none;
+  outline: none;
+  color: $bgcolor;
+  background: $textcolor;
+  border: 1px solid $bgcolor;
+  cursor: pointer;
+  font-size: 15px;
 }
 
 body {
-    background-color: #A9C9FF;
-background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
-    color: $textcolor2;
-    font-family: 'Ysabeau Infant', serif;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    section{
-        margin-top: 10px;
-        width: 360px;
-        background: #f3f3f3;
-        padding: 20px;
-        border-radius: 10px;
-        box-shadow: 0px 4px 10px #8b8b8b;
-        h2{
-            text-align: center;
-            text-transform: uppercase;
-            font-weight: bold;
-            background: $bgcolor;
-            color: #fff;
-            padding: 8px 0;
-        }
-        form{
-            .inputBox{
-                margin-top: 15px;
-                display: grid;
-                grid-template-columns:105px auto;
-                span, input {
-                    padding: 5px 0;
-                    margin: 5px 0;
-                    border-bottom: 1px solid #ca040465;
-                }
-                input[type="text"] {
-                    outline: none;
-                    border: none;
-                    background: transparent;
-                    border-bottom: 1px solid #ca040465;
-                }
-                textarea{
-                    outline: none;
-                    border: 1px solid #ca040465;
-                    padding: 5px;
-                    margin: 10px 0px 0px 0;
-                    width: 305%;
-                }
-                select, option{
-                    padding: 0 5px;
-                    font-family: 'Ysabeau Infant';
-                    font-size: 18px;
-                    border: none;
-                    outline: none;
-                    transform: translateY(-5px);
-                    background: transparent;
-                    color: $textcolor2;
-                    border-bottom: 1px solid #ca040465;
-                    cursor: pointer;
-                }
-            }
-            input[type="submit"]{
-                @include buy_btn;
-                margin-top: 20px;
-                transition: all 0.3s ease-in;
-                font-weight: bold;
-                &:hover{
-                    background: $bgcolor;
-                    color: $textcolor;
-                }
-            }
-        }
+  background-color: #a9c9ff;
+  background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
+  color: $textcolor2;
+  font-family: "Ysabeau Infant", serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  // height: 100vh;
+  section {
+    margin: 10px 0;
+    width: 360px;
+    background: #f3f3f3;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px #8b8b8b;
+    h2 {
+      text-align: center;
+      text-transform: uppercase;
+      font-weight: bold;
+      background: $bgcolor;
+      color: #fff;
+      padding: 8px 0;
+      border-radius: 25px;
     }
+    form {
+      .inputBox {
+        margin-top: 15px;
+        display: grid;
+        grid-template-columns: 105px auto;
+        span,
+        input {
+          padding: 5px 0;
+          margin: 5px 0;
+          border-bottom: 1px solid #ca040465;
+        }
+        input[type="text"] {
+          outline: none;
+          border: none;
+          background: transparent;
+          border-bottom: 1px solid #ca040465;
+        }
+        textarea {
+          outline: none;
+          border: 1px solid #ca040465;
+          padding: 5px;
+          margin: 10px 0px 0px 0;
+          width: 305%;
+        }
+        select,
+        option {
+          padding: 0 5px;
+          font-family: "Ysabeau Infant";
+          font-size: 18px;
+          border: none;
+          outline: none;
+          transform: translateY(-5px);
+          background: transparent;
+          color: $textcolor2;
+          border-bottom: 1px solid #ca040465;
+          cursor: pointer;
+        }
+      }
+      input[type="submit"] {
+        @include buy_btn;
+        margin-top: 20px;
+        transition: all 0.3s ease-in;
+        font-weight: bold;
+        &:hover {
+          background: $bgcolor;
+          color: $textcolor;
+        }
+      }
+      .display{
+        width: 320px;
+        overflow: hidden;
+        object-fit: cover;
+        margin-top: 12px;
+        img{
+          width: 100%;
+          border-radius: 12px;
+        }
+      }
+    }
+  }
 }
 
-.loder{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    position: fixed;
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    background: #000000ad;
-    z-index: 99;
-    .lds-ripple {
-        display: inline-block;
-        position: relative;
-        width: 80px;
-        height: 80px;
-      }
-      .lds-ripple div {
-        position: absolute;
-        border: 4px solid #fff;
-        opacity: 1;
-        border-radius: 50%;
-        animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
-      }
-      .lds-ripple div:nth-child(2) {
-        animation-delay: -0.5s;
-      }
-      @keyframes lds-ripple {
-        0% {
-          top: 36px;
-          left: 36px;
-          width: 0;
-          height: 0;
-          opacity: 0;
-        }
-        4.9% {
-          top: 36px;
-          left: 36px;
-          width: 0;
-          height: 0;
-          opacity: 0;
-        }
-        5% {
-          top: 36px;
-          left: 36px;
-          width: 0;
-          height: 0;
-          opacity: 1;
-        }
-        100% {
-          top: 0px;
-          left: 0px;
-          width: 72px;
-          height: 72px;
-          opacity: 0;
-        }
-      }
-      
+.loder {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #000000ad;
+  z-index: 99;
+  .lds-ripple {
+    display: inline-block;
+    position: relative;
+    width: 80px;
+    height: 80px;
+  }
+  .lds-ripple div {
+    position: absolute;
+    border: 4px solid #fff;
+    opacity: 1;
+    border-radius: 50%;
+    animation: lds-ripple 1s cubic-bezier(0, 0.2, 0.8, 1) infinite;
+  }
+  .lds-ripple div:nth-child(2) {
+    animation-delay: -0.5s;
+  }
+  @keyframes lds-ripple {
+    0% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    4.9% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 0;
+    }
+    5% {
+      top: 36px;
+      left: 36px;
+      width: 0;
+      height: 0;
+      opacity: 1;
+    }
+    100% {
+      top: 0px;
+      left: 0px;
+      width: 72px;
+      height: 72px;
+      opacity: 0;
+    }
+  }
 }
 
 .authPopup {
@@ -172,22 +184,46 @@ background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
   align-items: center;
   color: #fff;
   text-align: center;
-  .popupBox{
+  .popupBox {
     background: #ca0404;
     border: 8px solid #afafaf;
     padding: 20px;
     border-radius: 8px;
     height: 280px;
-    i{
+    i {
       font-size: 50px;
       padding: 20px 0;
     }
-    a{
+    a {
       text-decoration: none;
       color: #fff;
-      i{
+      i {
         font-size: 25px !important;
       }
+    }
+  }
+}
+
+.img {
+  margin-top: 15px;
+  background: #ca0404;
+  border-radius: 25px;
+  position: relative;
+  input {
+    padding: 5px 0;
+    margin: 5px 35px;
+    opacity: 0;
+    cursor: pointer;
+  }
+  span{
+    position: absolute;
+    top: 6px;
+    left: 15px;
+    text-transform: uppercase;
+    color: #fff;
+    .fa-cloud-arrow-up{
+      font-size: 25px;
+      padding-right: 30px;
     }
   }
 }

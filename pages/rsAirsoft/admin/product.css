@@ -6,17 +6,16 @@
 }
 
 body {
-  background-color: #A9C9FF;
-  background-image: linear-gradient(180deg, #A9C9FF 0%, #FFBBEC 100%);
+  background-color: #a9c9ff;
+  background-image: linear-gradient(180deg, #a9c9ff 0%, #ffbbec 100%);
   color: #313131;
   font-family: "Ysabeau Infant", serif;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
 }
 body section {
-  margin-top: 10px;
+  margin: 10px 0;
   width: 360px;
   background: #f3f3f3;
   padding: 20px;
@@ -30,13 +29,15 @@ body section h2 {
   background: #ca0404;
   color: #fff;
   padding: 8px 0;
+  border-radius: 25px;
 }
 body section form .inputBox {
   margin-top: 15px;
   display: grid;
   grid-template-columns: 105px auto;
 }
-body section form .inputBox span, body section form .inputBox input {
+body section form .inputBox span,
+body section form .inputBox input {
   padding: 5px 0;
   margin: 5px 0;
   border-bottom: 1px solid rgba(202, 4, 4, 0.3960784314);
@@ -54,7 +55,8 @@ body section form .inputBox textarea {
   margin: 10px 0px 0px 0;
   width: 305%;
 }
-body section form .inputBox select, body section form .inputBox option {
+body section form .inputBox select,
+body section form .inputBox option {
   padding: 0 5px;
   font-family: "Ysabeau Infant";
   font-size: 18px;
@@ -83,6 +85,17 @@ body section form input[type=submit] {
 body section form input[type=submit]:hover {
   background: #ca0404;
   color: #fff;
+}
+body section form .display {
+  width: 320px;
+  overflow: hidden;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-top: 12px;
+}
+body section form .display img {
+  width: 100%;
+  border-radius: 12px;
 }
 
 .loder {
@@ -175,4 +188,28 @@ body section form input[type=submit]:hover {
 }
 .authPopup .popupBox a i {
   font-size: 25px !important;
+}
+
+.img {
+  margin-top: 15px;
+  background: #ca0404;
+  border-radius: 25px;
+  position: relative;
+}
+.img input {
+  padding: 5px 0;
+  margin: 5px 35px;
+  opacity: 0;
+  cursor: pointer;
+}
+.img span {
+  position: absolute;
+  top: 6px;
+  left: 15px;
+  text-transform: uppercase;
+  color: #fff;
+}
+.img span .fa-cloud-arrow-up {
+  font-size: 25px;
+  padding-right: 30px;
 }/*# sourceMappingURL=product.css.map */
