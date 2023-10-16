@@ -726,6 +726,7 @@ footer .grid {
   border-radius: 15px;
   color: #fae902;
   text-align: center;
+  margin: 0 15px;
 }
 .ads_div .d_box h1, .ads_div .d_box p {
   padding: 15px 0px;
