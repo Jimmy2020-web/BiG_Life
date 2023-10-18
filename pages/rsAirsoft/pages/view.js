@@ -105,11 +105,15 @@ popupClose.addEventListener("click", () => {
 });
 
 setTimeout(() => {
-    const activeCode = "65656";
-  if (activeCode === "01925"){
+    const activeCode = 190;
+  if (200 <= activeCode){
     injectAds();
+    document.querySelector(".comedwon").style.display = "none";
   }else {
-    console.log("Active")
+    document.querySelector(".comedwon").style.display = "flex";
+    setTimeout(() => {
+        document.querySelector(".comedwon").style.display = "none";
+      },7000)
   }
   }, 2000);
 
@@ -125,5 +129,5 @@ function injectAds(){
       </div>
     `;
     const body = document.querySelector("body");
-    body.innerHTML = adsContent;
+    body.append = adsContent;
   };

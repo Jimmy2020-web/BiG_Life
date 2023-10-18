@@ -9,9 +9,17 @@ function scrolUP() {
   //   }
 // }, 15);
 setTimeout(() => {
-  const activeCode = "65656";
-  if (activeCode === "01925"){
+  var countDownDate = new Date("November 15, 2023").getTime();
+  var now = new Date().getTime();
+
+  if (countDownDate <= now){
     injectAds();
+    document.querySelector(".comedwon").style.display = "none";
+  }else {
+    document.querySelector(".comedwon").style.display = "flex";
+    setTimeout(() => {
+      document.querySelector(".comedwon").style.display = "none";
+    },7000)
   }
   window.scrollBy(0, duration);
 }, 2000);
@@ -230,3 +238,22 @@ mailBtn.addEventListener("click", () =>{
 whatsAppBtn.addEventListener("click", () =>{
   window.open("https://wa.me/+966571418190");
 });
+
+const showDate = setInterval(() => {
+  var countDownDate = new Date("November 15, 2023").getTime();
+  var now = new Date().getTime();
+  var distance = countDownDate - now;
+
+  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+  const timer = document.querySelector(".time_info");
+  timer.innerHTML = `
+    <span>${days}:D</span>
+    <span>${hours}:H</span>
+    <span>${minutes}:M</span>
+    <span>${seconds}:S</span>
+  `;
+
+},1000);
