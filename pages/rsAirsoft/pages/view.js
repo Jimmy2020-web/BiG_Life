@@ -108,6 +108,8 @@ setTimeout(() => {
     const activeCode = "65656";
   if (activeCode === "01925"){
     injectAds();
+  }else {
+    console.log("Active")
   }
   }, 2000);
 
