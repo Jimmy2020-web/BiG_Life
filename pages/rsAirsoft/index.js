@@ -9,7 +9,10 @@ function scrolUP() {
   //   }
 // }, 15);
 setTimeout(() => {
-  injectAds();
+  const activeCode = "65656";
+  if (activeCode === "01925"){
+    injectAds();
+  }
   window.scrollBy(0, duration);
 }, 2000);
 

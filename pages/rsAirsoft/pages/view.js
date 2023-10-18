@@ -105,7 +105,10 @@ popupClose.addEventListener("click", () => {
 });
 
 setTimeout(() => {
+    const activeCode = "65656";
+  if (activeCode === "01925"){
     injectAds();
+  }
   }, 2000);
 
 function injectAds(){
