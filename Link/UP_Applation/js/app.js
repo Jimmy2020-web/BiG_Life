@@ -38,7 +38,7 @@ pwBtn.addEventListener("click", () => {
       pwBuserInputtn.style.display = "none";
     }, 300);
   } else if (pwd === "01761") {
-    eUser.innerHTML = "মেহেদী হাসান";
+    eUser.innerHTML = "ওমর";
     eUser_info.value = eUser.innerHTML;
     chakePw.classList.add("okStatus");
     document.querySelector(".wroang").innerHTML = "lock_open";
