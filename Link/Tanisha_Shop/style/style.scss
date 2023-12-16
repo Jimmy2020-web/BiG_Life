@@ -1,0 +1,105 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Nova+Square&family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+// font-family: 'Nova Square', sans-serif;
+// font-family: 'Poppins', sans-serif;
+
+:root{
+    --bg_color: #ADCFD2;
+    --text_color: #0C818E;
+    --text2_color: #0F2C12;
+    --border_color: #F36979;
+    --shado_color: #DAE9EA;
+    --box_shadow: #145a5a7c;
+    --pad1: 1rem;
+    --Brd-red: 1.2rem;
+}
+
+body{
+    background: rgb(173,207,210);
+    background: linear-gradient(90deg, rgba(173,207,210,1) 0%, rgba(172,181,215,1) 50%, rgba(173,207,210,1) 100%);
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text2_color);
+    font-family: 'Poppins', sans-serif;
+    .box{
+        background: var(--shado_color);
+        backdrop-filter: blur(8px) !important;
+        padding: 2rem;
+        border-radius: var(--Brd-red);
+        border: 2px solid white;
+        box-shadow: 0px 2px 30px var(--box_shadow);
+        p,h1{
+            padding: .5rem;
+            a{
+                text-decoration: none;
+                color:var(--text_color);
+                &:hover{
+                    color: var(--text2_color);
+                }
+            }
+        }
+        p#info {
+            color: var(--border_color);
+            font-size: 14px;
+            text-align: center;
+        }
+        input{
+            padding: 10px 14px;
+            outline: none;
+            border: none;
+            border-radius: 1.5rem;
+            font-size: 15px;
+        }
+        span{
+            display: block;
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            img{
+                border-radius: 50%;
+                width: 100%;
+            }
+        }
+        .login_btn{
+            display: flex;
+            justify-content: space-around;
+            input{
+                font-size: 14px !important;
+                font-weight: 500;
+                padding: 10px 20px;
+                cursor: pointer;
+                transition: all cubic-bezier(0.895, 0.03, 0.685, 0.22);
+                &:nth-child(1){
+                    background: var(--text_color);
+                    color: white;
+                    &:hover{
+                        background: #065861;
+                    }
+                }
+                &:nth-child(2){
+                    background: var(--border_color);
+                    color: white;
+                    &:hover{
+                        background: #a83e4a;
+                    }
+                }
+            }
+        }
+        transition: all .5s ease-in-out;
+    }
+}
+
+@media screen and (min-width: 300px) {
+    
+}

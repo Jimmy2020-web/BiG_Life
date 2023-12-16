@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tanisha_Shop</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="./home.css">
+</head>
+<body>
+    <header class="ebox">
+        <div class="erroBox">
+            <p class="errTitle"><i class="fa-solid fa-triangle-exclamation"></i> Authorization Failed</p>
+            <span class="errorText">
+                <p>Authorization Failed</p>
+                <p>
+                    The most important point is that a failed authorization means a sale can not be completed. The seller should not ship the product or complete the transaction without an authorization code. If the error.
+                </p>
+            </span>
+            <span class="errorText">
+                <a href="#"><i class="fa-regular fa-circle-check"></i> Okay</a>
+            </span>
+            <br>
+        </div>
+    </header>
+    <main class="mainBody">
+        <div class="mainBox">
+            <div class="top">
+                <h2>Tanisha Shop</h2>
+                <div class="topItem">
+                    <p><i class="fa-solid fa-chart-column"></i></p>
+                    <p>Dashboard</p>
+                </div>
+                <div class="topItem">
+                    <span>
+                        <img src="../image/Post_FB.png" alt="" srcset="">
+                    </span>
+                    <p>Shahinur Islam</p>
+                </div>
+            </div>
+            <div class="buttom">
+                <div class="siedManu">
+                    <p><i class="fa-solid fa-bars"></i> Manu</p>
+                    <a href=""><i class="fa-brands fa-windows"></i> Home</a>
+                    <a href=""><i class="fa-solid fa-file-invoice-dollar"></i> Invoice</a>
+                    <a href=""> <i class="fa-solid fa-cloud-arrow-up"></i> Uplode</a>
+                    <a href=""><i class="fa-solid fa-user-shield"></i> About</a>
+                </div>
+                <div class="colum">
+                    <h3 id="titleData"><i class="fa-brands fa-windows"></i> Home</h3>
+                    <div class="homeData">
+                        <div class="content">
+                            <div class="invoice">
+                                <p class="textCenter">Invoice information Grand Total: <span id="gTotal"></span></p>
+                                <form id="invForm" action="">
+                                    <div class="coustomer">
+                                        <p><span>Name</span><input type="text" name="coustomerName" required></p>
+                                        <p><span>Mobile</span><input type="tel" name="mobile" maxlength="11" required></p>
+                                        <p><span>Address</span><input type="text" name="address" required></p>
+                                    </div>
+                                    <div class="priceing">
+                                        <div class="tableDataPrice">
+                                            <p>
+                                                <span>SL</span>
+                                                <span>Discraption</span>
+                                                <span>Quentity</span>
+                                                <span>Price</span>
+                                                <span>Total</span>
+                                                <span>Action</span>
+                                            </p>
+                                            <p>
+                                                <span><i class="fa-solid fa-pen-nib"></i></span>
+                                                <span>
+                                                    <input type="text" id="disc">
+                                                </span>
+                                                <span>
+                                                    <input type="number" id="qty" class="textCenter">
+                                                </span>
+                                                <span>
+                                                    <input type="number" id="price" class="textCenter">
+                                                </span>
+                                                <span>
+                                                    <input type="number" id="subT" readonly class="textCenter">
+                                                </span>
+                                                <span id="addBtn"><i class="fa-solid fa-square-plus"></i></span>
+                                            </p>
+                                            <div id="addTabel"></div>
+                                        </div>
+                                    </div>
+                                    <div class="submitBtn">
+                                        <button type="reset"><i class="fa-solid fa-recycle"></i> Reset</button>
+                                        <button type="submit"><i class="fa-regular fa-paper-plane"></i> Submit</button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="colum1">
+                    <div class="cash">
+                        <p><i class="fa-solid fa-sack-dollar"></i></p>
+                        <p class="tk1">3250/-</p>
+                        <p>capital Cash</p>
+                    </div>
+                    <div class="cash">
+                        <p><i class="fa-solid fa-chart-pie"></i></p>
+                        <p class="tk1">3250/-</p>
+                        <p>capital Cash</p>
+                    </div>
+                    <div class="cash">
+                        <p><i class="fa-solid fa-hand-holding-dollar"></i></p>
+                        <p class="tk1">3250/-</p>
+                        <p>capital Cash</p>
+                    </div>
+                    <div class="cash">
+                        <p><i class="fa-solid fa-cart-arrow-down"></i></p>
+                        <p class="tk1">3250/-</p>
+                        <p>capital Cash</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="./home.js"></script>
+</body>
+</html>
