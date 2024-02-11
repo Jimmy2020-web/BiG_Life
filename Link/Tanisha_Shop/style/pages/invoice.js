@@ -6,7 +6,11 @@ document.addEventListener("DOMContentLoaded", function () {
     var param3 = urlParams.get('param3');
     var param4 = urlParams.get("param4");
     var param5 = urlParams.get('param5');
- 
+    var param6 = urlParams.get('param6');
+    
+    document.querySelector("#tcno").innerHTML = `#TC${param6}`;
+    document.querySelector("#inv_no").innerHTML = `#TC${param6}`;
+    
     document.querySelector(".info1").innerHTML = `
     <p class="title_in"><i class="fa-solid fa-file-import"></i> INVOICE TO:</p>
             <p>Name: ${parameter}</p>

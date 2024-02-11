@@ -95,10 +95,11 @@ invoiceForm.addEventListener("submit", (e) => {
   const coustomerName = data.get("coustomerName");
   const mobile = data.get("mobile");
   const address = data.get("address");
+  const slno = data.get("slno");
 
   const sum = subTotal.reduce((acc, current) => acc + current, 0);
   const jsonObjArray = JSON.stringify(invoiceData);
-  const invoice = './invoice.html?parameter=' + encodeURIComponent(coustomerName) + "&param2=" +encodeURIComponent(mobile) + "&param3=" + encodeURIComponent(address) + "&param4=" + encodeURIComponent(jsonObjArray) + "&param5=" + encodeURIComponent(sum);
+  const invoice = './invoice.html?parameter=' + encodeURIComponent(coustomerName) + "&param2=" +encodeURIComponent(mobile) + "&param3=" + encodeURIComponent(address) + "&param4=" + encodeURIComponent(jsonObjArray) + "&param5=" + encodeURIComponent(sum) + "&param6=" + encodeURIComponent(slno);
   window.open(invoice, '_blank');
 
   invoiceData = [];

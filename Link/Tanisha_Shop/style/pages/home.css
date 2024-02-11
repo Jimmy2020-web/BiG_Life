@@ -162,6 +162,23 @@ body::-webkit-scrollbar {
   color: var(--text_color);
 }
 
+.invoice_sl {
+  margin: 0 auto;
+  text-align: center;
+  padding: 10px;
+}
+.invoice_sl input[type=number] {
+  color: var(--text_color);
+  padding: 5px 15px;
+  font-size: 20px;
+  width: 95px;
+  border-radius: 25px;
+  border: none;
+  outline: none;
+  margin-left: 20px;
+  -webkit-inner-spin-button: none;
+}
+
 .invoice #invForm {
   position: relative;
   min-height: 530px;
@@ -180,7 +197,8 @@ body::-webkit-scrollbar {
   border-radius: 20px 0px 0px 20px;
 }
 .invoice #invForm .coustomer p input {
-  padding: 11px 12px;
+  font-size: 15px;
+  padding: 10px 12px;
   border: none;
   outline: none;
   width: calc(100% - 110px);
@@ -206,11 +224,13 @@ body::-webkit-scrollbar {
 }
 .invoice #invForm .tableDataPrice p span i {
   font-size: 20px;
+  padding-top: 4px;
 }
 .invoice #invForm .tableDataPrice p span:nth-child(1) {
   border: none !important;
 }
 .invoice #invForm .tableDataPrice p span input {
+  font-size: 16px;
   border: none;
   outline: none;
   padding: 5px;
