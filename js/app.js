@@ -411,8 +411,8 @@ window.addEventListener('load', () => {
   document.querySelector(".popUp").style.display = "none";
 })
 
-// Eid-Ul Fitue-2023
-var target_date = new Date("Jun 27, 2023 24:00:00").getTime();
+// Eid-Ul Fitue-2024
+var target_date = new Date('mar 13, 2024 15:37:25').getTime();
 
 var days, hours, minutes, seconds; // variables for time units
 
@@ -438,7 +438,7 @@ function getCountdown(){
 	seconds = pad( parseInt( seconds_left % 60 ) );
 
 	// format countdown string + set tag value
-	countdown.innerHTML = `<span> ${days} </span> <span> ${hours} </span><span> ${minutes}</span><span> ${seconds}</span>`; 
+	countdown.innerHTML = `<span> ${days} </span> <span> ${hours} </span><span> ${minutes}</span><span> ${seconds}</span>`;
 }
 
 function pad(n) {
@@ -477,7 +477,7 @@ var iftTime = `{
 document.querySelector("#fixIft").innerHTML = "সন্ধ্যা " + "6:20 PM";
 
 setInterval(() => {
-  var terget_time = new Date( iftMonth + iftDay +", 2023 " + "6:20 PM").getTime();
+  var terget_time = new Date( iftMonth + iftDay +", 2024 " + "6:30 PM").getTime();
   var Ctime = new Date().getTime();
   var leftiftS = (terget_time - Ctime);
 

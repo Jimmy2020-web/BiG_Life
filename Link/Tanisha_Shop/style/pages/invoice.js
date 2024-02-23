@@ -12,13 +12,13 @@ document.addEventListener("DOMContentLoaded", function () {
     document.querySelector("#inv_no").innerHTML = `#TC${param6}`;
     
     document.querySelector(".info1").innerHTML = `
-    <p class="title_in"><i class="fa-solid fa-file-import"></i> INVOICE TO:</p>
-            <p>Name: ${parameter}</p>
-            <p>Mobile No: ${param2}</p>
-            <p>Address: ${param3}</p>
+    <p class="title_in"><i class="fa-solid fa-file-import"></i> বিল গ্রহিতাঃ</p>
+            <p>নামঃ ${parameter}</p>
+            <p>মোবাইল নংঃ ${param2}</p>
+            <p>ঠিকানাঃ ${param3}</p>
     `
     document.querySelector(".gTotal").innerHTML =`
-    <p>Grant Total: ${param5} <i class="fa-solid fa-bangladeshi-taka-sign"></i></p>
+    <p>সর্বমোটঃ ${param5} <i class="fa-solid fa-bangladeshi-taka-sign"></i></p>
     `
 
     const data = JSON.parse(decodeURIComponent(param4));

@@ -171,6 +171,7 @@ body::-webkit-scrollbar {
     text-align: center;
     padding: 10px;
     input[type="number"] {
+        font-family: NikoshBAN;
         color: var(--text_color);
         padding: 5px 15px;
         font-size: 20px;
@@ -209,7 +210,7 @@ body::-webkit-scrollbar {
                     width: calc(100% - 110px);
                     border-radius:  0px 20px 20px 0px;
                     color: var(--text_color);
-                    font-family: Poppins;
+                    font-family: NikoshBAN;
                 }
             }
         }
@@ -234,6 +235,7 @@ body::-webkit-scrollbar {
                         border: none !important;
                     }
                     input{
+                        font-family: NikoshBAN;
                         font-size: 16px;
                         border: none;
                         outline: none;
@@ -279,6 +281,7 @@ body::-webkit-scrollbar {
     display: block;
     border: none !important;
     border-radius: 20px;
+    font-family: NikoshBAN;
     p{
         padding: 5px 0;
         background: white;

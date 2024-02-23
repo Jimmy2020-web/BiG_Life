@@ -25,11 +25,15 @@
   text-align: center;
 }
 
+#eng {
+  font-family: Poppins;
+}
+
 body {
   background: rgb(173, 207, 210);
   background: linear-gradient(90deg, rgb(173, 207, 210) 0%, rgb(172, 181, 215) 50%, rgb(173, 207, 210) 100%);
   color: var(--text_color);
-  font-family: "Poppins", sans-serif, Nikosh;
+  font-family: NikoshBAN !important;
 }
 
 .title {
@@ -70,7 +74,7 @@ body {
 
 .invoiceHaed {
   display: grid;
-  grid-template-columns: 50px auto repeat(3, 120px);
+  grid-template-columns: 60px auto repeat(3, 120px);
   font-weight: bold;
   background: var(--shado_color);
   border-bottom: 1px solid var(--box_shadow);
@@ -86,7 +90,7 @@ body {
 
 #invoiceItems p {
   display: grid;
-  grid-template-columns: 50px auto repeat(3, 120px);
+  grid-template-columns: 60px auto repeat(3, 120px);
   border-bottom: 1px solid var(--box_shadow);
 }
 #invoiceItems p span {

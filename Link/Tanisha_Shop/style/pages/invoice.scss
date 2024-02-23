@@ -9,6 +9,7 @@
 
 // font-family: 'Nova Square', sans-serif;
 // font-family: 'Poppins', sans-serif;
+// font-family: NikoshBAN;
 
 :root{
     --bg_color: #ADCFD2;
@@ -28,11 +29,15 @@
     text-align: center;
 }
 
+#eng{
+    font-family: Poppins;
+}
+
 body {
     background: rgb(173,207,210);
     background: linear-gradient(90deg, rgba(173,207,210,1) 0%, rgba(172,181,215,1) 50%, rgba(173,207,210,1) 100%);
     color:var(--text_color);
-    font-family: 'Poppins', sans-serif, Nikosh;
+    font-family: NikoshBAN !important;
 }
 
 .title{
@@ -72,7 +77,7 @@ body {
   
 .invoiceHaed{
     display: grid;
-    grid-template-columns: 50px auto repeat(3, 120px) ;  
+    grid-template-columns: 60px auto repeat(3, 120px) ;  
     font-weight: bold;
     background: var(--shado_color);
     border-bottom: 1px solid var(--box_shadow);
@@ -89,7 +94,7 @@ body {
 #invoiceItems{
     p{
     display: grid;
-    grid-template-columns: 50px auto repeat(3, 120px);
+    grid-template-columns: 60px auto repeat(3, 120px);
     border-bottom: 1px solid var(--box_shadow);
     span{
         border-right: 1px solid var(--box_shadow);
