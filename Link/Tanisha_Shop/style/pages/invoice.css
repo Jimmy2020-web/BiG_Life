@@ -8,11 +8,11 @@
 
 :root {
   --bg_color: #ADCFD2;
-  --text_color: #05565f;
-  --text2_color: #0F2C12;
+  --text_color: #000000;
+  --text2_color: #000000;
   --border_color: #F36979;
   --shado_color: #dae9eace;
-  --box_shadow: #145a5a7c;
+  --box_shadow: #0000007c;
   --pad1: 1.5rem;
   --Brd-red: 1.2rem;
 }

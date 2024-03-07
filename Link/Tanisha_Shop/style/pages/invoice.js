@@ -42,7 +42,5 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 setTimeout(() => {
-    count++;
-    document.querySelector("#tcno").textContent = count;
     window.print();
 }, 500);
