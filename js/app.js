@@ -412,7 +412,7 @@ window.addEventListener('load', () => {
 })
 
 // Eid-Ul Fitue-2024
-var target_date = new Date('mar 13, 2024 15:37:25').getTime();
+var target_date = new Date('apr 10, 2024 15:37:25').getTime();
 
 var days, hours, minutes, seconds; // variables for time units
 
@@ -457,7 +457,7 @@ const todayEn = document.querySelector(".dateEn");
 todayEn.innerHTML = `
 <p>${ArDateYear}</p>
         <p>
-          <span>${(ArDateDay)-2}</span>
+          <span>${(ArDateDay)-1}</span>
           <span>${ArDateMonth}</span>
         </p>
         <p>${dd}</p>
@@ -468,16 +468,61 @@ const iftMonth = Intl.DateTimeFormat('en', {month: 'long'}).format(Date.now());
 
 var iftLocal = iftMonth+iftDay;
 
+var ramadan_calendar = {
+  March12: "6:15 PM",
+  March13: "6:16 PM",
+  March14: "6:16 PM",
+  March15: "6:17 PM",
+  March16: "6:17 PM",
+  March17: "6:18 PM",
+  March18: "6:18 PM",
+  March19: "6:19 PM",
+  March20: "6:19 PM",
+  March21: "6:19 PM",
+  March22: "6:20 PM",
+  March23: "6:20 PM",
+  March24: "6:20 PM",
+  March25: "6:21 PM",
+  March26: "6:21 PM",
+  March27: "6:22 PM",
+  March28: "6:22 PM",
+  March29: "6:23 PM",
+  March30: "6:23 PM",
+  March31: "6:24 PM",
+};
+
+function matchData(obj, key) {
+  return obj[key];
+}
+
+var match = matchData(ramadan_calendar, iftLocal);
 
 var iftTime = `{
-  ${iftLocal}:"6:40 PM"
+  ${iftLocal}:${match}
 }`;
 
+document.querySelector("#fixIft").innerHTML = `সন্ধ্যা ${match}`;
 
-document.querySelector("#fixIft").innerHTML = "সন্ধ্যা " + "6:20 PM";
+// setInterval(() => {
+//   var terget_time = new Date( iftMonth + iftDay +", 2024 " + match).getTime();
+//   var Ctime = new Date().getTime();
+//   var leftiftS = (terget_time - Ctime);
 
-setInterval(() => {
-  var terget_time = new Date( iftMonth + iftDay +", 2024 " + "6:30 PM").getTime();
+//   var _second = 1000,
+//     _minut = _second * 60,
+//     _hour = _minut * 60,
+//     _day = _hour * 24;
+
+//   var hourSet = Math.floor((leftiftS % _day) / _hour);
+//   var minutSet = Math.floor((leftiftS % _hour) / _minut);
+//   var secondSet = Math.floor((leftiftS % _minut) / _second);
+//   const iftTime2 = document.querySelector("#iftTime");
+//   iftTime2.innerHTML = `${hourSet}H ${minutSet}M ${secondSet}S`;
+// }, 1000);
+
+
+const intervalId = setInterval(() => {
+  var terget_time = new Date( iftMonth + iftDay +", 2024 " + match).getTime();
   var Ctime = new Date().getTime();
   var leftiftS = (terget_time - Ctime);
 
@@ -491,16 +536,8 @@ setInterval(() => {
   var secondSet = Math.floor((leftiftS % _minut) / _second);
   const iftTime2 = document.querySelector("#iftTime");
   iftTime2.innerHTML = `${hourSet}H ${minutSet}M ${secondSet}S`;
+    if (Ctime > terget_time) {
+        clearInterval(intervalId);
+    }
+  
 }, 1000);
-
-// const os = require('os');
-
-// const networkInterfaces = os.networkInterfaces();
-// const interface = networkInterfaces['eth0']; // or 'en0' for macOS
-
-// if (interface) {
-//   const macAddress = interface[0].mac;
-//   console.log('MAC address:', macAddress);
-// } else {
-//   console.error('Interface not found');
-// }
