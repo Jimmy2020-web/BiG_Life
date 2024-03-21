@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Tiro+Bangla:ital@0;1&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+    font-family: Tiro Bangla !important;
+}
+
+$bodycl: #E6E7EE;
+$borderLight: #d1d9e6;
+$textpry: #8f0831;
+$textsec: #02995f;
+$text: #616161;
+
+@mixin BoxShadwo1 {
+    padding: 1.5rem;
+    border: 1px solid $borderLight;
+    border-radius: 0.55rem;
+    box-shadow: 6px 6px 12px #b8b9be, -6px -6px 12px #fff !important;
+}
+
+@mixin BoxShadwo2 {
+    border: 1px solid $borderLight;
+    box-shadow: inset 2px 2px 5px #b8b9be, inset -3px -3px 7px #fff !important;
+}
+
+body {
+    padding: 20px;
+    background-color: $bodycl;
+}
+
+form {
+    @include BoxShadwo1;
+    max-width: 600px;
+    margin: 0 auto;
+    background: $bodycl;
+    padding: 20px 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    color: $textsec;
+    padding-bottom: 8px;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="date"],
+input[type="tel"],
+textarea {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    @include BoxShadwo2;
+    border-radius: 4px;
+    outline: none;
+}
+
+input[type="submit"],
+input[type="reset"] {
+    background-color: #4caf50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+input[type="submit"]:hover,
+input[type="reset"]:hover {
+    background-color: #45a049;
+}
+
+input[type="reset"] {
+    background-color: #f44336;
+}
+
+input[type="reset"]:hover {
+    background-color: #d32f2f;
+}
+
+select{
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    margin-bottom: 15px;
+    box-sizing: border-box;
+    border: 1px solid #ccc;
+    @include BoxShadwo2;
+    border-radius: 4px;
+    outline: none;
+}
+
+.hero{
+    max-width: 600px;
+    padding-bottom: 15px;
+    img{
+        width: 100%;
+        border-radius: 15px;
+    }
+}
+
+.title{
+    text-align: center;
+    color: #d32f2f;
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+
+// popup
+.popup_bg{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    background: #00000027;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(5px);
+    display: none;
+}
+.popup {
+    min-height: 120px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    color: orangered;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+    z-index: 9999;
+  }
+  
+  .popup-content {
+    text-align: center;
+    h2{
+        padding-bottom: 15px;
+    }
+  }
+  
+  .close {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    cursor: pointer;
+  }
+
+  .loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #00000027;
+    backdrop-filter: blur(5px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+  }
+  .loading-text {
+    font-size: 24px;
+    color: #333;
+    padding-left: 20px;
+  }
+  /* Animation */
+  @keyframes rotate {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+  }
+  .loading-icon {
+    width: 50px;
+    height: 50px;
+    border: 4px solid #333;
+    border-top: 4px solid transparent;
+    border-radius: 50%;
+    animation: rotate 1s linear infinite;
+  }

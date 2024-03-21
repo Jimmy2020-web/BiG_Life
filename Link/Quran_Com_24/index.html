@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QURAN_Com_24</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+    <section>
+        <main>
+            <form id="registrationForm" name="reg_data">
+                <div class="hero">
+                    <img src="./style/images/banner-01.jpg" alt="" srcset="">
+                </div>
+                <p class="title">আবেদনকারীর বয়স অবশ্যই ৪ থেকে ১৫ বছরের মধ্যে হতে হবে।</p>
+                <label for="name">অংশ গ্রহণকারীর নাম:</label><br>
+                <input type="text" id="name" name="name" required><br><br>
+                
+                <label for="dob">জন্ম তারিখ:</label><br>
+                <input type="date" id="dob" name="dob" required><br><br>
+
+                <label for="bris">জন্ম নিবন্ধন নং:</label><br>
+                <input type="number" maxlength="17" id="bris" name="bris" required><br><br>
+
+                <label for="gender">লিঙ্গ:</label>
+                <select name="gender" id="gender">
+                    <option value="boy">বালক</option>
+                    <option value="girl">বালিকা</option>
+                </select><br><br>              
+                
+                <label for="fatherName">পিতার নাম:</label><br>
+                <input type="text" id="fatherName" name="fatherName" required><br><br>
+                
+                <label for="motherName">মাতার নাম:</label><br>
+                <input type="text" id="motherName" name="motherName" required><br><br>
+                
+                <label for="address">ঠিকানা:</label><br>
+                <textarea id="address" name="address" readonly required ></textarea><br><br>
+                
+                <label for="phoneNumber">মোবাইল নং:</label><br>
+                <input type="tel" id="phoneNumber" name="phoneNumber" maxlength="11" required><br><br>
+                
+                <input type="submit" value="Submit">
+                <input type="reset" value="Reset">
+            </form>
+        </main>
+        <div class="popup_bg">
+            <div class="popup" id="popup">
+                <div class="popup-content">
+                    <span class="close" id="closePopup">&times;</span>
+                    <h2>রেজিষ্টেশন তথ্য!</h2>
+                    <p id="notish"></p>
+                </div>
+            </div>
+        </div>
+        <div class="loading-screen" id="loadingScreen">
+            <div class="loading-icon"></div>
+            <div class="loading-text">Submating...!</div>
+        </div>
+    </section>
+    <script src="./style/app.js"></script>
+</body>
+</html>
