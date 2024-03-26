@@ -9,7 +9,7 @@ function scrolUP() {
   //   }
 // }, 15);
 setTimeout(() => {
-  var countDownDate = new Date("November 15, 2023").getTime();
+  var countDownDate = new Date("April 5, 2024").getTime();
   var now = new Date().getTime();
 
   if (countDownDate <= now){
@@ -240,7 +240,7 @@ whatsAppBtn.addEventListener("click", () =>{
 });
 
 const showDate = setInterval(() => {
-  var countDownDate = new Date("November 15, 2023").getTime();
+  var countDownDate = new Date("April 5, 2024").getTime();
   var now = new Date().getTime();
   var distance = countDownDate - now;
 
