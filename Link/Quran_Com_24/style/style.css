@@ -178,4 +178,10 @@ select {
   border-top: 4px solid transparent;
   border-radius: 50%;
   animation: rotate 1s linear infinite;
+}
+
+#listBtn {
+  border: none;
+  outline: none;
+  padding: 10px 15px;
 }/*# sourceMappingURL=style.css.map */

@@ -116,3 +116,8 @@ closeButton.addEventListener('click', () => {
     popup.style.display = 'none';
   }, 300); // Adjust the duration to match the CSS transition duration
 });
+
+const listBtn = document.getElementById("listBtn");
+listBtn.addEventListener("click", () =>{
+  window.open("./style/page/list.html", "blank");
+});
