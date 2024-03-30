@@ -2,7 +2,7 @@
 var formData = document.getElementById("registrationForm");
 formData.addEventListener("submit", (e) =>{
   e.preventDefault();
-  
+
   function cakdata() {
     const url = 'https://script.google.com/macros/s/AKfycbySMax8dmEGV1RZeUxhTie_JdHiagesrmKdxsJV_gVwzr27_mca6mIVBVSEI2risGxf/exec';
      
@@ -109,6 +109,7 @@ setTimeout(() => {
 
 const closeButton = document.getElementById('closePopup');
 closeButton.addEventListener('click', () => {
+  window.location.reload();
   const popup = document.querySelector('.popup_bg');
   popup.style.opacity = '0';
   setTimeout(() => {
