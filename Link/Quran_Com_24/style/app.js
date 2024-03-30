@@ -4,7 +4,6 @@ formData.addEventListener("submit", (e) =>{
   e.preventDefault();
 
   function cakdata() {
-  
     const url = 'https://script.google.com/macros/s/AKfycbySMax8dmEGV1RZeUxhTie_JdHiagesrmKdxsJV_gVwzr27_mca6mIVBVSEI2risGxf/exec';
      
     fetch(url)
