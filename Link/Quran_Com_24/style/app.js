@@ -2,7 +2,7 @@
 var formData = document.getElementById("registrationForm");
 formData.addEventListener("submit", (e) =>{
   e.preventDefault();
-
+  
   function cakdata() {
     const url = 'https://script.google.com/macros/s/AKfycbySMax8dmEGV1RZeUxhTie_JdHiagesrmKdxsJV_gVwzr27_mca6mIVBVSEI2risGxf/exec';
      
@@ -10,11 +10,11 @@ formData.addEventListener("submit", (e) =>{
       .then(res => res.json()) // Parse the response as JSON
       .then(data => {
         var inputData = data.data;
-        console.log(inputData.length);
+        console.log(inputData);
         
         function findIndex(phoneNumber) {
           for (let i = 0; i < inputData.length; i++) {
-            if (inputData[i]["BRIS No"] === phoneNumber) {
+            if (Number(inputData[i]["BRIS No"]) === phoneNumber) {
               return i;
             }
           }
