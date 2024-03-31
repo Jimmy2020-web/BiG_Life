@@ -10,8 +10,7 @@ formData.addEventListener("submit", (e) =>{
       .then(res => res.json()) // Parse the response as JSON
       .then(data => {
         var inputData = data.data;
-        console.log(inputData);
-        
+                
         function findIndex(phoneNumber) {
           for (let i = 0; i < inputData.length; i++) {
             if (Number(inputData[i]["BRIS No"]) === phoneNumber) {
@@ -117,7 +116,7 @@ closeButton.addEventListener('click', () => {
   }, 300); // Adjust the duration to match the CSS transition duration
 });
 
-const listBtn = document.getElementById("listBtn");
-listBtn.addEventListener("click", () =>{
-  window.open("./style/page/list.html", "blank");
-});
+// const listBtn = document.getElementById("listBtn");
+// listBtn.addEventListener("click", () =>{
+//   window.open("./style/page/list.html", "blank");
+// });
