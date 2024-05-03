@@ -36,6 +36,12 @@ body {
   tr:nth-child(even) {
     background-color: #f2f2f2;
   }
+
+  tr:hover{
+    color: orangered;
+    cursor: pointer;
+    transition: color cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
   
   .loading-screen {
     position: fixed;

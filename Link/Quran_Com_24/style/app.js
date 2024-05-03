@@ -32,7 +32,7 @@ formData.addEventListener("submit", (e) =>{
         } else {
           function submitData() {
             var Quran_URL = "https://script.google.com/macros/s/AKfycby9WDtu8yhAUUGWI6yaq1PeZK6_CR4ITSM1IqBo7huO0J_-FSMadTQscD6i5NGQ_GZn/exec";
-            // var formData = document.getElementById("registrationForm");
+            var formData = document.getElementById("registrationForm");
 
             formData.addEventListener("submit", (e) => {
               document.getElementById('loadingScreen').style.display = 'flex';
