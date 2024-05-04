@@ -28,7 +28,8 @@ function checkDatabase() {
                     const notish = document.querySelector("#notish");
                     notish.innerHTML = `${getData[index].Name} আপনি ইতমধ্যে রেজিষ্টেশন করেছেন!`;
                 } else {
-                  chakAeg();
+                  // chakAeg();
+                  gteAgeLimite();
                 };
                 
                 function calculateAge(birthDate) {
@@ -41,23 +42,35 @@ function checkDatabase() {
                   return age;
                 };
 
-                function chakAeg() {
+                function gteAgeLimite() {
+                  var valideAge =0;
+                  var gender = document.querySelector("#gender").value;
+                  if (gender === "boy") {
+                    valideAge = 15;
+                  } else if (gender === "girl") {
+                    valideAge = 10;
+                  }
+                  chakAeg(valideAge);
+                };
+                
+                function chakAeg(valideAge2) {
                   var popup = document.querySelector('.popup_bg');
                   var dob = new Date(document.getElementById("dob").value);
                   var age = calculateAge(dob);
-                  if (age > 15) {
-                    console.log("i am okay" + age)
+                  
+                  if (age > valideAge2) {
+                    
                     const notish = document.querySelector("#notish");
-                    notish.innerHTML = `আপনার বর্তমান বয়স  ${age}! " বয়স ৪ থেকে ১৫ বছরের মধ‍্যে হতে হবে!`
+                    notish.innerHTML = `আপনার বর্তমান বয়স  ${age}! " বয়স 5 থেকে ${valideAge2} বছরের মধ‍্যে হতে হবে!`
                     popup.style.display = 'block';
                     setTimeout(() => {
                       popup.style.opacity = '1';
                     }, 10);
                     
-                  } else if (age < 3) {
-                    console.log("i am okay" + age)
+                  } else if (age < 4) {
+                    
                     const notish = document.querySelector("#notish");
-                    notish.innerHTML = `আপনার বর্তমান বয়স  ${age}! " বয়স ৪ থেকে ১৫ বছরের মধ‍্যে হতে হবে!`
+                    notish.innerHTML = `আপনার বর্তমান বয়স  ${age}! " বয়স 5 থেকে ${valideAge2} বছরের মধ‍্যে হতে হবে!`
                     popup.style.display = 'block';
                     setTimeout(() => {
                       popup.style.opacity = '1';
