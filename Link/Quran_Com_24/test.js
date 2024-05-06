@@ -128,3 +128,25 @@ closeButton.addEventListener('click', () => {
     popup.style.display = 'none';
   }, 300); // Adjust the duration to match the CSS transition duration
 });
+
+const capturBtn = document.querySelector(".cBtn");
+capturBtn.addEventListener("click", (e) =>{
+  e.preventDefault();
+  
+  cahkeCaptur();
+});
+
+function cahkeCaptur() {
+  const getCp = document.querySelector("#vCp").innerHTML;
+  const inputCp = document.querySelector("#iCp").value;
+  if (getCp === inputCp) {
+    const submitBtn = document.querySelector("#submitBtn");
+    submitBtn.style.opacity = 1;
+    submitBtn.style.pointerEvents = "all";
+  } else {
+    document.querySelector(".capctur").style.borderColor = "orangered";
+    setInterval(() => {
+      document.querySelector(".capctur").style.borderColor = "#d1d9e6";
+    }, 5000);
+  }
+};
