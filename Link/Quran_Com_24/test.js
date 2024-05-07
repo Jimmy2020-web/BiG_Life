@@ -129,6 +129,21 @@ closeButton.addEventListener('click', () => {
   }, 300); // Adjust the duration to match the CSS transition duration
 });
 
+
+function generateRandomString(length) {
+  let result = '';
+  const characters = 'abcdefghijklmnopqrstuvwxyz';
+  for (let i = 0; i < length; i++) {
+    result += characters.charAt(Math.floor(Math.random() * characters.length));
+  }
+  return result;
+}
+
+const randomString = generateRandomString(5);
+
+const getCp = document.querySelector("#vCp");
+getCp.innerHTML = randomString;
+
 const capturBtn = document.querySelector(".cBtn");
 capturBtn.addEventListener("click", (e) =>{
   e.preventDefault();
@@ -150,3 +165,4 @@ function cahkeCaptur() {
     }, 5000);
   }
 };
+
