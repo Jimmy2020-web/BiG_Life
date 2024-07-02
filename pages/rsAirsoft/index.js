@@ -1,44 +1,44 @@
-function scrolUP() {
-  const duration = 300;
-  // const scrollSetup = window.scrollY;
-  // let scrollinterval = setInterval(() => {
-  //   if (window.scrollY !== 0) {
-  //     window.scrollBy(0, scrollSetup);
-  //   }else {
-  //     clearInterval(scrollinterval);
-  //   }
-// }, 15);
-setTimeout(() => {
-  var countDownDate = new Date("April 5, 2024").getTime();
-  var now = new Date().getTime();
+// function scrolUP() {
+//   const duration = 300;
+//   // const scrollSetup = window.scrollY;
+//   // let scrollinterval = setInterval(() => {
+//   //   if (window.scrollY !== 0) {
+//   //     window.scrollBy(0, scrollSetup);
+//   //   }else {
+//   //     clearInterval(scrollinterval);
+//   //   }
+// // }, 15);
+// setTimeout(() => {
+//   var countDownDate = new Date("July 5, 2024").getTime();
+//   var now = new Date().getTime();
 
-  if (countDownDate <= now){
-    injectAds();
-    document.querySelector(".comedwon").style.display = "none";
-  }else {
-    document.querySelector(".comedwon").style.display = "flex";
-    setTimeout(() => {
-      document.querySelector(".comedwon").style.display = "none";
-    },7000)
-  }
-  window.scrollBy(0, duration);
-}, 2000);
+//   if (countDownDate <= now){
+//     injectAds();
+//     document.querySelector(".comedwon").style.display = "none";
+//   }else {
+//     document.querySelector(".comedwon").style.display = "flex";
+//     setTimeout(() => {
+//       document.querySelector(".comedwon").style.display = "none";
+//     },5000)
+//   }
+//   window.scrollBy(0, duration);
+// }, 2000);
 
-};
-function injectAds(){
-  const adsContent = `
-  <div class="ads_div">
-        <div class="d_box">
-            <h1>Warning <i class="fa-solid fa-triangle-exclamation"></i></h1>
-            <h1>Hi, Your Free Visiting Time is Over..!</h1>
-            <p>Please Connect With Developer or Hosting Your website.</p>
-            <button>Laron_More <i class="fa-solid fa-circle-info"></i></button>
-        </div>
-    </div>
-  `;
-  const body = document.querySelector("body");
-  body.innerHTML = adsContent;
-};
+// };
+// function injectAds(){
+//   const adsContent = `
+//   <div class="ads_div">
+//         <div class="d_box">
+//             <h1>Warning <i class="fa-solid fa-triangle-exclamation"></i></h1>
+//             <h1>Hi, Your Free Visiting Time is Over..!</h1>
+//             <p>Please Connect With Developer or Hosting Your website.</p>
+//             <button>Laron_More <i class="fa-solid fa-circle-info"></i></button>
+//         </div>
+//     </div>
+//   `;
+//   const body = document.querySelector("body");
+//   body.innerHTML = adsContent;
+// };
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -239,21 +239,21 @@ whatsAppBtn.addEventListener("click", () =>{
   window.open("https://wa.me/+966571418190");
 });
 
-const showDate = setInterval(() => {
-  var countDownDate = new Date("April 5, 2024").getTime();
-  var now = new Date().getTime();
-  var distance = countDownDate - now;
+// const showDate = setInterval(() => {
+//   var countDownDate = new Date("July 5, 2024").getTime();
+//   var now = new Date().getTime();
+//   var distance = countDownDate - now;
 
-  var days = Math.floor(distance / (1000 * 60 * 60 * 24));
-  var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-  var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
-  var seconds = Math.floor((distance % (1000 * 60)) / 1000);
-  const timer = document.querySelector(".time_info");
-  timer.innerHTML = `
-    <span>${days}:D</span>
-    <span>${hours}:H</span>
-    <span>${minutes}:M</span>
-    <span>${seconds}:S</span>
-  `;
+//   var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+//   var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+//   var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+//   var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+//   const timer = document.querySelector(".time_info");
+//   timer.innerHTML = `
+//     <span>${days}:D</span>
+//     <span>${hours}:H</span>
+//     <span>${minutes}:M</span>
+//     <span>${seconds}:S</span>
+//   `;
 
-},1000);
+// },1000);

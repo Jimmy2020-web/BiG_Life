@@ -104,30 +104,30 @@ popupClose.addEventListener("click", () => {
     document.querySelector(".popup").style.display = "none";
 });
 
-setTimeout(() => {
-    const activeCode = 190;
-  if (200 <= activeCode){
-    injectAds();
-    document.querySelector(".comedwon").style.display = "none";
-  }else {
-    document.querySelector(".comedwon").style.display = "flex";
-    setTimeout(() => {
-        document.querySelector(".comedwon").style.display = "none";
-      },7000)
-  }
-  }, 2000);
+// setTimeout(() => {
+//     const activeCode = 190;
+//   if (200 <= activeCode){
+//     injectAds();
+//     document.querySelector(".comedwon").style.display = "none";
+//   }else {
+//     document.querySelector(".comedwon").style.display = "flex";
+//     setTimeout(() => {
+//         document.querySelector(".comedwon").style.display = "none";
+//       },7000)
+//   }
+//   }, 2000);
 
-function injectAds(){
-    const adsContent = `
-    <div class="ads_div">
-          <div class="d_box">
-              <h1>Warning <i class="fa-solid fa-triangle-exclamation"></i></h1>
-              <h1>Hi, Your Free Visiting Time is Over..!</h1>
-              <p>Please Connect With Developer or Hosting Your website.</p>
-              <button>Laron_More <i class="fa-solid fa-circle-info"></i></button>
-          </div>
-      </div>
-    `;
-    const body = document.querySelector("body");
-    body.append = adsContent;
-  };
+// function injectAds(){
+//     const adsContent = `
+//     <div class="ads_div">
+//           <div class="d_box">
+//               <h1>Warning <i class="fa-solid fa-triangle-exclamation"></i></h1>
+//               <h1>Hi, Your Free Visiting Time is Over..!</h1>
+//               <p>Please Connect With Developer or Hosting Your website.</p>
+//               <button>Laron_More <i class="fa-solid fa-circle-info"></i></button>
+//           </div>
+//       </div>
+//     `;
+//     const body = document.querySelector("body");
+//     body.append = adsContent;
+//   };
