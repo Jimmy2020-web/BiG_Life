@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UDC Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="form-container">
+        <h2>বাংলাদেশ ইউডিসি পরিচালক কল্যান সমিতি, নওগাঁ জেলা শাখা</h2>
+        <p>ইউডিসি পরিচালক তথ‍্য সংগ্রহ ফরম</p>
+        <form id="dataForm">
+            <label for="name">ইউডিসি পরিচালকের নাম</label>
+            <input type="text" id="name" name="name" required>
+
+            <select name="gander" id="gander">
+                <option value="পুরুষ">লিঙ্গ (বাছাই করুন)</option>
+                <option value="পুরুষ">পুরুষ</option>
+                <option value="মহিলা">মহিলা</option>
+            </select>
+
+            <label for="dob">জন্মম তারিখ</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <label for="facebook">ফেসবুক প্রফাইল লিংক</label>
+            <input type="text" name="facebook" id="facebook">
+
+            <label for="fatherName">পিতার নাম</label>
+            <input type="text" id="fatherName" name="fatherName" required>
+
+            <label for="nidNo">জাতীয়পরিচয়পত্র নং</label>
+            <input type="number" value="56565" id="nidNo" name="nidNo" required>
+
+            <label for="ekid">একসেবা আইডি</label>
+            <input type="number" id="ekid" name="ekid" required>
+
+            <label for="udcName">ইউডিসির নাম</label>
+            <input type="text" id="udcName" name="udcName" required>
+
+            <label for="mobileNo">মোবাইল নং (whatsapp)</label>
+            <input type="text" id="mobileNo" name="mobileNo" required>
+
+            <label for="email">ই-মেইল আইডি</label>
+            <input type="email" name="email" id="email">
+
+            <label for="upozilaName">উপজেলার নাম</label>
+            <input type="text" id="upozilaName" name="upozilaName" required>
+
+            <div class="btn">
+                <button type="submit">Submit</button>
+                <button>List</button>
+            </div>
+        </form>
+    </div>
+    <div class="popup_box">
+        <div class="box">
+            <p id="info"></p>
+            <a href="#">তালিকা দেখুন</a>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+</html>
