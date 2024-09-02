@@ -4,6 +4,7 @@ var formData = document.getElementById("dataForm");
 
 formData.addEventListener("submit",(event)=>{
     event.preventDefault();
+    document.querySelector("#submit").textContent = "Verifying..!";
     chakData()
 });
 
@@ -23,11 +24,13 @@ function chakData() {
                 document.querySelector("#info").textContent = `${item.Name}  আপনি ইতমধ‍্য রেজিষ্টেশন করেছেন!`
                 setTimeout(() => {
                     infobox.style.display = "none";
+                    document.querySelector("#submit").textContent = "Submit";
                 }, 5000);
                 return;
             }
         });
         if (!matchFound) {
+            document.querySelector("#submit").textContent = "Submitting..!";
             submitData();
         }
     })
@@ -40,11 +43,17 @@ function submitData(){
         body:data
     }).then((res)=>res.text())
     .then((fres)=>{
+        document.querySelector("#submit").textContent = "Submitted..!";
         infobox.style.display = "flex";
         document.querySelector("#info").textContent = fres;
         setTimeout(() => {
             infobox.style.display = "none";
+            document.querySelector("#submit").textContent = "Submit";
         }, 5000);
     })
 }
 
+const btnList = document.querySelector("#list");
+btnList.addEventListener("click",()=>{
+    window.open("./page/list.html")
+})
