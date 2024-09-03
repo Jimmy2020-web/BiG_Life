@@ -141,3 +141,35 @@ button:hover {
         width: 100%;
     }
 }
+
+.div{
+    width: 100%;
+    height: 100vh;
+    background: #0000009c;
+    position: fixed;
+    left: 0;
+    top: 0;
+    display: none;
+    z-index: 90;
+}
+
+.loader {
+    border: 16px solid #e5e4e4; /* Light grey */
+    border-top: 16px solid #00b61c; /* Blue */
+    border-bottom: 16px solid #00b61c;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 3s linear infinite;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
