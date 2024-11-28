@@ -60,7 +60,8 @@ function fetchData() {
         paid_user.forEach((item) => {
           const one_user = `
                     <div class="paid_parson">
-                        <div class="row">
+                    <div class="shatus">চালু</div>
+                    <div class="row">
                             <span class="parson">ক্রমিক ${item.SL}</span>
                             <span class="parson">নাম: ${item.name}</span>
                             <span class="parson">পিতা: ${item.father_name}</span>
@@ -83,6 +84,7 @@ function fetchData() {
         due_user.forEach((item)=>{
           const one_user = `
                     <div class="due_parson">
+                      
                         <div class="row">
                             <span class="parson">ক্রমিক ${item.SL}</span>
                             <span class="parson">নাম: ${item.name}</span>

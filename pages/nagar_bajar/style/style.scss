@@ -211,6 +211,7 @@ nav ul.active {
     background: linear-gradient(to top, #4099ff, #73b4ff);
 }
 .due_parson, .paid_parson{
+    position: relative;
     display: grid;
     grid-template-columns: 240px 100px;
     justify-content: space-around;
@@ -221,6 +222,19 @@ nav ul.active {
     span{
         display: block;
     }
+}
+
+.shatus {
+    position: absolute;
+    bottom: 0px;
+    right: 0;
+    color: #fff;
+    padding: 1px 10px;
+    border-radius: 15px 00px 0px 0px;
+    text-align: right;
+    width: 40px;
+    font-size: 10px;
+    background: linear-gradient(-45deg, #02011f, #16123b);
 }
 
 .shop_info{
