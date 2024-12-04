@@ -55,6 +55,9 @@ function fetchData() {
           return data.filter((item) => item.status.includes(pass));
         }
         const paid_user = filterData("paid");
+
+        document.getElementById("payTotalCount").textContent = `${paid_user.length}/${data.length}`;
+                
         
         let all_user = "";
         paid_user.forEach((item) => {
@@ -80,6 +83,8 @@ function fetchData() {
         });
 
         const due_user = filterData("due");
+        document.getElementById("dueTotalCount").textContent = `${due_user.length}/${data.length}`;
+
         let dueData = "";
         due_user.forEach((item)=>{
           const one_user = `
