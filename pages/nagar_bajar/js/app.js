@@ -84,7 +84,7 @@ function fetchData() {
         due_user.forEach((item)=>{
           const one_user = `
                     <div class="due_parson">
-                      
+                      <div class="shatus">চালু</div>
                         <div class="row">
                             <span class="parson">ক্রমিক ${item.SL}</span>
                             <span class="parson">নাম: ${item.name}</span>

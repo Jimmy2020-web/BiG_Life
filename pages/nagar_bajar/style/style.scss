@@ -206,6 +206,7 @@ nav ul.active {
     display: block;
     padding: 10px 0;
     margin: 20px 0;
+    margin-bottom: 50px;
     color: #fff;
     border-radius: 8px;
     background: linear-gradient(to top, #4099ff, #73b4ff);
@@ -215,13 +216,23 @@ nav ul.active {
     display: grid;
     grid-template-columns: 240px 100px;
     justify-content: space-around;
-    border: 1px solid #434243;
     border-radius: 3px;
     padding: 5px;
     margin-bottom: 15px;
+    background-color: #fef9ebc4;
     span{
         display: block;
     }
+}
+
+.due_parson{
+    border: 1px solid #7e0d00bc;
+    box-shadow: 0px 0px 8px #7e0d00bc;
+}
+
+.paid_parson{
+    border: 1px solid #007e32bc;
+    box-shadow: 0px 0px 8px #007e32bc;
 }
 
 .shatus {
