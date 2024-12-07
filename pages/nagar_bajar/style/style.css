@@ -444,6 +444,11 @@ nav ul.active {
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
+.app {
+  display: grid;
+  place-items: center;
+}
+
 .link {
   display: inline-block;
   place-items: center;

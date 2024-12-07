@@ -459,6 +459,11 @@ $animation: cubic-bezier(0.76, 0, 0.24, 1);
     transition: background 0.3s ease, transform 0.3s ease;
   }
 
+.app{
+    display: grid;
+    place-items: center;
+}
+
 .link{
     display: inline-block;
     place-items: center;
