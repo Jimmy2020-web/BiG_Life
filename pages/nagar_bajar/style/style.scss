@@ -459,6 +459,21 @@ $animation: cubic-bezier(0.76, 0, 0.24, 1);
     transition: background 0.3s ease, transform 0.3s ease;
   }
 
+.link{
+    display: inline-block;
+    place-items: center;
+    padding-top: 75px;
+    text-align: center;
+    img{
+        width: 220px;
+        cursor: pointer;
+    }
+    p{
+        color: #1b1a1a91;
+        padding: 5px;
+    }
+}
+
 footer{
     background: linear-gradient(to top, #1e1d1e, #070340);
     padding: 50px 20px;

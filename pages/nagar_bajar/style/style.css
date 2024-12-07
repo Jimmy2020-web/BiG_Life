@@ -444,6 +444,21 @@ nav ul.active {
   transition: background 0.3s ease, transform 0.3s ease;
 }
 
+.link {
+  display: inline-block;
+  place-items: center;
+  padding-top: 75px;
+  text-align: center;
+}
+.link img {
+  width: 220px;
+  cursor: pointer;
+}
+.link p {
+  color: rgba(27, 26, 26, 0.568627451);
+  padding: 5px;
+}
+
 footer {
   background: linear-gradient(to top, #1e1d1e, #070340);
   padding: 50px 20px;
