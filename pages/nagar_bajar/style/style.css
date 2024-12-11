@@ -456,6 +456,18 @@ nav ul.active {
   font-size: 18px;
   width: 280px;
 }
+.app .shoper {
+  border: 1px solid rgba(151, 151, 151, 0.768627451);
+  background: rgba(255, 255, 255, 0.768627451);
+  padding: 10px;
+  margin: 20px;
+  border-radius: 5px;
+  text-align: left;
+  color: rgba(65, 65, 65, 0.862745098);
+}
+.app .shoper h3 {
+  color: rgba(193, 24, 145, 0.9607843137);
+}
 .app .srarchPopup {
   position: fixed;
   width: 100%;
@@ -470,13 +482,14 @@ nav ul.active {
           backdrop-filter: blur(5px);
 }
 .app .srarchPopup .contentBox {
-  margin-top: 10vh;
+  margin-top: 5vh;
   text-align: center;
-  min-width: 300px;
+  min-width: 400px;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.768627451);
-  padding: 10px;
+  padding: 15px;
   height: 70%;
+  overflow: hidden;
 }
 .app .srarchPopup .contentBox .wraper {
   overflow-y: scroll;
@@ -490,7 +503,7 @@ nav ul.active {
   border: 1px solid rgba(151, 151, 151, 0.768627451);
   outline: none;
   font-size: 15px;
-  width: 250px;
+  width: 90%;
   padding-left: 35px;
   margin: 12px 0;
 }

@@ -114,8 +114,10 @@ function fetchData() {
         data.forEach((item)=>{
           const result = `
             <div class="shoper">
-              <p>${item.name}</p>
-
+              <h3>${item.name}</h3>
+              <p>দোকানের নাম: ${item.shop_name}</p>
+              <span>আদায়: ${item.total_pay} টাকা, </span>
+              <span>বাঁকী: ${item.total_due} টাকা</span>
             </div>
           `;
           resultData += result;
@@ -158,7 +160,7 @@ var search = () => {
   const shoper = document.querySelectorAll(".shoper");
 
   for (let i = 0; i < shoper.length; i++) {
-    let match = shoper[i].getElementsByTagName("p")[0];
+    let match = shoper[i].getElementsByTagName("h3")[0];
     if (match) {
       let textValue = match.innerText || match.innerHTML;
       
