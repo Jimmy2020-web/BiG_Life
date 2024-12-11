@@ -107,6 +107,21 @@ function fetchData() {
             dueData += one_user;
             container2.innerHTML = dueData;
         })
+
+        let searchResult = document.querySelector(".searchResult");
+
+        let resultData = "";
+        data.forEach((item)=>{
+          const result = `
+            <div class="shoper">
+              <p>${item.name}</p>
+
+            </div>
+          `;
+          resultData += result;
+          searchResult.innerHTML = resultData;
+        })
+
       })
       .catch((error) => {
         console.error("Error fetching data:", error);
@@ -116,12 +131,49 @@ function fetchData() {
 fetchData();
 
 
-
-
 document.querySelector('.toggle').addEventListener('click', function () {
     document.querySelector('nav ul').classList.toggle('active');
 });
 
 document.getElementById('callButton').addEventListener('click', function() {
   window.location.href = 'tel:01761293854';
+});
+
+const searchBtn = document.getElementById("searchBtn");
+const closeBtn = document.getElementById("closeBtn");
+
+var srarchPopup = document.querySelector(".srarchPopup");
+searchBtn.addEventListener("click", ()=>{
+  srarchPopup.style.display = "flex";
+  
+})
+
+closeBtn.addEventListener('click', ()=>{
+  srarchPopup.style.display = "none";
+})
+
+
+var search = () => {
+  const searchBox = document.getElementById("searchBox").value; // Convert input to lowercase
+  const shoper = document.querySelectorAll(".shoper");
+
+  for (let i = 0; i < shoper.length; i++) {
+    let match = shoper[i].getElementsByTagName("p")[0];
+    if (match) {
+      let textValue = match.innerText || match.innerHTML;
+      
+      if (textValue.indexOf(searchBox) > -1) {
+        shoper[i].style.display = "";
+        
+      } else {
+        shoper[i].style.display = "none";
+      }
+    }
+  }
+};
+
+const searchInput = document.querySelector("#searchBox");
+searchInput.addEventListener("keyup", () => {
+  search();
+  
 });
