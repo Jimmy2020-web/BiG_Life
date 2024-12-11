@@ -465,7 +465,7 @@ $animation: cubic-bezier(0.76, 0, 0.24, 1);
     .find{
         input{
             padding: 10px 20px;
-            border-radius: 25px;
+            border-radius: 8px;
             border: none;
             outline: none;
             font-size: 18px;
@@ -502,7 +502,7 @@ $animation: cubic-bezier(0.76, 0, 0.24, 1);
             border-radius: 15px;
             background: #ffffffc4;
             padding: 15px;
-            height: 70%;
+            height: 90%;
             overflow: hidden;
             .wraper{
                 overflow-y: scroll;
@@ -534,7 +534,7 @@ $animation: cubic-bezier(0.76, 0, 0.24, 1);
                     position: absolute;
                     top: 18px;
                     left: 24px;
-                    color: green;
+                    color: #979797c4;
                     font-size: 22px;
                 }
             }

@@ -116,8 +116,8 @@ function fetchData() {
             <div class="shoper">
               <h3>${item.name}</h3>
               <p>দোকানের নাম: ${item.shop_name}</p>
-              <span>আদায়: ${item.total_pay} টাকা, </span>
-              <span>বাঁকী: ${item.total_due} টাকা</span>
+              <span>আদায়: <span class="popFont">${item.total_pay}</span> টাকা, </span>
+              <span>বাঁকী: <span class="popFont">${item.total_due}</span> টাকা</span>
             </div>
           `;
           resultData += result;
@@ -166,7 +166,6 @@ var search = () => {
       
       if (textValue.indexOf(searchBox) > -1) {
         shoper[i].style.display = "";
-        
       } else {
         shoper[i].style.display = "none";
       }

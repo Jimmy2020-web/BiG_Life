@@ -450,7 +450,7 @@ nav ul.active {
 }
 .app .find input {
   padding: 10px 20px;
-  border-radius: 25px;
+  border-radius: 8px;
   border: none;
   outline: none;
   font-size: 18px;
@@ -488,7 +488,7 @@ nav ul.active {
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.768627451);
   padding: 15px;
-  height: 70%;
+  height: 90%;
   overflow: hidden;
 }
 .app .srarchPopup .contentBox .wraper {
@@ -522,7 +522,7 @@ nav ul.active {
   position: absolute;
   top: 18px;
   left: 24px;
-  color: green;
+  color: rgba(151, 151, 151, 0.768627451);
   font-size: 22px;
 }
 
