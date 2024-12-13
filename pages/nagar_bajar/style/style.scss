@@ -480,6 +480,8 @@ $animation: cubic-bezier(0.76, 0, 0.24, 1);
         border-radius: 5px;
         text-align: left;
         color: #414141dc;
+        display: inline-block;
+        width: 300px;
         h3{
             color: #c11891f5;
         }
@@ -498,13 +500,14 @@ $animation: cubic-bezier(0.76, 0, 0.24, 1);
         .contentBox{
             margin-top: 5vh;
             text-align: center;
-            min-width: 400px;
+            width: 80%;
             border-radius: 15px;
             background: #ffffffc4;
             padding: 15px;
             height: 90%;
             overflow: hidden;
             .wraper{
+                display: flex;
                 overflow-y: scroll;
                 height: 90%;
                 scrollbar-width: none;
@@ -519,6 +522,7 @@ $animation: cubic-bezier(0.76, 0, 0.24, 1);
                 width: 90%;
                 padding-left: 35px;
                 margin: 12px 0;
+                width: 350px;
             }
             .inputBox{
                 position: relative;
@@ -541,6 +545,18 @@ $animation: cubic-bezier(0.76, 0, 0.24, 1);
         }
     }
 }
+
+@media only screen and (max-width: 650px){
+    .contentBox{
+        width: 100% !important;
+        height: 100% !important;
+        margin-top: 5px !important;
+        input{
+            width: 90% !important;
+        }
+    }
+}
+
 
 .link{
     display: inline-block;

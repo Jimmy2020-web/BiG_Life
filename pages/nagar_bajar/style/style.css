@@ -464,6 +464,8 @@ nav ul.active {
   border-radius: 5px;
   text-align: left;
   color: rgba(65, 65, 65, 0.862745098);
+  display: inline-block;
+  width: 300px;
 }
 .app .shoper h3 {
   color: rgba(193, 24, 145, 0.9607843137);
@@ -484,7 +486,7 @@ nav ul.active {
 .app .srarchPopup .contentBox {
   margin-top: 5vh;
   text-align: center;
-  min-width: 400px;
+  width: 80%;
   border-radius: 15px;
   background: rgba(255, 255, 255, 0.768627451);
   padding: 15px;
@@ -492,6 +494,7 @@ nav ul.active {
   overflow: hidden;
 }
 .app .srarchPopup .contentBox .wraper {
+  display: flex;
   overflow-y: scroll;
   height: 90%;
   scrollbar-width: none;
@@ -506,6 +509,7 @@ nav ul.active {
   width: 90%;
   padding-left: 35px;
   margin: 12px 0;
+  width: 350px;
 }
 .app .srarchPopup .contentBox .inputBox {
   position: relative;
@@ -526,6 +530,16 @@ nav ul.active {
   font-size: 22px;
 }
 
+@media only screen and (max-width: 650px) {
+  .contentBox {
+    width: 100% !important;
+    height: 100% !important;
+    margin-top: 5px !important;
+  }
+  .contentBox input {
+    width: 90% !important;
+  }
+}
 .link {
   display: inline-block;
   place-items: center;
