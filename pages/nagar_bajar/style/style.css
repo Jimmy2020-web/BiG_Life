@@ -448,13 +448,17 @@ nav ul.active {
   display: grid;
   place-items: center;
 }
-.app .find input {
+.app .find #searchBtn {
   padding: 10px 20px;
   border-radius: 8px;
   border: none;
   outline: none;
   font-size: 18px;
   width: 280px;
+  color: white;
+  cursor: pointer;
+  background: darkorange;
+  margin: 40px 0px;
 }
 .app .shoper {
   border: 1px solid rgba(151, 151, 151, 0.768627451);

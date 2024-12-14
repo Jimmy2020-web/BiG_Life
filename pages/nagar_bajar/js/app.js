@@ -178,3 +178,11 @@ searchInput.addEventListener("keyup", () => {
   search();
   
 });
+
+
+
+
+function openDefaultBrowser() {
+    // Replace 'https://www.example.com' with the URL you want to open
+    window.open('https://drive.google.com/drive/folders/1sB--pN30tpUkpB09i6FcbJmDOoVIL5PU?usp=sharing', '_blank');
+}

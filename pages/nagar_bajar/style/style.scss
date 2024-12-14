@@ -463,13 +463,17 @@ $animation: cubic-bezier(0.76, 0, 0.24, 1);
     display: grid;
     place-items: center;
     .find{
-        input{
+        #searchBtn{
             padding: 10px 20px;
             border-radius: 8px;
             border: none;
             outline: none;
             font-size: 18px;
             width: 280px;
+            color: white;
+            cursor: pointer;
+            background: darkorange;
+            margin: 40px 0px;
         }
     }
     .shoper{
