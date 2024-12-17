@@ -470,9 +470,16 @@ nav ul.active {
   color: rgba(65, 65, 65, 0.862745098);
   display: inline-block;
   width: 300px;
+  transition: all 0.5s ease-in-out;
 }
 .app .shoper h3 {
-  color: rgba(193, 24, 145, 0.9607843137);
+  color: rgba(203, 21, 151, 0.9843137255);
+}
+.app .shoper span:nth-child(1) {
+  color: #048d16;
+}
+.app .shoper:hover {
+  border: 1px solid rgba(203, 21, 151, 0.9843137255);
 }
 .app .srarchPopup {
   position: fixed;
@@ -565,4 +572,20 @@ footer {
   text-align: center;
   margin-top: 100px;
   color: rgb(255, 255, 255);
+}
+
+.afc {
+  animation: shrink 0.5s forwards ease-in;
+}
+
+@keyframes shrink {
+  0% {
+    height: 220px;
+    opacity: 1;
+  }
+  100% {
+    height: 5px;
+    opacity: 0.2;
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

@@ -486,8 +486,17 @@ $animation: cubic-bezier(0.76, 0, 0.24, 1);
         color: #414141dc;
         display: inline-block;
         width: 300px;
+        transition: all .5s ease-in-out;
         h3{
-            color: #c11891f5;
+            color: #cb1597fb;
+        }
+        span{
+            &:nth-child(1){
+                color: #048d16;
+            }
+        }
+        &:hover{
+            border: 1px solid #cb1597fb;
         }
     }
     .srarchPopup{
@@ -583,4 +592,20 @@ footer{
     text-align: center;
     margin-top: 100px;
     color: rgb(255, 255, 255);
+}
+
+.afc{
+    animation: shrink .5s forwards ease-in;
+}
+
+
+@keyframes shrink {
+    0%{
+        height: 220px;
+        opacity: 1;
+    }100%{
+        height: 5px;
+        opacity: 0.2;
+        display: none;
+    }
 }

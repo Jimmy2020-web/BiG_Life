@@ -165,8 +165,10 @@ var search = () => {
       let textValue = match.innerText || match.innerHTML;
       
       if (textValue.indexOf(searchBox) > -1) {
+        
         shoper[i].style.display = "";
       } else {
+        
         shoper[i].style.display = "none";
       }
     }
