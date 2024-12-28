@@ -55,7 +55,7 @@ function fetchData() {
           return data.filter((item) => item.status.includes(pass));
         }
         const paid_user = filterData("paid");
-
+        
         document.getElementById("payTotalCount").textContent = `${paid_user.length}/${data.length}`;
                 
         
@@ -63,7 +63,7 @@ function fetchData() {
         paid_user.forEach((item) => {
           const one_user = `
                     <div class="paid_parson">
-                    <div class="shatus">চালু</div>
+                    <div class="shatus">${item.onoff}</div>
                     <div class="row">
                             <span class="parson">ক্রমিক ${item.SL}</span>
                             <span class="parson">নাম: ${item.name}</span>
@@ -89,7 +89,7 @@ function fetchData() {
         due_user.forEach((item)=>{
           const one_user = `
                     <div class="due_parson">
-                      <div class="shatus">চালু</div>
+                      <div class="shatus">${item.onoff}</div>
                         <div class="row">
                             <span class="parson">ক্রমিক ${item.SL}</span>
                             <span class="parson">নাম: ${item.name}</span>
@@ -123,6 +123,39 @@ function fetchData() {
           resultData += result;
           searchResult.innerHTML = resultData;
         })
+        
+        document.querySelector(".month_table").innerHTML = `
+          <div class="table">
+                        <div class="row">
+                            <span>মাস</span>
+                            <span>আয়</span>
+                            <span>ব‍্যয়</span>
+                            <span>অবশিষ্ট</span>
+                            <span>বাঁকী</span>
+                        </div>
+                        <div class="row">
+                            <span>${data[0].month_name}</span>
+                            <span>${data[0].all_in}</span>
+                            <span>${data[0].all_co}</span>
+                            <span>${data[0].all_ha}</span>
+                            <span>${data[0].all_due}</span>
+                        </div>
+                        <div class="row">
+                            <span>${data[1].month_name}</span>
+                            <span>${data[1].all_in}</span>
+                            <span>${data[1].all_co}</span>
+                            <span>${data[1].all_ha}</span>
+                            <span>${data[1].all_due}</span>
+                        </div>
+                        <div class="row">
+                            <span>${data[2].month_name}</span>
+                            <span>${data[2].all_in}</span>
+                            <span>${data[2].all_co}</span>
+                            <span>${data[2].all_ha}</span>
+                            <span>${data[2].all_due}</span>
+                        </div>
+                    </div>
+        `;
 
       })
       .catch((error) => {
