@@ -412,7 +412,7 @@ window.addEventListener('load', () => {
 })
 
 // Eid-Ul Fitue-2024
-var target_date = new Date('apr 10, 2024 15:37:25').getTime();
+var target_date = new Date('apr 01, 2025 15:37:25').getTime();
 
 var days, hours, minutes, seconds; // variables for time units
 
