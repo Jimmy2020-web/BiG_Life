@@ -469,26 +469,36 @@ const iftMonth = Intl.DateTimeFormat('en', {month: 'long'}).format(Date.now());
 var iftLocal = iftMonth+iftDay;
 
 var ramadan_calendar = {
-  March12: "6:15 PM",
-  March13: "6:16 PM",
-  March14: "6:16 PM",
-  March15: "6:17 PM",
-  March16: "6:17 PM",
-  March17: "6:18 PM",
-  March18: "6:18 PM",
-  March19: "6:19 PM",
-  March20: "6:19 PM",
-  March21: "6:19 PM",
-  March22: "6:20 PM",
-  March23: "6:20 PM",
-  March24: "6:20 PM",
-  March25: "6:21 PM",
-  March26: "6:21 PM",
-  March27: "6:22 PM",
-  March28: "6:22 PM",
-  March29: "6:23 PM",
-  March30: "6:23 PM",
-  March31: "6:24 PM",
+  March1: "6:05 PM",
+  March2: "6:16 PM",
+  March3: "6:16 PM",
+  March4: "6:17 PM",
+  March5: "6:17 PM",
+  March6: "6:18 PM",
+  March7: "6:18 PM",
+  March8: "6:19 PM",
+  March9: "6:19 PM",
+  March10: "6:19 PM",
+  March11: "6:20 PM",
+  March12: "6:20 PM",
+  March13: "6:20 PM",
+  March14: "6:21 PM",
+  March15: "6:21 PM",
+  March16: "6:22 PM",
+  March17: "6:22 PM",
+  March18: "6:23 PM",
+  March19: "6:23 PM",
+  March20: "6:24 PM",
+  March21: "6:24 PM",
+  March22: "6:24 PM",
+  March23: "6:24 PM",
+  March24: "6:24 PM",
+  March25: "6:24 PM",
+  March26: "6:24 PM",
+  March27: "6:24 PM",
+  March28: "6:24 PM",
+  March29: "6:24 PM",
+  March30: "6:24 PM",
 };
 
 function matchData(obj, key) {
@@ -522,22 +532,28 @@ document.querySelector("#fixIft").innerHTML = `সন্ধ্যা ${match}`;
 
 
 const intervalId = setInterval(() => {
-  var terget_time = new Date( iftMonth + iftDay +", 2024 " + match).getTime();
-  var Ctime = new Date().getTime();
-  var leftiftS = (terget_time - Ctime);
+  var target_time = new Date(`${iftMonth} ${iftDay}, 2025 ${match}`).getTime();
+  var currentTime = new Date().getTime();
+  var timeLeft = target_time - currentTime;
 
   var _second = 1000,
-    _minut = _second * 60,
-    _hour = _minut * 60,
+    _minute = _second * 60,
+    _hour = _minute * 60,
     _day = _hour * 24;
 
-  var hourSet = Math.floor((leftiftS % _day) / _hour);
-  var minutSet = Math.floor((leftiftS % _hour) / _minut);
-  var secondSet = Math.floor((leftiftS % _minut) / _second);
+  var hourSet = Math.floor((timeLeft % _day) / _hour);
+  var minuteSet = Math.floor((timeLeft % _hour) / _minute);
+  var secondSet = Math.floor((timeLeft % _minute) / _second);
+
   const iftTime2 = document.querySelector("#iftTime");
-  iftTime2.innerHTML = `${hourSet}H ${minutSet}M ${secondSet}S`;
-    if (Ctime > terget_time) {
-        clearInterval(intervalId);
-    }
-  
+
+  if (timeLeft <= 0) {
+    clearInterval(intervalId);
+    iftTime2.innerHTML = "00H 00M 00S";
+    return;
+  }
+
+  iftTime2.innerHTML = `${hourSet}H ${minuteSet}M ${secondSet}S`;
+
 }, 1000);
+
