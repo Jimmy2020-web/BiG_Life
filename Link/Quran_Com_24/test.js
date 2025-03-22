@@ -49,6 +49,8 @@ function checkDatabase() {
                     valideAge = 15;
                   } else if (gender === "girl") {
                     valideAge = 10;
+                  } else if (gender === "adoult") {
+                    valideAge = 45;
                   }
                   chakAeg(valideAge);
                 };
@@ -76,7 +78,10 @@ function checkDatabase() {
                       popup.style.opacity = '1';
                     }, 10);
                     
-                  } else {
+                  }else if (age => 45) {
+                    submitData();
+                                      
+                  }else {
                     submitData();
                     
                   };
