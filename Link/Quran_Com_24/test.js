@@ -69,7 +69,7 @@ function checkDatabase() {
                       popup.style.opacity = '1';
                     }, 10);
                     
-                  } else if (age < 4) {
+                  } else if (age < 5) {
                     
                     const notish = document.querySelector("#notish");
                     notish.innerHTML = `আপনার বর্তমান বয়স  ${age}! " বয়স 5 থেকে ${valideAge2} বছরের মধ‍্যে হতে হবে!`
@@ -78,9 +78,13 @@ function checkDatabase() {
                       popup.style.opacity = '1';
                     }, 10);
                     
-                  }else if (age => 45) {
-                    submitData();
-                                      
+                  }else if (age >= 16 && age <= 44) {
+                    const notish = document.querySelector("#notish");
+                    notish.innerHTML = `আপনার বর্তমান বয়স  ${age}! "বয়স 5 থেকে ${valideAge2} বছরের মধ্যে হতে হবে! (16-44 বছর গ্রহণযোগ্য নয়)"`;
+                    popup.style.display = 'block';
+                    setTimeout(() => {
+                      popup.style.opacity = '1';
+                    }, 10);   
                   }else {
                     submitData();
                     
