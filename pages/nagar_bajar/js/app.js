@@ -63,25 +63,43 @@ function fetchData() {
         paid_user.forEach((item) => {
           const one_user = `
                     <div class="paid_parson">
-                    <div class="shatus">${item.onoff}</div>
-                    <div class="row">
-                            <span class="parson">ক্রমিক ${item.SL}</span>
-                            <span class="parson">নাম: ${item.name}</span>
-                            <span class="parson">পিতা: ${item.father_name}</span>
-                            <span class="parson">দোকানের নাম: ${item.shop_name}</span>
+                    <div class="container44">
+                      <div class="screen">
+                          <span>
+                              <img src="./style/image/${item.img_link}" alt="" srcset="">
+                          </span>
+                          <span>
+                              <h3>${item.name}</h3>
+                              <p>${item.father_name}</p>
+                              <p>${item.shop_name}</p>
+                              <p>
+                                  <span>আদায়: <strong class="popFont"> ${item.total_pay}/-</strong></span>
+                                  <span>বাঁকী <strong class="popFont">${item.total_due}/-</strong></span>
+                              </p>
+                          </span>
+                      </div>
+                  
+                      <div class="year-block">
+                        <h3>2025</h3>
+                        <div class="grid">
+                          <div>Jan</div><div>Feb</div><div>Mar</div><div>Apr</div><div>May</div><div>Jun</div>
+                          <div>Jul</div><div>Aug</div><div>Sep</div><div>Oct</div><div>Nav</div><div>Dec</div>
                         </div>
-                        <div class="row">
-                            <span class="parson">মাস ${item.total_pay / item.tax} / ${(item.total_due / item.tax)+(item.total_pay / item.tax)} <i class="fa-regular fa-clock"></i></span>
-                            <span class="parson">আদায় ${item.total_pay} <i class="fa-solid fa-bangladeshi-taka-sign"></i></span>
-                            <span class="parson">বাঁকী ${item.total_due} <i class="fa-solid fa-bangladeshi-taka-sign"></i></span>
-                            <span class="parson">বাঁকী ${item.total_due / item.tax} <i class="fa-solid fa-calendar-days"></i></span>
+                      </div>
+                  
+                      <div class="year-block">
+                        <h3>2026</h3>
+                        <div class="grid">
+                          <div>Jan</div><div>Feb</div><div>Mar</div><div>Apr</div><div>May</div><div>Jun</div>
+                          <div>Jul</div><div>Aug</div><div>Sep</div><div>Oct</div><div>Nav</div><div>Dec</div>
                         </div>
+                      </div>
+                    </div>
                     </div>
                 `;
           all_user += one_user;
           container.innerHTML = all_user;
         });
-
         const due_user = filterData("due");
         document.getElementById("dueTotalCount").textContent = `${due_user.length}/${data.length}`;
 
@@ -89,24 +107,54 @@ function fetchData() {
         due_user.forEach((item)=>{
           const one_user = `
                     <div class="due_parson">
-                      <div class="shatus">${item.onoff}</div>
-                        <div class="row">
-                            <span class="parson">ক্রমিক ${item.SL}</span>
-                            <span class="parson">নাম: ${item.name}</span>
-                            <span class="parson">পিতা: ${item.father_name}</span>
-                            <span class="parson">দোকানের নাম: ${item.shop_name}</span>
+                        <div class="container44">
+                      <div class="screen">
+                          <span>
+                              <img src="./style/image/${item.img_link}" alt="" srcset="">
+                          </span>
+                          <span>
+                              <h3>${item.name}</h3>
+                              <p>${item.father_name}</p>
+                              <p>${item.shop_name}</p>
+                              <p>
+                                  <span>আদায়: <strong class="popFont">${item.total_pay}/-</strong></span>
+                                  <span>বাঁকী <strong class="popFont">${item.total_due}/-</strong></span>
+                              </p>
+                          </span>
+                      </div>
+                  
+                      <div class="year-block">
+                        <h3>2025</h3>
+                        <div class="grid">
+                          <div>Jan</div><div>Feb</div><div>Mar</div><div>Apr</div><div>May</div><div>Jun</div>
+                          <div>Jul</div><div>Aug</div><div>Sep</div><div>Oct</div><div>Nav</div><div>Dec</div>
                         </div>
-                        <div class="row">
-                            <span class="parson">মাস ${item.total_pay / item.tax} / ${(item.total_due / item.tax)+(item.total_pay / item.tax)} <i class="fa-regular fa-clock"></i></span>
-                            <span class="parson">আদায় ${item.total_pay} <i class="fa-solid fa-bangladeshi-taka-sign"></i></span>
-                            <span class="parson">বাঁকী ${item.total_due} <i class="fa-solid fa-bangladeshi-taka-sign"></i></span>
-                            <span class="parson">বাঁকী ${item.total_due / item.tax} <i class="fa-solid fa-calendar-days"></i></span>
+                      </div>
+                  
+                      <div class="year-block">
+                        <h3>2026</h3>
+                        <div class="grid">
+                          <div>Jan</div><div>Feb</div><div>Mar</div><div>Apr</div><div>May</div><div>Jun</div>
+                          <div>Jul</div><div>Aug</div><div>Sep</div><div>Oct</div><div>Nav</div><div>Dec</div>
                         </div>
+                      </div>
+                    </div>
+                    </div>
                     </div>
                 `;
             dueData += one_user;
             container2.innerHTML = dueData;
         })
+
+        const monthsToHighlight = ["Jan", "Feb", "Mar", "Apr"];
+        const boxes = document.querySelectorAll(".grid div");
+
+        // Loop through and add the class
+        boxes.forEach((box) => {
+          if (monthsToHighlight.includes(box.innerText.trim())) {
+            box.classList.add("highlight");
+          }
+        });
 
         let searchResult = document.querySelector(".searchResult");
 
@@ -221,3 +269,4 @@ function openDefaultBrowser() {
     // Replace 'https://www.example.com' with the URL you want to open
     window.open('https://drive.google.com/drive/folders/1sB--pN30tpUkpB09i6FcbJmDOoVIL5PU?usp=sharing', '_blank');
 }
+
