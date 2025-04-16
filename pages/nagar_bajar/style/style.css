@@ -591,6 +591,7 @@ footer {
   margin-bottom: 20px;
   border: 1px solid #dfdede;
   display: flex;
+  gap: 5px;
   justify-content: space-between;
   align-items: center;
 }
