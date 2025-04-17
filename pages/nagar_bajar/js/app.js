@@ -54,9 +54,11 @@ function fetchData() {
         function filterData(pass) {
           return data.filter((item) => item.status.includes(pass));
         }
-        const paid_user = filterData("paid");
-        
-        document.getElementById("payTotalCount").textContent = `${paid_user.length}/${data.length}`;
+        const paid1_user = filterData("paid");
+
+        const paid_user = data;
+
+        document.getElementById("payTotalCount").textContent = `${paid1_user.length}/${data.length}`;
                 
         
         let all_user = "";
@@ -82,8 +84,18 @@ function fetchData() {
                       <div class="year-block">
                         <h3>2025</h3>
                         <div class="grid">
-                          <div>Jan</div><div>Feb</div><div>Mar</div><div>Apr</div><div>May</div><div>Jun</div>
-                          <div>Jul</div><div>Aug</div><div>Sep</div><div>Oct</div><div>Nav</div><div>Dec</div>
+                         <div class="${item.Jan25}">Jan</div>
+                          <div class="${item.Feb25}">Feb</div>
+                          <div class="${item.Mar25}">Mar</div>
+                          <div class="${item.Apr25}">Apr</div>
+                          <div class="${item.May25}">May</div>
+                          <div class="${item.Jun25}">Jun</div>
+                          <div class="${item.Jul25}">Jul</div>
+                          <div class="${item.Aug25}">Aug</div>
+                          <div class="${item.Sep25}">Sep</div>
+                          <div class="${item.Oct25}">Oct</div>
+                          <div class="${item.Nav25}">Nav</div>
+                          <div class="${item.Dec25}">Dec</div>
                         </div>
                       </div>
                   
@@ -100,61 +112,63 @@ function fetchData() {
           all_user += one_user;
           container.innerHTML = all_user;
         });
-        const due_user = filterData("due");
-        document.getElementById("dueTotalCount").textContent = `${due_user.length}/${data.length}`;
 
-        let dueData = "";
-        due_user.forEach((item)=>{
-          const one_user = `
-                    <div class="due_parson">
-                        <div class="container44">
-                      <div class="screen">
-                          <span>
-                              <img src="./style/image/${item.img_link}" alt="" srcset="">
-                          </span>
-                          <span>
-                              <h3>${item.name}</h3>
-                              <p>${item.father_name}</p>
-                              <p>${item.shop_name}</p>
-                              <p>
-                                  <span>আদায়: <strong class="popFont">${item.total_pay}/-</strong></span>
-                                  <span>বাঁকী <strong class="popFont">${item.total_due}/-</strong></span>
-                              </p>
-                          </span>
-                      </div>
+        // const due_user = filterData("due");
+        // document.getElementById("dueTotalCount").textContent = `${due_user.length}/${data.length}`;
+
+        // let dueData = "";
+        // due_user.forEach((item)=>{
+        //   console.log(item);
+        //   const one_user = `
+        //             <div class="due_parson">
+        //                 <div class="container44">
+        //               <div class="screen">
+        //                   <span>
+        //                       <img src="./style/image/${item.img_link}" alt="" srcset="">
+        //                   </span>
+        //                   <span>
+        //                       <h3>${item.name}</h3>
+        //                       <p>${item.father_name}</p>
+        //                       <p>${item.shop_name}</p>
+        //                       <p>
+        //                           <span>আদায়: <strong class="popFont">${item.total_pay}/-</strong></span>
+        //                           <span>বাঁকী <strong class="popFont">${item.total_due}/-</strong></span>
+        //                       </p>
+        //                   </span>
+        //               </div>
                   
-                      <div class="year-block">
-                        <h3>2025</h3>
-                        <div class="grid">
-                          <div>Jan</div><div>Feb</div><div>Mar</div><div>Apr</div><div>May</div><div>Jun</div>
-                          <div>Jul</div><div>Aug</div><div>Sep</div><div>Oct</div><div>Nav</div><div>Dec</div>
-                        </div>
-                      </div>
+        //               <div class="year-block">
+        //                 <h3>2025</h3>
+        //                 <div class="grid">
+        //                   <div class="${item.Jan25}">Jan</div>
+        //                   <div class="${item.Feb25}">Feb</div>
+        //                   <div class="${item.Mar25}">Mar</div>
+        //                   <div class="${item.Apr25}">Apr</div>
+        //                   <div class="${item.May25}">May</div>
+        //                   <div class="${item.Jun25}">Jun</div>
+        //                   <div class="${item.Jul25}">Jul</div>
+        //                   <div class="${item.Aug25}">Aug</div>
+        //                   <div class="${item.Sep25}">Sep</div>
+        //                   <div class="${item.Oct25}">Oct</div>
+        //                   <div class="${item.Nav25}">Nav</div>
+        //                   <div class="${item.Dec25}">Dec</div>
+        //                 </div>
+        //               </div>
                   
-                      <div class="year-block">
-                        <h3>2026</h3>
-                        <div class="grid">
-                          <div>Jan</div><div>Feb</div><div>Mar</div><div>Apr</div><div>May</div><div>Jun</div>
-                          <div>Jul</div><div>Aug</div><div>Sep</div><div>Oct</div><div>Nav</div><div>Dec</div>
-                        </div>
-                      </div>
-                    </div>
-                    </div>
-                    </div>
-                `;
-            dueData += one_user;
-            container2.innerHTML = dueData;
-        })
-
-        const monthsToHighlight = ["Jan", "Feb", "Mar", "Apr"];
-        const boxes = document.querySelectorAll(".grid div");
-
-        // Loop through and add the class
-        boxes.forEach((box) => {
-          if (monthsToHighlight.includes(box.innerText.trim())) {
-            box.classList.add("highlight");
-          }
-        });
+        //               <div class="year-block">
+        //                 <h3>2026</h3>
+        //                 <div class="grid">
+        //                   <div>Jan</div><div>Feb</div><div>Mar</div><div>Apr</div><div>May</div><div>Jun</div>
+        //                   <div>Jul</div><div>Aug</div><div>Sep</div><div>Oct</div><div>Nav</div><div>Dec</div>
+        //                 </div>
+        //               </div>
+        //             </div>
+        //             </div>
+        //             </div>
+        //         `;
+        //     dueData += one_user;
+        //     container2.innerHTML = dueData;
+        // })
 
         let searchResult = document.querySelector(".searchResult");
 

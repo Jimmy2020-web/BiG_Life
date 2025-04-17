@@ -643,7 +643,12 @@ footer {
   border: 1px solid #dfdede;
 }
 
-.highlight {
+.Unpaid {
   background: rgba(203, 21, 151, 0.9843137255) !important;
+  color: white !important;
+}
+
+.Paid {
+  background: rgba(0, 160, 11, 0.984) !important;
   color: white !important;
 }/*# sourceMappingURL=style.css.map */
