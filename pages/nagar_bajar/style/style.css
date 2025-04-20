@@ -430,21 +430,30 @@ nav ul.active {
   display: inline-block;
 }
 
+#searchBtn {
+  padding: 5px 12px;
+  border-radius: 12px;
+  border: none;
+  outline: none;
+  font-size: 22px;
+  background-color: #fff;
+  color: rgba(203, 21, 151, 0.9843137255);
+  cursor: pointer;
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  z-index: 1;
+}
+
+#searchBtn:hover {
+  background: rgba(203, 21, 151, 0.9843137255);
+  color: #ffffff;
+  transition: all 0.5s ease-in-out;
+}
+
 .app {
   display: grid;
   place-items: center;
-}
-.app .find #searchBtn {
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: none;
-  outline: none;
-  font-size: 18px;
-  width: 280px;
-  color: white;
-  cursor: pointer;
-  background: darkorange;
-  margin: 40px 0px;
 }
 .app .shoper {
   border: 1px solid rgba(151, 151, 151, 0.768627451);
@@ -454,9 +463,18 @@ nav ul.active {
   border-radius: 5px;
   text-align: left;
   color: rgba(65, 65, 65, 0.862745098);
-  display: inline-block;
-  width: 300px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  width: 320px;
   transition: all 0.5s ease-in-out;
+}
+.app .shoper img {
+  width: auto;
+  height: 100px;
+  border-radius: 50%;
+  margin: 0 auto;
 }
 .app .shoper h3 {
   color: rgba(203, 21, 151, 0.9843137255);
@@ -580,8 +598,18 @@ footer {
   border-radius: 12px;
   width: 320px;
   padding: 10px;
-  padding-top: 20px;
+  padding-top: 35px;
   border: 1px solid #dfdede;
+  position: relative;
+}
+.container44 .slNo {
+  background: rgba(203, 21, 151, 0.9843137255);
+  color: #fff;
+  padding: 0px 20px;
+  border-radius: 0px 0px 18px 0px;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .screen {
@@ -596,7 +624,7 @@ footer {
   align-items: center;
 }
 .screen img {
-  width: 100px;
+  height: 100px;
 }
 .screen h3 {
   color: rgba(203, 21, 151, 0.9843137255);

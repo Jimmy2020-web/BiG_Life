@@ -66,6 +66,7 @@ function fetchData() {
           const one_user = `
                     <div class="paid_parson">
                     <div class="container44">
+                    <span class="slNo">${item.SL}</span>
                       <div class="screen">
                           <span>
                               <img src="./style/image/${item.img_link}" alt="" srcset="">
@@ -175,11 +176,16 @@ function fetchData() {
         let resultData = "";
         data.forEach((item)=>{
           const result = `
-            <div class="shoper">
+          <div class="shoper">
+            <div class="col">
+              <img src="./style/image/${item.img_link}" alt="" srcset="">
+            </div>
+            <div class="col">
               <h3>${item.name}</h3>
               <p>দোকানের নাম: ${item.shop_name}</p>
               <span>আদায়: <span class="popFont">${item.total_pay}</span> টাকা, </span>
               <span>বাঁকী: <span class="popFont">${item.total_due}</span> টাকা</span>
+            </div>
             </div>
           `;
           resultData += result;
