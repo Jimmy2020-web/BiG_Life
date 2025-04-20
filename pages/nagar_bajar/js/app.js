@@ -82,29 +82,40 @@ function fetchData() {
                           </span>
                       </div>
                   
-                      <div class="year-block">
-                        <h3>2025</h3>
+                    <div class="year-block">
+                      <h3>2025</h3>
                         <div class="grid">
-                         <div class="${item.Jan25}">Jan</div>
-                          <div class="${item.Feb25}">Feb</div>
-                          <div class="${item.Mar25}">Mar</div>
-                          <div class="${item.Apr25}">Apr</div>
-                          <div class="${item.May25}">May</div>
-                          <div class="${item.Jun25}">Jun</div>
-                          <div class="${item.Jul25}">Jul</div>
-                          <div class="${item.Aug25}">Aug</div>
-                          <div class="${item.Sep25}">Sep</div>
-                          <div class="${item.Oct25}">Oct</div>
-                          <div class="${item.Nav25}">Nav</div>
-                          <div class="${item.Dec25}">Dec</div>
+                            <div class="${item.Jan25}">Jan</div>
+                            <div class="${item.Feb25}">Feb</div>
+                            <div class="${item.Mar25}">Mar</div>
+                            <div class="${item.Apr25}">Apr</div>
+                            <div class="${item.May25}">May</div>
+                            <div class="${item.Jun25}">Jun</div>
+                            <div class="${item.Jul25}">Jul</div>
+                            <div class="${item.Aug25}">Aug</div>
+                            <div class="${item.Sep25}">Sep</div>
+                            <div class="${item.Oct25}">Oct</div>
+                            <div class="${item.Nav25}">Nav</div>
+                            <div class="${item.Dec25}">Dec</div>
+                          </div>
                         </div>
                       </div>
                   
                       <div class="year-block">
                         <h3>2026</h3>
                         <div class="grid">
-                          <div>Jan</div><div>Feb</div><div>Mar</div><div>Apr</div><div>May</div><div>Jun</div>
-                          <div>Jul</div><div>Aug</div><div>Sep</div><div>Oct</div><div>Nav</div><div>Dec</div>
+                          <div class="${item.Jan26}">Jan</div>
+                          <div class="${item.Feb26}">Feb</div>
+                          <div class="${item.Mar26}">Mar</div>
+                          <div class="${item.Apr26}">Apr</div>
+                          <div class="${item.May26}">May</div>
+                          <div class="${item.Jun26}">Jun</div>
+                          <div class="${item.Jul26}">Jul</div>
+                          <div class="${item.Aug26}">Aug</div>
+                          <div class="${item.Sep26}">Sep</div>
+                          <div class="${item.Oct26}">Oct</div>
+                          <div class="${item.Nav26}">Nav</div>
+                          <div class="${item.Dec26}">Dec</div>
                         </div>
                       </div>
                     </div>
