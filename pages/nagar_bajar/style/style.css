@@ -432,7 +432,7 @@ nav ul.active {
 
 #searchBtn {
   padding: 5px 12px;
-  border-radius: 12px;
+  border-radius: 8px;
   border: none;
   outline: none;
   font-size: 22px;
@@ -443,6 +443,7 @@ nav ul.active {
   bottom: 10px;
   right: 10px;
   z-index: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
 
 #searchBtn:hover {

@@ -451,7 +451,7 @@ $animation: cubic-bezier(0.76, 0, 0.24, 1);
 
   #searchBtn{
     padding: 5px 12px;
-    border-radius: 12px;
+    border-radius: 8px;
     border: none;
     outline: none;
     font-size: 22px;
@@ -462,6 +462,7 @@ $animation: cubic-bezier(0.76, 0, 0.24, 1);
     bottom: 10px;
     right: 10px;
     z-index: 1;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 }
   #searchBtn:hover{
     background: #cb1597fb;
