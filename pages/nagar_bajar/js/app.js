@@ -66,7 +66,7 @@ function fetchData() {
           const one_user = `
                     <div class="paid_parson">
                     <div class="container44">
-                    <span class="slNo">${item.SL}</span>
+                    <span class="slNo">${item.SL} চাঁদার হার <span class="popFont"> ${item.tax}</span></span>
                       <div class="screen">
                           <span>
                               <img src="./style/image/${item.img_link}" alt="" srcset="">
