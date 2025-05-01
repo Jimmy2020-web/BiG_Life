@@ -128,7 +128,7 @@ function fetchData() {
         var authPw = sessionStorage.getItem("authPw");
         var userData26 = document.querySelectorAll(".Luser");
         
-        if (authPw == 19255) {
+        if (authPw == 255) {
         userData26.forEach((item) => {
           item.classList.remove("slNo1");
           
