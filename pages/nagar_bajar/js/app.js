@@ -66,7 +66,7 @@ function fetchData() {
           const one_user = `
                     <div class="paid_parson">
                     <div class="container44">
-                    <span class="slNo">${item.SL} চাঁদার হার <span class="popFont"> ${item.tax}</span></span>
+                    <span class="slNo">${item.SL} <span class="popFont Luser">চাঁদার হার  ${item.tax}</span></span>
                       <div class="screen">
                           <span>
                               <img src="./style/image/${item.img_link}" alt="" srcset="">
@@ -125,6 +125,22 @@ function fetchData() {
           container.innerHTML = all_user;
         });
 
+        var authPw = localStorage.getItem("authPw");
+        var userData26 = document.querySelectorAll(".Luser");
+        
+        console.log(authPw)
+
+        if (authPw == 552) {
+        userData26.forEach((item) => {
+          item.classList.remove("slNo1");
+          console.log("crrect");
+        });
+        }else{
+          userData26.forEach((item) => {
+            item.classList.add("slNo1");
+          });
+        }
+        
         // const due_user = filterData("due");
         // document.getElementById("dueTotalCount").textContent = `${due_user.length}/${data.length}`;
 
@@ -301,3 +317,35 @@ function openDefaultBrowser() {
     window.open('https://drive.google.com/drive/folders/1sB--pN30tpUkpB09i6FcbJmDOoVIL5PU?usp=sharing', '_blank');
 }
 
+
+
+  const popup = document.getElementById("popup");
+  const adminPasswordDiv = document.getElementById("adminPassword");
+  const passwordInput = document.getElementById("passwordInput");
+  const submitBtn = document.getElementById("submitBtn");
+
+  const radioButtons = document.querySelectorAll('input[name="role"]');
+
+  let selectedRole = null;
+
+  radioButtons.forEach(radio => {
+    radio.addEventListener("change", () => {
+      selectedRole = radio.value;
+      adminPasswordDiv.style.display = selectedRole === "admin" ? "block" : "none";
+    });
+  });
+
+  submitBtn.addEventListener("click", () => {
+    if (selectedRole === "admin") {
+      const enteredPassword = passwordInput.value;
+      localStorage.setItem("authPw", enteredPassword);
+      popup.style.display = "none";
+      fetchData()
+    } else if (selectedRole === "user") {
+      popup.style.display = "none";
+      localStorage.clear();
+      fetchData()
+    } else {
+      alert("পরিচয় দিন?");
+    }
+  });

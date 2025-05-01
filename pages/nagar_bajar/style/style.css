@@ -613,6 +613,10 @@ footer {
   left: 0;
 }
 
+.slNo1 {
+  display: none !important;
+}
+
 .screen {
   background-color: white;
   border-radius: 8px;
@@ -680,4 +684,55 @@ footer {
 .Paid {
   background: rgba(0, 160, 11, 0.984) !important;
   color: white !important;
+}
+
+#popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.6);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#popupContent {
+  width: 300px;
+  background: rgba(255, 255, 255, 0.866);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+#popupContent label {
+  padding: 10px 18px;
+}
+#popupContent #submitBtn {
+  background: linear-gradient(to right, #ff7e5f, #feb47b);
+  color: white;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 12px;
+  transition: background 0.3s ease;
+  margin-top: 15px;
+}
+
+#adminPassword {
+  display: none;
+}
+#adminPassword input {
+  padding: 8px 12px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 90%;
+  margin-top: 10px;
 }/*# sourceMappingURL=style.css.map */
