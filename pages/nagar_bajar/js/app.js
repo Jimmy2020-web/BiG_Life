@@ -125,7 +125,7 @@ function fetchData() {
           container.innerHTML = all_user;
         });
 
-        var authPw = localStorage.getItem("authPw");
+        var authPw = sessionStorage.getItem("authPw");
         var userData26 = document.querySelectorAll(".Luser");
         
         if (authPw == 19255) {
@@ -336,12 +336,12 @@ function openDefaultBrowser() {
   submitBtn.addEventListener("click", () => {
     if (selectedRole === "admin") {
       const enteredPassword = passwordInput.value;
-      localStorage.setItem("authPw", enteredPassword);
+      sessionStorage.setItem("authPw", enteredPassword);
       popup.style.display = "none";
       fetchData()
     } else if (selectedRole === "user") {
       popup.style.display = "none";
-      localStorage.clear();
+      sessionStorage.clear();
       fetchData()
     } else {
       alert("পরিচয় দিন?");
