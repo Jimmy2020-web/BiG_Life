@@ -128,12 +128,10 @@ function fetchData() {
         var authPw = localStorage.getItem("authPw");
         var userData26 = document.querySelectorAll(".Luser");
         
-        console.log(authPw)
-
-        if (authPw == 552) {
+        if (authPw == 19255) {
         userData26.forEach((item) => {
           item.classList.remove("slNo1");
-          console.log("crrect");
+          
         });
         }else{
           userData26.forEach((item) => {
