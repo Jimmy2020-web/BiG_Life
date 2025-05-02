@@ -66,7 +66,7 @@ function fetchData() {
           const one_user = `
                     <div class="paid_parson">
                     <div class="container44">
-                    <span class="slNo">${item.SL} <span class="popFont Luser">চাঁদার হার  ${item.tax}</span></span>
+                    <span class="slNo">${item.SL} <span class="popFont Luser">চাঁদার হার  ${item.tax}৳</span></span>
                       <div class="screen">
                           <span>
                               <img src="./style/image/${item.img_link}" alt="" srcset="">
@@ -76,8 +76,8 @@ function fetchData() {
                               <p>${item.father_name}</p>
                               <p>${item.shop_name}</p>
                               <p>
-                                  <span>আদায়: <strong class="popFont"> ${item.total_pay}/-</strong></span>
-                                  <span>বাঁকী <strong class="popFont">${item.total_due}/-</strong></span>
+                                  <span>আদায়: <strong class="popFont"> ${item.total_pay}৳</strong></span>
+                                  <span>বাঁকী <strong class="popFont">${item.total_due}৳</strong></span>
                               </p>
                           </span>
                       </div>
@@ -139,62 +139,6 @@ function fetchData() {
           });
         }
         
-        // const due_user = filterData("due");
-        // document.getElementById("dueTotalCount").textContent = `${due_user.length}/${data.length}`;
-
-        // let dueData = "";
-        // due_user.forEach((item)=>{
-        //   console.log(item);
-        //   const one_user = `
-        //             <div class="due_parson">
-        //                 <div class="container44">
-        //               <div class="screen">
-        //                   <span>
-        //                       <img src="./style/image/${item.img_link}" alt="" srcset="">
-        //                   </span>
-        //                   <span>
-        //                       <h3>${item.name}</h3>
-        //                       <p>${item.father_name}</p>
-        //                       <p>${item.shop_name}</p>
-        //                       <p>
-        //                           <span>আদায়: <strong class="popFont">${item.total_pay}/-</strong></span>
-        //                           <span>বাঁকী <strong class="popFont">${item.total_due}/-</strong></span>
-        //                       </p>
-        //                   </span>
-        //               </div>
-                  
-        //               <div class="year-block">
-        //                 <h3>2025</h3>
-        //                 <div class="grid">
-        //                   <div class="${item.Jan25}">Jan</div>
-        //                   <div class="${item.Feb25}">Feb</div>
-        //                   <div class="${item.Mar25}">Mar</div>
-        //                   <div class="${item.Apr25}">Apr</div>
-        //                   <div class="${item.May25}">May</div>
-        //                   <div class="${item.Jun25}">Jun</div>
-        //                   <div class="${item.Jul25}">Jul</div>
-        //                   <div class="${item.Aug25}">Aug</div>
-        //                   <div class="${item.Sep25}">Sep</div>
-        //                   <div class="${item.Oct25}">Oct</div>
-        //                   <div class="${item.Nav25}">Nav</div>
-        //                   <div class="${item.Dec25}">Dec</div>
-        //                 </div>
-        //               </div>
-                  
-        //               <div class="year-block">
-        //                 <h3>2026</h3>
-        //                 <div class="grid">
-        //                   <div>Jan</div><div>Feb</div><div>Mar</div><div>Apr</div><div>May</div><div>Jun</div>
-        //                   <div>Jul</div><div>Aug</div><div>Sep</div><div>Oct</div><div>Nav</div><div>Dec</div>
-        //                 </div>
-        //               </div>
-        //             </div>
-        //             </div>
-        //             </div>
-        //         `;
-        //     dueData += one_user;
-        //     container2.innerHTML = dueData;
-        // })
 
         let searchResult = document.querySelector(".searchResult");
 
@@ -206,10 +150,11 @@ function fetchData() {
               <img src="./style/image/${item.img_link}" alt="" srcset="">
             </div>
             <div class="col">
+              <P>দোকান নং ${item.SL}</P>
               <h3>${item.name}</h3>
-              <p>দোকানের নাম: ${item.shop_name}</p>
-              <span>আদায়: <span class="popFont">${item.total_pay}</span> টাকা, </span>
-              <span>বাঁকী: <span class="popFont">${item.total_due}</span> টাকা</span>
+              <p>${item.shop_name}</p>
+              <span>আদায়: <span class="popFont">${item.total_pay}</span>৳, </span>
+              <span>বাঁকী: <span class="popFont">${item.total_due}</span>৳</span>
             </div>
             </div>
           `;
