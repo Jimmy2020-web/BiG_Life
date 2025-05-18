@@ -52,13 +52,15 @@ function fetchData() {
         active_shop.textContent = data.length;
         
         function filterData(pass) {
-          return data.filter((item) => item.status.includes(pass));
+          return data.filter((item) => item.stats.includes(pass));
         }
-        const paid1_user = filterData("paid");
+        
+        const paid_user = filterData("On");
 
-        const paid_user = data;
 
-        document.getElementById("payTotalCount").textContent = `${paid1_user.length}/${data.length}`;
+        // const paid_user = data;
+
+        document.getElementById("payTotalCount").textContent = `${paid_user.length}/${data.length}`;
                 
         
         let all_user = "";
