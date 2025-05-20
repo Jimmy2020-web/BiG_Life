@@ -739,4 +739,20 @@ footer {
   border: 1px solid #ccc;
   width: 90%;
   margin-top: 10px;
+}
+
+#shopStatusSelect {
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid #eeeded;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  color: #333;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 90%;
+  max-width: 300px;
+  outline: none;
+  margin: 8px 0;
 }/*# sourceMappingURL=style.css.map */

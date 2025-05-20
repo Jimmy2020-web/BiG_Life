@@ -55,10 +55,10 @@ function fetchData() {
           return data.filter((item) => item.stats.includes(pass));
         }
         
-        const paid_user = filterData("On");
+        const userInput = document.getElementById("shopStatusSelect").value;
 
+        const paid_user = filterData(userInput);
 
-        // const paid_user = data;
 
         document.getElementById("payTotalCount").textContent = `${paid_user.length}/${data.length}`;
                 
