@@ -803,7 +803,7 @@ footer{
 
 
 #paymentForm {
-    max-width: 400px;
+    max-width: 300px;
     margin: auto;
     background: #ffffff;
     padding: 20px;
@@ -815,6 +815,8 @@ footer{
         border: 1px solid #ccc;
         border-radius: 5px;
         outline: none;
+        width: 45%;
+        margin-top: 6px;
     }
 
     p{
@@ -834,7 +836,6 @@ footer{
 
     input,
     button {
-        width: auto;
         padding: 10px;
         margin-bottom: 15px;
     }
@@ -846,6 +847,7 @@ footer{
         border-radius: 8px;
         font-size: 15px;
         cursor: pointer;
+        width: auto;
         width: 40%;
         margin: 0;
         transition: background-color 0.3s ease;
