@@ -318,20 +318,13 @@ function openDefaultBrowser() {
 // Replace this with your real GET API endpoint
   const getAPI = 'https://script.google.com/macros/s/AKfycbwewb1Q27VK8tGeFFLVqnVA_Wj3jL_71mzJLH8rL1priN1mCk9wDhbfNUUesjDrFuNs/exec'; 
   // Replace this with your real POST API endpoint
-  const postAPI = 'YOUR_POST_API_URL';
+  const postAPI = getAPI;
 
   async function fetchUserData() {
     try {
       const res = await fetch(getAPI);
       const data = await res.json();
-      // const userId = sessionStorage.getItem('userId');
      
-      // // Assuming the API returns an array, and you take the latest user
-      // const latest = data[userId]; // Adjust if needed
-
-      // document.getElementById('name').value = latest.name;
-      // document.getElementById('date').value = latest.date;
-      // document.getElementById('taka').value = latest.tax;
 
     } catch (err) {
       alert('Failed to fetch user data.');
@@ -342,11 +335,10 @@ function openDefaultBrowser() {
   document.getElementById('paymentForm').addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    const name = document.getElementById('name').value;
-    const date = document.getElementById('date').value;
+    const date = document.getElementById('month').value;
     const amount = document.getElementById('taka').value;
 
-    const payload = { name, date, amount };
+    const payload = { date, amount };
 
     try {
       const res = await fetch(postAPI, {
