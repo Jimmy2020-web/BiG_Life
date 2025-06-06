@@ -638,10 +638,10 @@ footer{
         background: rgba(203, 21, 151, 0.9843137255);
         color: #fff;
         padding: 0px 20px;
-        border-radius: 10px 0px 10px 0px;
+        border-radius: 15px;
         position: absolute;
-        top: 0;
-        left: 0;
+        top: 5px;
+        left: 10px;
     }
   }
 
@@ -827,10 +827,14 @@ footer{
         object-fit: cover;
         margin: 5px 0;
     }
+    .payment_info{
+        padding-bottom: 8px;
+        font-size: 16px;
+    }
 
     input,
     button {
-        width: 100%;
+        width: auto;
         padding: 10px;
         margin-bottom: 15px;
     }
@@ -839,15 +843,22 @@ footer{
         background-color: green;
         color: white;
         border: none;
-        border-radius: 5px;
-        font-size: 16px;
+        border-radius: 8px;
+        font-size: 15px;
         cursor: pointer;
+        width: 40%;
+        margin: 0;
         transition: background-color 0.3s ease;
     }
     #close_pay {
         background-color: #FF5370;
-        margin-top: 5px;
-        padding: 10px;
         text-align: center;
+        padding: 10px;
+    }
+    .payment_buttons{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
     }
 }
