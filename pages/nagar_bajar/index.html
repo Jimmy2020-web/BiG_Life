@@ -230,6 +230,29 @@
         </div>
       </div>
 
+      <div class="payment_model">
+          <form id="paymentForm">
+            <h2>মাসিক চাঁদার রশিদ</h2>
+            <p><img id="pay_img" src="" alt="" srcset=""></p>
+            <div>
+                <label for="name">নাম:</label>
+                <span id="name"></span><br>
+            </div>
+            <div>
+                <label for="shopName">পিতার নাম:</label>
+                <span id="shopName"></span>
+            </div>
+            <div>
+                <label for="shop_name">দোকানের নাম:</label>
+                <span id="shop_name"></span>
+            </div>
+            <input class="popFont" type="text" id="month" placeholder="Enter month" required>
+            <input class="popFont" type="number" id="taka" placeholder="Enter payment amount" required readonly>
+            <button type="submit">সংরক্ষন</button>
+            <p id="close_pay">বাতিল</p>
+            </form>
+      </div>
+
     <script src="./js/app.js"></script>
 </body>
 </html>

@@ -556,6 +556,16 @@ nav ul.active {
     width: 90% !important;
   }
 }
+.Sub_Payment {
+  padding: 5px 15px;
+  border: none;
+  outline: none;
+  color: #fff;
+  border-radius: 20px;
+  cursor: pointer;
+  background: #15a112;
+}
+
 .link {
   display: inline-block;
   place-items: center;
@@ -607,7 +617,7 @@ footer {
   background: rgba(203, 21, 151, 0.9843137255);
   color: #fff;
   padding: 0px 20px;
-  border-radius: 0px 0px 18px 0px;
+  border-radius: 10px 0px 10px 0px;
   position: absolute;
   top: 0;
   left: 0;
@@ -755,4 +765,65 @@ footer {
   max-width: 300px;
   outline: none;
   margin: 8px 0;
+}
+
+.payment_model {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(196, 196, 196, 0.5882352941);
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+#paymentForm {
+  max-width: 400px;
+  margin: auto;
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+#paymentForm input {
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  outline: none;
+}
+#paymentForm p {
+  text-align: center;
+}
+#paymentForm #pay_img {
+  width: 100px;
+  border-radius: 10px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 5px 0;
+}
+#paymentForm input,
+#paymentForm button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+#paymentForm button, #paymentForm #close_pay {
+  background-color: green;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+#paymentForm #close_pay {
+  background-color: #FF5370;
+  margin-top: 5px;
+  padding: 10px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

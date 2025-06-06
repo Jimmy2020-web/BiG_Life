@@ -100,7 +100,8 @@ function fetchData() {
                             <div class="${item.Nav25}">Nav</div>
                             <div class="${item.Dec25}">Dec</div>
                           </div>
-                        </div>
+                          </div>
+                          <button id="${item.SL}" class="Sub_Payment ">পরিষোধ করুন</button>
                       </div>
                   
                       <div class="year-block">
@@ -126,6 +127,25 @@ function fetchData() {
           all_user += one_user;
           container.innerHTML = all_user;
         });
+
+          const view_payment = document.querySelectorAll(".Sub_Payment");
+          view_payment.forEach((item) => {
+            
+            item.addEventListener("click", () => {
+              
+              const userId = item.id-1;
+              const latest = data[userId];
+
+              document.getElementById("pay_img").src = `./style/image/${latest.img_link}`;
+              document.getElementById("name").textContent = latest.name;
+              document.getElementById("shopName").textContent = latest.father_name;
+              document.getElementById("shop_name").textContent = latest.shop_name;
+              
+              document.getElementById("taka").value = latest.tax;
+              document.querySelector(".payment_model").style.display = "flex";
+            });
+          });
+
 
         var authPw = sessionStorage.getItem("authPw");
         var userData26 = document.querySelectorAll(".Luser");
@@ -294,3 +314,65 @@ function openDefaultBrowser() {
       alert("পরিচয় দিন?");
     }
   });
+
+// Replace this with your real GET API endpoint
+  const getAPI = 'https://script.google.com/macros/s/AKfycbwewb1Q27VK8tGeFFLVqnVA_Wj3jL_71mzJLH8rL1priN1mCk9wDhbfNUUesjDrFuNs/exec'; 
+  // Replace this with your real POST API endpoint
+  const postAPI = 'YOUR_POST_API_URL';
+
+  async function fetchUserData() {
+    try {
+      const res = await fetch(getAPI);
+      const data = await res.json();
+      // const userId = sessionStorage.getItem('userId');
+     
+      // // Assuming the API returns an array, and you take the latest user
+      // const latest = data[userId]; // Adjust if needed
+
+      // document.getElementById('name').value = latest.name;
+      // document.getElementById('date').value = latest.date;
+      // document.getElementById('taka').value = latest.tax;
+
+    } catch (err) {
+      alert('Failed to fetch user data.');
+      console.error(err);
+    }
+  }
+
+  document.getElementById('paymentForm').addEventListener('submit', async (e) => {
+    e.preventDefault();
+
+    const name = document.getElementById('name').value;
+    const date = document.getElementById('date').value;
+    const amount = document.getElementById('taka').value;
+
+    const payload = { name, date, amount };
+
+    try {
+      const res = await fetch(postAPI, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+
+      if (res.ok) {
+        alert('Payment submitted!');
+        document.getElementById('paymentForm').reset();
+        fetchUserData(); // Optional: reload name/date
+      } else {
+        alert('Submission failed.');
+      }
+    } catch (err) {
+      console.error(err);
+      alert('Network error.');
+    }
+  });
+
+  // Load name/date on page load
+  fetchUserData();
+
+  const close_payment_model = document.querySelector("#close_pay");
+  close_payment_model.addEventListener("click", () => {
+    document.querySelector(".payment_model").style.display = "none";
+  });
+
