@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css" integrity="sha512-9xKTRVabjVeZmc+GUW8GgSmcREDunMM+Dt/GrzchfN8tkwHizc5RP4Ok/MXFFy5rIjJjzhndFScTceq5e6GvVQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
-    <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button>
+    <button id="searchBtn"><i class="fa-solid fa-magnifying-glass"></i></button> 
     <header>
         <nav>
             <div class="toggle">☰</div>
@@ -16,7 +16,7 @@
                 <li>প্রথম পাতা</li>
                 <li>কমিটির তথ‍্য</li>
                 <li>দোকানের তালিকা</li>
-                <li>বাজার সম্পর্কে</li>
+                <li id="logout">লগ আউট</li>
             </ul>
         </nav>        
     </header>
@@ -246,6 +246,9 @@
                 <label for="shop_name">দোকানের নাম:</label>
                 <span id="shop_name"></span>
             </div>
+            <input type="text" id="row" hidden>
+            <input type="text" id="colAmount" hidden>
+
             <input class="popFont" type="text" maxlength="5" id="month" placeholder="Enter month" required>
             <input class="popFont" type="number" id="taka" placeholder="Enter payment amount" required readonly>
             <div class="payment_buttons">

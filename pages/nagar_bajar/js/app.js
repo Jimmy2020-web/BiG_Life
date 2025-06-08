@@ -101,7 +101,7 @@ function fetchData() {
                             <div class="${item.Dec25}">Dec</div>
                           </div>
                           </div>
-                          <button id="${item.SL}" class="Sub_Payment ">পরিষোধ করুন</button>
+                          <button id="${item.SL}" class="Sub_Payment Luser">পরিষোধ করুন</button>
                       </div>
                   
                       <div class="year-block">
@@ -130,6 +130,10 @@ function fetchData() {
 
           const view_payment = document.querySelectorAll(".Sub_Payment");
           view_payment.forEach((item) => {
+            const now = new Date();
+            now.setMonth(now.getMonth() - 1);
+            const year = now.getFullYear();
+            const prevMonthName = now.toLocaleString("default", { month: "short" });
             
             item.addEventListener("click", () => {
               
@@ -141,13 +145,16 @@ function fetchData() {
               document.getElementById("shopName").textContent = latest.father_name;
               document.getElementById("shop_name").textContent = latest.shop_name;
               
+              document.getElementById("row").value = userId+2;
+              document.getElementById("colAmount").value = 11;
               document.getElementById("taka").value = latest.tax;
+              document.getElementById("month").value = prevMonthName + year;
               document.querySelector(".payment_model").style.display = "flex";
             });
           });
 
 
-        var authPw = sessionStorage.getItem("authPw");
+        var authPw = localStorage.getItem("authPw");
         var userData26 = document.querySelectorAll(".Luser");
         
         if (authPw == 19255) {
@@ -289,6 +296,25 @@ function openDefaultBrowser() {
   const passwordInput = document.getElementById("passwordInput");
   const submitBtn = document.getElementById("submitBtn");
 
+  const popDisplay = localStorage.getItem("authPw");
+  if (!popDisplay) {
+    popup.style.display = "flex";
+  } else {
+    popup.style.display = "none";
+  }
+
+  if( popDisplay == 19255) {
+    document.querySelector("#logout").textContent = "লগ আউট";
+  }else{
+    document.querySelector("#logout").textContent = "লগ ইন";
+  }
+
+document.querySelector("#logout").addEventListener("click", () => {
+  localStorage.removeItem("authPw");
+  popup.style.display = "flex";
+  document.querySelector("#logout").textContent = "লগ ইন";
+});
+
   const radioButtons = document.querySelectorAll('input[name="role"]');
 
   let selectedRole = null;
@@ -303,12 +329,12 @@ function openDefaultBrowser() {
   submitBtn.addEventListener("click", () => {
     if (selectedRole === "admin") {
       const enteredPassword = passwordInput.value;
-      sessionStorage.setItem("authPw", enteredPassword);
+      localStorage.setItem("authPw", enteredPassword);
       popup.style.display = "none";
       fetchData()
     } else if (selectedRole === "user") {
       popup.style.display = "none";
-      sessionStorage.clear();
+      localStorage.setItem("authPw", "Shoper");
       fetchData()
     } else {
       alert("পরিচয় দিন?");
@@ -318,53 +344,55 @@ function openDefaultBrowser() {
 // Replace this with your real GET API endpoint
   const getAPI = 'https://script.google.com/macros/s/AKfycbwewb1Q27VK8tGeFFLVqnVA_Wj3jL_71mzJLH8rL1priN1mCk9wDhbfNUUesjDrFuNs/exec'; 
   // Replace this with your real POST API endpoint
-  const postAPI = getAPI;
+  const postAPI = "https://script.google.com/macros/s/AKfycbwlyjUk25NoysUhe4-Dl4Iktg_D7b1Q1S4sCN8DUAVv9PFSw53YC4sM06Ay7VTb04lz/exec";
 
-  async function fetchUserData() {
-    try {
-      const res = await fetch(getAPI);
-      const data = await res.json();
-     
-
-    } catch (err) {
-      alert('Failed to fetch user data.');
-      console.error(err);
-    }
+async function fetchUserData() {
+  try {
+    const res = await fetch(postAPI);
+    const data = await res.json();
+    
+  } catch (err) {
+    alert('Failed to fetch user data.');
+    console.error(err);
   }
+}
 
-  document.getElementById('paymentForm').addEventListener('submit', async (e) => {
-    e.preventDefault();
+document.getElementById('paymentForm').addEventListener('submit', async (e) => {
+  e.preventDefault();
 
-    const date = document.getElementById('month').value;
-    const amount = document.getElementById('taka').value;
+  const row = document.getElementById('row').value;
+  const amount = document.getElementById('taka').value;
+  const colAmount = document.getElementById('colAmount').value;
 
-    const payload = { date, amount };
+  const payload = { row, colAmount, amount };
 
-    try {
-      const res = await fetch(postAPI, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(payload)
-      });
+  try {
+    const res = await fetch(postAPI, {
+      method: 'POST',
+      // headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(payload)
+    });
 
-      if (res.ok) {
-        alert('Payment submitted!');
-        document.getElementById('paymentForm').reset();
-        fetchUserData(); // Optional: reload name/date
-      } else {
-        alert('Submission failed.');
-      }
-    } catch (err) {
-      console.error(err);
-      alert('Network error.');
+    if (res.ok) {
+      alert('Payment submitted!');
+      fetchData(); // Refresh data after submission
+      document.getElementById('paymentForm').reset();
+      document.querySelector(".payment_model").style.display = "none";
+    } else {
+      alert('Submission failed.');
     }
-  });
+  } catch (err) {
+    console.error(err);
+    alert('Network error.');
+  }
+});
 
-  // Load name/date on page load
-  fetchUserData();
 
   const close_payment_model = document.querySelector("#close_pay");
   close_payment_model.addEventListener("click", () => {
     document.querySelector(".payment_model").style.display = "none";
   });
+
+
+
 
