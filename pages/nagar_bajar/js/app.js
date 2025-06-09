@@ -132,11 +132,13 @@ function fetchData() {
           view_payment.forEach((item) => {
             const now = new Date();
             now.setMonth(now.getMonth() - 1);
+            const month = now.getMonth() + 1;
+            console.log(month);
             const year = now.getFullYear();
             const prevMonthName = now.toLocaleString("default", { month: "short" });
             
             item.addEventListener("click", () => {
-              
+  
               const userId = item.id-1;
               const latest = data[userId];
 
@@ -146,15 +148,15 @@ function fetchData() {
               document.getElementById("shop_name").textContent = latest.shop_name;
               
               document.getElementById("row").value = userId+2;
-              document.getElementById("colAmount").value = 11;
+              document.getElementById("colAmount").value = 6+month;
               document.getElementById("taka").value = latest.tax;
-              document.getElementById("month").value = prevMonthName + year;
+              document.getElementById("month").value = prevMonthName + " - "+ year;
               document.querySelector(".payment_model").style.display = "flex";
             });
           });
 
 
-        var authPw = localStorage.getItem("authPw");
+        var authPw = sessionStorage.getItem("authPw");
         var userData26 = document.querySelectorAll(".Luser");
         
         if (authPw == 19255) {
@@ -296,7 +298,7 @@ function openDefaultBrowser() {
   const passwordInput = document.getElementById("passwordInput");
   const submitBtn = document.getElementById("submitBtn");
 
-  const popDisplay = localStorage.getItem("authPw");
+  const popDisplay = sessionStorage.getItem("authPw");
   if (!popDisplay) {
     popup.style.display = "flex";
   } else {
@@ -310,7 +312,7 @@ function openDefaultBrowser() {
   }
 
 document.querySelector("#logout").addEventListener("click", () => {
-  localStorage.removeItem("authPw");
+  sessionStorage.removeItem("authPw");
   popup.style.display = "flex";
   document.querySelector("#logout").textContent = "লগ ইন";
 });
@@ -329,12 +331,12 @@ document.querySelector("#logout").addEventListener("click", () => {
   submitBtn.addEventListener("click", () => {
     if (selectedRole === "admin") {
       const enteredPassword = passwordInput.value;
-      localStorage.setItem("authPw", enteredPassword);
+      sessionStorage.setItem("authPw", enteredPassword);
       popup.style.display = "none";
       fetchData()
     } else if (selectedRole === "user") {
       popup.style.display = "none";
-      localStorage.setItem("authPw", "Shoper");
+      sessionStorage.setItem("authPw", "Shoper");
       fetchData()
     } else {
       alert("পরিচয় দিন?");
@@ -359,7 +361,7 @@ async function fetchUserData() {
 
 document.getElementById('paymentForm').addEventListener('submit', async (e) => {
   e.preventDefault();
-
+  document.querySelector("#submit").textContent = "অপেক্ষা করুন";
   const row = document.getElementById('row').value;
   const amount = document.getElementById('taka').value;
   const colAmount = document.getElementById('colAmount').value;
@@ -375,6 +377,7 @@ document.getElementById('paymentForm').addEventListener('submit', async (e) => {
 
     if (res.ok) {
       alert('Payment submitted!');
+      document.querySelector("#submit").textContent = "সংরক্ষন করুন";
       fetchData(); // Refresh data after submission
       document.getElementById('paymentForm').reset();
       document.querySelector(".payment_model").style.display = "none";
