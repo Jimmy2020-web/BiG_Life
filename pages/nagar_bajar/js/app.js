@@ -14,6 +14,7 @@ function fetchData() {
         const container2 = document.getElementById("duePersonsContainer"); // Target
         const totalCount_shop = document.getElementById("totalCount_shop"); // Target
         const active_shop = document.getElementById("active_shop"); // Target
+        const off_shop = document.getElementById("off_shop"); // Target
         const all_total = document.getElementById("ctk"); // Target
         const Buy_total = document.getElementById("Mtk"); // Target
         const Remaining = document.getElementById("invest"); // Target
@@ -49,7 +50,7 @@ function fetchData() {
         Remaining.innerHTML = `${data[0].Remaining} <i class="fa-solid fa-bangladeshi-taka-sign"></i>`;
         All_due.innerHTML = `${data[0].All_due} <i class="fa-solid fa-bangladeshi-taka-sign"></i>`;
         totalCount_shop.textContent = data.length;
-        active_shop.textContent = data.length;
+        
         
         function filterData(pass) {
           return data.filter((item) => item.stats.includes(pass));
@@ -58,7 +59,8 @@ function fetchData() {
         const userInput = document.getElementById("shopStatusSelect").value;
 
         const paid_user = filterData(userInput);
-
+        active_shop.textContent = paid_user.length;
+        off_shop.textContent = data.length - paid_user.length;
 
         document.getElementById("payTotalCount").textContent = `${paid_user.length}/${data.length}`;
                 

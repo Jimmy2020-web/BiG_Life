@@ -200,6 +200,8 @@ nav ul.active {
     gap: 30px;
     justify-content: space-between;
 }
+
+
 .title{
     font-size: 2rem;
     text-align: center;
@@ -218,6 +220,7 @@ nav ul.active {
     justify-content: space-between;
     align-items: center;
     gap: 2rem;
+    
     .c_card{
         text-align: center;
         padding: 15px;
@@ -227,6 +230,9 @@ nav ul.active {
         box-shadow: $B_shadow;
         font-size: 1rem;
         color: #fff;
+        #totalCount_shop, #active_shop, #off_shop{
+            font-size: 2rem;
+        }
         i{
             font-size: 2.5rem;
             font-size: 2.5rem;
@@ -643,7 +649,24 @@ footer{
         top: 5px;
         left: 10px;
     }
-  }
+}
+
+.offShope{
+        content: "এই দোকানটি বন্ধ হয়েছ";
+        top: 0;
+        left: 0;
+        padding: 100px 25px;
+        font-size: 3rem;
+        box-sizing: border-box;
+        text-align: center;
+        border-radius: 10px;
+        width: 100%;
+        color: rgba(117, 119, 117, 0.98);
+        height: 100%;
+        background: rgba(238, 235, 235, 0.7);
+        z-index: 1;
+        position: absolute;
+    }
 
   .slNo1 {
     display: none !important;
