@@ -35,10 +35,43 @@ function fetchData() {
         let Remaining_per = Math.floor((data[0].Remaining / data[0].All_total)*100);
         let All_due_per = Math.floor((data[0].All_due / data[0].All_total)*100);
         
-        psValu.textContent = `${100-(total_per)}%`;
-        psValu2.textContent = `${Buy_total_per}%`;
-        psValu3.textContent = `${Remaining_per}%`;
-        psValu4.textContent = `${All_due_per}%`;
+        // psValu.textContent = `${100-(total_per)}%`;
+        // psValu2.textContent = `${Buy_total_per}%`;
+        // psValu3.textContent = `${Remaining_per}%`;
+        // psValu4.textContent = `${All_due_per}%`;
+
+        function animateValue(id, start, end, duration, isPercent = false) {
+          const obj = document.getElementById(id);
+          
+          let startTimestamp = null;
+          const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min(
+              (timestamp - startTimestamp) / duration,
+              1
+            );
+            const value = Math.floor(progress * (end - start) + start);
+            
+            obj.textContent = isPercent ? value + "%" : value;
+            if (progress < 1) {
+              window.requestAnimationFrame(step);
+            }
+          };
+          window.requestAnimationFrame(step);
+        }
+
+  // Example use:
+  animateValue("psValu", 0, 100-total_per, 3500, true);  // 0% to 100% in 1.5 seconds
+  animateValue("ctk", 0, data[0].All_total, 4000);         // 0 to 25000 in 2 seconds
+
+  animateValue("psValu2", 0, Buy_total_per, 3500, true);  // 0% to 100% in 1.5 seconds
+  animateValue("Mtk", 0, data[0].Buy_total, 4000);         // 0 to 25000 in 2 seconds
+
+  animateValue("psValu3", 0, Remaining_per, 3500, true);  // 0% to 100% in 1.5 seconds
+  animateValue("invest", 0, data[0].Remaining, 4000);         // 0 to 25000 in 2 seconds
+
+  animateValue("psValu4", 0, All_due_per, 3500, true);  // 0% to 100% in 1.5 seconds
+  animateValue("cash", 0, data[0].All_due, 4000);         // 0 to 25000 in 2 seconds
 
         balance.style.background = `conic-gradient(#04088d ${(98-total_per) * 3.7}deg, #fff  0deg)`;
         balance2.style.background = `conic-gradient(#04088d ${Buy_total_per * 3.7}deg, #fff  0deg)`;
@@ -397,7 +430,3 @@ document.getElementById('paymentForm').addEventListener('submit', async (e) => {
   close_payment_model.addEventListener("click", () => {
     document.querySelector(".payment_model").style.display = "none";
   });
-
-
-
-
