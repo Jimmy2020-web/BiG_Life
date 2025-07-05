@@ -52,7 +52,7 @@ function fetchData() {
             );
             const value = Math.floor(progress * (end - start) + start);
             
-            obj.textContent = isPercent ? value + "%" : value;
+            obj.textContent = isPercent ? value + "%" : value + " ৳";
             if (progress < 1) {
               window.requestAnimationFrame(step);
             }
@@ -62,7 +62,7 @@ function fetchData() {
 
   // Example use:
   animateValue("psValu", 0, 100-total_per, 3500, true);  // 0% to 100% in 1.5 seconds
-  animateValue("ctk", 0, data[0].All_total, 4000);         // 0 to 25000 in 2 seconds
+  animateValue("ctk", 0, data[0].All_total, 4000); // 0 to 25000 in 2 seconds         // 0 to 25000 in 2 seconds
 
   animateValue("psValu2", 0, Buy_total_per, 3500, true);  // 0% to 100% in 1.5 seconds
   animateValue("Mtk", 0, data[0].Buy_total, 4000);         // 0 to 25000 in 2 seconds
@@ -73,15 +73,45 @@ function fetchData() {
   animateValue("psValu4", 0, All_due_per, 3500, true);  // 0% to 100% in 1.5 seconds
   animateValue("cash", 0, data[0].All_due, 4000);         // 0 to 25000 in 2 seconds
 
-        balance.style.background = `conic-gradient(#04088d ${(98-total_per) * 3.7}deg, #fff  0deg)`;
-        balance2.style.background = `conic-gradient(#04088d ${Buy_total_per * 3.7}deg, #fff  0deg)`;
-        balance3.style.background = `conic-gradient(#04088d ${Remaining_per * 3.7}deg, #fff  0deg)`;
-        balance4.style.background = `conic-gradient(#04088d ${All_due_per * 3.7}deg, #fff  0deg)`;
+        // balance.style.background = `conic-gradient(#04088d ${(98-total_per) * 3.7}deg, #fff  0deg)`;
+        // balance2.style.background = `conic-gradient(#04088d ${Buy_total_per * 3.7}deg, #fff  0deg)`;
+        // balance3.style.background = `conic-gradient(#04088d ${Remaining_per * 3.7}deg, #fff  0deg)`;
+        // balance4.style.background = `conic-gradient(#04088d ${All_due_per * 3.7}deg, #fff  0deg)`;
+
+        
+const targetDeg = (100 - total_per) * 3.7;
+const targetDeg2 = Buy_total_per * 3.7;
+const targetDeg3 = Remaining_per * 3.7;
+const targetDeg4 = All_due_per * 3.7;
+
+let currentDeg = 0;
+const duration = 4000; // in ms
+const startTime = performance.now();
+
+function animateGradient(currentTime) {
+  const elapsed = currentTime - startTime;
+  const progress = Math.min(elapsed / duration, 1);
+  const angle = targetDeg * progress;
+  const angle2 = targetDeg2 * progress;
+  const angle3 = targetDeg3 * progress;
+  const angle4 = targetDeg4 * progress;
+
+  balance.style.background = `conic-gradient(#04088d ${angle}deg, #fff 0deg)`;
+  balance2.style.background = `conic-gradient(#04088d ${angle2}deg, #fff 0deg)`;
+  balance3.style.background = `conic-gradient(#04088d ${angle3}deg, #fff 0deg)`;
+  balance4.style.background = `conic-gradient(#04088d ${angle4}deg, #fff 0deg)`;
+
+  if (progress < 1) {
+    requestAnimationFrame(animateGradient);
+  }
+}
+
+requestAnimationFrame(animateGradient);
       
-        all_total.innerHTML = `${data[0].All_total} <i class="fa-solid fa-bangladeshi-taka-sign"></i>`;
-        Buy_total.innerHTML = `${data[0].Buy_total} <i class="fa-solid fa-bangladeshi-taka-sign"></i>`;
-        Remaining.innerHTML = `${data[0].Remaining} <i class="fa-solid fa-bangladeshi-taka-sign"></i>`;
-        All_due.innerHTML = `${data[0].All_due} <i class="fa-solid fa-bangladeshi-taka-sign"></i>`;
+        // all_total.innerHTML = `${data[0].All_total} <i class="fa-solid fa-bangladeshi-taka-sign"></i>`;
+        // Buy_total.innerHTML = `${data[0].Buy_total} <i class="fa-solid fa-bangladeshi-taka-sign"></i>`;
+        // Remaining.innerHTML = `${data[0].Remaining} <i class="fa-solid fa-bangladeshi-taka-sign"></i>`;
+        // All_due.innerHTML = `${data[0].All_due} <i class="fa-solid fa-bangladeshi-taka-sign"></i>`;
         totalCount_shop.textContent = data.length;
         
         
