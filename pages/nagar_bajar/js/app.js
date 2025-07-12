@@ -269,24 +269,24 @@ requestAnimationFrame(animateGradient);
                         </div>
                         <div class="row">
                             <span>${data[0].month_name}</span>
-                            <span>${data[0].all_in}</span>
-                            <span>${data[0].all_co}</span>
-                            <span>${data[0].all_ha}</span>
-                            <span>${data[0].all_due}</span>
+                            <span class="popFont">${data[0].all_in}</span>
+                            <span class="popFont">${data[0].all_co}</span>
+                            <span class="popFont">${data[0].all_ha}</span>
+                            <span class="popFont">${data[0].all_due}</span>
                         </div>
                         <div class="row">
                             <span>${data[1].month_name}</span>
-                            <span>${data[1].all_in}</span>
-                            <span>${data[1].all_co}</span>
-                            <span>${data[1].all_ha}</span>
-                            <span>${data[1].all_due}</span>
+                            <span class="popFont">${data[1].all_in}</span>
+                            <span class="popFont">${data[1].all_co}</span>
+                            <span class="popFont">${data[1].all_ha}</span>
+                            <span class="popFont">${data[1].all_due}</span>
                         </div>
                         <div class="row">
                             <span>${data[2].month_name}</span>
-                            <span>${data[2].all_in}</span>
-                            <span>${data[2].all_co}</span>
-                            <span>${data[2].all_ha}</span>
-                            <span>${data[2].all_due}</span>
+                            <span class="popFont">${data[2].all_in}</span>
+                            <span class="popFont">${data[2].all_co}</span>
+                            <span class="popFont">${data[2].all_ha}</span>
+                            <span class="popFont">${data[2].all_due}</span>
                         </div>
                     </div>
         `;
