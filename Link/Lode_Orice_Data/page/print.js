@@ -1,8 +1,27 @@
 var today = new Date();
 var dd = String(today.getDate()).padStart(2, '0');
-var mm = String(today.getMonth() + 1).padStart(2, '0'); //January is 0!
+var mm = String(today.getMonth() + 1).padStart(2, '0');
 var yyyy = today.getFullYear();
-today = dd + '/' + mm + '/' + yyyy;
+
+// ইংরেজি থেকে বাংলা সংখ্যা ম্যাপ
+function toBengaliNumber(num) {
+  const enToBn = {
+    '0': '০',
+    '1': '১',
+    '2': '২',
+    '3': '৩',
+    '4': '৪',
+    '5': '৫',
+    '6': '৬',
+    '7': '৭',
+    '8': '৮',
+    '9': '৯'
+  };
+  return num.toString().split('').map(char => enToBn[char] || char).join('');
+}
+
+var todayBn = toBengaliNumber(dd) + '/' + toBengaliNumber(mm) + '/' + toBengaliNumber(yyyy);
+
 
 let user_input = document.querySelector("#user_input");
 let sBtn = document.querySelector("#sBtn");
@@ -20,7 +39,9 @@ let FULL_URL =
   "&range=" +
   Shet_RANGE;
 
-const sKey = Number(localStorage.getItem("sKey"));
+var sKey = Number(localStorage.getItem("sKey"));
+var appNo = toBengaliNumber(sKey+253);
+var appNoBn = `${appNo}/${toBengaliNumber(yyyy)}-${toBengaliNumber(yyyy+1)}`
 
 function fetchData() {
   fetch(FULL_URL)
@@ -70,8 +91,8 @@ function fetchData() {
                 </p>
             </div>
             <div class="dateStamp">
-            <p id="nikosh">আবেদন নম্বরঃ ${sKey + 253}/2023-24</p>
-            <p id="nikosh">তারিখঃ ${today}</p>
+            <p id="nikosh">আবেদন নম্বরঃ ${appNoBn}</p>
+            <p id="nikosh">তারিখঃ ${todayBn}</p>
             </div>
             <div class="lateMan_address">
                 এই মর্মে উত্তরাধীকার সনদ পত্র প্রদান করিতেছি যে, মৃত <span>${
