@@ -35,6 +35,7 @@ body{
 .contaner{
     width: 80%;
     margin: 0 auto;
+    
 }
 
 /* General styles for the navbar */
@@ -200,7 +201,6 @@ nav ul.active {
     gap: 30px;
     justify-content: space-between;
 }
-
 
 .title{
     font-size: 2rem;
@@ -885,5 +885,38 @@ footer{
         justify-content: center;
         align-items: center;
         gap: 20px;
+    }
+}
+
+.bankInfo{
+    background: #070340;
+    color: #f9ecec;
+    max-width: 500px;
+    font-size: 1.2rem;
+    height: 260px;
+    border-radius: 25px;
+    padding: 25px;
+    position: relative;
+    margin-bottom: 2.5rem;
+    .mainCard{
+        .acName{
+            font-size: 2rem;
+            text-align: center;
+        }
+        img{
+            height: 70px;
+        }
+        .amount{
+            position: absolute;
+            top: 30px;
+            right: 30px;
+            font-size: 2rem;
+            color: yellow;
+        }
+        .acountNumber{
+            letter-spacing: 13px;
+            font-size: 2.3rem;
+            text-align: center;
+        }
     }
 }
