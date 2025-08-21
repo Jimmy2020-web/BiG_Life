@@ -911,12 +911,22 @@ footer{
             top: 30px;
             right: 30px;
             font-size: 2rem;
-            color: yellow;
+            color: rgb(253, 253, 2);
         }
         .acountNumber{
-            letter-spacing: 13px;
             font-size: 2.3rem;
             text-align: center;
+        }
+    }
+}
+
+@media only screen and (max-width: 650px){  
+    .bankInfo{
+        .amount .acountNumber{
+            font-size: 1.2rem !important;
+        }
+        img{
+            height: 40px !important;
         }
     }
 }
