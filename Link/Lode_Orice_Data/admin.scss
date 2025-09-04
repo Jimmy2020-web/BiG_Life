@@ -208,3 +208,10 @@ body{
         }
     }
 }
+
+#apiData{
+    .t24{
+        display: grid;
+        grid-template-columns: repeat(6, auto);
+    }
+}

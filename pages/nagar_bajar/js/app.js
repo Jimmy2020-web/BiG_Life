@@ -427,6 +427,7 @@ async function fetchUserData() {
 document.getElementById('paymentForm').addEventListener('submit', async (e) => {
   e.preventDefault();
   document.querySelector("#submit").textContent = "অপেক্ষা করুন";
+  document.querySelector("#submit").style.background = "red";
   const row = document.getElementById('row').value;
   const amount = document.getElementById('taka').value;
   const colAmount = document.getElementById('colAmount').value;
@@ -441,7 +442,7 @@ document.getElementById('paymentForm').addEventListener('submit', async (e) => {
     });
 
     if (res.ok) {
-      alert('Payment submitted!');
+      // alert('Payment submitted!');
       document.querySelector("#submit").textContent = "সংরক্ষন করুন";
       fetchData(); // Refresh data after submission
       document.getElementById('paymentForm').reset();

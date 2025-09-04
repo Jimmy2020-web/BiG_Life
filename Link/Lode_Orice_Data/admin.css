@@ -203,4 +203,9 @@ body {
 }
 .chartBord .contentList table td {
   padding: 15px;
+}
+
+#apiData .t24 {
+  display: grid;
+  grid-template-columns: repeat(6, auto);
 }/*# sourceMappingURL=admin.css.map */
