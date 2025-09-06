@@ -493,6 +493,7 @@ $animation: cubic-bezier(0.76, 0, 0.24, 1);
         gap: 10px;
         width: 320px;
         transition: all .5s ease-in-out;
+        position: relative;
         img{
             width: auto;
             height: 100px;
@@ -510,6 +511,16 @@ $animation: cubic-bezier(0.76, 0, 0.24, 1);
         &:hover{
             border: 1px solid #cb1597fb;
         }
+                .jumpBtn {
+                    background: color(srgb 0.7976 0.1021 0.6);
+                    position: absolute;
+                    color: white;
+                    padding: 1px 10px;
+                    border-radius: 5px;
+                    top: 0;
+                    right: 0;
+                    cursor: pointer;
+                }
     }
     .srarchPopup{
         position: fixed;

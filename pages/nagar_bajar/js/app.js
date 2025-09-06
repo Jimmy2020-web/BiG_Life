@@ -238,25 +238,89 @@ requestAnimationFrame(animateGradient);
 
         let searchResult = document.querySelector(".searchResult");
 
-        let resultData = "";
-        data.forEach((item)=>{
-          const result = `
-          <div class="shoper">
-            <div class="col">
-              <img src="./style/image/${item.img_link}" alt="" srcset="">
-            </div>
-            <div class="col">
-              <P>দোকান নং ${item.SL}</P>
-              <h3>${item.name}</h3>
-              <p>${item.shop_name}</p>
-              <span>আদায়: <span class="popFont">${item.total_pay}</span>৳, </span>
-              <span>বাঁকী: <span class="popFont">${item.total_due}</span>৳</span>
-            </div>
-            </div>
-          `;
-          resultData += result;
-          searchResult.innerHTML = resultData;
-        })
+        // Build result list dynamically
+        data.forEach((item) => {
+          const wrapper = document.createElement("div");
+          wrapper.classList.add("shoper");
+
+          wrapper.innerHTML = `
+      <div class="col">
+        <img src="./style/image/${item.img_link}" alt="">
+        <span class="jumpBtn"> দেখুন </span>
+      </div>
+      <div class="col">
+        <p>দোকান নং ${item.SL}</p>
+        <h3>${item.name}</h3>
+        <p>${item.shop_name}</p>
+        <span>আদায়: <span class="popFont">${item.total_pay}</span>৳, </span>
+        <span>বাঁকী: <span class="popFont">${item.total_due}</span>৳</span>
+      </div>
+    `;
+
+          // Add click event to "দেখুন"
+          wrapper.querySelector(".jumpBtn").addEventListener("click", () => {
+            scrollToDiv(item.SL);
+          });
+
+          searchResult.appendChild(wrapper);
+        });
+
+        // Get all target divs
+        const divs = document.querySelectorAll(".paid_parson");
+
+        // Just logging their positions (optional)
+        divs.forEach(div => {
+          const rect = div.getBoundingClientRect();
+          const top = rect.top + window.scrollY;
+          
+        });
+
+        // Scroll function (GLOBAL)
+        function scrollToDiv(id) {
+          const el = document.getElementById(id);
+          if (el) {
+            el.scrollIntoView({ behavior: "smooth", block: "start" });
+            document.querySelector(".srarchPopup").style.display = "none";
+          }
+        }
+
+  //       let resultData = "";
+  //       data.forEach((item)=>{
+  //         const result = `
+  //         <div class="shoper">
+  //           <div class="col">
+  //             <img src="./style/image/${item.img_link}" alt="" srcset="">
+  //             <span onclick="scrollToDiv(${item.SL})"> দেখুন </span>
+  //           </div>
+  //           <div class="col">
+  //             <P>দোকান নং ${item.SL}</P>
+  //             <h3>${item.name}</h3>
+  //             <p>${item.shop_name}</p>
+  //             <span>আদায়: <span class="popFont">${item.total_pay}</span>৳, </span>
+  //             <span>বাঁকী: <span class="popFont">${item.total_due}</span>৳</span>
+  //           </div>
+  //           </div>
+  //         `;
+  //         resultData += result;
+  //         searchResult.innerHTML = resultData;
+  //       })
+
+  // const divs = document.querySelectorAll(".paid_parson");
+
+  // // Check each div’s position (in pixels from top of page)
+  // divs.forEach(div => {
+  //   const rect = div.getBoundingClientRect();
+  //   const top = rect.top + window.scrollY; // Y position on page
+  //   console.log("Div ID:", div.id, "Position Y:", top);
+  // });
+
+  // // Function to scroll to a div by id
+  // function scrollToDiv(id) {
+  //   const el = document.getElementById(id);
+  //   if (el) {
+  //     el.scrollIntoView({ behavior: "smooth", block: "start" });
+  //   }
+  // }
         
         document.querySelector(".month_table").innerHTML = `
           <div class="table">

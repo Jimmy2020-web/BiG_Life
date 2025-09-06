@@ -474,6 +474,7 @@ nav ul.active {
   gap: 10px;
   width: 320px;
   transition: all 0.5s ease-in-out;
+  position: relative;
 }
 .app .shoper img {
   width: auto;
@@ -489,6 +490,16 @@ nav ul.active {
 }
 .app .shoper:hover {
   border: 1px solid rgba(203, 21, 151, 0.9843137255);
+}
+.app .shoper .jumpBtn {
+  background: color(srgb 0.7976 0.1021 0.6);
+  position: absolute;
+  color: white;
+  padding: 1px 10px;
+  border-radius: 5px;
+  top: 0;
+  right: 0;
+  cursor: pointer;
 }
 .app .srarchPopup {
   position: fixed;
