@@ -168,7 +168,7 @@ requestAnimationFrame(animateGradient);
                           </div>
                           <button id="${item.SL}" class="Sub_Payment Luser">পরিষোধ করুন</button>
                       </div>
-                  
+                 
                       <div class="year-block">
                         <h3>2026</h3>
                         <div class="grid">
@@ -185,8 +185,11 @@ requestAnimationFrame(animateGradient);
                           <div class="${item.Nav26}">Nav</div>
                           <div class="${item.Dec26}">Dec</div>
                         </div>
+                        </div>
+                        <div class="year-block">
+                          <p>দোকান নিবন্ধন ফি: ১০০০৳ প্রদান: <span class="popFont">${item.reg}</span>৳</P>
+                        </div>
                       </div>
-                    </div>
                     </div>
                 `;
           all_user += one_user;
