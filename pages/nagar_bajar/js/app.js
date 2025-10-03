@@ -9,6 +9,8 @@ function fetchData() {
     fetch(URL)
       .then((response) => response.json()) // Assuming the API returns JSON
       .then((data) => {
+        document.querySelector(".amount").textContent=`${data[4].All_total}৳`;
+      
         loder.style.display = "none";
         const container = document.getElementById("paidPersonsContainer"); // Target
         const container2 = document.getElementById("duePersonsContainer"); // Target
