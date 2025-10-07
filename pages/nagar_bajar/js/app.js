@@ -189,7 +189,7 @@ requestAnimationFrame(animateGradient);
                         </div>
                         </div>
                         <div class="year-block">
-                          <p>দোকান নিবন্ধন ফি: ১০০০৳ প্রদান: <span class="popFont">${item.reg}</span>৳</P>
+                          <p>নিবন্ধন ফি: <span class="popFont">1000৳/${item.reg}৳</span><span id="review"><img src="./style/image/${item.review}" alt="" srcset=""></span></P>
                         </div>
                       </div>
                     </div>
@@ -496,7 +496,6 @@ async function fetchUserData() {
 document.getElementById('paymentForm').addEventListener('submit', async (e) => {
   e.preventDefault();
   document.querySelector("#submit").textContent = "অপেক্ষা করুন";
-  document.querySelector("#submit").style.background = "red";
   const row = document.getElementById('row').value;
   const amount = document.getElementById('taka').value;
   const colAmount = document.getElementById('colAmount').value;

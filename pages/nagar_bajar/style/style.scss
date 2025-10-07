@@ -720,13 +720,25 @@ footer{
     &:nth-child(2){
         display: none;
     }
-  }
+        p {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+    
+            #review {
+                img {
+                    height: 20px;
+                }
+            }
+        }
+        }
 
   .year-block h3 {
     text-align: center;
     margin: 0 0 10px 0;
     font-size: 18px;
   }
+
 
   .grid {
     display: grid;

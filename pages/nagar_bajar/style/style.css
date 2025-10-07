@@ -695,6 +695,14 @@ footer {
 .year-block:nth-child(2) {
   display: none;
 }
+.year-block p {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.year-block p #review img {
+  height: 20px;
+}
 
 .year-block h3 {
   text-align: center;
