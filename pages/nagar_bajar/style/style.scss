@@ -642,7 +642,21 @@ footer{
         display: none;
     }
 }
+.paid_parson{
+    animation: fadUp both;
+    animation-timeline: view();
+    animation-range: entry 20% cover 30%;
+}
 
+@keyframes fadUp {
+    from{
+        opacity: 0;
+        transform: translateY(12px) scale(.5);
+    }to{
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
 .container44 {
     background: rgba(255, 255, 255, 0.768627451);
     border-radius: 12px;
