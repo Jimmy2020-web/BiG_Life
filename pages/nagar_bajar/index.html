@@ -239,7 +239,7 @@
       </div>
 
       <div class="payment_model">
-          <form id="paymentForm">
+        <form id="paymentForm">
             <h2>মাসিক চাঁদার রশিদ</h2>
             <p><img id="pay_img" src="" alt="" srcset=""></p>
             <div class="payment_info">
@@ -256,14 +256,16 @@
             </div>
             <input type="text" id="row" hidden>
             <input type="text" id="colAmount" hidden>
-
+        
             <input class="popFont" type="text" maxlength="5" id="month" placeholder="Enter month" required>
             <input class="popFont" type="number" id="taka" placeholder="Enter payment amount" required readonly>
+            <label for="">Giv Review *** </label>
+            <input id="Review" value="4" type="number" min="1" max="5" required>
             <div class="payment_buttons">
                 <button id="submit" type="submit">সংরক্ষন</button>
                 <p id="close_pay">বাতিল</p>
             </div>
-            </form>
+        </form>
       </div>
 
     <script src="./js/app.js"></script>

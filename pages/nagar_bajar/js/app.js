@@ -189,7 +189,7 @@ requestAnimationFrame(animateGradient);
                         </div>
                         </div>
                         <div class="year-block">
-                          <p>নিবন্ধন ফি: <span class="popFont">1000৳/${item.reg}৳</span><span id="review"><img src="./style/image/${item.review}" alt="" srcset=""></span></P>
+                          <p>নিবন্ধন ফি: <span class="popFont">1000৳/${item.reg}৳</span><span id="review"><img src="./style/image/${item.review}.png" alt="" srcset=""></span></P>
                         </div>
                       </div>
                     </div>
@@ -480,7 +480,7 @@ document.querySelector("#logout").addEventListener("click", () => {
 // Replace this with your real GET API endpoint
   const getAPI = 'https://script.google.com/macros/s/AKfycbwewb1Q27VK8tGeFFLVqnVA_Wj3jL_71mzJLH8rL1priN1mCk9wDhbfNUUesjDrFuNs/exec'; 
   // Replace this with your real POST API endpoint
-  const postAPI = "https://script.google.com/macros/s/AKfycbwlyjUk25NoysUhe4-Dl4Iktg_D7b1Q1S4sCN8DUAVv9PFSw53YC4sM06Ay7VTb04lz/exec";
+  const postAPI = "https://script.google.com/macros/s/AKfycbw_dag9FOvWXJI3VbO2vrWPb4Fso30ox8BBDS7osbAlHOPKE5JHr1oIEcKXiQeeODMh/exec";
 
 async function fetchUserData() {
   try {
@@ -497,11 +497,12 @@ document.getElementById('paymentForm').addEventListener('submit', async (e) => {
   e.preventDefault();
   document.querySelector("#submit").textContent = "অপেক্ষা করুন";
   const row = document.getElementById('row').value;
+  const review = document.getElementById('Review').value;
   const amount = document.getElementById('taka').value;
   const colAmount = document.getElementById('colAmount').value;
-
-  const payload = { row, colAmount, amount };
-
+console.log(review)
+  const payload = { row, colAmount, amount, review };
+console.log(payload)
   try {
     const res = await fetch(postAPI, {
       method: 'POST',
