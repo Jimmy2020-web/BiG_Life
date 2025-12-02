@@ -164,7 +164,7 @@ requestAnimationFrame(animateGradient);
                             <div class="${item.Aug25}">Aug</div>
                             <div class="${item.Sep25}">Sep</div>
                             <div class="${item.Oct25}">Oct</div>
-                            <div class="${item.Nav25}">Nav</div>
+                            <div class="${item.Nov25}">Nov</div>
                             <div class="${item.Dec25}">Dec</div>
                           </div>
                           </div>
