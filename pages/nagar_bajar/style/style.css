@@ -708,9 +708,6 @@ footer {
 .year-block h3 {
   color: rgba(203, 21, 151, 0.9843137255);
 }
-.year-block:nth-child(2) {
-  display: none;
-}
 .year-block p {
   display: flex;
   justify-content: space-around;
@@ -900,7 +897,6 @@ footer {
 .bankInfo {
   background: #070340;
   color: #f9ecec;
-  max-width: 500px;
   font-size: 1.2rem;
   height: 260px;
   border-radius: 25px;

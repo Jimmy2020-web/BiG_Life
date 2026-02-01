@@ -11,6 +11,8 @@
 // font-family: 'Poppins', sans-serif;
 // font-family: NikoshBAN;
 
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Bengali:wght@100..900&display=swap');
+
 :root{
     --bg_color: #ADCFD2;
     --text_color: #000000;
@@ -37,7 +39,7 @@ body {
     background: rgb(173,207,210);
     background: linear-gradient(90deg, rgba(173,207,210,1) 0%, rgba(172,181,215,1) 50%, rgba(173,207,210,1) 100%);
     color:var(--text_color);
-    font-family: NikoshBAN !important;
+    font-family: "Noto Serif Bengali", serif;
 }
 
 .title{
