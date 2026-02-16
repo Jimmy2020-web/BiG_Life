@@ -264,8 +264,7 @@ nav ul.active {
   top: 0;
   left: 0;
   background: rgba(1, 5, 35, 0.7803921569);
-  -webkit-backdrop-filter: blur(8px);
-          backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
 }
 
 .loading {
@@ -413,13 +412,15 @@ nav ul.active {
 
 .lsst3Month {
   color: #ff7e5f;
-  display: grid;
-  place-items: center;
 }
 .lsst3Month p {
   font-size: 20px;
   font-weight: bold;
   padding: 10px;
+}
+.lsst3Month {
+  display: grid;
+  place-items: center;
 }
 .lsst3Month .table .row {
   text-align: center;
@@ -511,8 +512,7 @@ nav ul.active {
   top: 0;
   left: 0;
   z-index: 10;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
 }
 .app .srarchPopup .contentBox {
   margin-top: 5vh;
@@ -756,8 +756,7 @@ footer {
   width: 100vw;
   height: 100vh;
   background: rgba(255, 255, 255, 0.6);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -771,8 +770,7 @@ footer {
 #popupContent {
   width: 300px;
   background: rgba(255, 255, 255, 0.571);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 20px;
   border-radius: 10px;
@@ -827,8 +825,7 @@ footer {
   width: 100vw;
   height: 100vh;
   background: rgba(196, 196, 196, 0.5882352941);
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
   display: none;
   align-items: center;
   justify-content: center;
