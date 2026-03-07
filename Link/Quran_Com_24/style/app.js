@@ -4,7 +4,7 @@ formData.addEventListener("submit", (e) =>{
   e.preventDefault();
 
   function cakdata() {
-    const url = 'https://script.google.com/macros/s/AKfycbySMax8dmEGV1RZeUxhTie_JdHiagesrmKdxsJV_gVwzr27_mca6mIVBVSEI2risGxf/exec';
+    const url = 'https://script.google.com/macros/s/AKfycbw8G-OweYrTQ4Ruug_slk1hyBbUrkwyjAC4bXT9C25mUtWd0S1pMKQLWqzQ-9vBM8zP/exec';
      
     fetch(url)
       .then(res => res.json()) // Parse the response as JSON

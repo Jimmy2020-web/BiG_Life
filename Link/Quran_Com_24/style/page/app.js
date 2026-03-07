@@ -5,6 +5,7 @@ var url = 'https://script.google.com/macros/s/AKfycbx_p6asLE8RR0U5TT3UAu4dMdbs2U
 fetch(url)
   .then(response => response.json())
   .then(data => {
+    console.log(data);
     document.getElementById('loadingScreen').style.display = 'flex';
     const getData = data.data.reverse();
     document.getElementById("total").innerText = getData.length;

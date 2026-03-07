@@ -150,8 +150,7 @@ select {
   background: rgba(0, 0, 0, 0.1529411765);
   top: 0;
   left: 0;
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   display: none;
 }
 
@@ -190,8 +189,7 @@ select {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.1529411765);
-  -webkit-backdrop-filter: blur(5px);
-          backdrop-filter: blur(5px);
+  backdrop-filter: blur(5px);
   display: none;
   justify-content: center;
   align-items: center;
