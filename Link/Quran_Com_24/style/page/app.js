@@ -8,7 +8,7 @@ fetch(url)
     console.log(data);
     document.getElementById('loadingScreen').style.display = 'flex';
     const getData = data.data.reverse();
-    document.getElementById("total").innerText = getData.length;
+    document.getElementById("total").innerText = getData.length - 1;
     const tableBody = document.querySelector('#data-table tbody');
     getData.forEach(rowData => {
       const row = document.createElement('tr');
